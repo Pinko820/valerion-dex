@@ -1,4 +1,12 @@
 let pokemonData = [];
+const TYPE_COLORS = {
+    NORMAL: '#A8A77A', FIRE: '#EE8130', WATER: '#6390F0',
+    GRASS: '#7AC74C', ELECTRIC: '#F7D02C', ICE: '#96D9D6',
+    FIGHTING: '#C22E28', POISON: '#A33EA1', GROUND: '#E2BF65',
+    FLYING: '#A98FF3', PSYCHIC: '#F95587', BUG: '#A6B91A',
+    ROCK: '#B6A136', GHOST: '#735797', DRAGON: '#6F35FC',
+    STEEL: '#B7B7CE', FAIRY: '#D685AD', DARK: '#705746'
+};
 
 /**
  * Maneja el error de carga de imagen ocultando el img y mostrando el placeholder
@@ -45,10 +53,19 @@ function updateUI() {
  * Genera el HTML de una tarjeta individual con los 6 stats
  */
 function createCard(p) {
+    // Generamos el HTML de los tipos con color dinámico
+    const typesHTML = p.tipos.map(t => {
+        const color = TYPE_COLORS[t.toUpperCase()] || '#555'; // Color por defecto si no existe
+        return `<span class="text-[10px] px-2 py-1 rounded-md font-mono text-white uppercase shadow-sm" 
+                      style="background-color: ${color}">
+                    ${t}
+                </span>`;
+    }).join('');
+
     return `
         <div class="bg-gray-800 p-5 rounded-3xl hover:bg-gray-750 transition-all border-b-8 border-yellow-600 group shadow-lg flex flex-col">
             <div class="sprite-window mb-4 group-hover:scale-110 transition-transform relative flex-shrink-0">
-                <img src="sprites/${p.id}.png" class="pixelated" onerror="handleMissingImage(this)" alt="${p.nombre}">
+                <img src="sprites/${p.id}.png" class="pixelated" onerror="handleMissingImage(this)" alt="${p.nombre}" loading="lazy">
                 <div class="placeholder-silhouette hidden">?</div>
             </div>
             
@@ -57,7 +74,7 @@ function createCard(p) {
                     <h2 class="text-center font-bold text-xl uppercase tracking-tight text-white">${p.nombre}</h2>
                     <p class="text-center text-yellow-500 text-xs font-bold mb-3">${p.generacion}</p>
                     <div class="flex justify-center gap-1 mb-4 flex-wrap">
-                        ${p.tipos.map(t => `<span class="text-[10px] bg-black/40 px-2 py-1 rounded-md font-mono text-gray-300 uppercase">${t}</span>`).join('')}
+                        ${typesHTML}
                     </div>
                 </div>
 
