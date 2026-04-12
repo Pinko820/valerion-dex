@@ -9,26 +9,30 @@
     width: 100%;
     height: 140px;
     margin: 0 auto;
-    overflow: hidden; /* Esto es lo que corta los frames extras */
+    overflow: hidden; 
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centra el "cuadrado" resultante en la tarjeta */
     align-items: center;
     background: rgba(0,0,0,0.1);
     border-radius: 1rem;
-    position: relative;
 }
 
 .sprite-window img {
-    /* IMPORTANTE: Forzamos la altura para que el frame encaje verticalmente */
+    /* 1. Definimos un área cuadrada basada en la altura */
     height: 110px; 
+    width: 110px; /* Al ser iguales, creamos un marco 1:1 */
+
+    /* 2. El truco maestro: cover + left top */
+    /* 'cover' escala la imagen para llenar el 110x110 y recorta el resto */
+    object-fit: cover; 
     
-    /* BLOQUEAMOS el encogimiento horizontal */
-    width: auto !important; 
-    max-width: none !important; 
+    /* 'left top' obliga a que el recorte empiece en la esquina superior izquierda */
+    object-position: left top; 
+
+    image-rendering: pixelated;
     
-    /* Alineamos al primer frame de la izquierda */
-    object-fit: contain;
-    object-position: left center;
+    /* Quitamos los max-width anteriores para que no interfieran */
+    max-width: none !important;
 }
 
 /* Placeholder para imágenes faltantes */
