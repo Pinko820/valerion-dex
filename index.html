@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex Valerion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <div class="container mx-auto p-4">
+        <h1 class="text-4xl font-bold text-center mb-8 text-yellow-500">Pokédex de Valerion</h1>
+        
+        <div class="mb-8 max-w-md mx-auto">
+            <input type="text" id="search" placeholder="Buscar Pokémon..." 
+                   class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+        </div>
+
+        <div id="pokedex" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            </div>
+    </div>
+
+    <script>
+        let pokemonData = [];
+
+        async function init() {
+            const response = await fetch('valerion_data.json');
+            pokemonData = await response.json();
+            renderPokedex(pokemonData);
+        }
+
+        function renderPokedex(data) {
+            const container = document.getElementById('pokedex');
+            container.innerHTML = data.map(pkmn => `
+                <div class="bg-gray-800 rounded-xl p-4 shadow-lg hover:scale-105 transition-transform border-b-4 border-yellow-600">
+                    <img src="sprites/${pkmn.id}.png" alt="${pkmn.nombre}" class="w-32 h-32 mx-auto mb-4 pixelated" onerror="this.src='https://via.placeholder.com/150?text=No+Sprite'">
+                    <h2 class="text-xl font-bold text-center capitalize">${pkmn.nombre.toLowerCase()}</h2>
+                    <div class="flex justify-center gap-2 my-2">
+                        ${pkmn.tipos.map(t => `<span class="px-2 py-1 rounded text-xs font-bold bg-gray-700">${t}</span>`).join('')}
+                    </div>
+                    <div class="mt-4 text-sm bg-gray-900 p-3 rounded-lg">
+                        <p>HP: ${pkmn.stats_base.hp} | ATK: ${pkmn.stats_base.atq}</p>
+                        <p>DEF: ${pkmn.stats_base.def} | SPD: ${pkmn.stats_base.vel}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Buscador en tiempo real
+        document.getElementById('search').addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const filtered = pokemonData.filter(p => p.nombre.toLowerCase().includes(term));
+            renderPokedex(filtered);
+        });
+
+        init();
+    </script>
+    <style>
+        .pixelated { image-rendering: pixelated; }
+    </style>
+</body>
+</html>
