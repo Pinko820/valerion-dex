@@ -1,0 +1,45 @@
+.pixelated { 
+    image-rendering: pixelated; 
+}
+
+/* Manejo de la ventana para sprites variables y tiras de animación */
+.sprite-window {
+    width: 100%;
+    height: 140px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.1);
+    border-radius: 1rem;
+    position: relative;
+}
+
+.sprite-window img {
+    max-height: 120px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    object-position: left center; /* Clave para tiras de animación */
+}
+
+/* Placeholder para imágenes faltantes */
+.placeholder-silhouette {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #374151;
+    color: #1f2937;
+    font-size: 3rem;
+    font-weight: bold;
+    border-radius: 50%;
+    font-family: sans-serif;
+}
+
+.hidden {
+    display: none !important;
+}
