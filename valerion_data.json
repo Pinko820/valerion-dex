@@ -52038,7 +52038,7 @@
   {
     "id": "ESCAVALIER",
     "nombre": "Escavalier",
-    "generacion": "Valerion",
+    "generacion": "Gen 5",
     "tipos": [
       "BUG",
       "STEEL"
@@ -62910,7 +62910,7 @@
   {
     "id": "AVALUGG",
     "nombre": "Avalugg",
-    "generacion": "Valerion",
+    "generacion": "Gen 6",
     "tipos": [
       "ICE"
     ],
@@ -68074,7 +68074,7 @@
   {
     "id": "SILVALLY",
     "nombre": "Silvally",
-    "generacion": "Valerion",
+    "generacion": "Gen 7",
     "tipos": [
       "NORMAL"
     ],
@@ -79731,7 +79731,7 @@
   {
     "id": "QUAQUAVAL",
     "nombre": "Quaquaval",
-    "generacion": "Valerion",
+    "generacion": "Gen 9",
     "tipos": [
       "WATER",
       "FIGHTING"
@@ -87807,7 +87807,7 @@
   {
     "id": "IRONVALIANT",
     "nombre": "Ferropaladín",
-    "generacion": "Valerion",
+    "generacion": "Gen 9",
     "tipos": [
       "FAIRY",
       "FIGHTING"
