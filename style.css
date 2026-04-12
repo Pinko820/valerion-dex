@@ -1,13 +1,15 @@
+/* style.css */
+
 .pixelated { 
     image-rendering: pixelated; 
 }
 
-/* Manejo de la ventana para sprites variables y tiras de animación */
+/* La ventana que recorta el sprite */
 .sprite-window {
     width: 100%;
     height: 140px;
     margin: 0 auto;
-    overflow: hidden;
+    overflow: hidden; /* Esto es lo que corta los frames extras */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,12 +19,16 @@
 }
 
 .sprite-window img {
-    max-height: 120px;
-    max-width: 100%;
-    width: auto;
-    height: auto;
+    /* IMPORTANTE: Forzamos la altura para que el frame encaje verticalmente */
+    height: 110px; 
+    
+    /* BLOQUEAMOS el encogimiento horizontal */
+    width: auto !important; 
+    max-width: none !important; 
+    
+    /* Alineamos al primer frame de la izquierda */
     object-fit: contain;
-    object-position: left center; /* Clave para tiras de animación */
+    object-position: left center;
 }
 
 /* Placeholder para imágenes faltantes */
@@ -37,7 +43,6 @@
     font-size: 3rem;
     font-weight: bold;
     border-radius: 50%;
-    font-family: sans-serif;
 }
 
 .hidden {
