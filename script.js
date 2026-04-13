@@ -79,11 +79,11 @@ function createCard(p) {
                 </div>
 
                 <div class="grid grid-cols-2 gap-x-4 gap-y-1 text-[10px] font-mono opacity-80 bg-gray-900 p-3 rounded-lg mt-auto">
-                    <div class="flex justify-between text-gray-400 border-b border-gray-800"><span>HP</span><span class="text-white font-bold">${p.stats_base.hp}</span></div>
+                    <div class="flex justify-between text-gray-400 border-b border-gray-800"><span>PS</span><span class="text-white font-bold">${p.stats_base.hp}</span></div>
                     <div class="flex justify-between text-gray-400 border-b border-gray-800"><span>ATK</span><span class="text-white font-bold">${p.stats_base.atq}</span></div>
                     <div class="flex justify-between text-gray-400 border-b border-gray-800"><span>DEF</span><span class="text-white font-bold">${p.stats_base.def}</span></div>
-                    <div class="flex justify-between text-gray-400 border-b border-gray-800"><span>SPA</span><span class="text-white font-bold">${p.stats_base.spa}</span></div>
-                    <div class="flex justify-between text-gray-400"><span>SPD</span><span class="text-white font-bold">${p.stats_base.spd}</span></div>
+                    <div class="flex justify-between text-gray-400 border-b border-gray-800"><span>ATKSP</span><span class="text-white font-bold">${p.stats_base.spa}</span></div>
+                    <div class="flex justify-between text-gray-400"><span>DEFSP</span><span class="text-white font-bold">${p.stats_base.spd}</span></div>
                     <div class="flex justify-between text-gray-400"><span>VEL</span><span class="text-white font-bold">${p.stats_base.vel}</span></div>
                 </div>
             </div>
