@@ -62,16 +62,19 @@ function updateUI() {
 }
 
 /**
- * Genera el HTML de una tarjeta individual con los 6 stats
+ * Genera el HTML de una tarjeta individual con los 6 stats y su BST total, además de los tipos con su traducción y color correspondiente.
  */
 function createCard(p) {
-    // Traducción de tipos
+    // 1. Cálculo del BST (Suma de stats)
+    const bst = p.stats_base.hp + p.stats_base.atq + p.stats_base.def + 
+                p.stats_base.spa + p.stats_base.spd + p.stats_base.vel;
+
+    // 2. Traducción de tipos (se mantiene igual)
     const typesHTML = p.tipos.map(t => {
         const info = TYPE_MAP[t.toUpperCase()] || { esp: t, color: '#555' };
         return `<span class="text-[10px] px-2 py-0.5 rounded font-bold text-white uppercase" style="background-color: ${info.color}">${info.esp}</span>`;
     }).join('');
 
-    // Formatear número a 3 dígitos (ej: 007)
     const numeroFormateado = String(p.numero).padStart(3, '0');
 
     return `
@@ -93,13 +96,20 @@ function createCard(p) {
                     <div class="flex justify-center gap-1 mb-2 flex-wrap">${typesHTML}</div>
                 </div>
 
-                <div class="grid grid-cols-2 gap-x-3 gap-y-1 text-sm font-mono opacity-90 bg-gray-900 p-3 rounded-xl mt-auto">
-                    <div class="flex justify-between text-gray-400 border-b border-gray-800"><span class="text-[10px]">HP</span><span class="text-white font-bold">${p.stats_base.hp}</span></div>
-                    <div class="flex justify-between text-gray-400 border-b border-gray-800"><span class="text-[10px]">ATK</span><span class="text-white font-bold">${p.stats_base.atq}</span></div>
-                    <div class="flex justify-between text-gray-400 border-b border-gray-800"><span class="text-[10px]">DEF</span><span class="text-white font-bold">${p.stats_base.def}</span></div>
-                    <div class="flex justify-between text-gray-400 border-b border-gray-800"><span class="text-[10px]">SPA</span><span class="text-white font-bold">${p.stats_base.spa}</span></div>
-                    <div class="flex justify-between text-gray-400"><span class="text-[10px]">SPD</span><span class="text-white font-bold">${p.stats_base.spd}</span></div>
-                    <div class="flex justify-between text-gray-400"><span class="text-[10px]">VEL</span><span class="text-white font-bold">${p.stats_base.vel}</span></div>
+                <div class="bg-gray-900 p-3 rounded-xl mt-auto shadow-inner">
+                    <div class="flex justify-between items-center mb-2 px-1 border-b border-gray-700 pb-1">
+                        <span class="text-[9px] font-bold text-yellow-500 uppercase tracking-widest">Total Stats</span>
+                        <span class="text-sm font-black text-white">${bst}</span>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-x-3 gap-y-1 text-sm font-mono opacity-90">
+                        <div class="flex justify-between text-gray-400 border-b border-gray-800"><span class="text-[10px]">HP</span><span class="text-white font-bold">${p.stats_base.hp}</span></div>
+                        <div class="flex justify-between text-gray-400 border-b border-gray-800"><span class="text-[10px]">ATK</span><span class="text-white font-bold">${p.stats_base.atq}</span></div>
+                        <div class="flex justify-between text-gray-400 border-b border-gray-800"><span class="text-[10px]">DEF</span><span class="text-white font-bold">${p.stats_base.def}</span></div>
+                        <div class="flex justify-between text-gray-400 border-b border-gray-800"><span class="text-[10px]">SPA</span><span class="text-white font-bold">${p.stats_base.spa}</span></div>
+                        <div class="flex justify-between text-gray-400"><span class="text-[10px]">SPD</span><span class="text-white font-bold">${p.stats_base.spd}</span></div>
+                        <div class="flex justify-between text-gray-400"><span class="text-[10px]">VEL</span><span class="text-white font-bold">${p.stats_base.vel}</span></div>
+                    </div>
                 </div>
             </div>
         </div>
