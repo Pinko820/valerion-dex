@@ -53,37 +53,37 @@ function updateUI() {
  * Genera el HTML de una tarjeta individual con los 6 stats
  */
 function createCard(p) {
-    // Generamos el HTML de los tipos con color dinámico
     const typesHTML = p.tipos.map(t => {
-        const color = TYPE_COLORS[t.toUpperCase()] || '#555'; // Color por defecto si no existe
-        return `<span class="text-[10px] px-2 py-1 rounded-md font-mono text-white uppercase shadow-sm" 
+        const color = TYPE_COLORS[t.toUpperCase()] || '#555';
+        return `<span class="text-xs px-3 py-1 rounded-md font-bold text-white uppercase shadow-sm" 
                       style="background-color: ${color}">
                     ${t}
                 </span>`;
     }).join('');
 
     return `
-        <div class="bg-gray-800 p-5 rounded-3xl hover:bg-gray-750 transition-all border-b-8 border-yellow-600 group shadow-lg flex flex-col">
-            <div class="sprite-window mb-4 group-hover:scale-110 transition-transform relative flex-shrink-0">
+        <div class="bg-gray-800 p-6 rounded-3xl hover:bg-gray-750 transition-all border-b-8 border-yellow-600 group shadow-lg flex flex-col">
+            <div class="sprite-window mb-6 group-hover:scale-110 transition-transform relative flex-shrink-0">
                 <img src="sprites/${p.id}.png" class="pixelated" onerror="handleMissingImage(this)" alt="${p.nombre}" loading="lazy">
                 <div class="placeholder-silhouette hidden">?</div>
             </div>
             
             <div class="flex-grow flex flex-col justify-between">
-                <div>
-                    <h2 class="text-center font-bold text-xl uppercase tracking-tight text-white">${p.nombre}</h2>
-                    <p class="text-center text-yellow-500 text-xs font-bold mb-3">${p.generacion}</p>
-                    <div class="flex justify-center gap-1 mb-4 flex-wrap">
+                <div class="mb-4">
+                    <h2 class="text-center font-black text-2xl uppercase tracking-tight text-white leading-none">${p.nombre}</h2>
+                    <p class="text-center text-yellow-500 text-sm font-bold mt-1 mb-4">${p.generacion}</p>
+                    
+                    <div class="flex justify-center gap-2 mb-2 flex-wrap">
                         ${typesHTML}
                     </div>
                 </div>
 
-                <div class="grid grid-cols-2 gap-x-4 gap-y-1 text-[10px] font-mono opacity-80 bg-gray-900 p-3 rounded-lg mt-auto">
-                    <div class="flex justify-between text-gray-400 border-b border-gray-800"><span>PS</span><span class="text-white font-bold">${p.stats_base.hp}</span></div>
-                    <div class="flex justify-between text-gray-400 border-b border-gray-800"><span>ATK</span><span class="text-white font-bold">${p.stats_base.atq}</span></div>
-                    <div class="flex justify-between text-gray-400 border-b border-gray-800"><span>DEF</span><span class="text-white font-bold">${p.stats_base.def}</span></div>
-                    <div class="flex justify-between text-gray-400 border-b border-gray-800"><span>ATKSP</span><span class="text-white font-bold">${p.stats_base.spa}</span></div>
-                    <div class="flex justify-between text-gray-400"><span>DEFSP</span><span class="text-white font-bold">${p.stats_base.spd}</span></div>
+                <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-xs font-mono opacity-90 bg-gray-900 p-4 rounded-xl mt-auto">
+                    <div class="flex justify-between text-gray-400 border-b border-gray-800 pb-1"><span>HP</span><span class="text-white font-bold">${p.stats_base.hp}</span></div>
+                    <div class="flex justify-between text-gray-400 border-b border-gray-800 pb-1"><span>ATK</span><span class="text-white font-bold">${p.stats_base.atq}</span></div>
+                    <div class="flex justify-between text-gray-400 border-b border-gray-800 pb-1"><span>DEF</span><span class="text-white font-bold">${p.stats_base.def}</span></div>
+                    <div class="flex justify-between text-gray-400 border-b border-gray-800 pb-1"><span>SPA</span><span class="text-white font-bold">${p.stats_base.spa}</span></div>
+                    <div class="flex justify-between text-gray-400"><span>SPD</span><span class="text-white font-bold">${p.stats_base.spd}</span></div>
                     <div class="flex justify-between text-gray-400"><span>VEL</span><span class="text-white font-bold">${p.stats_base.vel}</span></div>
                 </div>
             </div>
