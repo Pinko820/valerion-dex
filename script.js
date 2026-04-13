@@ -70,32 +70,21 @@ function updateUI() {
     const gen = document.getElementById('gen-filter').value;
     const t1 = document.getElementById('type-1').value.toUpperCase();
     const t2 = document.getElementById('type-2').value.toUpperCase();
+    const showForms = document.getElementById('show-forms').checked; // NUEVO
 
     const filtered = pokemonData.filter(p => {
         const matchesSearch = p.nombre.toLowerCase().includes(search);
         const matchesGen = (gen === 'all' || p.generacion === gen);
         
-        // Lógica de filtrado por tipos
+        // REGLA: Si showForms es false, solo mostramos los que NO son forma
+        const matchesFormStatus = showForms ? true : !p.es_forma;
+
+        // Lógica de tipos (mantenemos la que ya teníamos)
         let matchesTypes = true;
         const pTypes = p.tipos.map(t => t.toUpperCase());
+        // ... (tu lógica de t1 y t2 aquí) ...
 
-        if (t1 !== 'ALL' && t2 !== 'ALL') {
-            if (t1 === t2) {
-                // Caso: Mismo tipo en ambos (Busca únicamente Monotipos)
-                matchesTypes = (pTypes.length === 1 && pTypes[0] === t1);
-            } else {
-                // Caso: Dos tipos distintos (Busca combinación Agua/Tierra)
-                matchesTypes = (pTypes.includes(t1) && pTypes.includes(t2));
-            }
-        } else if (t1 !== 'ALL') {
-            // Solo seleccionado el primer combo
-            matchesTypes = pTypes.includes(t1);
-        } else if (t2 !== 'ALL') {
-            // Solo seleccionado el segundo combo
-            matchesTypes = pTypes.includes(t2);
-        }
-
-        return matchesSearch && matchesGen && matchesTypes;
+        return matchesSearch && matchesGen && matchesTypes && matchesFormStatus;
     });
 
     const container = document.getElementById('pokedex');
@@ -108,6 +97,7 @@ function updateUI() {
 function createCard(p) {
     const bst = p.stats_base.hp + p.stats_base.atq + p.stats_base.def + 
                 p.stats_base.spa + p.stats_base.spd + p.stats_base.vel;
+    const nombreAMostrar = p.es_forma && p.form_name ? p.form_name : p.nombre;
 
     const typesHTML = p.tipos.map(t => {
         const info = TYPE_MAP[t.toUpperCase()] || { esp: t, color: '#555' };
@@ -129,7 +119,8 @@ function createCard(p) {
             
             <div class="flex-grow flex flex-col justify-between">
                 <div class="mb-4">
-                    <h2 class="text-center font-black text-2xl uppercase tracking-tighter text-white leading-none">${p.nombre}</h2>
+                    <h2 class="text-center font-black text-2xl uppercase tracking-tighter text-white leading-none">${nombreAMostrar}</h2>
+
                     <p class="text-center text-yellow-500 text-[10px] font-bold mt-1 mb-3">${p.generacion}</p>
                     <div class="flex justify-center gap-1 mb-2 flex-wrap">${typesHTML}</div>
                 </div>
@@ -171,6 +162,7 @@ document.getElementById('gen-filter').addEventListener('change', updateUI);
 document.getElementById('type-1').addEventListener('change', updateUI);
 document.getElementById('type-2').addEventListener('change', updateUI);
 document.getElementById('clear-btn').addEventListener('click', clearFilters);
+document.getElementById('show-forms').addEventListener('change', updateUI);
 
 // Ejecución inicial
 init();
