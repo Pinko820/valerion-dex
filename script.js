@@ -56,45 +56,62 @@ function updateUI() {
     const t1 = document.getElementById('type-1').value.toUpperCase();
     const t2 = document.getElementById('type-2').value.toUpperCase();
     const showForms = document.getElementById('show-forms').checked;
+    
+    // NUEVOS VALORES DE ORDENAMIENTO
+    const sortBy = document.getElementById('sort-by').value;
+    const sortDir = document.getElementById('sort-direction').value;
 
-    const filtered = pokemonData.filter(p => {
+    // 1. FILTRADO (Tu lógica actual corregida)
+    let filtered = pokemonData.filter(p => {
         const matchesSearch = p.nombre.toLowerCase().includes(search);
-        
-        // --- NORMALIZACIÓN DE GENERACIÓN ---
-        // Si el JSON trae 1, lo convertimos a "Gen 1" para comparar con el select
         const pGen = (typeof p.generacion === 'number') ? `Gen ${p.generacion}` : p.generacion;
         
-        let matchesGen = false;
-        if (gen === 'all') {
-            matchesGen = true;
-        } else if (gen === 'Otras') {
-            // Lógica para "Otras": No es Valerion ni de la Gen 1 a la 9
+        let matchesGen = (gen === 'all');
+        if (gen === 'Otras') {
             const principales = ['Valerion', 'Gen 1', 'Gen 2', 'Gen 3', 'Gen 4', 'Gen 5', 'Gen 6', 'Gen 7', 'Gen 8', 'Gen 9'];
             matchesGen = !principales.includes(pGen);
-        } else {
+        } else if (gen !== 'all') {
             matchesGen = (pGen === gen);
         }
         
         const matchesFormStatus = showForms ? true : !p.es_forma;
-
-        let matchesTypes = true;
         const pTypes = p.tipos.map(t => t.toUpperCase());
+        let matchesTypes = true;
 
         if (t1 !== 'ALL' && t2 !== 'ALL') {
-            if (t1 === t2) {
-                matchesTypes = (pTypes.length === 1 && pTypes[0] === t1);
-            } else {
-                matchesTypes = (pTypes.includes(t1) && pTypes.includes(t2));
-            }
-        } else if (t1 !== 'ALL') {
-            matchesTypes = pTypes.includes(t1);
-        } else if (t2 !== 'ALL') {
-            matchesTypes = pTypes.includes(t2);
-        }
+            matchesTypes = (t1 === t2) ? (pTypes.length === 1 && pTypes[0] === t1) : (pTypes.includes(t1) && pTypes.includes(t2));
+        } else if (t1 !== 'ALL') matchesTypes = pTypes.includes(t1);
+        else if (t2 !== 'ALL') matchesTypes = pTypes.includes(t2);
 
         return matchesSearch && matchesGen && matchesTypes && matchesFormStatus;
     });
 
+    // 2. ORDENAMIENTO (Lógica nueva)
+    filtered.sort((a, b) => {
+        let valA, valB;
+
+        // Extraer valores según el criterio
+        if (sortBy === 'nombre') {
+            valA = a.nombre.toLowerCase();
+            valB = b.nombre.toLowerCase();
+        } else if (sortBy === 'bst') {
+            valA = Object.values(a.stats_base).reduce((sum, s) => sum + s, 0);
+            valB = Object.values(b.stats_base).reduce((sum, s) => sum + s, 0);
+        } else if (['hp', 'atq', 'def', 'spa', 'spd', 'vel'].includes(sortBy)) {
+            valA = a.stats_base[sortBy];
+            valB = b.stats_base[sortBy];
+        } else {
+            valA = a.numero;
+            valB = b.numero;
+        }
+
+        // Comparar según dirección
+        if (valA < valB) return sortDir === 'asc' ? -1 : 1;
+        if (valA > valB) return sortDir === 'asc' ? 1 : -1;
+        return 0;
+    });
+
+    // 3. RENDERIZADO
     const container = document.getElementById('pokedex');
     container.innerHTML = filtered.map(p => createCard(p)).join('');
 }
@@ -156,7 +173,12 @@ function clearFilters() {
     document.getElementById('gen-filter').value = 'all';
     document.getElementById('type-1').value = 'all';
     document.getElementById('type-2').value = 'all';
-    document.getElementById('show-forms').checked = true; // Agregado para resetear el checkbox también
+    document.getElementById('show-forms').checked = true;
+    
+    // Resetear ordenamiento
+    document.getElementById('sort-by').value = 'numero';
+    document.getElementById('sort-direction').value = 'asc';
+    
     updateUI();
 }
 
@@ -166,5 +188,7 @@ document.getElementById('type-1').addEventListener('change', updateUI);
 document.getElementById('type-2').addEventListener('change', updateUI);
 document.getElementById('clear-btn').addEventListener('click', clearFilters);
 document.getElementById('show-forms').addEventListener('change', updateUI);
+document.getElementById('sort-by').addEventListener('change', updateUI);
+document.getElementById('sort-direction').addEventListener('change', updateUI);
 
 init();

@@ -18,56 +18,74 @@
         </header>
 
         <div class="max-w-6xl mx-auto bg-gray-800 p-6 rounded-2xl shadow-2xl border border-gray-700 mb-10">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+                <input type="text" id="search" placeholder="Nombre del Pokémon..." 
+                    class="w-full p-3 rounded-xl bg-gray-900 border-none focus:ring-2 focus:ring-yellow-500 text-white placeholder-gray-500">
         
-    <!--FILTRO POR NOMBRE-->
-        <input type="text" id="search" placeholder="Nombre del Pokémon..." 
-               class="w-full p-3 rounded-xl bg-gray-900 border-none focus:ring-2 focus:ring-yellow-500 text-white placeholder-gray-500">
-        
-    <!--FILTRO POR GENERACIÓN-->
-        <select id="gen-filter" class="w-full p-3 rounded-xl bg-gray-900 border-none focus:ring-2 focus:ring-yellow-500 text-gray-300">
-            <option value="all">Todas las Regiones</option>
-            <option value="Valerion">Región Valerion (Fakemon)</option>
-            <option value="Gen 1">Kanto (Gen 1)</option>
-            <option value="Gen 2">Johto (Gen 2)</option>
-            <option value="Gen 3">Hoenn (Gen 3)</option>
-            <option value="Gen 4">Sinnoh (Gen 4)</option>
-            <option value="Gen 5">Unova (Gen 5)</option>
-            <option value="Gen 6">Kalos (Gen 6)</option>
-            <option value="Gen 7">Alola (Gen 7)</option>
-            <option value="Gen 8">Galar (Gen 8)</option>
-            <option value="Gen 9">Paldea (Gen 9)</option>
-            <option value="Otras">Otras Generaciones</option>
-        </select>
+                <select id="gen-filter" class="w-full p-3 rounded-xl bg-gray-900 border-none focus:ring-2 focus:ring-yellow-500 text-gray-300">
+                    <option value="all">Todas las Regiones</option>
+                    <option value="Valerion">Región Valerion (Fakemon)</option>
+                    <option value="Gen 1">Kanto (Gen 1)</option>
+                    <option value="Gen 2">Johto (Gen 2)</option>
+                    <option value="Gen 3">Hoenn (Gen 3)</option>
+                    <option value="Gen 4">Sinnoh (Gen 4)</option>
+                    <option value="Gen 5">Unova (Gen 5)</option>
+                    <option value="Gen 6">Kalos (Gen 6)</option>
+                    <option value="Gen 7">Alola (Gen 7)</option>
+                    <option value="Gen 8">Galar (Gen 8)</option>
+                    <option value="Gen 9">Paldea (Gen 9)</option>
+                <option value="Otras">Otras Generaciones</option>
+                </select>
 
-    <!--FILTRO POR TIPO-->
-        <select id="type-1" class="w-full p-3 rounded-xl bg-gray-900 border-none focus:ring-2 focus:ring-blue-500 text-gray-300">
-            <option value="all">Tipo 1: Todos</option>
-        </select>
+                <select id="type-1" class="w-full p-3 rounded-xl bg-gray-900 border-none focus:ring-2 focus:ring-blue-500 text-gray-300">
+                    <option value="all">Tipo 1: Todos</option>
+                </select>
 
-        <select id="type-2" class="w-full p-3 rounded-xl bg-gray-900 border-none focus:ring-2 focus:ring-red-500 text-gray-300">
-            <option value="all">Tipo 2: Todos / Único</option>
-        </select>
+                <select id="type-2" class="w-full p-3 rounded-xl bg-gray-900 border-none focus:ring-2 focus:ring-red-500 text-gray-300">
+                    <option value="all">Tipo 2: Todos / Único</option>
+                </select>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 border-t border-gray-700 pt-4 mb-6">
+                <div class="flex items-center gap-2">
+                    <label class="text-xs font-bold text-gray-500 uppercase">Ordenar por:</label>
+                    <select id="sort-by" class="flex-1 p-3 rounded-xl bg-gray-900 border-none focus:ring-2 focus:ring-yellow-500 text-gray-300">
+                        <option value="numero">Nº Pokédex</option>
+                        <option value="nombre">Orden Alfabético</option>
+                        <option value="bst">Total Stats (BST)</option>
+                        <option value="hp">PS (Vida)</option>
+                        <option value="atq">Ataque</option>
+                        <option value="def">Defensa</option>
+                        <option value="spa">At. Especial</option>
+                        <option value="spd">Def. Especial</option>
+                        <option value="vel">Velocidad</option>
+                    </select>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <label class="text-xs font-bold text-gray-500 uppercase">Dirección:</label>
+                    <select id="sort-direction" class="flex-1 p-3 rounded-xl bg-gray-900 border-none focus:ring-2 focus:ring-yellow-500 text-gray-300">
+                        <option value="asc">Ascendente (Menor a Mayor)</option>
+                        <option value="desc">Descendente (Mayor a Menor)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <label class="flex items-center gap-2 cursor-pointer text-sm text-gray-400 hover:text-white transition-colors">
+                    <input type="checkbox" id="show-forms" class="w-4 h-4 accent-yellow-500" checked>
+                    Mostrar formas alternativas
+                </label>
+                <button id="clear-btn" class="px-6 py-2 bg-red-600/20 hover:bg-red-600 text-red-400 hover:text-white rounded-xl transition-all font-bold text-sm border border-red-600/50">
+                    Limpiar Filtros
+                </button>
+            </div>
+        </div>
+
+        <div id="pokedex" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+
+        </div>
     </div>
-
-    <!--BOTÓN DE LIMPIEZA-->
-    <div class="flex justify-end">
-        <button id="clear-btn" class="px-6 py-2 bg-red-600/20 hover:bg-red-600 text-red-400 hover:text-white rounded-xl transition-all font-bold text-sm border border-red-600/50">
-            Limpiar Filtros
-        </button>
-    </div>
-
-    <!--CHECKBOX PARA FORMAS ALTERNATIVAS-->
-    <label class="flex items-center gap-2 cursor-pointer text-sm text-gray-400 hover:text-white transition-colors">
-        <input type="checkbox" id="show-forms" class="w-4 h-4 accent-yellow-500" checked>
-        Mostrar formas alternativas
-    </label>
-</div>
-
-        <!-- <div id="pokedex" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6"></div> -->
-        <div id="pokedex" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4"></div>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>
