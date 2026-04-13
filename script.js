@@ -1,4 +1,5 @@
 let pokemonData = [];
+
 const TYPE_MAP = {
     NORMAL: { esp: 'Normal', color: '#A8A77A' },
     FIRE: { esp: 'Fuego', color: '#EE8130' },
@@ -21,11 +22,24 @@ const TYPE_MAP = {
 };
 
 /**
+ * Llena los selectores de tipos automáticamente usando el TYPE_MAP
+ */
+function populateTypeFilters() {
+    const type1Select = document.getElementById('type-1');
+    const type2Select = document.getElementById('type-2');
+    
+    Object.keys(TYPE_MAP).forEach(typeKey => {
+        const optionHTML = `<option value="${typeKey}">${TYPE_MAP[typeKey].esp}</option>`;
+        type1Select.innerHTML += optionHTML;
+        type2Select.innerHTML += optionHTML;
+    });
+}
+
+/**
  * Maneja el error de carga de imagen ocultando el img y mostrando el placeholder
  */
 function handleMissingImage(imgElement) {
     imgElement.classList.add('hidden');
-    // Muestra el div placeholder que es el siguiente hermano en el DOM
     imgElement.nextElementSibling.classList.remove('hidden');
     imgElement.nextElementSibling.classList.add('flex');
 }
@@ -37,6 +51,10 @@ async function init() {
     try {
         const res = await fetch(`valerion_data.json?v=${new Date().getTime()}`);
         pokemonData = await res.json();
+        
+        // Inicializamos los filtros de tipos
+        populateTypeFilters();
+        
         updateUI();
     } catch (error) {
         console.error("Error en la carga:", error);
@@ -45,16 +63,39 @@ async function init() {
 }
 
 /**
- * Filtra y renderiza las tarjetas
+ * Filtra y renderiza las tarjetas basándose en búsqueda, generación y tipos
  */
 function updateUI() {
     const search = document.getElementById('search').value.toLowerCase();
     const gen = document.getElementById('gen-filter').value;
+    const t1 = document.getElementById('type-1').value.toUpperCase();
+    const t2 = document.getElementById('type-2').value.toUpperCase();
 
     const filtered = pokemonData.filter(p => {
         const matchesSearch = p.nombre.toLowerCase().includes(search);
         const matchesGen = (gen === 'all' || p.generacion === gen);
-        return matchesSearch && matchesGen;
+        
+        // Lógica de filtrado por tipos
+        let matchesTypes = true;
+        const pTypes = p.tipos.map(t => t.toUpperCase());
+
+        if (t1 !== 'ALL' && t2 !== 'ALL') {
+            if (t1 === t2) {
+                // Caso: Mismo tipo en ambos (Busca únicamente Monotipos)
+                matchesTypes = (pTypes.length === 1 && pTypes[0] === t1);
+            } else {
+                // Caso: Dos tipos distintos (Busca combinación Agua/Tierra)
+                matchesTypes = (pTypes.includes(t1) && pTypes.includes(t2));
+            }
+        } else if (t1 !== 'ALL') {
+            // Solo seleccionado el primer combo
+            matchesTypes = pTypes.includes(t1);
+        } else if (t2 !== 'ALL') {
+            // Solo seleccionado el segundo combo
+            matchesTypes = pTypes.includes(t2);
+        }
+
+        return matchesSearch && matchesGen && matchesTypes;
     });
 
     const container = document.getElementById('pokedex');
@@ -62,14 +103,12 @@ function updateUI() {
 }
 
 /**
- * Genera el HTML de una tarjeta individual con los 6 stats y su BST total, además de los tipos con su traducción y color correspondiente.
+ * Genera el HTML de una tarjeta individual
  */
 function createCard(p) {
-    // 1. Cálculo del BST (Suma de stats)
     const bst = p.stats_base.hp + p.stats_base.atq + p.stats_base.def + 
                 p.stats_base.spa + p.stats_base.spd + p.stats_base.vel;
 
-    // 2. Traducción de tipos (se mantiene igual)
     const typesHTML = p.tipos.map(t => {
         const info = TYPE_MAP[t.toUpperCase()] || { esp: t, color: '#555' };
         return `<span class="text-[10px] px-2 py-0.5 rounded font-bold text-white uppercase" style="background-color: ${info.color}">${info.esp}</span>`;
@@ -79,7 +118,6 @@ function createCard(p) {
 
     return `
         <div class="bg-gray-800 px-3 py-6 rounded-3xl hover:bg-gray-750 transition-all border-b-8 border-yellow-600 group shadow-lg flex flex-col relative">
-            
             <span class="absolute top-4 right-6 font-mono text-xl font-black text-white/10 group-hover:text-yellow-500/20 transition-colors">
                 #${numeroFormateado}
             </span>
@@ -119,6 +157,8 @@ function createCard(p) {
 // Event Listeners
 document.getElementById('search').addEventListener('input', updateUI);
 document.getElementById('gen-filter').addEventListener('change', updateUI);
+document.getElementById('type-1').addEventListener('change', updateUI);
+document.getElementById('type-2').addEventListener('change', updateUI);
 
 // Ejecución inicial
 init();
