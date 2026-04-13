@@ -154,11 +154,23 @@ function createCard(p) {
     `;
 }
 
+function clearFilters() {
+    // Resetear valores de los elementos del DOM
+    document.getElementById('search').value = '';
+    document.getElementById('gen-filter').value = 'all';
+    document.getElementById('type-1').value = 'all';
+    document.getElementById('type-2').value = 'all';
+    
+    // Ejecutar la actualización de la interfaz para mostrar todos los Pokémon
+    updateUI();
+}
+
 // Event Listeners
 document.getElementById('search').addEventListener('input', updateUI);
 document.getElementById('gen-filter').addEventListener('change', updateUI);
 document.getElementById('type-1').addEventListener('change', updateUI);
 document.getElementById('type-2').addEventListener('change', updateUI);
+document.getElementById('clear-btn').addEventListener('click', clearFilters);
 
 // Ejecución inicial
 init();
