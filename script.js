@@ -21,9 +21,6 @@ const TYPE_MAP = {
     DARK: { esp: 'Siniestro', color: '#705746' }
 };
 
-/**
- * Llena los selectores de tipos automáticamente usando el TYPE_MAP
- */
 function populateTypeFilters() {
     const type1Select = document.getElementById('type-1');
     const type2Select = document.getElementById('type-2');
@@ -35,26 +32,17 @@ function populateTypeFilters() {
     });
 }
 
-/**
- * Maneja el error de carga de imagen ocultando el img y mostrando el placeholder
- */
 function handleMissingImage(imgElement) {
     imgElement.classList.add('hidden');
     imgElement.nextElementSibling.classList.remove('hidden');
     imgElement.nextElementSibling.classList.add('flex');
 }
 
-/**
- * Carga inicial de datos
- */
 async function init() {
     try {
         const res = await fetch(`valerion_data.json?v=${new Date().getTime()}`);
         pokemonData = await res.json();
-        
-        // Inicializamos los filtros de tipos
         populateTypeFilters();
-        
         updateUI();
     } catch (error) {
         console.error("Error en la carga:", error);
@@ -62,27 +50,47 @@ async function init() {
     }
 }
 
-/**
- * Filtra y renderiza las tarjetas basándose en búsqueda, generación y tipos
- */
 function updateUI() {
     const search = document.getElementById('search').value.toLowerCase();
     const gen = document.getElementById('gen-filter').value;
     const t1 = document.getElementById('type-1').value.toUpperCase();
     const t2 = document.getElementById('type-2').value.toUpperCase();
-    const showForms = document.getElementById('show-forms').checked; // NUEVO
+    const showForms = document.getElementById('show-forms').checked;
 
     const filtered = pokemonData.filter(p => {
         const matchesSearch = p.nombre.toLowerCase().includes(search);
-        const matchesGen = (gen === 'all' || p.generacion === gen);
         
-        // REGLA: Si showForms es false, solo mostramos los que NO son forma
+        // --- NORMALIZACIÓN DE GENERACIÓN ---
+        // Si el JSON trae 1, lo convertimos a "Gen 1" para comparar con el select
+        const pGen = (typeof p.generacion === 'number') ? `Gen ${p.generacion}` : p.generacion;
+        
+        let matchesGen = false;
+        if (gen === 'all') {
+            matchesGen = true;
+        } else if (gen === 'Otras') {
+            // Lógica para "Otras": No es Valerion ni de la Gen 1 a la 9
+            const principales = ['Valerion', 'Gen 1', 'Gen 2', 'Gen 3', 'Gen 4', 'Gen 5', 'Gen 6', 'Gen 7', 'Gen 8', 'Gen 9'];
+            matchesGen = !principales.includes(pGen);
+        } else {
+            matchesGen = (pGen === gen);
+        }
+        
         const matchesFormStatus = showForms ? true : !p.es_forma;
 
-        // Lógica de tipos (mantenemos la que ya teníamos)
         let matchesTypes = true;
         const pTypes = p.tipos.map(t => t.toUpperCase());
-        // ... (tu lógica de t1 y t2 aquí) ...
+
+        if (t1 !== 'ALL' && t2 !== 'ALL') {
+            if (t1 === t2) {
+                matchesTypes = (pTypes.length === 1 && pTypes[0] === t1);
+            } else {
+                matchesTypes = (pTypes.includes(t1) && pTypes.includes(t2));
+            }
+        } else if (t1 !== 'ALL') {
+            matchesTypes = pTypes.includes(t1);
+        } else if (t2 !== 'ALL') {
+            matchesTypes = pTypes.includes(t2);
+        }
 
         return matchesSearch && matchesGen && matchesTypes && matchesFormStatus;
     });
@@ -91,20 +99,19 @@ function updateUI() {
     container.innerHTML = filtered.map(p => createCard(p)).join('');
 }
 
-/**
- * Genera el HTML de una tarjeta individual
- */
 function createCard(p) {
     const bst = p.stats_base.hp + p.stats_base.atq + p.stats_base.def + 
                 p.stats_base.spa + p.stats_base.spd + p.stats_base.vel;
+    
     const nombreAMostrar = p.es_forma && p.form_name ? p.form_name : p.nombre;
-
     const typesHTML = p.tipos.map(t => {
         const info = TYPE_MAP[t.toUpperCase()] || { esp: t, color: '#555' };
         return `<span class="text-[10px] px-2 py-0.5 rounded font-bold text-white uppercase" style="background-color: ${info.color}">${info.esp}</span>`;
     }).join('');
 
     const numeroFormateado = String(p.numero).padStart(3, '0');
+    // Normalizamos la etiqueta de generación para la vista
+    const genLabel = (typeof p.generacion === 'number') ? `Gen ${p.generacion}` : p.generacion;
 
     return `
         <div class="bg-gray-800 px-3 py-6 rounded-3xl hover:bg-gray-750 transition-all border-b-8 border-yellow-600 group shadow-lg flex flex-col relative">
@@ -120,8 +127,7 @@ function createCard(p) {
             <div class="flex-grow flex flex-col justify-between">
                 <div class="mb-4">
                     <h2 class="text-center font-black text-2xl uppercase tracking-tighter text-white leading-none">${nombreAMostrar}</h2>
-
-                    <p class="text-center text-yellow-500 text-[10px] font-bold mt-1 mb-3">${p.generacion}</p>
+                    <p class="text-center text-yellow-500 text-[10px] font-bold mt-1 mb-3">${genLabel}</p>
                     <div class="flex justify-center gap-1 mb-2 flex-wrap">${typesHTML}</div>
                 </div>
 
@@ -146,17 +152,14 @@ function createCard(p) {
 }
 
 function clearFilters() {
-    // Resetear valores de los elementos del DOM
     document.getElementById('search').value = '';
     document.getElementById('gen-filter').value = 'all';
     document.getElementById('type-1').value = 'all';
     document.getElementById('type-2').value = 'all';
-    
-    // Ejecutar la actualización de la interfaz para mostrar todos los Pokémon
+    document.getElementById('show-forms').checked = true; // Agregado para resetear el checkbox también
     updateUI();
 }
 
-// Event Listeners
 document.getElementById('search').addEventListener('input', updateUI);
 document.getElementById('gen-filter').addEventListener('change', updateUI);
 document.getElementById('type-1').addEventListener('change', updateUI);
@@ -164,5 +167,4 @@ document.getElementById('type-2').addEventListener('change', updateUI);
 document.getElementById('clear-btn').addEventListener('click', clearFilters);
 document.getElementById('show-forms').addEventListener('change', updateUI);
 
-// Ejecución inicial
 init();
