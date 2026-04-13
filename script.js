@@ -121,7 +121,7 @@ function createCard(p) {
                 <div class="mb-4">
                     <h2 class="text-center font-black text-2xl uppercase tracking-tighter text-white leading-none">${nombreAMostrar}</h2>
 
-                    <p class="text-center text-yellow-500 text-[10px] font-bold mt-1 mb-3">${p.generacion}</p>
+                    <p class="text-center text-yellow-500 text-[10px] font-bold mt-1 mb-3">$Gen {p.generacion}</p>
                     <div class="flex justify-center gap-1 mb-2 flex-wrap">${typesHTML}</div>
                 </div>
 
