@@ -1140,7 +1140,7 @@
     "numero": 26,
     "id": "RAICHU_1",
     "nombre": "Raichu",
-    "form_name": "Forma Alola",
+    "form_name": "Raichu Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -1261,7 +1261,7 @@
     "numero": 27,
     "id": "SANDSHREW_1",
     "nombre": "Sandshrew",
-    "form_name": "Forma Alola",
+    "form_name": "Sandshrew Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -1322,7 +1322,7 @@
     "numero": 28,
     "id": "SANDSLASH_1",
     "nombre": "Sandslash",
-    "form_name": "Forma Alola",
+    "form_name": "Sandslash Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -1664,11 +1664,12 @@
     "numero": 37,
     "id": "VULPIX_1",
     "nombre": "Vulpix",
-    "form_name": "Forma Alola",
+    "form_name": "Vulpix Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
-      "ICE"
+      "ICE",
+      "NORMAL"
     ],
     "stats_base": {
       "hp": 38,
@@ -1725,7 +1726,7 @@
     "numero": 38,
     "id": "NINETALES_1",
     "nombre": "Ninetales",
-    "form_name": "Forma Alola",
+    "form_name": "Ninetales Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -2134,7 +2135,7 @@
     "numero": 50,
     "id": "DIGLETT_1",
     "nombre": "Diglett",
-    "form_name": "Forma Alola",
+    "form_name": "Diglett Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -2197,7 +2198,7 @@
     "numero": 51,
     "id": "DUGTRIO_1",
     "nombre": "Dugtrio",
-    "form_name": "Forma Alola",
+    "form_name": "Dugtrio Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -2260,7 +2261,7 @@
     "numero": 52,
     "id": "MEOWTH_1",
     "nombre": "Meowth",
-    "form_name": "Forma Alola",
+    "form_name": "Meowth Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -2291,7 +2292,7 @@
     "numero": 52,
     "id": "MEOWTH_2",
     "nombre": "Meowth",
-    "form_name": "Forma Galar",
+    "form_name": "Meowth Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -2353,7 +2354,7 @@
     "numero": 53,
     "id": "PERSIAN_1",
     "nombre": "Persian",
-    "form_name": "Forma Alola",
+    "form_name": "Persian Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -3164,7 +3165,7 @@
     "numero": 74,
     "id": "GEODUDE_1",
     "nombre": "Geodude",
-    "form_name": "Forma Alola",
+    "form_name": "Geodude Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -3228,7 +3229,7 @@
     "numero": 75,
     "id": "GRAVELER_1",
     "nombre": "Graveler",
-    "form_name": "Forma Alola",
+    "form_name": "Graveler Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -3292,7 +3293,7 @@
     "numero": 76,
     "id": "GOLEM_1",
     "nombre": "Golem",
-    "form_name": "Forma Alola",
+    "form_name": "Golem Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -3355,7 +3356,7 @@
     "numero": 77,
     "id": "PONYTA_1",
     "nombre": "Ponyta",
-    "form_name": "Forma Galar",
+    "form_name": "Ponyta Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -3417,7 +3418,7 @@
     "numero": 78,
     "id": "RAPIDASH_1",
     "nombre": "Rapidash",
-    "form_name": "Forma Galar",
+    "form_name": "Rapidash Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -3481,7 +3482,7 @@
     "numero": 79,
     "id": "SLOWPOKE_1",
     "nombre": "Slowpoke",
-    "form_name": "Forma Galar",
+    "form_name": "Slowpoke Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -3544,7 +3545,7 @@
     "numero": 80,
     "id": "SLOWBRO_1",
     "nombre": "Slowbro",
-    "form_name": "Forma Galar",
+    "form_name": "Slowbro Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -3703,7 +3704,7 @@
     "numero": 83,
     "id": "FARFETCHD_1",
     "nombre": "Farfetch'd",
-    "form_name": "Forma Galar",
+    "form_name": "Farfetch'd Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -3891,7 +3892,7 @@
     "numero": 88,
     "id": "GRIMER_1",
     "nombre": "Grimer",
-    "form_name": "Forma Alola",
+    "form_name": "Grimer Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -3954,7 +3955,7 @@
     "numero": 89,
     "id": "MUK_1",
     "nombre": "Muk",
-    "form_name": "Forma Alola",
+    "form_name": "Muk Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -4517,7 +4518,7 @@
     "numero": 103,
     "id": "EXEGGUTOR_1",
     "nombre": "Exeggutor",
-    "form_name": "Forma Alola",
+    "form_name": "Exeggutor Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -4551,37 +4552,6 @@
     "form_name": "",
     "es_forma": false,
     "generacion": 1,
-    "tipos": [
-      "GROUND"
-    ],
-    "stats_base": {
-      "hp": 50,
-      "atq": 50,
-      "def": 95,
-      "spa": 40,
-      "spd": 50,
-      "vel": 35
-    },
-    "física": {
-      "altura": 0.4,
-      "peso": 6.5
-    },
-    "habilidades": [
-      "ROCKHEAD",
-      "LIGHTNINGROD"
-    ],
-    "habilidad_oculta": [
-      "BATTLEARMOR"
-    ],
-    "descripcion": "Le apena no volver a ver a su madre. La luna llena le recuerda a ella y se pone a chillar. Las marcas que tiene en el cráneo que lleva son debido a sus lágrimas."
-  },
-  {
-    "numero": 104,
-    "id": "CUBONE_1",
-    "nombre": "Cubone",
-    "form_name": "",
-    "es_forma": true,
-    "generacion": 7,
     "tipos": [
       "GROUND"
     ],
@@ -4641,7 +4611,7 @@
     "numero": 105,
     "id": "MAROWAK_1",
     "nombre": "Marowak",
-    "form_name": "Forma Alola",
+    "form_name": "Marowak Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -4828,7 +4798,7 @@
     "numero": 110,
     "id": "WEEZING_1",
     "nombre": "Weezing",
-    "form_name": "Forma Galar",
+    "form_name": "Weezing Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -5297,7 +5267,7 @@
     "numero": 122,
     "id": "MRMIME_1",
     "nombre": "Mr. Mime",
-    "form_name": "Forma Galar",
+    "form_name": "Mr. Mime Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -6200,7 +6170,7 @@
     "numero": 144,
     "id": "ARTICUNO_1",
     "nombre": "Articuno",
-    "form_name": "Forma Galar",
+    "form_name": "Articuno Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -6262,7 +6232,7 @@
     "numero": 145,
     "id": "ZAPDOS_1",
     "nombre": "Zapdos",
-    "form_name": "Forma Galar",
+    "form_name": "Zapdos Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -6324,7 +6294,7 @@
     "numero": 146,
     "id": "MOLTRES_1",
     "nombre": "Moltres",
-    "form_name": "Forma Galar",
+    "form_name": "Moltres Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -8279,7 +8249,7 @@
     "numero": 199,
     "id": "SLOWKING_1",
     "nombre": "Slowking",
-    "form_name": "Forma Galar",
+    "form_name": "Slowking Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -9999,7 +9969,7 @@
     "numero": 222,
     "id": "CORSOLA_1",
     "nombre": "Corsola",
-    "form_name": "Forma Galar",
+    "form_name": "Corsola Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -11481,7 +11451,7 @@
     "numero": 263,
     "id": "ZIGZAGOON_1",
     "nombre": "Zigzagoon",
-    "form_name": "Forma Galar",
+    "form_name": "Zigzagoon Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -11544,7 +11514,7 @@
     "numero": 264,
     "id": "LINOONE_1",
     "nombre": "Linoone",
-    "form_name": "Forma Galar",
+    "form_name": "Linoone Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -22722,37 +22692,6 @@
     "descripcion": "Habita tierras húmedas ricas en nutrientes donde la cosecha es abundante."
   },
   {
-    "numero": 548,
-    "id": "PETILIL_1",
-    "nombre": "Petilil",
-    "form_name": "",
-    "es_forma": true,
-    "generacion": 8,
-    "tipos": [
-      "GRASS"
-    ],
-    "stats_base": {
-      "hp": 45,
-      "atq": 35,
-      "def": 50,
-      "spa": 70,
-      "spd": 50,
-      "vel": 30
-    },
-    "física": {
-      "altura": 0.5,
-      "peso": 6.6
-    },
-    "habilidades": [
-      "CHLOROPHYLL",
-      "OWNTEMPO"
-    ],
-    "habilidad_oculta": [
-      "LEAFGUARD"
-    ],
-    "descripcion": "Habita tierras húmedas ricas en nutrientes donde la cosecha es abundante."
-  },
-  {
     "numero": 549,
     "id": "LILLIGANT",
     "nombre": "Lilligant",
@@ -23038,7 +22977,7 @@
     "numero": 554,
     "id": "DARUMAKA_2",
     "nombre": "Darumaka",
-    "form_name": "Forma Galar",
+    "form_name": "Darumaka Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -23129,7 +23068,7 @@
     "numero": 555,
     "id": "DARMANITAN_2",
     "nombre": "Darmanitan",
-    "form_name": "Forma Galar",
+    "form_name": "Darmanitan Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -23442,7 +23381,7 @@
     "numero": 562,
     "id": "YAMASK_1",
     "nombre": "Yamask",
-    "form_name": "Forma Galar",
+    "form_name": "Yamask Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -25532,7 +25471,7 @@
     "numero": 618,
     "id": "STUNFISK_1",
     "nombre": "Stunfisk",
-    "form_name": "Forma Galar",
+    "form_name": "Stunfisk Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
