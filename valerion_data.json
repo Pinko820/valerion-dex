@@ -29952,37 +29952,6 @@
     "descripcion": "Es el Pokémon de tipo Dragón más débil. Habita en zonas oscuras y húmedas para evitar que su viscoso cuerpo se seque."
   },
   {
-    "numero": 704,
-    "id": "GOOMY_1",
-    "nombre": "Goomy",
-    "form_name": "",
-    "es_forma": true,
-    "generacion": 8,
-    "tipos": [
-      "DRAGON"
-    ],
-    "stats_base": {
-      "hp": 45,
-      "atq": 50,
-      "def": 35,
-      "spa": 55,
-      "spd": 75,
-      "vel": 40
-    },
-    "física": {
-      "altura": 0.3,
-      "peso": 2.8
-    },
-    "habilidades": [
-      "SAPSIPPER",
-      "HYDRATION"
-    ],
-    "habilidad_oculta": [
-      "GOOEY"
-    ],
-    "descripcion": "Es el Pokémon de tipo Dragón más débil. Habita en zonas oscuras y húmedas para evitar que su viscoso cuerpo se seque."
-  },
-  {
     "numero": 705,
     "id": "SLIGGOO",
     "nombre": "Sliggoo",
@@ -30236,102 +30205,6 @@
     "descripcion": "En el interior de la calabaza reside un espíritu que ha permanecido atrapado en este mundo. Entra en acción al caer la noche."
   },
   {
-    "numero": 710,
-    "id": "PUMPKABOO_1",
-    "nombre": "Pumpkaboo",
-    "form_name": "Tamaño Normal",
-    "es_forma": true,
-    "generacion": 6,
-    "tipos": [
-      "GHOST",
-      "GRASS"
-    ],
-    "stats_base": {
-      "hp": 49,
-      "atq": 66,
-      "def": 70,
-      "spa": 44,
-      "spd": 55,
-      "vel": 51
-    },
-    "física": {
-      "altura": 0.4,
-      "peso": 5.0
-    },
-    "habilidades": [
-      "PICKUP",
-      "FRISK"
-    ],
-    "habilidad_oculta": [
-      "INSOMNIA"
-    ],
-    "descripcion": "Las almas errantes de este mundo se introducen en su cuerpo e inician así su viaje al más allá."
-  },
-  {
-    "numero": 710,
-    "id": "PUMPKABOO_2",
-    "nombre": "Pumpkaboo",
-    "form_name": "Tamaño Grande",
-    "es_forma": true,
-    "generacion": 6,
-    "tipos": [
-      "GHOST",
-      "GRASS"
-    ],
-    "stats_base": {
-      "hp": 54,
-      "atq": 66,
-      "def": 70,
-      "spa": 44,
-      "spd": 55,
-      "vel": 46
-    },
-    "física": {
-      "altura": 0.5,
-      "peso": 7.5
-    },
-    "habilidades": [
-      "PICKUP",
-      "FRISK"
-    ],
-    "habilidad_oculta": [
-
-    ],
-    "descripcion": "Se atribuye su gran tamaño al hecho de haber vivido en un lugar donde no escaseaban las almas errantes."
-  },
-  {
-    "numero": 710,
-    "id": "PUMPKABOO_3",
-    "nombre": "Pumpkaboo",
-    "form_name": "Tamaño Extragrande",
-    "es_forma": true,
-    "generacion": 6,
-    "tipos": [
-      "GHOST",
-      "GRASS"
-    ],
-    "stats_base": {
-      "hp": 59,
-      "atq": 66,
-      "def": 70,
-      "spa": 44,
-      "spd": 55,
-      "vel": 41
-    },
-    "física": {
-      "altura": 0.8,
-      "peso": 15.0
-    },
-    "habilidades": [
-      "PICKUP",
-      "FRISK"
-    ],
-    "habilidad_oculta": [
-      "INSOMNIA"
-    ],
-    "descripcion": "Se atribuye su enorme tamaño al hecho de haber vivido en un lugar donde abundaban las almas errantes."
-  },
-  {
     "numero": 711,
     "id": "GOURGEIST",
     "nombre": "Gourgeist",
@@ -30364,139 +30237,12 @@
     "descripcion": "En las noches de luna nueva deambula por las calles de las ciudades y emite espeluznantes alaridos que maldicen a quienes los oyen."
   },
   {
-    "numero": 711,
-    "id": "GOURGEIST_1",
-    "nombre": "Gourgeist",
-    "form_name": "Tamaño Normal",
-    "es_forma": true,
-    "generacion": 6,
-    "tipos": [
-      "GHOST",
-      "GRASS"
-    ],
-    "stats_base": {
-      "hp": 65,
-      "atq": 90,
-      "def": 122,
-      "spa": 58,
-      "spd": 75,
-      "vel": 84
-    },
-    "física": {
-      "altura": 0.9,
-      "peso": 12.5
-    },
-    "habilidades": [
-      "PICKUP",
-      "FRISK"
-    ],
-    "habilidad_oculta": [
-      "INSOMNIA"
-    ],
-    "descripcion": "Se dice que los espeluznantes alaridos que emite bien entrada la noche son los lamentos de almas en pena desde el más allá."
-  },
-  {
-    "numero": 711,
-    "id": "GOURGEIST_2",
-    "nombre": "Gourgeist",
-    "form_name": "Tamaño Grande",
-    "es_forma": true,
-    "generacion": 6,
-    "tipos": [
-      "GHOST",
-      "GRASS"
-    ],
-    "stats_base": {
-      "hp": 75,
-      "atq": 95,
-      "def": 122,
-      "spa": 58,
-      "spd": 75,
-      "vel": 69
-    },
-    "física": {
-      "altura": 1.1,
-      "peso": 14.0
-    },
-    "habilidades": [
-      "PICKUP",
-      "FRISK"
-    ],
-    "habilidad_oculta": [
-
-    ],
-    "descripcion": "Los Gourgeist Tamaño Grande se hacen pasar por adultos para tomar a los niños de la mano y llevárselos al otro mundo."
-  },
-  {
-    "numero": 711,
-    "id": "GOURGEIST_3",
-    "nombre": "Gourgeist",
-    "form_name": "Tamaño Extragrande",
-    "es_forma": true,
-    "generacion": 6,
-    "tipos": [
-      "GHOST",
-      "GRASS"
-    ],
-    "stats_base": {
-      "hp": 85,
-      "atq": 100,
-      "def": 122,
-      "spa": 58,
-      "spd": 75,
-      "vel": 54
-    },
-    "física": {
-      "altura": 1.7,
-      "peso": 39.0
-    },
-    "habilidades": [
-      "PICKUP",
-      "FRISK"
-    ],
-    "habilidad_oculta": [
-      "INSOMNIA"
-    ],
-    "descripcion": "Los Gourgeist tamaño Extragrande se llevan a cualquiera al otro mundo, pues nadie puede resistir su fuerza."
-  },
-  {
     "numero": 712,
     "id": "BERGMITE",
     "nombre": "Bergmite",
     "form_name": "",
     "es_forma": false,
     "generacion": 6,
-    "tipos": [
-      "ICE"
-    ],
-    "stats_base": {
-      "hp": 55,
-      "atq": 69,
-      "def": 85,
-      "spa": 32,
-      "spd": 35,
-      "vel": 28
-    },
-    "física": {
-      "altura": 1.0,
-      "peso": 99.5
-    },
-    "habilidades": [
-      "OWNTEMPO",
-      "ICEBODY"
-    ],
-    "habilidad_oculta": [
-      "STURDY"
-    ],
-    "descripcion": "Envuelve su cuerpo en una capa de hielo que le permite evitar los ataques del enemigo. Si se resquebraja, la recompone con aire gélido."
-  },
-  {
-    "numero": 712,
-    "id": "BERGMITE_1",
-    "nombre": "Bergmite",
-    "form_name": "",
-    "es_forma": true,
-    "generacion": 8,
     "tipos": [
       "ICE"
     ],
@@ -31083,74 +30829,12 @@
     "descripcion": "Es cauteloso, desconfiado y de naturaleza nocturna. Durante el día acumula energía mediante la fotosíntesis."
   },
   {
-    "numero": 722,
-    "id": "ROWLET_1",
-    "nombre": "Rowlet",
-    "form_name": "",
-    "es_forma": true,
-    "generacion": 8,
-    "tipos": [
-      "GRASS",
-      "FLYING"
-    ],
-    "stats_base": {
-      "hp": 68,
-      "atq": 55,
-      "def": 55,
-      "spa": 50,
-      "spd": 50,
-      "vel": 42
-    },
-    "física": {
-      "altura": 0.3,
-      "peso": 1.5
-    },
-    "habilidades": [
-      "OVERGROW"
-    ],
-    "habilidad_oculta": [
-      "LONGREACH"
-    ],
-    "descripcion": "Es cauteloso, desconfiado y de naturaleza nocturna. Durante el día acumula energía mediante la fotosíntesis."
-  },
-  {
     "numero": 723,
     "id": "DARTRIX",
     "nombre": "Dartrix",
     "form_name": "",
     "es_forma": false,
     "generacion": 7,
-    "tipos": [
-      "GRASS",
-      "FLYING"
-    ],
-    "stats_base": {
-      "hp": 78,
-      "atq": 75,
-      "def": 75,
-      "spa": 70,
-      "spd": 70,
-      "vel": 52
-    },
-    "física": {
-      "altura": 0.7,
-      "peso": 16.0
-    },
-    "habilidades": [
-      "OVERGROW"
-    ],
-    "habilidad_oculta": [
-      "LONGREACH"
-    ],
-    "descripcion": "Su capacidad de percepción es excelente y puede detectar una presencia a sus espaldas y aniquilarla con sus afiladas plumas."
-  },
-  {
-    "numero": 723,
-    "id": "DARTRIX_1",
-    "nombre": "Dartrix",
-    "form_name": "",
-    "es_forma": true,
-    "generacion": 8,
     "tipos": [
       "GRASS",
       "FLYING"
