@@ -4483,37 +4483,6 @@
     "descripcion": "Está compuesto de seis huevos que forman una tupida piña que va girando. Si empiezan a resquebrajarse las cáscaras, es que le queda poco para evolucionar."
   },
   {
-    "numero": 102,
-    "id": "EXEGGCUTE_1",
-    "nombre": "Exeggcute",
-    "form_name": "",
-    "es_forma": true,
-    "generacion": 7,
-    "tipos": [
-      "GRASS",
-      "PSYCHIC"
-    ],
-    "stats_base": {
-      "hp": 60,
-      "atq": 40,
-      "def": 80,
-      "spa": 60,
-      "spd": 45,
-      "vel": 40
-    },
-    "física": {
-      "altura": 0.4,
-      "peso": 2.5
-    },
-    "habilidades": [
-      "CHLOROPHYLL"
-    ],
-    "habilidad_oculta": [
-      "HARVEST"
-    ],
-    "descripcion": "Está compuesto de seis huevos que forman una tupida piña que va girando. Si empiezan a resquebrajarse las cáscaras, es que le queda poco para evolucionar."
-  },
-  {
     "numero": 103,
     "id": "EXEGGUTOR",
     "nombre": "Exeggutor",
@@ -40390,7 +40359,6 @@
     "generacion": 9,
     "tipos": [
       "STEEL",
-      "POISON",
       "POISON"
     ],
     "stats_base": {
@@ -42152,37 +42120,6 @@
     "descripcion": "Según se dice, el resquemor de un practicante de la ceremonia del té que murió sin perfeccionar el arte poseyó el matcha y dio lugar a un Pokémon."
   },
   {
-    "numero": 1012,
-    "id": "POLTCHAGEIST_1",
-    "nombre": "Poltchageist",
-    "form_name": "Forma Opulenta",
-    "es_forma": true,
-    "generacion": 9,
-    "tipos": [
-      "GRASS",
-      "GHOST"
-    ],
-    "stats_base": {
-      "hp": 40,
-      "atq": 45,
-      "def": 45,
-      "spa": 74,
-      "spd": 54,
-      "vel": 50
-    },
-    "física": {
-      "altura": 0.1,
-      "peso": 1.1
-    },
-    "habilidades": [
-      "HOSPITALITY"
-    ],
-    "habilidad_oculta": [
-      "HEATPROOF"
-    ],
-    "descripcion": "Absorbe la energía vital de aquellos que prueban un bocado de cualquier comida condimentada con el polvo que conforma su cuerpo."
-  },
-  {
     "numero": 1013,
     "id": "SINISTCHA",
     "nombre": "Sinistcha",
@@ -42212,37 +42149,6 @@
       "HEATPROOF"
     ],
     "descripcion": "Prefiere los lugares fríos y oscuros, como el fondo de las estanterías o bajo el suelo de las casas. Vaga en pos de presas tras el ocaso."
-  },
-  {
-    "numero": 1013,
-    "id": "SINISTCHA_1",
-    "nombre": "Sinistcha",
-    "form_name": "Forma Exquisita",
-    "es_forma": true,
-    "generacion": 9,
-    "tipos": [
-      "GRASS",
-      "GHOST"
-    ],
-    "stats_base": {
-      "hp": 71,
-      "atq": 60,
-      "def": 106,
-      "spa": 121,
-      "spd": 80,
-      "vel": 70
-    },
-    "física": {
-      "altura": 0.2,
-      "peso": 4.9
-    },
-    "habilidades": [
-      "HOSPITALITY"
-    ],
-    "habilidad_oculta": [
-      "HEATPROOF"
-    ],
-    "descripcion": "Vive en un exquisito cuenco de té elaborado por un alfarero de renombre. Los coleccionistas más acérrimos se desviven por este Pokémon."
   },
   {
     "numero": 1014,
@@ -42371,7 +42277,7 @@
     "numero": 1017,
     "id": "OGERPON_1",
     "nombre": "Ogerpon",
-    "form_name": "Máscara Fuente",
+    "form_name": "Ogerpon Máscara Fuente",
     "es_forma": true,
     "generacion": 9,
     "tipos": [
@@ -42402,7 +42308,7 @@
     "numero": 1017,
     "id": "OGERPON_2",
     "nombre": "Ogerpon",
-    "form_name": "Máscara Horno",
+    "form_name": "Ogerpon Máscara Horno",
     "es_forma": true,
     "generacion": 9,
     "tipos": [
@@ -42433,7 +42339,7 @@
     "numero": 1017,
     "id": "OGERPON_3",
     "nombre": "Ogerpon",
-    "form_name": "Máscara Cimiento",
+    "form_name": "Ogerpon Máscara Cimiento",
     "es_forma": true,
     "generacion": 9,
     "tipos": [
@@ -42462,132 +42368,9 @@
   },
   {
     "numero": 1017,
-    "id": "OGERPON_4",
-    "nombre": "Ogerpon",
-    "form_name": "",
-    "es_forma": true,
-    "generacion": 9,
-    "tipos": [
-      "GRASS"
-    ],
-    "stats_base": {
-      "hp": 80,
-      "atq": 120,
-      "def": 84,
-      "spa": 60,
-      "spd": 96,
-      "vel": 110
-    },
-    "física": {
-      "altura": 1.2,
-      "peso": 39.8
-    },
-    "habilidades": [
-      "DEFIANT"
-    ],
-    "habilidad_oculta": [
-
-    ],
-    "descripcion": "Es bromista y extremadamente curioso. A la hora de combatir, se sirve del tipo de energía que contenga la máscara que lleve puesta."
-  },
-  {
-    "numero": 1017,
-    "id": "OGERPON_5",
-    "nombre": "Ogerpon",
-    "form_name": "Máscara Fuente",
-    "es_forma": true,
-    "generacion": 9,
-    "tipos": [
-      "GRASS",
-      "WATER"
-    ],
-    "stats_base": {
-      "hp": 80,
-      "atq": 120,
-      "def": 84,
-      "spa": 60,
-      "spd": 96,
-      "vel": 110
-    },
-    "física": {
-      "altura": 1.2,
-      "peso": 39.8
-    },
-    "habilidades": [
-      "WATERABSORB"
-    ],
-    "habilidad_oculta": [
-
-    ],
-    "descripcion": "Es bromista y extremadamente curioso. A la hora de combatir, se sirve del tipo de energía que contenga la máscara que lleve puesta."
-  },
-  {
-    "numero": 1017,
-    "id": "OGERPON_6",
-    "nombre": "Ogerpon",
-    "form_name": "Máscara Horno",
-    "es_forma": true,
-    "generacion": 9,
-    "tipos": [
-      "GRASS",
-      "FIRE"
-    ],
-    "stats_base": {
-      "hp": 80,
-      "atq": 120,
-      "def": 84,
-      "spa": 60,
-      "spd": 96,
-      "vel": 110
-    },
-    "física": {
-      "altura": 1.2,
-      "peso": 39.8
-    },
-    "habilidades": [
-      "MOLDBREAKER"
-    ],
-    "habilidad_oculta": [
-
-    ],
-    "descripcion": "Es bromista y extremadamente curioso. A la hora de combatir, se sirve del tipo de energía que contenga la máscara que lleve puesta."
-  },
-  {
-    "numero": 1017,
-    "id": "OGERPON_7",
-    "nombre": "Ogerpon",
-    "form_name": "Máscara Cimiento",
-    "es_forma": true,
-    "generacion": 9,
-    "tipos": [
-      "GRASS",
-      "ROCK"
-    ],
-    "stats_base": {
-      "hp": 80,
-      "atq": 120,
-      "def": 84,
-      "spa": 60,
-      "spd": 96,
-      "vel": 110
-    },
-    "física": {
-      "altura": 1.2,
-      "peso": 39.8
-    },
-    "habilidades": [
-      "STURDY"
-    ],
-    "habilidad_oculta": [
-
-    ],
-    "descripcion": "Es bromista y extremadamente curioso. A la hora de combatir, se sirve del tipo de energía que contenga la máscara que lleve puesta."
-  },
-  {
-    "numero": 1017,
     "id": "OGERPON_8",
     "nombre": "Ogerpon",
-    "form_name": "Máscara Turquesa teracristalizado",
+    "form_name": "Ogerpon Máscara Turquesa teracristalizado",
     "es_forma": true,
     "generacion": 9,
     "tipos": [
@@ -42617,7 +42400,7 @@
     "numero": 1017,
     "id": "OGERPON_9",
     "nombre": "Ogerpon",
-    "form_name": "Máscara Fuente teracristalizado",
+    "form_name": "Ogerpon Máscara Fuente teracristalizado",
     "es_forma": true,
     "generacion": 9,
     "tipos": [
@@ -42648,7 +42431,7 @@
     "numero": 1017,
     "id": "OGERPON_10",
     "nombre": "Ogerpon",
-    "form_name": "Máscara Horno teracristalizado",
+    "form_name": "Ogerpon Máscara Horno teracristalizado",
     "es_forma": true,
     "generacion": 9,
     "tipos": [
@@ -42679,7 +42462,7 @@
     "numero": 1017,
     "id": "OGERPON_11",
     "nombre": "Ogerpon",
-    "form_name": "Máscara Cimiento teracristalizado",
+    "form_name": "Ogerpon Máscara Cimiento teracristalizado",
     "es_forma": true,
     "generacion": 9,
     "tipos": [
