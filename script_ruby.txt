@@ -4,17 +4,11 @@ def pbExportarPokedexJSON
   mapa_numeros = {}
   indice_regional = 1
 
-  # 1. Obtenemos el orden original del motor (el orden de los PBS)
-  # GameData::Species.keys nos da los símbolos en el orden correcto
-  orden_pbs = GameData::Species.keys
-
-  # 2. Recolectamos todas las especies en una lista plana
   todas_las_especies = []
   GameData::Species.each { |s| todas_las_especies << s }
 
-  # 3. ORDENAMIENTO MAESTRO:
-  # - Primero: Buscamos la posición de la especie BASE en el orden del PBS
-  # - Segundo: Ordenamos por número de forma (0, 1, 2...) para que las megas sigan a su base
+  # Ordenamos por posición en PBS y luego por forma
+  orden_pbs = GameData::Species.keys
   especies_ordenadas = todas_las_especies.sort_by do |s| 
     [orden_pbs.index(s.species), s.form] 
   end
@@ -22,14 +16,36 @@ def pbExportarPokedexJSON
   especies_ordenadas.each do |s|
     next if s.name.nil? || s.name == ""
     
-    # Lógica de número regional (Venusaur y Mega Venusaur comparten el mismo)
-    if s.form == 0
-      numero_pokedex = indice_regional
-      mapa_numeros[s.species] = numero_pokedex
-      indice_regional += 1
-    else
-      numero_pokedex = mapa_numeros[s.species] || 0
+    # --- FILTRO DE FORMAS ESTÉTICAS ---
+    especie_id = s.species
+    forma = s.form
+    skip_pokemon = false
+
+    case especie_id
+    when :MINIOR
+      # Solo conservamos la forma 7 (que suele ser el Núcleo Rojo en Essentials)
+      skip_pokemon = true if forma != 7
+    when :ALCREMIE, :FLABEBE, :FLORGES, :GENESECT
+      # Solo conservamos la forma base (forma 0)
+      skip_pokemon = true if forma > 0
+    when :FLOETTE
+      # Solo conservamos la Forma Eterna (5) y tu Mega personalizada (6)
+      skip_pokemon = true unless [5, 6].include?(forma)
     end
+
+    next if skip_pokemon
+    # ----------------------------------
+
+    # Lógica de número regional
+    if forma == 0 || especie_id == :MINIOR || especie_id == :FLOETTE
+      # Asignamos número si es base o si es el "representante" que elegimos (Minior/Floette)
+      unless mapa_numeros.key?(especie_id)
+        mapa_numeros[especie_id] = indice_regional
+        indice_regional += 1
+      end
+    end
+    
+    numero_pokedex = mapa_numeros[especie_id] || 0
 
     pokedex << {
       "numero" => numero_pokedex,
@@ -58,5 +74,5 @@ def pbExportarPokedexJSON
   end
 
   File.open("valerion_data.json", "w") { |f| f.write(JSON.pretty_generate(pokedex)) }
-  pbMessage(_INTL("JSON exportado en orden Nacional/PBS con #{indice_regional-1} especies."))
+  pbMessage(_INTL("Exportación limpia: se eliminaron formas estéticas redundantes."))
 end

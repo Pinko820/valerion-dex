@@ -64,7 +64,11 @@ function updateUI() {
     // 1. FILTRADO (Tu lógica actual corregida)
     let filtered = pokemonData.filter(p => {
         const matchesSearch = p.nombre.toLowerCase().includes(search);
-        const pGen = (typeof p.generacion === 'number') ? `Gen ${p.generacion}` : p.generacion;
+
+        // TRADUCCIÓN: Si es 124, lo tratamos como "Valerion", si no, como "Gen X"
+        const pGen = (typeof p.generacion === 'number') ? 
+                (p.generacion === 124 ? "Valerion" : `Gen ${p.generacion}`) : 
+                p.generacion;
         
         let matchesGen = (gen === 'all');
         if (gen === 'Otras') {
@@ -128,7 +132,9 @@ function createCard(p) {
 
     const numeroFormateado = String(p.numero).padStart(3, '0');
     // Normalizamos la etiqueta de generación para la vista
-    const genLabel = (typeof p.generacion === 'number') ? `Gen ${p.generacion}` : p.generacion;
+    const genLabel = (typeof p.generacion === 'number') ? 
+                (p.generacion === 124 ? "Valerion" : `Gen ${p.generacion}`) : 
+                p.generacion;
 
     return `
         <div class="bg-gray-800 px-3 py-6 rounded-3xl hover:bg-gray-750 transition-all border-b-8 border-yellow-600 group shadow-lg flex flex-col relative">
