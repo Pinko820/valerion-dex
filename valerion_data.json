@@ -97,37 +97,6 @@
     "numero": 3,
     "id": "VENUSAUR_1",
     "nombre": "Venusaur",
-    "form_name": "Mega Venusaur Y",
-    "es_forma": true,
-    "generacion": 6,
-    "tipos": [
-      "GRASS",
-      "POISON"
-    ],
-    "stats_base": {
-      "hp": 100,
-      "atq": 95,
-      "def": 133,
-      "spa": 122,
-      "spd": 120,
-      "vel": 80
-    },
-    "física": {
-      "altura": 2.4,
-      "peso": 155.5
-    },
-    "habilidades": [
-      "THICKFAT"
-    ],
-    "habilidad_oculta": [
-      "THICKFAT"
-    ],
-    "descripcion": "Sus patas y lomo se fortalecieron para soportar el peso de la flor, que creció considerablemente tras la megaevolución."
-  },
-  {
-    "numero": 3,
-    "id": "VENUSAUR_2",
-    "nombre": "Venusaur",
     "form_name": "Mega Venusaur X",
     "es_forma": true,
     "generacion": 10,
@@ -152,6 +121,37 @@
     ],
     "habilidad_oculta": [
       "GRASSYSURGE"
+    ],
+    "descripcion": "Sus patas y lomo se fortalecieron para soportar el peso de la flor, que creció considerablemente tras la megaevolución."
+  },
+  {
+    "numero": 3,
+    "id": "VENUSAUR_2",
+    "nombre": "Venusaur",
+    "form_name": "Mega Venusaur Y",
+    "es_forma": true,
+    "generacion": 6,
+    "tipos": [
+      "GRASS",
+      "POISON"
+    ],
+    "stats_base": {
+      "hp": 100,
+      "atq": 95,
+      "def": 133,
+      "spa": 122,
+      "spd": 120,
+      "vel": 80
+    },
+    "física": {
+      "altura": 2.4,
+      "peso": 155.5
+    },
+    "habilidades": [
+      "THICKFAT"
+    ],
+    "habilidad_oculta": [
+      "THICKFAT"
     ],
     "descripcion": "Sus patas y lomo se fortalecieron para soportar el peso de la flor, que creció considerablemente tras la megaevolución."
   },
@@ -801,7 +801,7 @@
     "numero": 19,
     "id": "RATTATA_1",
     "nombre": "Rattata",
-    "form_name": "Forma Alola",
+    "form_name": "Rattata Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -864,7 +864,7 @@
     "numero": 20,
     "id": "RATICATE_1",
     "nombre": "Raticate",
-    "form_name": "Forma Alola",
+    "form_name": "Raticate Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -1048,399 +1048,9 @@
   },
   {
     "numero": 25,
-    "id": "PIKACHU_2",
-    "nombre": "Pikachu",
-    "form_name": "Forma Coqueta",
-    "es_forma": true,
-    "generacion": 1,
-    "tipos": [
-      "ELECTRIC"
-    ],
-    "stats_base": {
-      "hp": 35,
-      "atq": 55,
-      "def": 40,
-      "spa": 50,
-      "spd": 50,
-      "vel": 90
-    },
-    "física": {
-      "altura": 0.4,
-      "peso": 6.0
-    },
-    "habilidades": [
-      "LIGHTNINGROD"
-    ],
-    "habilidad_oculta": [
-      "LIGHTNINGROD"
-    ],
-    "descripcion": "Tiene unas bolsas en las mejillas en las que almacena electricidad. Cuando la libera de golpe, la potencia de la descarga es igual a la de un rayo."
-  },
-  {
-    "numero": 25,
-    "id": "PIKACHU_3",
-    "nombre": "Pikachu",
-    "form_name": "Forma Aristócrata",
-    "es_forma": true,
-    "generacion": 1,
-    "tipos": [
-      "ELECTRIC"
-    ],
-    "stats_base": {
-      "hp": 35,
-      "atq": 55,
-      "def": 40,
-      "spa": 50,
-      "spd": 50,
-      "vel": 90
-    },
-    "física": {
-      "altura": 0.4,
-      "peso": 6.0
-    },
-    "habilidades": [
-      "LIGHTNINGROD"
-    ],
-    "habilidad_oculta": [
-      "LIGHTNINGROD"
-    ],
-    "descripcion": "Tiene unas bolsas en las mejillas en las que almacena electricidad. Cuando la libera de golpe, la potencia de la descarga es igual a la de un rayo."
-  },
-  {
-    "numero": 25,
-    "id": "PIKACHU_4",
-    "nombre": "Pikachu",
-    "form_name": "Forma Enmascarada",
-    "es_forma": true,
-    "generacion": 1,
-    "tipos": [
-      "ELECTRIC"
-    ],
-    "stats_base": {
-      "hp": 35,
-      "atq": 55,
-      "def": 40,
-      "spa": 50,
-      "spd": 50,
-      "vel": 90
-    },
-    "física": {
-      "altura": 0.4,
-      "peso": 6.0
-    },
-    "habilidades": [
-      "LIGHTNINGROD"
-    ],
-    "habilidad_oculta": [
-      "LIGHTNINGROD"
-    ],
-    "descripcion": "Tiene unas bolsas en las mejillas en las que almacena electricidad. Cuando la libera de golpe, la potencia de la descarga es igual a la de un rayo."
-  },
-  {
-    "numero": 25,
-    "id": "PIKACHU_5",
-    "nombre": "Pikachu",
-    "form_name": "Forma Erudita",
-    "es_forma": true,
-    "generacion": 1,
-    "tipos": [
-      "ELECTRIC"
-    ],
-    "stats_base": {
-      "hp": 35,
-      "atq": 55,
-      "def": 40,
-      "spa": 50,
-      "spd": 50,
-      "vel": 90
-    },
-    "física": {
-      "altura": 0.4,
-      "peso": 6.0
-    },
-    "habilidades": [
-      "LIGHTNINGROD"
-    ],
-    "habilidad_oculta": [
-      "LIGHTNINGROD"
-    ],
-    "descripcion": "Tiene unas bolsas en las mejillas en las que almacena electricidad. Cuando la libera de golpe, la potencia de la descarga es igual a la de un rayo."
-  },
-  {
-    "numero": 25,
-    "id": "PIKACHU_6",
-    "nombre": "Pikachu",
-    "form_name": "Forma Superstar",
-    "es_forma": true,
-    "generacion": 1,
-    "tipos": [
-      "ELECTRIC"
-    ],
-    "stats_base": {
-      "hp": 35,
-      "atq": 55,
-      "def": 40,
-      "spa": 50,
-      "spd": 50,
-      "vel": 90
-    },
-    "física": {
-      "altura": 0.4,
-      "peso": 6.0
-    },
-    "habilidades": [
-      "LIGHTNINGROD"
-    ],
-    "habilidad_oculta": [
-      "LIGHTNINGROD"
-    ],
-    "descripcion": "Tiene unas bolsas en las mejillas en las que almacena electricidad. Cuando la libera de golpe, la potencia de la descarga es igual a la de un rayo."
-  },
-  {
-    "numero": 25,
-    "id": "PIKACHU_7",
-    "nombre": "Pikachu",
-    "form_name": "Forma Roquera",
-    "es_forma": true,
-    "generacion": 1,
-    "tipos": [
-      "ELECTRIC"
-    ],
-    "stats_base": {
-      "hp": 35,
-      "atq": 55,
-      "def": 40,
-      "spa": 50,
-      "spd": 50,
-      "vel": 90
-    },
-    "física": {
-      "altura": 0.4,
-      "peso": 6.0
-    },
-    "habilidades": [
-      "LIGHTNINGROD"
-    ],
-    "habilidad_oculta": [
-      "LIGHTNINGROD"
-    ],
-    "descripcion": "Tiene unas bolsas en las mejillas en las que almacena electricidad. Cuando la libera de golpe, la potencia de la descarga es igual a la de un rayo."
-  },
-  {
-    "numero": 25,
     "id": "PIKACHU_8",
     "nombre": "Pikachu",
     "form_name": "Forma Gorra Original",
-    "es_forma": true,
-    "generacion": 1,
-    "tipos": [
-      "ELECTRIC"
-    ],
-    "stats_base": {
-      "hp": 35,
-      "atq": 55,
-      "def": 40,
-      "spa": 50,
-      "spd": 50,
-      "vel": 90
-    },
-    "física": {
-      "altura": 0.4,
-      "peso": 6.0
-    },
-    "habilidades": [
-      "STATIC"
-    ],
-    "habilidad_oculta": [
-      "LIGHTNINGROD"
-    ],
-    "descripcion": "Tiene unas bolsas en las mejillas en las que almacena electricidad. Cuando la libera de golpe, la potencia de la descarga es igual a la de un rayo."
-  },
-  {
-    "numero": 25,
-    "id": "PIKACHU_9",
-    "nombre": "Pikachu",
-    "form_name": "Forma Gorra Hoenn",
-    "es_forma": true,
-    "generacion": 1,
-    "tipos": [
-      "ELECTRIC"
-    ],
-    "stats_base": {
-      "hp": 35,
-      "atq": 55,
-      "def": 40,
-      "spa": 50,
-      "spd": 50,
-      "vel": 90
-    },
-    "física": {
-      "altura": 0.4,
-      "peso": 6.0
-    },
-    "habilidades": [
-      "STATIC"
-    ],
-    "habilidad_oculta": [
-      "LIGHTNINGROD"
-    ],
-    "descripcion": "Tiene unas bolsas en las mejillas en las que almacena electricidad. Cuando la libera de golpe, la potencia de la descarga es igual a la de un rayo."
-  },
-  {
-    "numero": 25,
-    "id": "PIKACHU_10",
-    "nombre": "Pikachu",
-    "form_name": "Forma Gorra Sinnoh",
-    "es_forma": true,
-    "generacion": 1,
-    "tipos": [
-      "ELECTRIC"
-    ],
-    "stats_base": {
-      "hp": 35,
-      "atq": 55,
-      "def": 40,
-      "spa": 50,
-      "spd": 50,
-      "vel": 90
-    },
-    "física": {
-      "altura": 0.4,
-      "peso": 6.0
-    },
-    "habilidades": [
-      "STATIC"
-    ],
-    "habilidad_oculta": [
-      "LIGHTNINGROD"
-    ],
-    "descripcion": "Tiene unas bolsas en las mejillas en las que almacena electricidad. Cuando la libera de golpe, la potencia de la descarga es igual a la de un rayo."
-  },
-  {
-    "numero": 25,
-    "id": "PIKACHU_11",
-    "nombre": "Pikachu",
-    "form_name": "Forma Gorra Teselia",
-    "es_forma": true,
-    "generacion": 1,
-    "tipos": [
-      "ELECTRIC"
-    ],
-    "stats_base": {
-      "hp": 35,
-      "atq": 55,
-      "def": 40,
-      "spa": 50,
-      "spd": 50,
-      "vel": 90
-    },
-    "física": {
-      "altura": 0.4,
-      "peso": 6.0
-    },
-    "habilidades": [
-      "STATIC"
-    ],
-    "habilidad_oculta": [
-      "LIGHTNINGROD"
-    ],
-    "descripcion": "Tiene unas bolsas en las mejillas en las que almacena electricidad. Cuando la libera de golpe, la potencia de la descarga es igual a la de un rayo."
-  },
-  {
-    "numero": 25,
-    "id": "PIKACHU_12",
-    "nombre": "Pikachu",
-    "form_name": "Forma Gorra Kalos",
-    "es_forma": true,
-    "generacion": 1,
-    "tipos": [
-      "ELECTRIC"
-    ],
-    "stats_base": {
-      "hp": 35,
-      "atq": 55,
-      "def": 40,
-      "spa": 50,
-      "spd": 50,
-      "vel": 90
-    },
-    "física": {
-      "altura": 0.4,
-      "peso": 6.0
-    },
-    "habilidades": [
-      "STATIC"
-    ],
-    "habilidad_oculta": [
-      "LIGHTNINGROD"
-    ],
-    "descripcion": "Tiene unas bolsas en las mejillas en las que almacena electricidad. Cuando la libera de golpe, la potencia de la descarga es igual a la de un rayo."
-  },
-  {
-    "numero": 25,
-    "id": "PIKACHU_13",
-    "nombre": "Pikachu",
-    "form_name": "Forma Gorra Alola",
-    "es_forma": true,
-    "generacion": 1,
-    "tipos": [
-      "ELECTRIC"
-    ],
-    "stats_base": {
-      "hp": 35,
-      "atq": 55,
-      "def": 40,
-      "spa": 50,
-      "spd": 50,
-      "vel": 90
-    },
-    "física": {
-      "altura": 0.4,
-      "peso": 6.0
-    },
-    "habilidades": [
-      "STATIC"
-    ],
-    "habilidad_oculta": [
-      "LIGHTNINGROD"
-    ],
-    "descripcion": "Tiene unas bolsas en las mejillas en las que almacena electricidad. Cuando la libera de golpe, la potencia de la descarga es igual a la de un rayo."
-  },
-  {
-    "numero": 25,
-    "id": "PIKACHU_14",
-    "nombre": "Pikachu",
-    "form_name": "Forma Gorra Compañero",
-    "es_forma": true,
-    "generacion": 1,
-    "tipos": [
-      "ELECTRIC"
-    ],
-    "stats_base": {
-      "hp": 35,
-      "atq": 55,
-      "def": 40,
-      "spa": 50,
-      "spd": 50,
-      "vel": 90
-    },
-    "física": {
-      "altura": 0.4,
-      "peso": 6.0
-    },
-    "habilidades": [
-      "STATIC"
-    ],
-    "habilidad_oculta": [
-      "LIGHTNINGROD"
-    ],
-    "descripcion": "Tiene unas bolsas en las mejillas en las que almacena electricidad. Cuando la libera de golpe, la potencia de la descarga es igual a la de un rayo."
-  },
-  {
-    "numero": 25,
-    "id": "PIKACHU_15",
-    "nombre": "Pikachu",
-    "form_name": "Forma Gorra Trotamundos",
     "es_forma": true,
     "generacion": 1,
     "tipos": [
@@ -7137,72 +6747,12 @@
     "descripcion": "Se protege con el fuego que le arde en el lomo. Si está enfadado, las llamas son fieras, pero, si está cansado, sólo suelta chispas que no llegan a inflamarse."
   },
   {
-    "numero": 155,
-    "id": "CYNDAQUIL_1",
-    "nombre": "Cyndaquil",
-    "form_name": "",
-    "es_forma": true,
-    "generacion": 8,
-    "tipos": [
-      "FIRE"
-    ],
-    "stats_base": {
-      "hp": 39,
-      "atq": 52,
-      "def": 43,
-      "spa": 60,
-      "spd": 50,
-      "vel": 65
-    },
-    "física": {
-      "altura": 0.5,
-      "peso": 7.9
-    },
-    "habilidades": [
-      "BLAZE"
-    ],
-    "habilidad_oculta": [
-      "FLASHFIRE"
-    ],
-    "descripcion": "Se protege con el fuego que le arde en el lomo. Si está enfadado, las llamas son fieras, pero, si está cansado, sólo suelta chispas que no llegan a inflamarse."
-  },
-  {
     "numero": 156,
     "id": "QUILAVA",
     "nombre": "Quilava",
     "form_name": "",
     "es_forma": false,
     "generacion": 2,
-    "tipos": [
-      "FIRE"
-    ],
-    "stats_base": {
-      "hp": 58,
-      "atq": 64,
-      "def": 58,
-      "spa": 80,
-      "spd": 65,
-      "vel": 80
-    },
-    "física": {
-      "altura": 0.9,
-      "peso": 19.0
-    },
-    "habilidades": [
-      "BLAZE"
-    ],
-    "habilidad_oculta": [
-      "FLASHFIRE"
-    ],
-    "descripcion": "Intimida a sus rivales con la intensidad de sus llamas y sus ráfagas de aire ígneo. Es capaz de esquivar ataques con gran agilidad al tiempo que abrasa al rival."
-  },
-  {
-    "numero": 156,
-    "id": "QUILAVA_1",
-    "nombre": "Quilava",
-    "form_name": "",
-    "es_forma": true,
-    "generacion": 8,
     "tipos": [
       "FIRE"
     ],
@@ -7260,7 +6810,7 @@
     "numero": 157,
     "id": "TYPHLOSION_1",
     "nombre": "Typhlosion",
-    "form_name": "Forma Hisui",
+    "form_name": "Typhlosion Forma Hisui",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -21584,72 +21134,12 @@
     "descripcion": "La vieira de su ombligo está hecha del mismo material que sus garras. Puede sacarla y usarla de daga."
   },
   {
-    "numero": 501,
-    "id": "OSHAWOTT_1",
-    "nombre": "Oshawott",
-    "form_name": "",
-    "es_forma": true,
-    "generacion": 8,
-    "tipos": [
-      "WATER"
-    ],
-    "stats_base": {
-      "hp": 55,
-      "atq": 55,
-      "def": 45,
-      "spa": 63,
-      "spd": 45,
-      "vel": 45
-    },
-    "física": {
-      "altura": 0.5,
-      "peso": 5.9
-    },
-    "habilidades": [
-      "TORRENT"
-    ],
-    "habilidad_oculta": [
-      "SHELLARMOR"
-    ],
-    "descripcion": "La vieira de su ombligo está hecha del mismo material que sus garras. Puede sacarla y usarla de daga."
-  },
-  {
     "numero": 502,
     "id": "DEWOTT",
     "nombre": "Dewott",
     "form_name": "",
     "es_forma": false,
     "generacion": 5,
-    "tipos": [
-      "WATER"
-    ],
-    "stats_base": {
-      "hp": 75,
-      "atq": 75,
-      "def": 60,
-      "spa": 83,
-      "spd": 60,
-      "vel": 60
-    },
-    "física": {
-      "altura": 0.8,
-      "peso": 24.5
-    },
-    "habilidades": [
-      "TORRENT"
-    ],
-    "habilidad_oculta": [
-      "SHELLARMOR"
-    ],
-    "descripcion": "Cada Dewott utiliza diferentes técnicas de espadachín con sus dos vieiras, cuyo mantenimiento nunca descuida."
-  },
-  {
-    "numero": 502,
-    "id": "DEWOTT_1",
-    "nombre": "Dewott",
-    "form_name": "",
-    "es_forma": true,
-    "generacion": 8,
     "tipos": [
       "WATER"
     ],
@@ -34057,7 +33547,7 @@
     "numero": 774,
     "id": "MINIOR_7",
     "nombre": "Minior",
-    "form_name": "Forma Núcleo Rojo",
+    "form_name": "Minior Forma Núcleo",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
