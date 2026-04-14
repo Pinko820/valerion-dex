@@ -40609,6 +40609,8 @@
     "es_forma": true,
     "generacion": 9,
     "tipos": [
+      "STEEL",
+      "POISON",
       "FIRE"
     ],
     "stats_base": {
@@ -40639,6 +40641,8 @@
     "es_forma": true,
     "generacion": 9,
     "tipos": [
+      "STEEL",
+      "POISON",
       "FAIRY"
     ],
     "stats_base": {
@@ -40669,6 +40673,8 @@
     "es_forma": true,
     "generacion": 9,
     "tipos": [
+      "STEEL",
+      "POISON",
       "FIGHTING"
     ],
     "stats_base": {
@@ -40699,6 +40705,8 @@
     "es_forma": true,
     "generacion": 9,
     "tipos": [
+      "STEEL",
+      "POISON",
       "POISON"
     ],
     "stats_base": {
@@ -40729,6 +40737,8 @@
     "es_forma": true,
     "generacion": 9,
     "tipos": [
+      "STEEL",
+      "POISON",
       "DARK"
     ],
     "stats_base": {
