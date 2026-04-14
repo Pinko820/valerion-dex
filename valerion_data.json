@@ -227,8 +227,8 @@
       "FLYING"
     ],
     "stats_base": {
-      "hp": 78,
-      "atq": 84,
+      "hp": 87,
+      "atq": 91,
       "def": 78,
       "spa": 109,
       "spd": 85,
@@ -258,12 +258,12 @@
       "DRAGON"
     ],
     "stats_base": {
-      "hp": 78,
-      "atq": 130,
+      "hp": 87,
+      "atq": 148,
       "def": 111,
-      "spa": 130,
+      "spa": 109,
       "spd": 85,
-      "vel": 100
+      "vel": 110
     },
     "física": {
       "altura": 1.7,
@@ -289,12 +289,12 @@
       "FLYING"
     ],
     "stats_base": {
-      "hp": 78,
-      "atq": 104,
+      "hp": 87,
+      "atq": 91,
       "def": 78,
-      "spa": 159,
+      "spa": 169,
       "spd": 115,
-      "vel": 100
+      "vel": 110
     },
     "física": {
       "altura": 1.7,
@@ -307,6 +307,36 @@
       "DROUGHT"
     ],
     "descripcion": "El vínculo que lo une a su Entrenador es la fuente de su poder. Su capacidad de vuelo supera la de un avión de combate."
+  },
+  {
+    "numero": 6,
+    "id": "CHARIZARD_3",
+    "nombre": "Charizard",
+    "form_name": "Mega Charizard Z",
+    "es_forma": true,
+    "generacion": 124,
+    "tipos": [
+      "FIRE"
+    ],
+    "stats_base": {
+      "hp": 87,
+      "atq": 145,
+      "def": 61,
+      "spa": 145,
+      "spd": 61,
+      "vel": 151
+    },
+    "física": {
+      "altura": 2.1,
+      "peso": 110.5
+    },
+    "habilidades": [
+      "WINDRIDER"
+    ],
+    "habilidad_oculta": [
+      "WINDRIDER"
+    ],
+    "descripcion": "El vínculo que lo une a su Entrenador es la fuente de su poder. Su capacidad de vuelo ha desaparecido."
   },
   {
     "numero": 7,
@@ -379,12 +409,12 @@
       "WATER"
     ],
     "stats_base": {
-      "hp": 79,
-      "atq": 83,
-      "def": 100,
+      "hp": 95,
+      "atq": 85,
+      "def": 105,
       "spa": 85,
-      "spd": 105,
-      "vel": 78
+      "spd": 110,
+      "vel": 70
     },
     "física": {
       "altura": 1.6,
