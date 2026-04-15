@@ -126,6 +126,8 @@ function updateUI() {
     // Ordenamiento
     filtered.sort((a, b) => {
         let valA, valB;
+        
+        // Criterio Primario
         if (filters.sortBy === 'bst') {
             valA = a.bst;
             valB = b.bst;
@@ -137,11 +139,19 @@ function updateUI() {
             valB = b[filters.sortBy];
         }
 
+        // Si los valores son iguales (ej: mismo número de Pokedex), aplicamos desempate
+        if (valA === valB) {
+            // Ponemos la forma base (es_forma: false) siempre primero
+            return a.es_forma - b.es_forma; 
+        }
+
+        // Normalización para strings
         if (typeof valA === 'string') {
             valA = valA.toLowerCase();
             valB = valB.toLowerCase();
         }
 
+        // Aplicamos la dirección
         return filters.sortDir === 'asc' 
             ? (valA > valB ? 1 : -1) 
             : (valA < valB ? 1 : -1);
