@@ -78,3 +78,34 @@
 .hidden {
     display: none !important;
 }
+
+/* Clase para abrir el panel */
+#details-panel.open {
+    transform: translateX(0);
+}
+
+#panel-overlay.show {
+    display: block;
+    opacity: 1;
+}
+
+/* Lógica específica para móviles */
+@media (max-width: 768px) {
+    #details-panel {
+        top: auto;
+        bottom: 0;
+        height: 90vh; /* Ocupa el 90% de la altura de la pantalla */
+        /*border-l-0;
+        border-t: 2px solid #eab308; /* Borde amarillo Valerion arriba */
+        border-radius: 2rem 2rem 0 0;
+        transform: translateY(100%); /* En móvil se esconde hacia abajo */
+    }
+
+    #details-panel.open {
+        transform: translateY(0); /* Sube desde abajo */
+    }
+}
+
+/* Scrollbar estética para los detalles */
+.custom-scrollbar::-webkit-scrollbar { width: 6px; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #374151; border-radius: 10px; }
