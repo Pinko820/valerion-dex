@@ -1,16 +1,10 @@
-// Centralizamos la configuración
+// Configuración global
 const CONFIG = {
     VALERION_GEN: 124,
     SPRITE_PATH: 'sprites/'
 };
 
 let pokemonData = [];
-
-// Helper para normalizar nombres de generación
-const getGenLabel = (gen) => {
-    if (gen === CONFIG.VALERION_GEN) return "Valerion";
-    return typeof gen === 'number' ? `Gen ${gen}` : gen;
-};
 
 const TYPE_MAP = {
     NORMAL: { esp: 'Normal', color: '#A8A77A' },
@@ -33,10 +27,64 @@ const TYPE_MAP = {
     DARK: { esp: 'Siniestro', color: '#705746' }
 };
 
+// Helper para normalizar nombres de generación
+const getGenLabel = (gen) => {
+    if (gen === CONFIG.VALERION_GEN) return "Valerion";
+    return typeof gen === 'number' ? `Gen ${gen}` : gen;
+};
+
+/**
+ * Carga inicial de datos y pre-procesamiento
+ */
+async function init() {
+    try {
+        const res = await fetch(`valerion_data.json?v=${new Date().getTime()}`);
+        if (!res.ok) throw new Error(`No se pudo cargar el JSON (Error ${res.status})`);
+        
+        const rawData = await res.json();
+        
+        // OPTIMIZACIÓN: Pre-procesamos los datos una sola vez
+        pokemonData = rawData.map(p => {
+            const bst = p.stats_base ? Object.values(p.stats_base).reduce((a, b) => a + b, 0) : 0;
+            const genLabel = getGenLabel(p.generacion);
+            
+            // Lógica de nombre dinámico
+            let nombreFinal = p.nombre;
+            if (p.es_forma && p.form_name) {
+                const contieneNombre = p.form_name.toLowerCase().includes(p.nombre.toLowerCase());
+                nombreFinal = contieneNombre ? p.form_name : `${p.nombre} ${p.form_name}`;
+            }
+
+            return {
+                ...p,
+                bst: bst,
+                genLabel: genLabel,
+                nombreFinal: nombreFinal,
+                nombreBusqueda: nombreFinal.toLowerCase()
+            };
+        });
+
+        populateTypeFilters();
+        updateUI();
+    } catch (error) {
+        console.error("Error crítico:", error);
+        document.getElementById('pokedex').innerHTML = `
+            <div class="col-span-full text-center p-10 bg-red-900/20 rounded-3xl border border-red-500">
+                <p class="text-red-500 font-bold">Error al cargar la base de datos:</p>
+                <p class="text-white text-sm mt-2">${error.message}</p>
+                <p class="text-gray-400 text-xs mt-4">Verifica que 'valerion_data.json' esté en la carpeta raíz.</p>
+            </div>`;
+    }
+}
+
+/**
+ * Llena los selectores de tipos
+ */
 function populateTypeFilters() {
     const type1Select = document.getElementById('type-1');
     const type2Select = document.getElementById('type-2');
-    
+    if (!type1Select || !type2Select) return;
+
     Object.keys(TYPE_MAP).forEach(typeKey => {
         const optionHTML = `<option value="${typeKey}">${TYPE_MAP[typeKey].esp}</option>`;
         type1Select.innerHTML += optionHTML;
@@ -44,32 +92,9 @@ function populateTypeFilters() {
     });
 }
 
-function handleMissingImage(imgElement) {
-    imgElement.classList.add('hidden');
-    imgElement.nextElementSibling.classList.remove('hidden');
-    imgElement.nextElementSibling.classList.add('flex');
-}
-
-async function init() {
-    try {
-        const res = await fetch(`valerion_data.json?v=${new Date().getTime()}`);
-        const rawData = await res.json();
-        
-        // OPTIMIZACIÓN: Pre-procesamos los datos para no calcular en cada render
-        pokemonData = rawData.map(p => ({
-            ...p,
-            bst: Object.values(p.stats_base).reduce((a, b) => a + b, 0),
-            genLabel: getGenLabel(p.generacion),
-            nombreBusqueda: p.nombre.toLowerCase()
-        }));
-
-        populateTypeFilters();
-        updateUI();
-    } catch (error) {
-        console.error("Error:", error);
-    }
-}
-
+/**
+ * Filtra y ordena los datos
+ */
 function updateUI() {
     const filters = {
         search: document.getElementById('search').value.toLowerCase(),
@@ -81,13 +106,11 @@ function updateUI() {
         sortDir: document.getElementById('sort-direction').value
     };
 
-    // 1. Filtrado eficiente
     let filtered = pokemonData.filter(p => {
         const matchesSearch = p.nombreBusqueda.includes(filters.search);
         const matchesGen = filters.gen === 'all' || p.genLabel === filters.gen;
         const matchesForm = filters.showForms ? true : !p.es_forma;
         
-        // Lógica de tipos simplificada
         const pTypes = p.tipos.map(t => t.toUpperCase());
         let matchesTypes = true;
         if (filters.t1 !== 'ALL' && filters.t2 !== 'ALL') {
@@ -100,11 +123,20 @@ function updateUI() {
         return matchesSearch && matchesGen && matchesForm && matchesTypes;
     });
 
-    // 2. Ordenamiento (ahora mucho más rápido porque el BST ya existe)
+    // Ordenamiento
     filtered.sort((a, b) => {
-        let valA = (filters.sortBy === 'bst') ? a.bst : (a.stats_base[filters.sortBy] || a[filters.sortBy]);
-        let valB = (filters.sortBy === 'bst') ? b.bst : (b.stats_base[filters.sortBy] || b[filters.sortBy]);
-        
+        let valA, valB;
+        if (filters.sortBy === 'bst') {
+            valA = a.bst;
+            valB = b.bst;
+        } else if (a.stats_base && a.stats_base[filters.sortBy]) {
+            valA = a.stats_base[filters.sortBy];
+            valB = b.stats_base[filters.sortBy];
+        } else {
+            valA = a[filters.sortBy];
+            valB = b[filters.sortBy];
+        }
+
         if (typeof valA === 'string') {
             valA = valA.toLowerCase();
             valB = valB.toLowerCase();
@@ -118,11 +150,76 @@ function updateUI() {
     renderPokedex(filtered);
 }
 
-// Separamos el render para mayor claridad
+/**
+ * Renderiza la lista en el contenedor
+ */
 function renderPokedex(list) {
     const container = document.getElementById('pokedex');
-    // Usamos DocumentFragment o un solo innerHTML para evitar reflujos constantes
+    if (!container) return;
     container.innerHTML = list.map(p => createCard(p)).join('');
+}
+
+/**
+ * Genera el HTML de una tarjeta (Función que faltaba)
+ */
+function createCard(p) {
+    // Escalado de fuente dinámico
+    let fontSizeClass = "text-2xl";
+    if (p.nombreFinal.length > 18) fontSizeClass = "text-base";
+    else if (p.nombreFinal.length > 14) fontSizeClass = "text-lg";
+    else if (p.nombreFinal.length > 10) fontSizeClass = "text-xl";
+
+    const typesHTML = p.tipos.map(t => {
+        const info = TYPE_MAP[t.toUpperCase()] || { esp: t, color: '#555' };
+        return `<span class="text-[10px] px-2 py-0.5 rounded font-bold text-white uppercase" style="background-color: ${info.color}">${info.esp}</span>`;
+    }).join('');
+
+    const numeroFormateado = String(p.numero).padStart(3, '0');
+
+    return `
+        <div class="bg-gray-800 px-3 py-6 rounded-3xl hover:bg-gray-750 transition-all border-b-8 border-yellow-600 group shadow-lg flex flex-col relative">
+            <span class="absolute top-4 right-6 font-mono text-xl font-black text-white/10 group-hover:text-yellow-500/20 transition-colors">
+                #${numeroFormateado}
+            </span>
+
+            <div class="sprite-window mb-4 group-hover:scale-110 transition-transform relative flex-shrink-0">
+                <img src="${CONFIG.SPRITE_PATH}${p.id}.png" class="pixelated" onerror="handleMissingImage(this)" alt="${p.nombre}" loading="lazy">
+                <div class="placeholder-silhouette hidden">?</div>
+            </div>
+            
+            <div class="flex-grow flex flex-col justify-between">
+                <div class="mb-4 px-1">
+                    <h2 class="text-center font-black ${fontSizeClass} uppercase tracking-tighter text-white leading-tight break-words">
+                        ${p.nombreFinal}
+                    </h2>
+                    <p class="text-center text-yellow-500 text-[10px] font-bold mt-1 mb-3">${p.genLabel}</p>
+                    <div class="flex justify-center gap-1 mb-2 flex-wrap">${typesHTML}</div>
+                </div>
+
+                <div class="bg-gray-900 p-3 rounded-xl mt-auto shadow-inner">
+                    <div class="flex justify-between items-center mb-2 px-1 border-b border-gray-700 pb-1">
+                        <span class="text-[9px] font-bold text-yellow-500 uppercase tracking-widest">Total Stats</span>
+                        <span class="text-sm font-black text-white">${p.bst}</span>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-x-3 gap-y-1 text-sm font-mono opacity-90">
+                        <div class="flex justify-between text-gray-400 border-b border-gray-800"><span class="text-[10px]">HP</span><span class="text-white font-bold">${p.stats_base.hp}</span></div>
+                        <div class="flex justify-between text-gray-400 border-b border-gray-800"><span class="text-[10px]">ATK</span><span class="text-white font-bold">${p.stats_base.atq}</span></div>
+                        <div class="flex justify-between text-gray-400 border-b border-gray-800"><span class="text-[10px]">DEF</span><span class="text-white font-bold">${p.stats_base.def}</span></div>
+                        <div class="flex justify-between text-gray-400 border-b border-gray-800"><span class="text-[10px]">SPA</span><span class="text-white font-bold">${p.stats_base.spa}</span></div>
+                        <div class="flex justify-between text-gray-400"><span class="text-[10px]">SPD</span><span class="text-white font-bold">${p.stats_base.spd}</span></div>
+                        <div class="flex justify-between text-gray-400"><span class="text-[10px]">VEL</span><span class="text-white font-bold">${p.stats_base.vel}</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function handleMissingImage(imgElement) {
+    imgElement.classList.add('hidden');
+    imgElement.nextElementSibling.classList.remove('hidden');
+    imgElement.nextElementSibling.classList.add('flex');
 }
 
 function clearFilters() {
@@ -131,14 +228,12 @@ function clearFilters() {
     document.getElementById('type-1').value = 'all';
     document.getElementById('type-2').value = 'all';
     document.getElementById('show-forms').checked = true;
-    
-    // Resetear ordenamiento
     document.getElementById('sort-by').value = 'numero';
     document.getElementById('sort-direction').value = 'asc';
-    
     updateUI();
 }
 
+// Event Listeners
 document.getElementById('search').addEventListener('input', updateUI);
 document.getElementById('gen-filter').addEventListener('change', updateUI);
 document.getElementById('type-1').addEventListener('change', updateUI);
@@ -148,4 +243,5 @@ document.getElementById('show-forms').addEventListener('change', updateUI);
 document.getElementById('sort-by').addEventListener('change', updateUI);
 document.getElementById('sort-direction').addEventListener('change', updateUI);
 
+// Ejecución
 init();
