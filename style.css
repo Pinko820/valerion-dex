@@ -22,6 +22,7 @@
 
 /* 2. LA IMAGEN (El escalado relativo) */
 .sprite-window img {
+    transition: opacity 0.3s ease-in-out;
     /* --- PARTE A: EL TRUCO DEL RECORTADO DE ANIMACIONES --- */
     /* Mantenemos la lógica de forzar un "cuadrado" visual para que el navegador 
        sepa dónde recortar. El ancho define el frame. */
@@ -45,6 +46,19 @@
     /* Aseguramos pixelado y quitamos max-width de Tailwind */
     image-rendering: pixelated;
     max-width: none !important; 
+}
+
+.sprite-window img.loading {
+    opacity: 0;
+}
+
+@media (max-width: 640px) {
+    .sprite-window {
+        height: 100px;
+    }
+    .sprite-window img {
+        transform: scale(0.9);
+    }
 }
 
 /* Placeholder para imágenes faltantes */
