@@ -1,4 +1,16 @@
+// Centralizamos la configuración
+const CONFIG = {
+    VALERION_GEN: 124,
+    SPRITE_PATH: 'sprites/'
+};
+
 let pokemonData = [];
+
+// Helper para normalizar nombres de generación
+const getGenLabel = (gen) => {
+    if (gen === CONFIG.VALERION_GEN) return "Valerion";
+    return typeof gen === 'number' ? `Gen ${gen}` : gen;
+};
 
 const TYPE_MAP = {
     NORMAL: { esp: 'Normal', color: '#A8A77A' },
@@ -41,152 +53,76 @@ function handleMissingImage(imgElement) {
 async function init() {
     try {
         const res = await fetch(`valerion_data.json?v=${new Date().getTime()}`);
-        pokemonData = await res.json();
+        const rawData = await res.json();
+        
+        // OPTIMIZACIÓN: Pre-procesamos los datos para no calcular en cada render
+        pokemonData = rawData.map(p => ({
+            ...p,
+            bst: Object.values(p.stats_base).reduce((a, b) => a + b, 0),
+            genLabel: getGenLabel(p.generacion),
+            nombreBusqueda: p.nombre.toLowerCase()
+        }));
+
         populateTypeFilters();
         updateUI();
     } catch (error) {
-        console.error("Error en la carga:", error);
-        document.getElementById('pokedex').innerHTML = `<p class="text-center text-red-500">Error: ${error.message}</p>`;
+        console.error("Error:", error);
     }
 }
 
 function updateUI() {
-    const search = document.getElementById('search').value.toLowerCase();
-    const gen = document.getElementById('gen-filter').value;
-    const t1 = document.getElementById('type-1').value.toUpperCase();
-    const t2 = document.getElementById('type-2').value.toUpperCase();
-    const showForms = document.getElementById('show-forms').checked;
-    
-    // NUEVOS VALORES DE ORDENAMIENTO
-    const sortBy = document.getElementById('sort-by').value;
-    const sortDir = document.getElementById('sort-direction').value;
+    const filters = {
+        search: document.getElementById('search').value.toLowerCase(),
+        gen: document.getElementById('gen-filter').value,
+        t1: document.getElementById('type-1').value.toUpperCase(),
+        t2: document.getElementById('type-2').value.toUpperCase(),
+        showForms: document.getElementById('show-forms').checked,
+        sortBy: document.getElementById('sort-by').value,
+        sortDir: document.getElementById('sort-direction').value
+    };
 
-    // 1. FILTRADO (Tu lógica actual corregida)
+    // 1. Filtrado eficiente
     let filtered = pokemonData.filter(p => {
-        const matchesSearch = p.nombre.toLowerCase().includes(search);
-
-        // TRADUCCIÓN: Si es 124, lo tratamos como "Valerion", si no, como "Gen X"
-        const pGen = (typeof p.generacion === 'number') ? 
-                (p.generacion === 124 ? "Valerion" : `Gen ${p.generacion}`) : 
-                p.generacion;
+        const matchesSearch = p.nombreBusqueda.includes(filters.search);
+        const matchesGen = filters.gen === 'all' || p.genLabel === filters.gen;
+        const matchesForm = filters.showForms ? true : !p.es_forma;
         
-        let matchesGen = (gen === 'all');
-        if (gen === 'Otras') {
-            const principales = ['Valerion', 'Gen 1', 'Gen 2', 'Gen 3', 'Gen 4', 'Gen 5', 'Gen 6', 'Gen 7', 'Gen 8', 'Gen 9'];
-            matchesGen = !principales.includes(pGen);
-        } else if (gen !== 'all') {
-            matchesGen = (pGen === gen);
-        }
-        
-        const matchesFormStatus = showForms ? true : !p.es_forma;
+        // Lógica de tipos simplificada
         const pTypes = p.tipos.map(t => t.toUpperCase());
         let matchesTypes = true;
+        if (filters.t1 !== 'ALL' && filters.t2 !== 'ALL') {
+            matchesTypes = (filters.t1 === filters.t2) 
+                ? (pTypes.length === 1 && pTypes[0] === filters.t1)
+                : (pTypes.includes(filters.t1) && pTypes.includes(filters.t2));
+        } else if (filters.t1 !== 'ALL') matchesTypes = pTypes.includes(filters.t1);
+        else if (filters.t2 !== 'ALL') matchesTypes = pTypes.includes(filters.t2);
 
-        if (t1 !== 'ALL' && t2 !== 'ALL') {
-            matchesTypes = (t1 === t2) ? (pTypes.length === 1 && pTypes[0] === t1) : (pTypes.includes(t1) && pTypes.includes(t2));
-        } else if (t1 !== 'ALL') matchesTypes = pTypes.includes(t1);
-        else if (t2 !== 'ALL') matchesTypes = pTypes.includes(t2);
-
-        return matchesSearch && matchesGen && matchesTypes && matchesFormStatus;
+        return matchesSearch && matchesGen && matchesForm && matchesTypes;
     });
 
-    // 2. ORDENAMIENTO (Lógica nueva)
+    // 2. Ordenamiento (ahora mucho más rápido porque el BST ya existe)
     filtered.sort((a, b) => {
-        let valA, valB;
-
-        // Extraer valores según el criterio
-        if (sortBy === 'nombre') {
-            valA = a.nombre.toLowerCase();
-            valB = b.nombre.toLowerCase();
-        } else if (sortBy === 'bst') {
-            valA = Object.values(a.stats_base).reduce((sum, s) => sum + s, 0);
-            valB = Object.values(b.stats_base).reduce((sum, s) => sum + s, 0);
-        } else if (['hp', 'atq', 'def', 'spa', 'spd', 'vel'].includes(sortBy)) {
-            valA = a.stats_base[sortBy];
-            valB = b.stats_base[sortBy];
-        } else {
-            valA = a.numero;
-            valB = b.numero;
+        let valA = (filters.sortBy === 'bst') ? a.bst : (a.stats_base[filters.sortBy] || a[filters.sortBy]);
+        let valB = (filters.sortBy === 'bst') ? b.bst : (b.stats_base[filters.sortBy] || b[filters.sortBy]);
+        
+        if (typeof valA === 'string') {
+            valA = valA.toLowerCase();
+            valB = valB.toLowerCase();
         }
 
-        // Comparar según dirección
-        if (valA < valB) return sortDir === 'asc' ? -1 : 1;
-        if (valA > valB) return sortDir === 'asc' ? 1 : -1;
-        return 0;
+        return filters.sortDir === 'asc' 
+            ? (valA > valB ? 1 : -1) 
+            : (valA < valB ? 1 : -1);
     });
 
-    // 3. RENDERIZADO
-    const container = document.getElementById('pokedex');
-    container.innerHTML = filtered.map(p => createCard(p)).join('');
+    renderPokedex(filtered);
 }
 
-function createCard(p) {
-    const bst = p.stats_base.hp + p.stats_base.atq + p.stats_base.def + 
-                p.stats_base.spa + p.stats_base.spd + p.stats_base.vel;
-    
-    // --- NUEVA LÓGICA DE NOMBRE DINÁMICO ---
-    let nombreFinal = p.nombre;
-    if (p.es_forma && p.form_name) {
-        // Comprobamos si el nombre base ya está en el nombre de la forma (ej: Mega Pidgeot)
-        const contieneNombre = p.form_name.toLowerCase().includes(p.nombre.toLowerCase());
-        nombreFinal = contieneNombre ? p.form_name : `${p.nombre} ${p.form_name}`;
-    }
-
-    // --- ESCALADO DE FUENTE DINÁMICO ---
-    let fontSizeClass = "text-2xl";
-    if (nombreFinal.length > 18) fontSizeClass = "text-base";
-    else if (nombreFinal.length > 14) fontSizeClass = "text-lg";
-    else if (nombreFinal.length > 10) fontSizeClass = "text-xl";
-
-    const typesHTML = p.tipos.map(t => {
-        const info = TYPE_MAP[t.toUpperCase()] || { esp: t, color: '#555' };
-        return `<span class="text-[10px] px-2 py-0.5 rounded font-bold text-white uppercase" style="background-color: ${info.color}">${info.esp}</span>`;
-    }).join('');
-
-    const numeroFormateado = String(p.numero).padStart(3, '0');
-    
-    const genLabel = (typeof p.generacion === 'number') ? 
-                (p.generacion === 124 ? "Valerion" : `Gen ${p.generacion}`) : 
-                p.generacion;
-
-    return `
-        <div class="bg-gray-800 px-3 py-6 rounded-3xl hover:bg-gray-750 transition-all border-b-8 border-yellow-600 group shadow-lg flex flex-col relative">
-            <span class="absolute top-4 right-6 font-mono text-xl font-black text-white/10 group-hover:text-yellow-500/20 transition-colors">
-                #${numeroFormateado}
-            </span>
-
-            <div class="sprite-window mb-4 group-hover:scale-110 transition-transform relative flex-shrink-0">
-                <img src="sprites/${p.id}.png" class="pixelated" onerror="handleMissingImage(this)" alt="${p.nombre}" loading="lazy">
-                <div class="placeholder-silhouette hidden">?</div>
-            </div>
-            
-            <div class="flex-grow flex flex-col justify-between">
-                <div class="mb-4 px-1">
-                    <h2 class="text-center font-black ${fontSizeClass} uppercase tracking-tighter text-white leading-tight break-words">
-                        ${nombreFinal}
-                    </h2>
-                    <p class="text-center text-yellow-500 text-[10px] font-bold mt-1 mb-3">${genLabel}</p>
-                    <div class="flex justify-center gap-1 mb-2 flex-wrap">${typesHTML}</div>
-                </div>
-
-                <div class="bg-gray-900 p-3 rounded-xl mt-auto shadow-inner">
-                    <div class="flex justify-between items-center mb-2 px-1 border-b border-gray-700 pb-1">
-                        <span class="text-[9px] font-bold text-yellow-500 uppercase tracking-widest">Total Stats</span>
-                        <span class="text-sm font-black text-white">${bst}</span>
-                    </div>
-
-                    <div class="grid grid-cols-2 gap-x-3 gap-y-1 text-sm font-mono opacity-90">
-                        <div class="flex justify-between text-gray-400 border-b border-gray-800"><span class="text-[10px]">HP</span><span class="text-white font-bold">${p.stats_base.hp}</span></div>
-                        <div class="flex justify-between text-gray-400 border-b border-gray-800"><span class="text-[10px]">ATK</span><span class="text-white font-bold">${p.stats_base.atq}</span></div>
-                        <div class="flex justify-between text-gray-400 border-b border-gray-800"><span class="text-[10px]">DEF</span><span class="text-white font-bold">${p.stats_base.def}</span></div>
-                        <div class="flex justify-between text-gray-400 border-b border-gray-800"><span class="text-[10px]">SPA</span><span class="text-white font-bold">${p.stats_base.spa}</span></div>
-                        <div class="flex justify-between text-gray-400"><span class="text-[10px]">SPD</span><span class="text-white font-bold">${p.stats_base.spd}</span></div>
-                        <div class="flex justify-between text-gray-400"><span class="text-[10px]">VEL</span><span class="text-white font-bold">${p.stats_base.vel}</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
+// Separamos el render para mayor claridad
+function renderPokedex(list) {
+    const container = document.getElementById('pokedex');
+    // Usamos DocumentFragment o un solo innerHTML para evitar reflujos constantes
+    container.innerHTML = list.map(p => createCard(p)).join('');
 }
 
 function clearFilters() {
