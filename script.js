@@ -124,14 +124,27 @@ function createCard(p) {
     const bst = p.stats_base.hp + p.stats_base.atq + p.stats_base.def + 
                 p.stats_base.spa + p.stats_base.spd + p.stats_base.vel;
     
-    const nombreAMostrar = p.es_forma && p.form_name ? p.form_name : p.nombre;
+    // --- NUEVA LÓGICA DE NOMBRE DINÁMICO ---
+    let nombreFinal = p.nombre;
+    if (p.es_forma && p.form_name) {
+        // Comprobamos si el nombre base ya está en el nombre de la forma (ej: Mega Pidgeot)
+        const contieneNombre = p.form_name.toLowerCase().includes(p.nombre.toLowerCase());
+        nombreFinal = contieneNombre ? p.form_name : `${p.nombre} ${p.form_name}`;
+    }
+
+    // --- ESCALADO DE FUENTE DINÁMICO ---
+    let fontSizeClass = "text-2xl";
+    if (nombreFinal.length > 18) fontSizeClass = "text-base";
+    else if (nombreFinal.length > 14) fontSizeClass = "text-lg";
+    else if (nombreFinal.length > 10) fontSizeClass = "text-xl";
+
     const typesHTML = p.tipos.map(t => {
         const info = TYPE_MAP[t.toUpperCase()] || { esp: t, color: '#555' };
         return `<span class="text-[10px] px-2 py-0.5 rounded font-bold text-white uppercase" style="background-color: ${info.color}">${info.esp}</span>`;
     }).join('');
 
     const numeroFormateado = String(p.numero).padStart(3, '0');
-    // Normalizamos la etiqueta de generación para la vista
+    
     const genLabel = (typeof p.generacion === 'number') ? 
                 (p.generacion === 124 ? "Valerion" : `Gen ${p.generacion}`) : 
                 p.generacion;
@@ -148,8 +161,10 @@ function createCard(p) {
             </div>
             
             <div class="flex-grow flex flex-col justify-between">
-                <div class="mb-4">
-                    <h2 class="text-center font-black text-2xl uppercase tracking-tighter text-white leading-none">${nombreAMostrar}</h2>
+                <div class="mb-4 px-1">
+                    <h2 class="text-center font-black ${fontSizeClass} uppercase tracking-tighter text-white leading-tight break-words">
+                        ${nombreFinal}
+                    </h2>
                     <p class="text-center text-yellow-500 text-[10px] font-bold mt-1 mb-3">${genLabel}</p>
                     <div class="flex justify-center gap-1 mb-2 flex-wrap">${typesHTML}</div>
                 </div>
