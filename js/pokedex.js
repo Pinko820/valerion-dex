@@ -19,7 +19,8 @@ export async function cargarBaseDeDatos() {
 
 export function getFilteredData() {
     const search = document.getElementById('search').value.toLowerCase();
-    const type = document.getElementById('type-filter').value;
+    const type1 = document.getElementById('type-1').value;
+    const type2 = document.getElementById('type-2').value;
     const gen = document.getElementById('gen-filter').value;
     const showForms = document.getElementById('show-forms').checked;
     const sortBy = document.getElementById('sort-by').value;
@@ -27,13 +28,22 @@ export function getFilteredData() {
 
     let filtered = pokemonData.filter(p => {
         const matchesSearch = p.nombreBusqueda.includes(search);
-        const matchesType = type === 'all' || p.tipos.some(t => {
-            const info = TYPE_MAP[t.toUpperCase()];
-            return info && info.esp === type;
+        
+        // Lógica para Tipo 1
+        const matchesType1 = type1 === 'all' || p.tipos.some(t => {
+            return TYPE_MAP[t.toUpperCase()]?.esp === type1;
         });
+
+        // Lógica para Tipo 2
+        const matchesType2 = type2 === 'all' || p.tipos.some(t => {
+            return TYPE_MAP[t.toUpperCase()]?.esp === type2;
+        });
+
         const matchesGen = gen === 'all' || p.genLabel === gen;
         const matchesForm = showForms ? true : !p.es_forma;
-        return matchesSearch && matchesType && matchesGen && matchesForm;
+
+        // El Pokémon debe cumplir con ambos filtros de tipo a la vez
+        return matchesSearch && matchesType1 && matchesType2 && matchesGen && matchesForm;
     });
 
     return filtered.sort((a, b) => {

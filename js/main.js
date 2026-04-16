@@ -5,7 +5,8 @@ import { populateTypeFilter } from './ui-utils.js';
 
 async function init() {
     await cargarBaseDeDatos();
-    populateTypeFilter(); 
+    populateTypeFilter('type-1', 'Tipo 1: Todos');
+    populateTypeFilter('type-2', 'Tipo 2: Todos');
     renderUI();
 
     // Event Delegation para clics en tarjetas
