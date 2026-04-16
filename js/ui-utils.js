@@ -58,20 +58,17 @@ export function createCard(p) {
     `;
 }
 
-export function populateTypeFilter() {
-    const select = document.getElementById('type-filter');
+export function populateTypeFilter(selectorId, defaultText) {
+    const select = document.getElementById(selectorId);
     if (!select) return;
 
-    // Convertimos el objeto en un array de nombres en español y los ordenamos
     const tiposOrdenados = Object.values(TYPE_MAP)
         .map(t => t.esp)
         .sort((a, b) => a.localeCompare(b));
 
-    // Generamos el HTML de las opciones
     const optionsHTML = tiposOrdenados.map(tipo => 
         `<option value="${tipo}">${tipo}</option>`
     ).join('');
 
-    // Insertamos las opciones después de la opción por defecto "Todos"
-    select.innerHTML = `<option value="all">Todos los Tipos</option>` + optionsHTML;
+    select.innerHTML = `<option value="all">${defaultText}</option>` + optionsHTML;
 }
