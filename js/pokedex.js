@@ -29,30 +29,39 @@ export function getFilteredData() {
 
     let filtered = pokemonData.filter(p => {
         const matchesSearch = p.nombreBusqueda.includes(search);
-        
-        // Comprobar si el Pokémon tiene el Tipo 1 seleccionado
-        const matchesType1 = type1 === 'all' || p.tipos.some(t => {
-            return TYPE_MAP[t.toUpperCase()]?.esp === type1;
-        });
-
-        // Comprobar si el Pokémon tiene el Tipo 2 seleccionado
-        const matchesType2 = type2 === 'all' || p.tipos.some(t => {
-            return TYPE_MAP[t.toUpperCase()]?.esp === type2;
-        });
-
         const matchesGen = gen === 'all' || p.genLabel === gen;
         const matchesForm = showForms ? true : !p.es_forma;
 
-        return matchesSearch && matchesType1 && matchesType2 && matchesGen && matchesForm;
+        // --- Lógica de Tipos ---
+        let matchesType = true;
+        if (type1 !== 'all' && type2 !== 'all') {
+            if (type1 === type2) {
+                // CASO: Pokémon Puro (Solo el tipo seleccionado)
+                matchesType = p.tipos.length === 1 && 
+                              TYPE_MAP[p.tipos[0].toUpperCase()]?.esp === type1;
+            } else {
+                // CASO: Doble Tipo (Debe tener ambos)
+                const tieneT1 = p.tipos.some(t => TYPE_MAP[t.toUpperCase()]?.esp === type1);
+                const tieneT2 = p.tipos.some(t => TYPE_MAP[t.toUpperCase()]?.esp === type2);
+                matchesType = tieneT1 && tieneT2;
+            }
+        } else if (type1 !== 'all') {
+            matchesType = p.tipos.some(t => TYPE_MAP[t.toUpperCase()]?.esp === type1);
+        } else if (type2 !== 'all') {
+            matchesType = p.tipos.some(t => TYPE_MAP[t.toUpperCase()]?.esp === type2);
+        }
+
+        return matchesSearch && matchesType && matchesGen && matchesForm;
     });
 
-    // ORDENAMIENTO (Corregido el acceso a stats_base)
+    // --- Lógica de Ordenamiento ---
     return filtered.sort((a, b) => {
+        // Buscamos el valor en stats_base, si no existe (como 'numero'), buscamos en la raíz
         let valA = (sortBy === 'bst') ? a.bst : (a.stats_base[sortBy] ?? a[sortBy]);
         let valB = (sortBy === 'bst') ? b.bst : (b.stats_base[sortBy] ?? b[sortBy]);
         
-        // Si los valores son iguales (ej. mismo número de Pokedex), priorizar la forma base
-        if (valA === valB) return a.es_forma - b.es_forma;
+        // Desempate por ID para que el orden sea consistente
+        if (valA === valB) return a.id.localeCompare(b.id);
 
         if (sortDir === 'asc') {
             return valA > valB ? 1 : -1;

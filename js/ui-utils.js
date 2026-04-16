@@ -62,13 +62,9 @@ export function populateTypeFilter(selectorId, defaultText) {
     const select = document.getElementById(selectorId);
     if (!select) return;
 
-    // Obtenemos los nombres en español de TYPE_MAP en config.js
-    const tiposOrdenados = Object.values(TYPE_MAP)
-        .map(t => t.esp)
-        .sort((a, b) => a.localeCompare(b));
-
-    const optionsHTML = tiposOrdenados.map(tipo => 
-        `<option value="${tipo}">${tipo}</option>`
+    // Usamos t.esp para mostrarlo traducido, pero el valor sigue siendo el texto
+    const optionsHTML = Object.values(TYPE_MAP).map(tipo => 
+        `<option value="${tipo.esp}">${tipo.esp}</option>`
     ).join('');
 
     select.innerHTML = `<option value="all">${defaultText}</option>` + optionsHTML;
