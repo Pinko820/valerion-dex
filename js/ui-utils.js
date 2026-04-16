@@ -1,4 +1,7 @@
-import { CONFIG, TYPE_MAP } from './config.js';
+import { CONFIG, TYPE_MAP, ABILITY_MAP } from './config.js';
+
+// Función para traducir habilidades
+const translateAbility = (id) => ABILITY_MAP[id.toUpperCase()] || id;
 
 export function getGenLabel(gen) {
     if (gen === CONFIG.VALERION_GEN) return "Valerion";
@@ -21,21 +24,26 @@ export function createCard(p) {
         return `<span class="text-[10px] px-2 py-0.5 rounded font-bold text-white uppercase" style="background-color: ${info.color}">${info.esp}</span>`;
     }).join('');
 
-    // --- LÓGICA DE HABILIDADES ---
-    const todasHab = [...p.habilidades, ...p.habilidad_oculta];
+    const habilidadesUnicas = new Set([...p.habilidades, ...p.habilidad_oculta]);
     let abilitiesHTML = "";
-    
-    if (todasHab.length === 1) {
-        abilitiesHTML = `<div class="text-[10px] text-gray-400 italic">Habilidad Innata: <span class="text-white font-bold">${todasHab[0]}</span></div>`;
+
+    if (habilidadesUnicas.size === 1) {
+        // Traducimos el primer (y único) elemento
+        const habilidad = translateAbility(Array.from(habilidadesUnicas)[0]);
+        abilitiesHTML = `<div class="text-[10px] text-gray-400 italic">Habilidad Innata: <span class="text-white font-bold">${habilidad}</span></div>`;
     } else {
-        const normales = p.habilidades.join(' / ');
-        const oculta = p.habilidad_oculta.length > 0 ? 
-            `<div class="text-yellow-500/80 italic mt-0.5">Oculta: ${p.habilidad_oculta.join(', ')}</div>` : "";
+        // Mapeamos las normales a sus traducciones
+        const normales = p.habilidades.map(translateAbility).join(' / ');
+        
+        // Filtramos y traducimos la oculta
+        const ocultaFiltrada = p.habilidad_oculta.filter(h => !p.habilidades.includes(h));
+        const ocultaHTML = ocultaFiltrada.length > 0 ? 
+            `<div class="text-yellow-500/80 italic mt-0.5">Oculta: ${ocultaFiltrada.map(translateAbility).join(', ')}</div>` : "";
         
         abilitiesHTML = `
             <div class="text-[10px] text-gray-400">
                 <div class="text-white font-medium">${normales}</div>
-                ${oculta}
+                ${ocultaHTML}
             </div>
         `;
     }
@@ -56,6 +64,7 @@ export function createCard(p) {
                     <h2 class="font-black ${fontSizeClass} uppercase tracking-tighter text-white leading-tight break-words">${p.nombreFinal}</h2>
                     <p class="text-yellow-500 text-[10px] font-bold mt-1 mb-2">${p.genLabel}</p>
                     <div class="flex justify-center gap-1 mb-3 flex-wrap">${typesHTML}</div>
+                    
                     <div class="bg-black/20 py-2 px-1 rounded-lg border border-white/5 mb-2">
                         ${abilitiesHTML}
                     </div>
