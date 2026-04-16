@@ -19,6 +19,7 @@ export async function cargarBaseDeDatos() {
 
 export function getFilteredData() {
     const search = document.getElementById('search').value.toLowerCase();
+    const type = document.getElementById('type-filter').value;
     const gen = document.getElementById('gen-filter').value;
     const showForms = document.getElementById('show-forms').checked;
     const sortBy = document.getElementById('sort-by').value;
@@ -26,9 +27,13 @@ export function getFilteredData() {
 
     let filtered = pokemonData.filter(p => {
         const matchesSearch = p.nombreBusqueda.includes(search);
+        const matchesType = type === 'all' || p.tipos.some(t => {
+            const info = TYPE_MAP[t.toUpperCase()];
+            return info && info.esp === type;
+        });
         const matchesGen = gen === 'all' || p.genLabel === gen;
         const matchesForm = showForms ? true : !p.es_forma;
-        return matchesSearch && matchesGen && matchesForm;
+        return matchesSearch && matchesType && matchesGen && matchesForm;
     });
 
     return filtered.sort((a, b) => {
