@@ -47,9 +47,31 @@ export function createCard(p) {
                     <div class="grid grid-cols-2 gap-x-3 gap-y-1 text-sm font-mono opacity-90 text-gray-400">
                         <div class="flex justify-between border-b border-gray-800"><span>HP</span><span class="text-white">${p.stats_base.hp}</span></div>
                         <div class="flex justify-between border-b border-gray-800"><span>ATK</span><span class="text-white">${p.stats_base.atq}</span></div>
+                        <div class="flex justify-between border-b border-gray-800"><span>DEF</span><span class="text-white">${p.stats_base.def}</span></div>
+                        <div class="flex justify-between border-b border-gray-800"><span>SPA</span><span class="text-white">${p.stats_base.spa}</span></div>
+                        <div class="flex justify-between border-b border-gray-800"><span>SPD</span><span class="text-white">${p.stats_base.spd}</span></div>
+                        <div class="flex justify-between border-b border-gray-800"><span>VEL</span><span class="text-white">${p.stats_base.vel}</span></div>
                         </div>
                 </div>
             </div>
         </div>
     `;
+}
+
+export function populateTypeFilter() {
+    const select = document.getElementById('type-filter');
+    if (!select) return;
+
+    // Convertimos el objeto en un array de nombres en español y los ordenamos
+    const tiposOrdenados = Object.values(TYPE_MAP)
+        .map(t => t.esp)
+        .sort((a, b) => a.localeCompare(b));
+
+    // Generamos el HTML de las opciones
+    const optionsHTML = tiposOrdenados.map(tipo => 
+        `<option value="${tipo}">${tipo}</option>`
+    ).join('');
+
+    // Insertamos las opciones después de la opción por defecto "Todos"
+    select.innerHTML = `<option value="all">Todos los Tipos</option>` + optionsHTML;
 }

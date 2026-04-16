@@ -1,9 +1,11 @@
 import { cargarBaseDeDatos, getFilteredData, pokemonData } from './pokedex.js';
 import { createCard, handleMissingImage } from './ui-utils.js';
 import { openDetails, closeDetails } from './detalles.js';
+import { populateTypeFilter } from './ui-utils.js';
 
 async function init() {
     await cargarBaseDeDatos();
+    populateTypeFilter(); 
     renderUI();
 
     // Event Delegation para clics en tarjetas
@@ -16,7 +18,7 @@ async function init() {
     });
 
     // Listeners de Filtros
-    ['search', 'gen-filter', 'sort-by', 'sort-direction', 'show-forms'].forEach(id => {
+    ['search', 'gen-filter', 'type-filter', 'sort-by', 'sort-direction', 'show-forms'].forEach(id => {
         document.getElementById(id).addEventListener('input', renderUI);
     });
 

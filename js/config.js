@@ -20,6 +20,7 @@ export const TYPE_MAP = {
     GHOST: { esp: 'Fantasma', color: '#735797' },
     DRAGON: { esp: 'Dragón', color: '#6F35FC' },
     STEEL: { esp: 'Acero', color: '#B7B7CE' },
+    DARK: { esp: 'Siniestro', color: '#705746' },
     FAIRY: { esp: 'Hada', color: '#D685AD' },
-    DARK: { esp: 'Siniestro', color: '#705746' }
+    '???': { esp: 'Desconocido', color: '#555' }
 };
