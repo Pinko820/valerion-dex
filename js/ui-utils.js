@@ -62,6 +62,7 @@ export function populateTypeFilter(selectorId, defaultText) {
     const select = document.getElementById(selectorId);
     if (!select) return;
 
+    // Obtenemos los nombres en español de TYPE_MAP en config.js
     const tiposOrdenados = Object.values(TYPE_MAP)
         .map(t => t.esp)
         .sort((a, b) => a.localeCompare(b));
