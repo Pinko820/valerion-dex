@@ -16,35 +16,42 @@ def pbExportarPokedexJSON
   especies_ordenadas.each do |s|
     next if s.name.nil? || s.name == ""
     
-    # --- FILTRO DE FORMAS ESTÉTICAS ---
+    # --- FILTRO DE FORMAS ESTÉTICAS (ACTUALIZADO) ---
     especie_id = s.species
     forma = s.form
     skip_pokemon = false
 
     case especie_id
     when :MINIOR
-      # Solo conservamos la forma 7 (que suele ser el Núcleo Rojo en Essentials)
-      skip_pokemon = true if forma != 7
+      # Conservamos la forma base (0 - Meteorito) y el Núcleo Rojo (7)
+      skip_pokemon = true unless [0, 7].include?(forma)
     when :ALCREMIE, :FLABEBE, :FLORGES, :GENESECT
       # Solo conservamos la forma base (forma 0)
       skip_pokemon = true if forma > 0
     when :FLOETTE
-      # Solo conservamos la Forma Eterna (5) y tu Mega personalizada (6)
-      skip_pokemon = true unless [5, 6].include?(forma)
+      # Conservamos la forma base (0), la Forma Eterna (5) y tu Mega (6)
+      skip_pokemon = true unless [0, 5, 6].include?(forma)
     end
 
     next if skip_pokemon
     # ----------------------------------
 
     # Lógica de número regional
-    if forma == 0 || especie_id == :MINIOR || especie_id == :FLOETTE
-      # Asignamos número si es base o si es el "representante" que elegimos (Minior/Floette)
+    # Asignamos un número nuevo si es la forma 0 de cualquier especie
+    if forma == 0
       unless mapa_numeros.key?(especie_id)
         mapa_numeros[especie_id] = indice_regional
         indice_regional += 1
       end
     end
     
+    # Si por alguna razón un Pokémon no tiene forma 0 (caso raro), 
+    # le asignamos el índice basado en su especie.
+    unless mapa_numeros.key?(especie_id)
+       mapa_numeros[especie_id] = indice_regional
+       indice_regional += 1
+    end
+
     numero_pokedex = mapa_numeros[especie_id] || 0
 
     pokedex << {
@@ -74,5 +81,5 @@ def pbExportarPokedexJSON
   end
 
   File.open("valerion_data.json", "w") { |f| f.write(JSON.pretty_generate(pokedex)) }
-  pbMessage(_INTL("Exportación limpia: se eliminaron formas estéticas redundantes."))
+  pbMessage(_INTL("Exportación limpia: se restauraron formas base de Minior y Floette."))
 end

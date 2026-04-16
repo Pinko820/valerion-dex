@@ -894,7 +894,7 @@
     "numero": 20,
     "id": "RATICATE_1",
     "nombre": "Raticate",
-    "form_name": "Raticate Forma Alola",
+    "form_name": "Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -1140,7 +1140,7 @@
     "numero": 26,
     "id": "RAICHU_1",
     "nombre": "Raichu",
-    "form_name": "Raichu Forma Alola",
+    "form_name": "Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -1261,7 +1261,7 @@
     "numero": 27,
     "id": "SANDSHREW_1",
     "nombre": "Sandshrew",
-    "form_name": "Sandshrew Forma Alola",
+    "form_name": "Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -1623,10 +1623,10 @@
       "peso": 42.3
     },
     "habilidades": [
-      "AERILATE"
+      "MAGICBOUNCE"
     ],
     "habilidad_oculta": [
-      "AERILATE"
+      "MAGICBOUNCE"
     ],
     "descripcion": "Se desplaza flotando gracias al poder de la luz lunar, que le permite controlar la gravedad en un radio de 10m."
   },
@@ -1664,7 +1664,7 @@
     "numero": 37,
     "id": "VULPIX_1",
     "nombre": "Vulpix",
-    "form_name": "Vulpix Forma Alola",
+    "form_name": "Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -1726,7 +1726,7 @@
     "numero": 38,
     "id": "NINETALES_1",
     "nombre": "Ninetales",
-    "form_name": "Ninetales Forma Alola",
+    "form_name": "Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -2135,7 +2135,7 @@
     "numero": 50,
     "id": "DIGLETT_1",
     "nombre": "Diglett",
-    "form_name": "Diglett Forma Alola",
+    "form_name": "Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -2198,7 +2198,7 @@
     "numero": 51,
     "id": "DUGTRIO_1",
     "nombre": "Dugtrio",
-    "form_name": "Dugtrio Forma Alola",
+    "form_name": "Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -2261,7 +2261,7 @@
     "numero": 52,
     "id": "MEOWTH_1",
     "nombre": "Meowth",
-    "form_name": "Meowth Forma Alola",
+    "form_name": "Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -2292,11 +2292,12 @@
     "numero": 52,
     "id": "MEOWTH_2",
     "nombre": "Meowth",
-    "form_name": "Meowth Forma Galar",
+    "form_name": "Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
-      "STEEL"
+      "STEEL",
+      "NORMAL"
     ],
     "stats_base": {
       "hp": 50,
@@ -2354,7 +2355,7 @@
     "numero": 53,
     "id": "PERSIAN_1",
     "nombre": "Persian",
-    "form_name": "Persian Forma Alola",
+    "form_name": "Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -3165,7 +3166,7 @@
     "numero": 74,
     "id": "GEODUDE_1",
     "nombre": "Geodude",
-    "form_name": "Geodude Forma Alola",
+    "form_name": "Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -3229,7 +3230,7 @@
     "numero": 75,
     "id": "GRAVELER_1",
     "nombre": "Graveler",
-    "form_name": "Graveler Forma Alola",
+    "form_name": "Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -3293,7 +3294,7 @@
     "numero": 76,
     "id": "GOLEM_1",
     "nombre": "Golem",
-    "form_name": "Golem Forma Alola",
+    "form_name": "Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -3356,7 +3357,7 @@
     "numero": 77,
     "id": "PONYTA_1",
     "nombre": "Ponyta",
-    "form_name": "Ponyta Forma Galar",
+    "form_name": "Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -3418,7 +3419,7 @@
     "numero": 78,
     "id": "RAPIDASH_1",
     "nombre": "Rapidash",
-    "form_name": "Rapidash Forma Galar",
+    "form_name": "Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -3482,7 +3483,7 @@
     "numero": 79,
     "id": "SLOWPOKE_1",
     "nombre": "Slowpoke",
-    "form_name": "Slowpoke Forma Galar",
+    "form_name": "Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -3545,7 +3546,7 @@
     "numero": 80,
     "id": "SLOWBRO_1",
     "nombre": "Slowbro",
-    "form_name": "Slowbro Forma Galar",
+    "form_name": "Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -3704,7 +3705,7 @@
     "numero": 83,
     "id": "FARFETCHD_1",
     "nombre": "Farfetch'd",
-    "form_name": "Farfetch'd Forma Galar",
+    "form_name": "Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -3892,7 +3893,7 @@
     "numero": 88,
     "id": "GRIMER_1",
     "nombre": "Grimer",
-    "form_name": "Grimer Forma Alola",
+    "form_name": "Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -3955,7 +3956,7 @@
     "numero": 89,
     "id": "MUK_1",
     "nombre": "Muk",
-    "form_name": "Muk Forma Alola",
+    "form_name": "Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -4518,7 +4519,7 @@
     "numero": 103,
     "id": "EXEGGUTOR_1",
     "nombre": "Exeggutor",
-    "form_name": "Exeggutor Forma Alola",
+    "form_name": "Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -4611,7 +4612,7 @@
     "numero": 105,
     "id": "MAROWAK_1",
     "nombre": "Marowak",
-    "form_name": "Marowak Forma Alola",
+    "form_name": "Forma Alola",
     "es_forma": true,
     "generacion": 7,
     "tipos": [
@@ -4798,7 +4799,7 @@
     "numero": 110,
     "id": "WEEZING_1",
     "nombre": "Weezing",
-    "form_name": "Weezing Forma Galar",
+    "form_name": "Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -5267,7 +5268,7 @@
     "numero": 122,
     "id": "MRMIME_1",
     "nombre": "Mr. Mime",
-    "form_name": "Mr. Mime Forma Galar",
+    "form_name": "Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -6170,7 +6171,7 @@
     "numero": 144,
     "id": "ARTICUNO_1",
     "nombre": "Articuno",
-    "form_name": "Articuno Forma Galar",
+    "form_name": "Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -6232,7 +6233,7 @@
     "numero": 145,
     "id": "ZAPDOS_1",
     "nombre": "Zapdos",
-    "form_name": "Zapdos Forma Galar",
+    "form_name": "Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -6294,7 +6295,7 @@
     "numero": 146,
     "id": "MOLTRES_1",
     "nombre": "Moltres",
-    "form_name": "Moltres Forma Galar",
+    "form_name": "Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -6753,7 +6754,8 @@
     "es_forma": false,
     "generacion": 2,
     "tipos": [
-      "FIRE"
+      "FIRE",
+      "NORMAL"
     ],
     "stats_base": {
       "hp": 78,
@@ -8249,7 +8251,7 @@
     "numero": 199,
     "id": "SLOWKING_1",
     "nombre": "Slowking",
-    "form_name": "Slowking Forma Galar",
+    "form_name": "Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -9969,7 +9971,7 @@
     "numero": 222,
     "id": "CORSOLA_1",
     "nombre": "Corsola",
-    "form_name": "Corsola Forma Galar",
+    "form_name": "Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -11451,7 +11453,7 @@
     "numero": 263,
     "id": "ZIGZAGOON_1",
     "nombre": "Zigzagoon",
-    "form_name": "Zigzagoon Forma Galar",
+    "form_name": "Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -11514,7 +11516,7 @@
     "numero": 264,
     "id": "LINOONE_1",
     "nombre": "Linoone",
-    "form_name": "Linoone Forma Galar",
+    "form_name": "Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -16614,7 +16616,8 @@
     "es_forma": false,
     "generacion": 4,
     "tipos": [
-      "BUG"
+      "BUG",
+      "NORMAL"
     ],
     "stats_base": {
       "hp": 37,
@@ -16644,7 +16647,8 @@
     "es_forma": false,
     "generacion": 4,
     "tipos": [
-      "BUG"
+      "BUG",
+      "NORMAL"
     ],
     "stats_base": {
       "hp": 77,
@@ -22692,6 +22696,37 @@
     "descripcion": "Habita tierras húmedas ricas en nutrientes donde la cosecha es abundante."
   },
   {
+    "numero": 548,
+    "id": "PETILIL_1",
+    "nombre": "Petilil",
+    "form_name": "",
+    "es_forma": true,
+    "generacion": 8,
+    "tipos": [
+      "GRASS"
+    ],
+    "stats_base": {
+      "hp": 45,
+      "atq": 35,
+      "def": 50,
+      "spa": 70,
+      "spd": 50,
+      "vel": 30
+    },
+    "física": {
+      "altura": 0.5,
+      "peso": 6.6
+    },
+    "habilidades": [
+      "CHLOROPHYLL",
+      "OWNTEMPO"
+    ],
+    "habilidad_oculta": [
+      "LEAFGUARD"
+    ],
+    "descripcion": "Habita tierras húmedas ricas en nutrientes donde la cosecha es abundante."
+  },
+  {
     "numero": 549,
     "id": "LILLIGANT",
     "nombre": "Lilligant",
@@ -22977,7 +23012,7 @@
     "numero": 554,
     "id": "DARUMAKA_2",
     "nombre": "Darumaka",
-    "form_name": "Darumaka Forma Galar",
+    "form_name": "Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -23068,7 +23103,7 @@
     "numero": 555,
     "id": "DARMANITAN_2",
     "nombre": "Darmanitan",
-    "form_name": "Darmanitan Forma Galar",
+    "form_name": "Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -23381,7 +23416,7 @@
     "numero": 562,
     "id": "YAMASK_1",
     "nombre": "Yamask",
-    "form_name": "Yamask Forma Galar",
+    "form_name": "Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -25471,7 +25506,7 @@
     "numero": 618,
     "id": "STUNFISK_1",
     "nombre": "Stunfisk",
-    "form_name": "Stunfisk Forma Galar",
+    "form_name": "Forma Galar",
     "es_forma": true,
     "generacion": 8,
     "tipos": [
@@ -25788,38 +25823,6 @@
     "form_name": "",
     "es_forma": false,
     "generacion": 5,
-    "tipos": [
-      "NORMAL",
-      "FLYING"
-    ],
-    "stats_base": {
-      "hp": 70,
-      "atq": 83,
-      "def": 50,
-      "spa": 37,
-      "spd": 50,
-      "vel": 60
-    },
-    "física": {
-      "altura": 0.5,
-      "peso": 10.5
-    },
-    "habilidades": [
-      "KEENEYE",
-      "SHEERFORCE"
-    ],
-    "habilidad_oculta": [
-      "HUSTLE"
-    ],
-    "descripcion": "Desafía indiscriminadamente a rivales poderosos. Librar numerosas batallas lo hace fuerte."
-  },
-  {
-    "numero": 627,
-    "id": "RUFFLET_1",
-    "nombre": "Rufflet",
-    "form_name": "",
-    "es_forma": true,
-    "generacion": 8,
     "tipos": [
       "NORMAL",
       "FLYING"
@@ -28252,6 +28255,36 @@
   },
   {
     "numero": 670,
+    "id": "FLOETTE",
+    "nombre": "Floette",
+    "form_name": "Forma Flor Roja",
+    "es_forma": false,
+    "generacion": 6,
+    "tipos": [
+      "FAIRY"
+    ],
+    "stats_base": {
+      "hp": 54,
+      "atq": 45,
+      "def": 47,
+      "spa": 75,
+      "spd": 98,
+      "vel": 52
+    },
+    "física": {
+      "altura": 0.2,
+      "peso": 0.9
+    },
+    "habilidades": [
+      "FLOWERVEIL"
+    ],
+    "habilidad_oculta": [
+      "SYMBIOSIS"
+    ],
+    "descripcion": "Revolotea alrededor de campos de flores y cuida de aquellas que empiezan a marchitarse. Usa en combate el poder oculto de las flores."
+  },
+  {
+    "numero": 670,
     "id": "FLOETTE_5",
     "nombre": "Floette",
     "form_name": "Forma Flor Eterna",
@@ -28303,10 +28336,10 @@
       "peso": 100.8
     },
     "habilidades": [
-      "MEGALAUNCHER"
+      "FAIRYAURA"
     ],
     "habilidad_oculta": [
-      "MEGALAUNCHER"
+      "FAIRYAURA"
     ],
     "descripcion": "Su Flor Eterna ha absorbido toda la energía de la megaevolución y ahora es capaz de atacar a los enemigos por sí sola."
   },
@@ -29860,6 +29893,37 @@
     "descripcion": "Es el Pokémon de tipo Dragón más débil. Habita en zonas oscuras y húmedas para evitar que su viscoso cuerpo se seque."
   },
   {
+    "numero": 704,
+    "id": "GOOMY_1",
+    "nombre": "Goomy",
+    "form_name": "",
+    "es_forma": true,
+    "generacion": 8,
+    "tipos": [
+      "DRAGON"
+    ],
+    "stats_base": {
+      "hp": 45,
+      "atq": 50,
+      "def": 35,
+      "spa": 55,
+      "spd": 75,
+      "vel": 40
+    },
+    "física": {
+      "altura": 0.3,
+      "peso": 2.8
+    },
+    "habilidades": [
+      "SAPSIPPER",
+      "HYDRATION"
+    ],
+    "habilidad_oculta": [
+      "GOOEY"
+    ],
+    "descripcion": "Es el Pokémon de tipo Dragón más débil. Habita en zonas oscuras y húmedas para evitar que su viscoso cuerpo se seque."
+  },
+  {
     "numero": 705,
     "id": "SLIGGOO",
     "nombre": "Sliggoo",
@@ -30113,6 +30177,102 @@
     "descripcion": "En el interior de la calabaza reside un espíritu que ha permanecido atrapado en este mundo. Entra en acción al caer la noche."
   },
   {
+    "numero": 710,
+    "id": "PUMPKABOO_1",
+    "nombre": "Pumpkaboo",
+    "form_name": "Tamaño Normal",
+    "es_forma": true,
+    "generacion": 6,
+    "tipos": [
+      "GHOST",
+      "GRASS"
+    ],
+    "stats_base": {
+      "hp": 49,
+      "atq": 66,
+      "def": 70,
+      "spa": 44,
+      "spd": 55,
+      "vel": 51
+    },
+    "física": {
+      "altura": 0.4,
+      "peso": 5.0
+    },
+    "habilidades": [
+      "PICKUP",
+      "FRISK"
+    ],
+    "habilidad_oculta": [
+      "INSOMNIA"
+    ],
+    "descripcion": "Las almas errantes de este mundo se introducen en su cuerpo e inician así su viaje al más allá."
+  },
+  {
+    "numero": 710,
+    "id": "PUMPKABOO_2",
+    "nombre": "Pumpkaboo",
+    "form_name": "Tamaño Grande",
+    "es_forma": true,
+    "generacion": 6,
+    "tipos": [
+      "GHOST",
+      "GRASS"
+    ],
+    "stats_base": {
+      "hp": 54,
+      "atq": 66,
+      "def": 70,
+      "spa": 44,
+      "spd": 55,
+      "vel": 46
+    },
+    "física": {
+      "altura": 0.5,
+      "peso": 7.5
+    },
+    "habilidades": [
+      "PICKUP",
+      "FRISK"
+    ],
+    "habilidad_oculta": [
+
+    ],
+    "descripcion": "Se atribuye su gran tamaño al hecho de haber vivido en un lugar donde no escaseaban las almas errantes."
+  },
+  {
+    "numero": 710,
+    "id": "PUMPKABOO_3",
+    "nombre": "Pumpkaboo",
+    "form_name": "Tamaño Extragrande",
+    "es_forma": true,
+    "generacion": 6,
+    "tipos": [
+      "GHOST",
+      "GRASS"
+    ],
+    "stats_base": {
+      "hp": 59,
+      "atq": 66,
+      "def": 70,
+      "spa": 44,
+      "spd": 55,
+      "vel": 41
+    },
+    "física": {
+      "altura": 0.8,
+      "peso": 15.0
+    },
+    "habilidades": [
+      "PICKUP",
+      "FRISK"
+    ],
+    "habilidad_oculta": [
+      "INSOMNIA"
+    ],
+    "descripcion": "Se atribuye su enorme tamaño al hecho de haber vivido en un lugar donde abundaban las almas errantes."
+  },
+  {
     "numero": 711,
     "id": "GOURGEIST",
     "nombre": "Gourgeist",
@@ -30145,12 +30305,139 @@
     "descripcion": "En las noches de luna nueva deambula por las calles de las ciudades y emite espeluznantes alaridos que maldicen a quienes los oyen."
   },
   {
+    "numero": 711,
+    "id": "GOURGEIST_1",
+    "nombre": "Gourgeist",
+    "form_name": "Tamaño Normal",
+    "es_forma": true,
+    "generacion": 6,
+    "tipos": [
+      "GHOST",
+      "GRASS"
+    ],
+    "stats_base": {
+      "hp": 65,
+      "atq": 90,
+      "def": 122,
+      "spa": 58,
+      "spd": 75,
+      "vel": 84
+    },
+    "física": {
+      "altura": 0.9,
+      "peso": 12.5
+    },
+    "habilidades": [
+      "PICKUP",
+      "FRISK"
+    ],
+    "habilidad_oculta": [
+      "INSOMNIA"
+    ],
+    "descripcion": "Se dice que los espeluznantes alaridos que emite bien entrada la noche son los lamentos de almas en pena desde el más allá."
+  },
+  {
+    "numero": 711,
+    "id": "GOURGEIST_2",
+    "nombre": "Gourgeist",
+    "form_name": "Tamaño Grande",
+    "es_forma": true,
+    "generacion": 6,
+    "tipos": [
+      "GHOST",
+      "GRASS"
+    ],
+    "stats_base": {
+      "hp": 75,
+      "atq": 95,
+      "def": 122,
+      "spa": 58,
+      "spd": 75,
+      "vel": 69
+    },
+    "física": {
+      "altura": 1.1,
+      "peso": 14.0
+    },
+    "habilidades": [
+      "PICKUP",
+      "FRISK"
+    ],
+    "habilidad_oculta": [
+
+    ],
+    "descripcion": "Los Gourgeist Tamaño Grande se hacen pasar por adultos para tomar a los niños de la mano y llevárselos al otro mundo."
+  },
+  {
+    "numero": 711,
+    "id": "GOURGEIST_3",
+    "nombre": "Gourgeist",
+    "form_name": "Tamaño Extragrande",
+    "es_forma": true,
+    "generacion": 6,
+    "tipos": [
+      "GHOST",
+      "GRASS"
+    ],
+    "stats_base": {
+      "hp": 85,
+      "atq": 100,
+      "def": 122,
+      "spa": 58,
+      "spd": 75,
+      "vel": 54
+    },
+    "física": {
+      "altura": 1.7,
+      "peso": 39.0
+    },
+    "habilidades": [
+      "PICKUP",
+      "FRISK"
+    ],
+    "habilidad_oculta": [
+      "INSOMNIA"
+    ],
+    "descripcion": "Los Gourgeist tamaño Extragrande se llevan a cualquiera al otro mundo, pues nadie puede resistir su fuerza."
+  },
+  {
     "numero": 712,
     "id": "BERGMITE",
     "nombre": "Bergmite",
     "form_name": "",
     "es_forma": false,
     "generacion": 6,
+    "tipos": [
+      "ICE"
+    ],
+    "stats_base": {
+      "hp": 55,
+      "atq": 69,
+      "def": 85,
+      "spa": 32,
+      "spd": 35,
+      "vel": 28
+    },
+    "física": {
+      "altura": 1.0,
+      "peso": 99.5
+    },
+    "habilidades": [
+      "OWNTEMPO",
+      "ICEBODY"
+    ],
+    "habilidad_oculta": [
+      "STURDY"
+    ],
+    "descripcion": "Envuelve su cuerpo en una capa de hielo que le permite evitar los ataques del enemigo. Si se resquebraja, la recompone con aire gélido."
+  },
+  {
+    "numero": 712,
+    "id": "BERGMITE_1",
+    "nombre": "Bergmite",
+    "form_name": "",
+    "es_forma": true,
+    "generacion": 8,
     "tipos": [
       "ICE"
     ],
@@ -33164,6 +33451,37 @@
 
     ],
     "descripcion": "La confianza con su Entrenador ha despertado su potencial. Ahora es capaz de cambiar de tipo a voluntad durante el combate."
+  },
+  {
+    "numero": 774,
+    "id": "MINIOR",
+    "nombre": "Minior",
+    "form_name": "Forma Meteorito",
+    "es_forma": false,
+    "generacion": 7,
+    "tipos": [
+      "ROCK",
+      "FLYING"
+    ],
+    "stats_base": {
+      "hp": 60,
+      "atq": 60,
+      "def": 100,
+      "spa": 60,
+      "spd": 100,
+      "vel": 60
+    },
+    "física": {
+      "altura": 0.3,
+      "peso": 40.0
+    },
+    "habilidades": [
+      "SHIELDSDOWN"
+    ],
+    "habilidad_oculta": [
+
+    ],
+    "descripcion": "Vive en la capa de ozono hasta que su caparazón se hace demasiado pesado y cae sin remisión a tierra firme."
   },
   {
     "numero": 774,
@@ -36390,7 +36708,8 @@
     "es_forma": false,
     "generacion": 8,
     "tipos": [
-      "STEEL"
+      "STEEL",
+      "NORMAL"
     ],
     "stats_base": {
       "hp": 70,
@@ -37423,6 +37742,68 @@
     },
     "física": {
       "altura": 20.0,
+      "peso": 950.0
+    },
+    "habilidades": [
+      "PRESSURE"
+    ],
+    "habilidad_oculta": [
+
+    ],
+    "descripcion": "Fue hallado en el interior de un meteorito caído hace 20000 años. Por lo visto, está relacionado con el misterio que rodea al fenómeno Dinamax."
+  },
+  {
+    "numero": 890,
+    "id": "ETERNATUS_1",
+    "nombre": "Eternatus",
+    "form_name": "Mega Eternatus",
+    "es_forma": true,
+    "generacion": 8,
+    "tipos": [
+      "POISON",
+      "DRAGON"
+    ],
+    "stats_base": {
+      "hp": 140,
+      "atq": 85,
+      "def": 135,
+      "spa": 165,
+      "spd": 135,
+      "vel": 130
+    },
+    "física": {
+      "altura": 50.0,
+      "peso": 950.0
+    },
+    "habilidades": [
+      "PRESSURE"
+    ],
+    "habilidad_oculta": [
+
+    ],
+    "descripcion": "Usando la Energia de las Mega Piedras para asimilar su forma Dinamax Infinita vista Galar."
+  },
+  {
+    "numero": 890,
+    "id": "ETERNATUS_2",
+    "nombre": "Eternatus",
+    "form_name": "Dinamax Infinito",
+    "es_forma": true,
+    "generacion": 8,
+    "tipos": [
+      "POISON",
+      "DRAGON"
+    ],
+    "stats_base": {
+      "hp": 255,
+      "atq": 115,
+      "def": 250,
+      "spa": 125,
+      "spd": 250,
+      "vel": 130
+    },
+    "física": {
+      "altura": 100.0,
       "peso": 950.0
     },
     "habilidades": [
@@ -40201,8 +40582,6 @@
     "es_forma": true,
     "generacion": 9,
     "tipos": [
-      "STEEL",
-      "POISON",
       "FIRE"
     ],
     "stats_base": {
@@ -40233,8 +40612,6 @@
     "es_forma": true,
     "generacion": 9,
     "tipos": [
-      "STEEL",
-      "POISON",
       "FAIRY"
     ],
     "stats_base": {
@@ -40265,8 +40642,6 @@
     "es_forma": true,
     "generacion": 9,
     "tipos": [
-      "STEEL",
-      "POISON",
       "FIGHTING"
     ],
     "stats_base": {
@@ -40297,7 +40672,6 @@
     "es_forma": true,
     "generacion": 9,
     "tipos": [
-      "STEEL",
       "POISON"
     ],
     "stats_base": {
@@ -40328,8 +40702,6 @@
     "es_forma": true,
     "generacion": 9,
     "tipos": [
-      "STEEL",
-      "POISON",
       "DARK"
     ],
     "stats_base": {
@@ -42059,6 +42431,37 @@
     "descripcion": "Según se dice, el resquemor de un practicante de la ceremonia del té que murió sin perfeccionar el arte poseyó el matcha y dio lugar a un Pokémon."
   },
   {
+    "numero": 1012,
+    "id": "POLTCHAGEIST_1",
+    "nombre": "Poltchageist",
+    "form_name": "Forma Opulenta",
+    "es_forma": true,
+    "generacion": 9,
+    "tipos": [
+      "GRASS",
+      "GHOST"
+    ],
+    "stats_base": {
+      "hp": 40,
+      "atq": 45,
+      "def": 45,
+      "spa": 74,
+      "spd": 54,
+      "vel": 50
+    },
+    "física": {
+      "altura": 0.1,
+      "peso": 1.1
+    },
+    "habilidades": [
+      "HOSPITALITY"
+    ],
+    "habilidad_oculta": [
+      "HEATPROOF"
+    ],
+    "descripcion": "Absorbe la energía vital de aquellos que prueban un bocado de cualquier comida condimentada con el polvo que conforma su cuerpo."
+  },
+  {
     "numero": 1013,
     "id": "SINISTCHA",
     "nombre": "Sinistcha",
@@ -42088,6 +42491,37 @@
       "HEATPROOF"
     ],
     "descripcion": "Prefiere los lugares fríos y oscuros, como el fondo de las estanterías o bajo el suelo de las casas. Vaga en pos de presas tras el ocaso."
+  },
+  {
+    "numero": 1013,
+    "id": "SINISTCHA_1",
+    "nombre": "Sinistcha",
+    "form_name": "Forma Exquisita",
+    "es_forma": true,
+    "generacion": 9,
+    "tipos": [
+      "GRASS",
+      "GHOST"
+    ],
+    "stats_base": {
+      "hp": 71,
+      "atq": 60,
+      "def": 106,
+      "spa": 121,
+      "spd": 80,
+      "vel": 70
+    },
+    "física": {
+      "altura": 0.2,
+      "peso": 4.9
+    },
+    "habilidades": [
+      "HOSPITALITY"
+    ],
+    "habilidad_oculta": [
+      "HEATPROOF"
+    ],
+    "descripcion": "Vive en un exquisito cuenco de té elaborado por un alfarero de renombre. Los coleccionistas más acérrimos se desviven por este Pokémon."
   },
   {
     "numero": 1014,
@@ -42216,7 +42650,7 @@
     "numero": 1017,
     "id": "OGERPON_1",
     "nombre": "Ogerpon",
-    "form_name": "Ogerpon Máscara Fuente",
+    "form_name": "Máscara Fuente",
     "es_forma": true,
     "generacion": 9,
     "tipos": [
@@ -42247,7 +42681,7 @@
     "numero": 1017,
     "id": "OGERPON_2",
     "nombre": "Ogerpon",
-    "form_name": "Ogerpon Máscara Horno",
+    "form_name": "Máscara Horno",
     "es_forma": true,
     "generacion": 9,
     "tipos": [
@@ -42278,7 +42712,7 @@
     "numero": 1017,
     "id": "OGERPON_3",
     "nombre": "Ogerpon",
-    "form_name": "Ogerpon Máscara Cimiento",
+    "form_name": "Máscara Cimiento",
     "es_forma": true,
     "generacion": 9,
     "tipos": [
@@ -42307,9 +42741,132 @@
   },
   {
     "numero": 1017,
+    "id": "OGERPON_4",
+    "nombre": "Ogerpon",
+    "form_name": "",
+    "es_forma": true,
+    "generacion": 9,
+    "tipos": [
+      "GRASS"
+    ],
+    "stats_base": {
+      "hp": 80,
+      "atq": 120,
+      "def": 84,
+      "spa": 60,
+      "spd": 96,
+      "vel": 110
+    },
+    "física": {
+      "altura": 1.2,
+      "peso": 39.8
+    },
+    "habilidades": [
+      "DEFIANT"
+    ],
+    "habilidad_oculta": [
+
+    ],
+    "descripcion": "Es bromista y extremadamente curioso. A la hora de combatir, se sirve del tipo de energía que contenga la máscara que lleve puesta."
+  },
+  {
+    "numero": 1017,
+    "id": "OGERPON_5",
+    "nombre": "Ogerpon",
+    "form_name": "Máscara Fuente",
+    "es_forma": true,
+    "generacion": 9,
+    "tipos": [
+      "GRASS",
+      "WATER"
+    ],
+    "stats_base": {
+      "hp": 80,
+      "atq": 120,
+      "def": 84,
+      "spa": 60,
+      "spd": 96,
+      "vel": 110
+    },
+    "física": {
+      "altura": 1.2,
+      "peso": 39.8
+    },
+    "habilidades": [
+      "WATERABSORB"
+    ],
+    "habilidad_oculta": [
+
+    ],
+    "descripcion": "Es bromista y extremadamente curioso. A la hora de combatir, se sirve del tipo de energía que contenga la máscara que lleve puesta."
+  },
+  {
+    "numero": 1017,
+    "id": "OGERPON_6",
+    "nombre": "Ogerpon",
+    "form_name": "Máscara Horno",
+    "es_forma": true,
+    "generacion": 9,
+    "tipos": [
+      "GRASS",
+      "FIRE"
+    ],
+    "stats_base": {
+      "hp": 80,
+      "atq": 120,
+      "def": 84,
+      "spa": 60,
+      "spd": 96,
+      "vel": 110
+    },
+    "física": {
+      "altura": 1.2,
+      "peso": 39.8
+    },
+    "habilidades": [
+      "MOLDBREAKER"
+    ],
+    "habilidad_oculta": [
+
+    ],
+    "descripcion": "Es bromista y extremadamente curioso. A la hora de combatir, se sirve del tipo de energía que contenga la máscara que lleve puesta."
+  },
+  {
+    "numero": 1017,
+    "id": "OGERPON_7",
+    "nombre": "Ogerpon",
+    "form_name": "Máscara Cimiento",
+    "es_forma": true,
+    "generacion": 9,
+    "tipos": [
+      "GRASS",
+      "ROCK"
+    ],
+    "stats_base": {
+      "hp": 80,
+      "atq": 120,
+      "def": 84,
+      "spa": 60,
+      "spd": 96,
+      "vel": 110
+    },
+    "física": {
+      "altura": 1.2,
+      "peso": 39.8
+    },
+    "habilidades": [
+      "STURDY"
+    ],
+    "habilidad_oculta": [
+
+    ],
+    "descripcion": "Es bromista y extremadamente curioso. A la hora de combatir, se sirve del tipo de energía que contenga la máscara que lleve puesta."
+  },
+  {
+    "numero": 1017,
     "id": "OGERPON_8",
     "nombre": "Ogerpon",
-    "form_name": "Ogerpon Máscara Turquesa teracristalizado",
+    "form_name": "Máscara Turquesa teracristalizado",
     "es_forma": true,
     "generacion": 9,
     "tipos": [
@@ -42339,7 +42896,7 @@
     "numero": 1017,
     "id": "OGERPON_9",
     "nombre": "Ogerpon",
-    "form_name": "Ogerpon Máscara Fuente teracristalizado",
+    "form_name": "Máscara Fuente teracristalizado",
     "es_forma": true,
     "generacion": 9,
     "tipos": [
@@ -42370,7 +42927,7 @@
     "numero": 1017,
     "id": "OGERPON_10",
     "nombre": "Ogerpon",
-    "form_name": "Ogerpon Máscara Horno teracristalizado",
+    "form_name": "Máscara Horno teracristalizado",
     "es_forma": true,
     "generacion": 9,
     "tipos": [
@@ -42401,7 +42958,7 @@
     "numero": 1017,
     "id": "OGERPON_11",
     "nombre": "Ogerpon",
-    "form_name": "Ogerpon Máscara Cimiento teracristalizado",
+    "form_name": "Máscara Cimiento teracristalizado",
     "es_forma": true,
     "generacion": 9,
     "tipos": [
