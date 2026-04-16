@@ -10,6 +10,9 @@ async function init() {
     populateTypeFilter('type-1', 'Primer Tipo: Todos');
     populateTypeFilter('type-2', 'Segundo Tipo: Todos'); 
     
+    // Nueva función para el filtro de habilidades
+    populateAbilityFilter();
+
     renderUI();
 
     // Delegación de eventos para las tarjetas
@@ -25,7 +28,7 @@ async function init() {
     }
 
     // LISTENER DE FILTROS (Corregido para usar type-1 y type-2)
-    const filterIds = ['search', 'gen-filter', 'type-1', 'type-2', 'sort-by', 'sort-direction', 'show-forms'];
+    const filterIds = ['search', 'gen-filter', 'ability-filter', 'type-1', 'type-2', 'sort-by', 'sort-direction', 'show-forms'];
     
     filterIds.forEach(id => {
         const el = document.getElementById(id);
@@ -46,6 +49,28 @@ function renderUI() {
     if (container) {
         container.innerHTML = filtered.map(p => createCard(p)).join('');
     }
+}
+
+function populateAbilityFilter() {
+    const select = document.getElementById('ability-filter');
+    if (!select) return;
+
+    // Extraemos todas las habilidades (normales y ocultas) de todos los pokemon
+    const todasLasHabilidades = new Set();
+    pokemonData.forEach(p => {
+        p.habilidades.forEach(h => todasLasHabilidades.add(h));
+        p.habilidad_oculta.forEach(h => todasLasHabilidades.add(h));
+    });
+
+    // Ordenamos alfabéticamente
+    const listaOrdenada = Array.from(todasLasHabilidades).sort();
+
+    listaOrdenada.forEach(hab => {
+        const option = document.createElement('option');
+        option.value = hab;
+        option.textContent = hab;
+        select.appendChild(option);
+    });
 }
 
 init();
