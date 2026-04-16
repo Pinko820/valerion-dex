@@ -22,5 +22,5 @@ export const TYPE_MAP = {
     STEEL: { esp: 'Acero', color: '#B7B7CE' },
     DARK: { esp: 'Siniestro', color: '#705746' },
     FAIRY: { esp: 'Hada', color: '#D685AD' },
-    '???': { esp: 'Desconocido', color: '#555' }
+    QMARKS: { esp: 'Desconocido', color: '#555' }
 };

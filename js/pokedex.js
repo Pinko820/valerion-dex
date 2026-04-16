@@ -22,6 +22,7 @@ export function getFilteredData() {
     const search = document.getElementById('search')?.value.toLowerCase() || "";
     const type1 = document.getElementById('type-1')?.value || "all";
     const type2 = document.getElementById('type-2')?.value || "all";
+    const ability = document.getElementById('ability-filter')?.value || "all";
     const gen = document.getElementById('gen-filter')?.value || "all";
     const showForms = document.getElementById('show-forms')?.checked || false;
     const sortBy = document.getElementById('sort-by')?.value || "numero";
@@ -51,7 +52,12 @@ export function getFilteredData() {
             matchesType = p.tipos.some(t => TYPE_MAP[t.toUpperCase()]?.esp === type2);
         }
 
-        return matchesSearch && matchesType && matchesGen && matchesForm;
+        // --- Lógica de Habilidades ---
+        const matchesAbility = ability === 'all' || 
+                               p.habilidades.includes(ability) || 
+                               p.habilidad_oculta.includes(ability);
+
+        return matchesSearch && matchesType && matchesGen && matchesForm && matchesAbility;
     });
 
     // --- Lógica de Ordenamiento ---

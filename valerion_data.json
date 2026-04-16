@@ -9722,8 +9722,8 @@
     "es_forma": true,
     "generacion": 8,
     "tipos": [
-      "FIGHTING",
-      "POISON"
+      "POISON",
+      "ICE"
     ],
     "stats_base": {
       "hp": 55,
@@ -19132,7 +19132,7 @@
     "generacion": 4,
     "tipos": [
       "BUG",
-      "FLYING"
+      "DRAGON"
     ],
     "stats_base": {
       "hp": 86,
@@ -20540,7 +20540,7 @@
     "es_forma": true,
     "generacion": 4,
     "tipos": [
-      "???"
+      "QMARKS"
     ],
     "stats_base": {
       "hp": 120,
@@ -29893,37 +29893,6 @@
     "descripcion": "Es el Pokémon de tipo Dragón más débil. Habita en zonas oscuras y húmedas para evitar que su viscoso cuerpo se seque."
   },
   {
-    "numero": 704,
-    "id": "GOOMY_1",
-    "nombre": "Goomy",
-    "form_name": "",
-    "es_forma": true,
-    "generacion": 8,
-    "tipos": [
-      "DRAGON"
-    ],
-    "stats_base": {
-      "hp": 45,
-      "atq": 50,
-      "def": 35,
-      "spa": 55,
-      "spd": 75,
-      "vel": 40
-    },
-    "física": {
-      "altura": 0.3,
-      "peso": 2.8
-    },
-    "habilidades": [
-      "SAPSIPPER",
-      "HYDRATION"
-    ],
-    "habilidad_oculta": [
-      "GOOEY"
-    ],
-    "descripcion": "Es el Pokémon de tipo Dragón más débil. Habita en zonas oscuras y húmedas para evitar que su viscoso cuerpo se seque."
-  },
-  {
     "numero": 705,
     "id": "SLIGGOO",
     "nombre": "Sliggoo",
@@ -30407,37 +30376,6 @@
     "form_name": "",
     "es_forma": false,
     "generacion": 6,
-    "tipos": [
-      "ICE"
-    ],
-    "stats_base": {
-      "hp": 55,
-      "atq": 69,
-      "def": 85,
-      "spa": 32,
-      "spd": 35,
-      "vel": 28
-    },
-    "física": {
-      "altura": 1.0,
-      "peso": 99.5
-    },
-    "habilidades": [
-      "OWNTEMPO",
-      "ICEBODY"
-    ],
-    "habilidad_oculta": [
-      "STURDY"
-    ],
-    "descripcion": "Envuelve su cuerpo en una capa de hielo que le permite evitar los ataques del enemigo. Si se resquebraja, la recompone con aire gélido."
-  },
-  {
-    "numero": 712,
-    "id": "BERGMITE_1",
-    "nombre": "Bergmite",
-    "form_name": "",
-    "es_forma": true,
-    "generacion": 8,
     "tipos": [
       "ICE"
     ],
@@ -31862,36 +31800,6 @@
     "descripcion": "Su carácter amigable lo convierte en el Pokémon ideal para Entrenadores novatos. Sin embargo, al crecer suele volverse un poco agresivo."
   },
   {
-    "numero": 744,
-    "id": "ROCKRUFF_2",
-    "nombre": "Rockruff",
-    "form_name": "",
-    "es_forma": true,
-    "generacion": 7,
-    "tipos": [
-      "ROCK"
-    ],
-    "stats_base": {
-      "hp": 45,
-      "atq": 65,
-      "def": 40,
-      "spa": 30,
-      "spd": 40,
-      "vel": 60
-    },
-    "física": {
-      "altura": 0.5,
-      "peso": 9.2
-    },
-    "habilidades": [
-      "OWNTEMPO"
-    ],
-    "habilidad_oculta": [
-      "OWNTEMPO"
-    ],
-    "descripcion": "Su carácter amigable lo convierte en el Pokémon ideal para Entrenadores novatos. Sin embargo, al crecer suele volverse un poco agresivo."
-  },
-  {
     "numero": 745,
     "id": "LYCANROC",
     "nombre": "Lycanroc",
@@ -31899,7 +31807,8 @@
     "es_forma": false,
     "generacion": 7,
     "tipos": [
-      "ROCK"
+      "ROCK",
+      "NORMAL"
     ],
     "stats_base": {
       "hp": 75,
@@ -31930,7 +31839,8 @@
     "es_forma": true,
     "generacion": 7,
     "tipos": [
-      "ROCK"
+      "ROCK",
+      "DARK"
     ],
     "stats_base": {
       "hp": 85,
@@ -31961,7 +31871,8 @@
     "es_forma": true,
     "generacion": 7,
     "tipos": [
-      "ROCK"
+      "ROCK",
+      "FIGHTING"
     ],
     "stats_base": {
       "hp": 75,
@@ -34476,37 +34387,6 @@
     "descripcion": "Esta forma es el resultado de haber absorbido una gran cantidad de energía luminosa. Emite rayos láser por todo el cuerpo."
   },
   {
-    "numero": 800,
-    "id": "NECROZMA_4",
-    "nombre": "Necrozma",
-    "form_name": "",
-    "es_forma": true,
-    "generacion": 7,
-    "tipos": [
-      "PSYCHIC",
-      "DRAGON"
-    ],
-    "stats_base": {
-      "hp": 97,
-      "atq": 167,
-      "def": 97,
-      "spa": 167,
-      "spd": 97,
-      "vel": 129
-    },
-    "física": {
-      "altura": 7.5,
-      "peso": 230.0
-    },
-    "habilidades": [
-      "NEUROFORCE"
-    ],
-    "habilidad_oculta": [
-
-    ],
-    "descripcion": "La luz es su fuente de energía. Si no absorbe la suficiente, empieza a acumular impurezas que hacen que se quede negruzco e inmóvil."
-  },
-  {
     "numero": 801,
     "id": "MAGEARNA",
     "nombre": "Magearna",
@@ -36389,36 +36269,6 @@
     "descripcion": "Según se dice, este Pokémon surgió de un alma solitaria que poseyó una taza abandonada llena de un té ya frío."
   },
   {
-    "numero": 854,
-    "id": "SINISTEA_1",
-    "nombre": "Sinistea",
-    "form_name": "Forma Genuina",
-    "es_forma": true,
-    "generacion": 8,
-    "tipos": [
-      "GHOST"
-    ],
-    "stats_base": {
-      "hp": 40,
-      "atq": 45,
-      "def": 45,
-      "spa": 74,
-      "spd": 54,
-      "vel": 50
-    },
-    "física": {
-      "altura": 0.1,
-      "peso": 0.2
-    },
-    "habilidades": [
-      "WEAKARMOR"
-    ],
-    "habilidad_oculta": [
-      "CURSEDBODY"
-    ],
-    "descripcion": "Espera a que algún incauto intente bebérselo para absorber su energía vital, pero suelen escupirlo enseguida debido a su mal sabor."
-  },
-  {
     "numero": 855,
     "id": "POLTEAGEIST",
     "nombre": "Polteageist",
@@ -36447,36 +36297,6 @@
       "CURSEDBODY"
     ],
     "descripcion": "Se hospeda en teteras dignas de un anticuario. Las originales son escasísimas, pero existe un gran número de burdas falsificaciones."
-  },
-  {
-    "numero": 855,
-    "id": "POLTEAGEIST_1",
-    "nombre": "Polteageist",
-    "form_name": "Forma Genuina",
-    "es_forma": true,
-    "generacion": 8,
-    "tipos": [
-      "GHOST"
-    ],
-    "stats_base": {
-      "hp": 60,
-      "atq": 65,
-      "def": 65,
-      "spa": 134,
-      "spd": 114,
-      "vel": 70
-    },
-    "física": {
-      "altura": 0.2,
-      "peso": 0.4
-    },
-    "habilidades": [
-      "WEAKARMOR"
-    ],
-    "habilidad_oculta": [
-      "CURSEDBODY"
-    ],
-    "descripcion": "Tiene un sabor y un aroma sumamente singulares. Si su Entrenador se hace pleno merecedor de su confianza, le permite catarlo ligeramente."
   },
   {
     "numero": 856,
@@ -38349,8 +38169,8 @@
     "es_forma": false,
     "generacion": 8,
     "tipos": [
-      "FIGHTING",
-      "POISON"
+      "POISON",
+      "ICE"
     ],
     "stats_base": {
       "hp": 80,
@@ -41603,7 +41423,7 @@
     "generacion": 9,
     "tipos": [
       "BUG",
-      "FIGHTING"
+      "DRAGON"
     ],
     "stats_base": {
       "hp": 85,
@@ -42431,37 +42251,6 @@
     "descripcion": "Según se dice, el resquemor de un practicante de la ceremonia del té que murió sin perfeccionar el arte poseyó el matcha y dio lugar a un Pokémon."
   },
   {
-    "numero": 1012,
-    "id": "POLTCHAGEIST_1",
-    "nombre": "Poltchageist",
-    "form_name": "Forma Opulenta",
-    "es_forma": true,
-    "generacion": 9,
-    "tipos": [
-      "GRASS",
-      "GHOST"
-    ],
-    "stats_base": {
-      "hp": 40,
-      "atq": 45,
-      "def": 45,
-      "spa": 74,
-      "spd": 54,
-      "vel": 50
-    },
-    "física": {
-      "altura": 0.1,
-      "peso": 1.1
-    },
-    "habilidades": [
-      "HOSPITALITY"
-    ],
-    "habilidad_oculta": [
-      "HEATPROOF"
-    ],
-    "descripcion": "Absorbe la energía vital de aquellos que prueban un bocado de cualquier comida condimentada con el polvo que conforma su cuerpo."
-  },
-  {
     "numero": 1013,
     "id": "SINISTCHA",
     "nombre": "Sinistcha",
@@ -42491,37 +42280,6 @@
       "HEATPROOF"
     ],
     "descripcion": "Prefiere los lugares fríos y oscuros, como el fondo de las estanterías o bajo el suelo de las casas. Vaga en pos de presas tras el ocaso."
-  },
-  {
-    "numero": 1013,
-    "id": "SINISTCHA_1",
-    "nombre": "Sinistcha",
-    "form_name": "Forma Exquisita",
-    "es_forma": true,
-    "generacion": 9,
-    "tipos": [
-      "GRASS",
-      "GHOST"
-    ],
-    "stats_base": {
-      "hp": 71,
-      "atq": 60,
-      "def": 106,
-      "spa": 121,
-      "spd": 80,
-      "vel": 70
-    },
-    "física": {
-      "altura": 0.2,
-      "peso": 4.9
-    },
-    "habilidades": [
-      "HOSPITALITY"
-    ],
-    "habilidad_oculta": [
-      "HEATPROOF"
-    ],
-    "descripcion": "Vive en un exquisito cuenco de té elaborado por un alfarero de renombre. Los coleccionistas más acérrimos se desviven por este Pokémon."
   },
   {
     "numero": 1014,
