@@ -43,12 +43,10 @@ async function init() {
         
         const rawData = await res.json();
         
-        // OPTIMIZACIÓN: Pre-procesamos los datos una sola vez
         pokemonData = rawData.map(p => {
             const bst = p.stats_base ? Object.values(p.stats_base).reduce((a, b) => a + b, 0) : 0;
             const genLabel = getGenLabel(p.generacion);
             
-            // Lógica de nombre dinámico
             let nombreFinal = p.nombre;
             if (p.es_forma && p.form_name) {
                 const contieneNombre = p.form_name.toLowerCase().includes(p.nombre.toLowerCase());
@@ -68,18 +66,9 @@ async function init() {
         updateUI();
     } catch (error) {
         console.error("Error crítico:", error);
-        document.getElementById('pokedex').innerHTML = `
-            <div class="col-span-full text-center p-10 bg-red-900/20 rounded-3xl border border-red-500">
-                <p class="text-red-500 font-bold">Error al cargar la base de datos:</p>
-                <p class="text-white text-sm mt-2">${error.message}</p>
-                <p class="text-gray-400 text-xs mt-4">Verifica que 'valerion_data.json' esté en la carpeta raíz.</p>
-            </div>`;
     }
 }
 
-/**
- * Llena los selectores de tipos
- */
 function populateTypeFilters() {
     const type1Select = document.getElementById('type-1');
     const type2Select = document.getElementById('type-2');
@@ -92,9 +81,6 @@ function populateTypeFilters() {
     });
 }
 
-/**
- * Filtra y ordena los datos
- */
 function updateUI() {
     const filters = {
         search: document.getElementById('search').value.toLowerCase(),
@@ -123,46 +109,29 @@ function updateUI() {
         return matchesSearch && matchesGen && matchesForm && matchesTypes;
     });
 
-    // Ordenamiento
+    // Ordenamiento con desempate por forma base
     filtered.sort((a, b) => {
         let valA, valB;
-        
-        // Criterio Primario
         if (filters.sortBy === 'bst') {
-            valA = a.bst;
-            valB = b.bst;
+            valA = a.bst; valB = b.bst;
         } else if (a.stats_base && a.stats_base[filters.sortBy]) {
-            valA = a.stats_base[filters.sortBy];
-            valB = b.stats_base[filters.sortBy];
+            valA = a.stats_base[filters.sortBy]; valB = b.stats_base[filters.sortBy];
         } else {
-            valA = a[filters.sortBy];
-            valB = b[filters.sortBy];
+            valA = a[filters.sortBy]; valB = b[filters.sortBy];
         }
 
-        // Si los valores son iguales (ej: mismo número de Pokedex), aplicamos desempate
-        if (valA === valB) {
-            // Ponemos la forma base (es_forma: false) siempre primero
-            return a.es_forma - b.es_forma; 
-        }
+        if (valA === valB) return a.es_forma - b.es_forma;
 
-        // Normalización para strings
         if (typeof valA === 'string') {
-            valA = valA.toLowerCase();
-            valB = valB.toLowerCase();
+            valA = valA.toLowerCase(); valB = valB.toLowerCase();
         }
 
-        // Aplicamos la dirección
-        return filters.sortDir === 'asc' 
-            ? (valA > valB ? 1 : -1) 
-            : (valA < valB ? 1 : -1);
+        return filters.sortDir === 'asc' ? (valA > valB ? 1 : -1) : (valA < valB ? 1 : -1);
     });
 
     renderPokedex(filtered);
 }
 
-/**
- * Renderiza la lista en el contenedor
- */
 function renderPokedex(list) {
     const container = document.getElementById('pokedex');
     if (!container) return;
@@ -170,10 +139,9 @@ function renderPokedex(list) {
 }
 
 /**
- * Genera el HTML de una tarjeta (Función que faltaba)
+ * MODIFICACIÓN: createCard ahora incluye el clic para abrir detalles
  */
 function createCard(p) {
-    // Escalado de fuente dinámico
     let fontSizeClass = "text-2xl";
     if (p.nombreFinal.length > 18) fontSizeClass = "text-base";
     else if (p.nombreFinal.length > 14) fontSizeClass = "text-lg";
@@ -187,7 +155,9 @@ function createCard(p) {
     const numeroFormateado = String(p.numero).padStart(3, '0');
 
     return `
-        <div class="bg-gray-800 px-3 py-6 rounded-3xl hover:bg-gray-750 transition-all border-b-8 border-yellow-600 group shadow-lg flex flex-col relative">
+        <div class="bg-gray-800 px-3 py-6 rounded-3xl hover:bg-gray-750 transition-all border-b-8 border-yellow-600 group shadow-lg flex flex-col relative cursor-pointer" 
+             onclick="openDetails('${p.id}')">
+            
             <span class="absolute top-4 right-6 font-mono text-xl font-black text-white/10 group-hover:text-yellow-500/20 transition-colors">
                 #${numeroFormateado}
             </span>
@@ -226,6 +196,73 @@ function createCard(p) {
     `;
 }
 
+/**
+ * FUNCIÓN NUEVA: Control de Detalles (Side Panel)
+ */
+function openDetails(pokemonId) {
+    const p = pokemonData.find(item => item.id === pokemonId);
+    if (!p) return;
+
+    const content = document.getElementById('panel-content');
+    
+    content.innerHTML = `
+        <div class="p-8 pt-16">
+            <img src="${CONFIG.SPRITE_PATH}${p.id}.png" class="w-48 h-48 mx-auto pixelated mb-6 drop-shadow-[0_0_15px_rgba(234,179,8,0.3)]" alt="${p.nombre}">
+            
+            <div class="text-center mb-8">
+                <h2 class="text-4xl font-black uppercase text-white leading-none">${p.nombreFinal}</h2>
+                <p class="text-yellow-500 font-bold text-xl mt-2">#${String(p.numero).padStart(3, '0')}</p>
+                <p class="text-gray-500 text-xs font-bold uppercase tracking-widest mt-1">${p.genLabel}</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 mb-8">
+                <div class="bg-gray-800 p-4 rounded-2xl text-center">
+                    <span class="text-[10px] text-gray-400 uppercase font-bold block mb-1">Altura</span>
+                    <span class="text-white font-mono text-lg">${p.física.altura} m</span>
+                </div>
+                <div class="bg-gray-800 p-4 rounded-2xl text-center">
+                    <span class="text-[10px] text-gray-400 uppercase font-bold block mb-1">Peso</span>
+                    <span class="text-white font-mono text-lg">${p.física.peso} kg</span>
+                </div>
+            </div>
+
+            <div class="bg-gray-800/50 p-6 rounded-3xl mb-8">
+                <h3 class="text-xs font-bold text-yellow-500 uppercase tracking-widest mb-4 border-b border-gray-700 pb-2">Descripción Pokédex</h3>
+                <p class="text-gray-300 leading-relaxed text-sm italic">"${p.descripcion}"</p>
+            </div>
+            
+            <div class="bg-gray-900 p-6 rounded-3xl border border-gray-700">
+                <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">Estadísticas Base</h3>
+                ${Object.entries(p.stats_base).map(([key, val]) => `
+                    <div class="mb-4">
+                        <div class="flex justify-between text-xs font-bold mb-1 uppercase text-gray-500">
+                            <span>${key}</span>
+                            <span class="text-white">${val}</span>
+                        </div>
+                        <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
+                            <div class="bg-yellow-500 h-full rounded-full" style="width: ${(val / 255) * 100}%"></div>
+                        </div>
+                    </div>
+                `).join('')}
+                <div class="mt-6 pt-4 border-t border-gray-800 flex justify-between items-center">
+                    <span class="text-xs font-black uppercase text-gray-400">Total Base (BST)</span>
+                    <span class="text-xl font-black text-yellow-500">${p.bst}</span>
+                </div>
+            </div>
+        </div>
+    `;
+
+    document.getElementById('details-panel').classList.add('open');
+    document.getElementById('panel-overlay').classList.add('show');
+    document.body.style.overflow = 'hidden'; 
+}
+
+function closeDetails() {
+    document.getElementById('details-panel').classList.remove('open');
+    document.getElementById('panel-overlay').classList.remove('show');
+    document.body.style.overflow = 'auto'; 
+}
+
 function handleMissingImage(imgElement) {
     imgElement.classList.add('hidden');
     imgElement.nextElementSibling.classList.remove('hidden');
@@ -243,7 +280,7 @@ function clearFilters() {
     updateUI();
 }
 
-// Event Listeners
+// Event Listeners Globales
 document.getElementById('search').addEventListener('input', updateUI);
 document.getElementById('gen-filter').addEventListener('change', updateUI);
 document.getElementById('type-1').addEventListener('change', updateUI);
@@ -253,5 +290,8 @@ document.getElementById('show-forms').addEventListener('change', updateUI);
 document.getElementById('sort-by').addEventListener('change', updateUI);
 document.getElementById('sort-direction').addEventListener('change', updateUI);
 
-// Ejecución
+// Listeners para cerrar el panel
+document.getElementById('close-panel')?.addEventListener('click', closeDetails);
+document.getElementById('panel-overlay')?.addEventListener('click', closeDetails);
+
 init();
