@@ -7,43 +7,21 @@
 /* 1. EL CONTENEDOR (La ventana centradora) */
 .sprite-window {
     width: 100%;
-    /* Subimos un poco la altura total de la ventana para dar aire 
-       a los sprites de 192px si queremos escalarlos menos */
     height: 150px; 
     margin: 0 auto;
-    overflow: hidden; /* Vital: corta frames extra hacia la derecha */
+    overflow: hidden; 
     display: flex;
-    justify-content: center; /* Centrado horizontal */
-    align-items: center; /* Centrado vertical para alturas variables */
-    background: rgba(0,0,0,0.1); /* Fondo sutil opcional */
+    justify-content: center; 
+    align-items: center; 
+    background: rgba(0,0,0,0.1); 
     border-radius: 1rem;
     position: relative;
 }
 
-/* 2. LA IMAGEN (El escalado relativo) */
 .sprite-window img {
     transition: opacity 0.3s ease-in-out;
-    /* --- PARTE A: EL TRUCO DEL RECORTADO DE ANIMACIONES --- */
-    /* Mantenemos la lógica de forzar un "cuadrado" visual para que el navegador 
-       sepa dónde recortar. El ancho define el frame. */
-    width: 130px; /* 'width' define el ancho del frame visual que queremos ver */
-    height: 130px; /* 'height' debe ser igual para crear el cuadrado */
-    
-    /* Mantenemos object-fit: cover y position: left top para que se muestre 
-       solo el primer frame de la tira a la izquierda. */
-    object-fit: cover; 
-    object-position: left top; 
-    
-    /* --- PARTE B: EL ESCALADO RELATIVO --- */
-    /* Aquí está la magia. Usamos 'transform' para escalar la imagen 
-       sin romper la lógica del frame cuadrado. */
-    transform: scale(1.1); /* Factor de escala base para tus sprites (puedes ajustarlo) */
-    
-    /* Esto ayuda a mantener el centrado si el escalado es agresivo */
-    transform-origin: left top; 
-    margin-left: -10px; /* Ajuste sutil para re-centrar el frame tras el scale */
-    
-    /* Aseguramos pixelado y quitamos max-width de Tailwind */
+    width: 130px; 
+    height: 130px; 
     image-rendering: pixelated;
     max-width: none !important; 
 }
@@ -61,7 +39,17 @@
     }
 }
 
-/* Placeholder para imágenes faltantes */
+/* Ajuste del layout principal al abrir el panel */
+#main-layout {
+    transition: margin-right 0.3s ease-out;
+}
+
+/* Asegurar que las tarjetas se adapten al espacio disponible */
+#pokedex {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
 .placeholder-silhouette {
     width: 80px;
     height: 80px;
@@ -94,18 +82,30 @@
     #details-panel {
         top: auto;
         bottom: 0;
-        height: 90vh; /* Ocupa el 90% de la altura de la pantalla */
+        height: 90vh;
+        width: 100% !important;
         /*border-l-0;
-        border-t: 2px solid #eab308; /* Borde amarillo Valerion arriba */
+        border-t: 1px solid #374151;*/
         border-radius: 2rem 2rem 0 0;
-        transform: translateY(100%); /* En móvil se esconde hacia abajo */
     }
-
+    
     #details-panel.open {
-        transform: translateY(0); /* Sube desde abajo */
+        transform: translateY(0);
+    }
+    
+    #details-panel:not(.open) {
+        transform: translateY(100%);
     }
 }
 
-/* Scrollbar estética para los detalles */
-.custom-scrollbar::-webkit-scrollbar { width: 6px; }
-.custom-scrollbar::-webkit-scrollbar-thumb { background: #374151; border-radius: 10px; }
+/* Scrollbar personalizada */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #111827;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #374151;
+    border-radius: 10px;
+}
