@@ -229,8 +229,8 @@
       "FLYING"
     ],
     "stats_base": {
-      "hp": 87,
-      "atq": 91,
+      "hp": 78,
+      "atq": 85,
       "def": 78,
       "spa": 109,
       "spd": 85,
@@ -260,8 +260,8 @@
       "DRAGON"
     ],
     "stats_base": {
-      "hp": 87,
-      "atq": 148,
+      "hp": 78,
+      "atq": 142,
       "def": 111,
       "spa": 109,
       "spd": 85,
@@ -291,8 +291,8 @@
       "FLYING"
     ],
     "stats_base": {
-      "hp": 87,
-      "atq": 91,
+      "hp": 78,
+      "atq": 85,
       "def": 78,
       "spa": 169,
       "spd": 115,
@@ -321,10 +321,10 @@
       "FIRE"
     ],
     "stats_base": {
-      "hp": 87,
-      "atq": 145,
+      "hp": 78,
+      "atq": 142,
       "def": 61,
-      "spa": 145,
+      "spa": 142,
       "spd": 61,
       "vel": 151
     },
@@ -338,7 +338,7 @@
     "habilidad_oculta": [
       "WINDRIDER"
     ],
-    "descripcion": "El vínculo que lo une a su Entrenador es la fuente de su poder. Su capacidad de vuelo ha desaparecido."
+    "descripcion": "Su capacidad de vuelo ha desaparecido. Pero no el manejo de este."
   },
   {
     "numero": 7,
@@ -434,11 +434,43 @@
     "numero": 9,
     "id": "BLASTOISE_1",
     "nombre": "Blastoise",
-    "form_name": "Mega Blastoise",
+    "form_name": "Mega Blastoise X",
+    "es_forma": true,
+    "generacion": 124,
+    "tipos": [
+      "WATER",
+      "ROCK"
+    ],
+    "stats_base": {
+      "hp": 95,
+      "atq": 140,
+      "def": 100,
+      "spa": 85,
+      "spd": 125,
+      "vel": 90
+    },
+    "física": {
+      "altura": 1.9,
+      "peso": 190.0
+    },
+    "habilidades": [
+      "DAUNTLESSSHIELD"
+    ],
+    "habilidad_oculta": [
+      "RAINDISH"
+    ],
+    "descripcion": "La energía de la Megaevolución ha petrificado su caparazón, otorgándole la dureza de un diamante negro."
+  },
+  {
+    "numero": 9,
+    "id": "BLASTOISE_2",
+    "nombre": "Blastoise",
+    "form_name": "Mega Blastoise Y",
     "es_forma": true,
     "generacion": 6,
     "tipos": [
-      "WATER"
+      "WATER",
+      "STEEL"
     ],
     "stats_base": {
       "hp": 79,
@@ -643,37 +675,6 @@
       "SNIPER"
     ],
     "descripcion": "Los Beedrill defienden su territorio a toda costa. No conviene acercarse a su colmena, por seguridad. Si se les molesta, todo un enjambre atacará ferozmente."
-  },
-  {
-    "numero": 15,
-    "id": "BEEDRILL_1",
-    "nombre": "Beedrill",
-    "form_name": "Mega Beedrill",
-    "es_forma": true,
-    "generacion": 6,
-    "tipos": [
-      "BUG",
-      "POISON"
-    ],
-    "stats_base": {
-      "hp": 65,
-      "atq": 150,
-      "def": 40,
-      "spa": 15,
-      "spd": 80,
-      "vel": 145
-    },
-    "física": {
-      "altura": 1.4,
-      "peso": 40.5
-    },
-    "habilidades": [
-      "ADAPTABILITY"
-    ],
-    "habilidad_oculta": [
-      "ADAPTABILITY"
-    ],
-    "descripcion": "Al megaevolucionar, también le salen aguijones venenosos en las patas posteriores. Primero ataca con los de las patas y luego con el del abdomen."
   },
   {
     "numero": 16,
@@ -43053,5 +43054,36 @@
 
     ],
     "descripcion": "Su caparazón con forma de melocotón alberga un potente veneno con el que prepara un mochi tóxico que ofrece a humanos y Pokémon."
+  },
+  {
+    "numero": 1026,
+    "id": "MEGABEEDRILL",
+    "nombre": "Beedrill",
+    "form_name": "",
+    "es_forma": false,
+    "generacion": 6,
+    "tipos": [
+      "BUG",
+      "POISON"
+    ],
+    "stats_base": {
+      "hp": 65,
+      "atq": 130,
+      "def": 50,
+      "spa": 15,
+      "spd": 90,
+      "vel": 145
+    },
+    "física": {
+      "altura": 1.4,
+      "peso": 40.5
+    },
+    "habilidades": [
+      "ADAPTABILITY"
+    ],
+    "habilidad_oculta": [
+      "ADAPTABILITY"
+    ],
+    "descripcion": "Su evolución definitiva ha desarrollado aguijones en las patas que inyectan un veneno letal en milisegundos."
   }
 ]
