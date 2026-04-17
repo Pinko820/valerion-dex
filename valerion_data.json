@@ -23,7 +23,8 @@
       "peso": 6.9
     },
     "habilidades": [
-      "OVERGROW"
+      "OVERGROW",
+      "THICKFAT"
     ],
     "habilidad_oculta": [
       "CHLOROPHYLL"
@@ -54,7 +55,8 @@
       "peso": 13.0
     },
     "habilidades": [
-      "OVERGROW"
+      "OVERGROW",
+      "THICKFAT"
     ],
     "habilidad_oculta": [
       "CHLOROPHYLL"
@@ -73,9 +75,9 @@
       "POISON"
     ],
     "stats_base": {
-      "hp": 100,
+      "hp": 92,
       "atq": 80,
-      "def": 90,
+      "def": 83,
       "spa": 100,
       "spd": 100,
       "vel": 80
@@ -105,11 +107,11 @@
       "POISON"
     ],
     "stats_base": {
-      "hp": 100,
-      "atq": 140,
+      "hp": 92,
+      "atq": 135,
       "def": 105,
       "spa": 100,
-      "spd": 125,
+      "spd": 123,
       "vel": 80
     },
     "física": {
@@ -136,11 +138,11 @@
       "POISON"
     ],
     "stats_base": {
-      "hp": 100,
-      "atq": 95,
+      "hp": 92,
+      "atq": 85,
       "def": 133,
       "spa": 122,
-      "spd": 120,
+      "spd": 123,
       "vel": 80
     },
     "física": {

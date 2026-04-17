@@ -39,6 +39,7 @@ export const ABILITY_MAP = {
     "GUTS": "Agallas",
     "STURDY": "Robustez",
     "DRIZZLE": "Llovizna",
+    "DROUGHT": "Sequía",
     "SPEEDBOOST": "Impulso",
     "BATTLEARMOR": "Armadura Batalla",
     "DAMP": "Humedad",
@@ -56,6 +57,7 @@ export const ABILITY_MAP = {
     "OWNTEMPO": "Ritmo Propio",
     "SUCTIONCUPS": "Ventosas",
     "SHADOWTAG": "Sombratrampa",
+    "ARENATRAP": "Trampa Arena",
     "ROUGHSKIN": "Piel Tosca",
     "WONDERGUARD": "Superguarda",
     "LEVITATE": "Levitación",
@@ -257,5 +259,7 @@ export const ABILITY_MAP = {
     "WELLBAKEDBODY": "Cuerpo Horneado",
     "WINDPOWER": "Energía Eólica",
     "WINDRIDER": "Surcavientos",
-    "ZEROTOHERO": "Heroicidad"
+    "ZEROTOHERO": "Cambio Heroico",
+    "ARMORTAIL": "Cola Armadura",
+    "ANGERSHELL": "Coraza Ira"
 };

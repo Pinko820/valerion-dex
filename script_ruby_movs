@@ -1,0 +1,101 @@
+#===============================================================================
+# * Valerion Dex Exporter + Moves Integrator
+# Genera moves_data.json cruzando pokemon.txt y moves.txt
+#===============================================================================
+require 'json'
+
+def pbExportMovesData
+  path_moves = "PBS/moves.txt"
+  path_pokemon = "PBS/pokemon.txt"
+  output_file = "moves_data.json"
+
+  unless File.exist?(path_moves) && File.exist?(path_pokemon)
+    pbMessage("Faltan archivos en la carpeta PBS (moves.txt o pokemon.txt)")
+    return
+  end
+
+  # 1. PASADA A: Crear diccionario de movimientos
+  moves_db = {}
+  current_move_id = nil
+
+  File.open(path_moves, "r:utf-8").each_line do |line|
+    line = line.strip
+    if line =~ /^\[(.+)\]$/
+      current_move_id = $1
+      moves_db[current_move_id] = { "tipo" => "NORMAL", "pot" => 0, "pre" => 0 }
+      next
+    end
+    next if current_move_id.nil? || line.empty? || line.start_with?('#')
+
+    if line.include?('=')
+      key, value = line.split('=', 2).map(&:strip)
+      case key
+      when "Type"     then moves_db[current_move_id]["tipo"] = value
+      when "Power"    then moves_db[current_move_id]["pot"] = value.to_i
+      when "Accuracy" then moves_db[current_move_id]["pre"] = value.to_i
+      end
+    end
+  end
+
+  # 2. PASADA B: Procesar Pokemon y cruzar datos
+  pokemon_moves_db = {}
+  current_pkm_id = nil
+
+  File.open(path_pokemon, "r:utf-8").each_line do |line|
+    line = line.strip
+    if line =~ /^\[(.+)\]$/
+      current_pkm_id = $1
+      pokemon_moves_db[current_pkm_id] = { "nivel" => [], "mt" => [], "huevo" => [], "tutor" => [] }
+      next
+    end
+    next if current_pkm_id.nil? || line.empty? || line.start_with?('#')
+
+    if line.include?('=')
+      key, value = line.split('=', 2).map(&:strip)
+      
+      case key
+      when "Moves"
+        raw = value.split(',')
+        raw.each_slice(2) do |lvl, m_id|
+          m_info = moves_db[m_id] || {}
+          pokemon_moves_db[current_pkm_id]["nivel"] << {
+            "nombre" => m_id,
+            "nivel"  => lvl.to_i,
+            "tipo"   => m_info["tipo"] || "???",
+            "pot"    => m_info["pot"],
+            "pre"    => m_info["pre"]
+          }
+        end
+
+      when "TutorMoves"
+        value.split(',').each do |m_id|
+          m_id.strip!
+          m_info = moves_db[m_id] || {}
+          pokemon_moves_db[current_pkm_id]["mt"] << {
+            "nombre" => m_id,
+            "tipo"   => m_info["tipo"] || "???",
+            "pot"    => m_info["pot"],
+            "pre"    => m_info["pre"]
+          }
+        end
+
+      when "EggMoves"
+        value.split(',').each do |m_id|
+          m_id.strip!
+          m_info = moves_db[m_id] || {}
+          pokemon_moves_db[current_pkm_id]["huevo"] << {
+            "nombre" => m_id,
+            "tipo"   => m_info["tipo"] || "???",
+            "pot"    => m_info["pot"],
+            "pre"    => m_info["pre"]
+          }
+        end
+      end
+    end
+  end
+
+  # 3. Guardar JSON
+  File.open(output_file, "w") { |f| f.write(JSON.pretty_generate(pokemon_moves_db)) }
+
+  pbMessage(_INTL("¡Datos de Valerion exportados con éxito!"))
+end
