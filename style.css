@@ -50,6 +50,13 @@
     opacity: 0;
 }
 
+/* Forzar que el grid se reajuste al nuevo ancho del 60% restante */
+@media (min-width: 1024px) {
+    #pokedex {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
 @media (max-width: 640px) {
     .sprite-window {
         height: 100px;
