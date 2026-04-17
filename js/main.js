@@ -2,7 +2,7 @@ import { cargarBaseDeDatos, getFilteredData, pokemonData } from './pokedex.js';
 import { createCard } from './ui-utils.js';
 import { openDetails, closeDetails } from './detalles.js';
 import { populateTypeFilter } from './ui-utils.js';
-import { TYPE_MAP } from './config.js';
+import { TYPE_MAP,ABILITY_MAP } from './config.js';
 
 async function init() {
     await cargarBaseDeDatos();
@@ -25,6 +25,35 @@ async function init() {
                 const p = pokemonData.find(item => item.id === card.dataset.id);
                 if (p) openDetails(p);
             }
+        });
+    }
+
+    // --- NUEVO: Lógica para Limpiar Filtros ---
+    const clearBtn = document.getElementById('clear-btn');
+    if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+            // 1. Resetear el buscador
+            document.getElementById('search').value = "";
+            
+            // 2. Resetear todos los selects a "all"
+            ['gen-filter', 'ability-filter', 'type-1', 'type-2'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.value = "all";
+            });
+
+            // 3. Resetear ordenamiento a sus valores iniciales
+            const sortBy = document.getElementById('sort-by');
+            if (sortBy) sortBy.value = "numero";
+            
+            const sortDir = document.getElementById('sort-direction');
+            if (sortDir) sortDir.value = "asc";
+
+            // 4. Asegurar que el checkbox de formas esté marcado
+            const showForms = document.getElementById('show-forms');
+            if (showForms) showForms.checked = true;
+
+            // 5. Volver a dibujar la interfaz con los datos originales
+            renderUI();
         });
     }
 
