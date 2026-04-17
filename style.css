@@ -129,3 +129,22 @@
     background: #374151;
     border-radius: 10px;
 }
+
+.card-pokemon h2 {
+    font-size: 1.5rem; /* Ajusta según prefieras */
+}
+
+/* Estilos para la tabla de calculadora en el panel de detalles */
+.stats-calc-table th {
+    font-size: 0.65rem;
+    color: #9ca3af;
+    text-transform: uppercase;
+    padding: 0.25rem;
+}
+
+.stats-calc-table td {
+    font-size: 0.85rem;
+    font-family: monospace;
+    padding: 0.25rem;
+    text-align: center;
+}
