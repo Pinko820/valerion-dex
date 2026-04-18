@@ -43057,8 +43057,8 @@
   },
   {
     "numero": 1026,
-    "id": "MEGABEEDRILL",
-    "nombre": "Beedrill",
+    "id": "BEEDRILLOTE",
+    "nombre": "Mega Beedrill",
     "form_name": "",
     "es_forma": false,
     "generacion": 6,
@@ -43085,5 +43085,36 @@
       "ADAPTABILITY"
     ],
     "descripcion": "Su evolución definitiva ha desarrollado aguijones en las patas que inyectan un veneno letal en milisegundos."
+  },
+  {
+    "numero": 1027,
+    "id": "BUTTERFREEVALE",
+    "nombre": "Mega Butterfree",
+    "form_name": "",
+    "es_forma": false,
+    "generacion": 1,
+    "tipos": [
+      "BUG",
+      "FLYING"
+    ],
+    "stats_base": {
+      "hp": 60,
+      "atq": 15,
+      "def": 60,
+      "spa": 125,
+      "spd": 90,
+      "vel": 145
+    },
+    "física": {
+      "altura": 1.1,
+      "peso": 32.0
+    },
+    "habilidades": [
+      "COMPOUNDEYES"
+    ],
+    "habilidad_oculta": [
+      "TINTEDLENS"
+    ],
+    "descripcion": "Butterfree absorbio la energia de su mega piedra."
   }
 ]
