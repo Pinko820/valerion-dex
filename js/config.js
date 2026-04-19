@@ -261,5 +261,18 @@ export const ABILITY_MAP = {
     "WINDRIDER": "Surcavientos",
     "ZEROTOHERO": "Cambio Heroico",
     "ARMORTAIL": "Cola Armadura",
-    "ANGERSHELL": "Coraza Ira"
+    "ANGERSHELL": "Coraza Ira",
+    "BEASTBOOST": "Ultra Impulso",
+    "CHILLINGNEIGH": "Relincho Blanco",
+    "GRIMNEIGH": "Relincho Negro",
+    "ASONECHILLINGNEIGH": "Unidad Ecuestre Glacial",
+    "ASONEGRIMNEIGH": "Unidad Ecuestre Tenebrosa",
+    "CURIOUSMEDICINE": "Medicina Extraña",
+    "BATTERY": "Batería",
+    "COMATOSE": "Letargo Perrene",
+    "CORROSION": "Corrosión",
+    "COSTAR": "Unisono",
+    "COTTONDOWN": "Pelusa de Algodón",
+    "CUDCHEW": "Rumia",
+    "DANCER": "Pareja de Baile"
 };
