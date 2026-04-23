@@ -847,7 +847,7 @@
       "def": 80,
       "spa": 155,
       "spd": 80,
-      "vel": 121
+      "vel": 122
     },
     "física": {
       "altura": 2.2,
@@ -1245,12 +1245,12 @@
       "ELECTRIC"
     ],
     "stats_base": {
-      "hp": 60,
+      "hp": 70,
       "atq": 90,
       "def": 55,
       "spa": 90,
       "spd": 80,
-      "vel": 110
+      "vel": 115
     },
     "física": {
       "altura": 0.8,
@@ -1306,12 +1306,12 @@
       "ELECTRIC"
     ],
     "stats_base": {
-      "hp": 60,
+      "hp": 70,
       "atq": 135,
       "def": 95,
       "spa": 90,
       "spd": 95,
-      "vel": 110
+      "vel": 115
     },
     "física": {
       "altura": 1.2,
