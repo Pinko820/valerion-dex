@@ -1208,19 +1208,49 @@
     "numero": 29,
     "id": "PIKACHU_8",
     "nombre": "Pikachu",
-    "form_name": "Forma Gorra Original",
+    "form_name": "Acompañante",
     "es_forma": true,
     "generacion": 1,
     "tipos": [
       "ELECTRIC"
     ],
     "stats_base": {
-      "hp": 35,
+      "hp": 30,
       "atq": 100,
-      "def": 50,
+      "def": 45,
       "spa": 100,
-      "spd": 50,
-      "vel": 100
+      "spd": 45,
+      "vel": 130
+    },
+    "física": {
+      "altura": 0.4,
+      "peso": 6.0
+    },
+    "habilidades": [
+      "STATIC"
+    ],
+    "habilidad_oculta": [
+      "LIGHTNINGROD"
+    ],
+    "descripcion": "Tiene unas bolsas en las mejillas en las que almacena electricidad. Cuando la libera de golpe, la potencia de la descarga es igual a la de un rayo."
+  },
+  {
+    "numero": 29,
+    "id": "PIKACHU_20",
+    "nombre": "Pikachu",
+    "form_name": "Mega Pikachu Acompañante",
+    "es_forma": true,
+    "generacion": 1,
+    "tipos": [
+      "ELECTRIC"
+    ],
+    "stats_base": {
+      "hp": 30,
+      "atq": 150,
+      "def": 45,
+      "spa": 150,
+      "spd": 45,
+      "vel": 130
     },
     "física": {
       "altura": 0.4,
