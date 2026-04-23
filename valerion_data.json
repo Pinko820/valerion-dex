@@ -847,7 +847,7 @@
       "def": 80,
       "spa": 155,
       "spd": 80,
-      "vel": 121
+      "vel": 122
     },
     "física": {
       "altura": 2.2,
@@ -1245,12 +1245,12 @@
       "ELECTRIC"
     ],
     "stats_base": {
-      "hp": 60,
+      "hp": 70,
       "atq": 90,
       "def": 55,
       "spa": 90,
       "spd": 80,
-      "vel": 110
+      "vel": 115
     },
     "física": {
       "altura": 0.8,
@@ -1306,12 +1306,12 @@
       "ELECTRIC"
     ],
     "stats_base": {
-      "hp": 60,
+      "hp": 70,
       "atq": 135,
       "def": 95,
       "spa": 90,
       "spd": 95,
-      "vel": 110
+      "vel": 115
     },
     "física": {
       "altura": 1.2,
@@ -30274,102 +30274,6 @@
     "descripcion": "En el interior de la calabaza reside un espíritu que ha permanecido atrapado en este mundo. Entra en acción al caer la noche."
   },
   {
-    "numero": 714,
-    "id": "PUMPKABOO_1",
-    "nombre": "Pumpkaboo",
-    "form_name": "Tamaño Normal",
-    "es_forma": true,
-    "generacion": 6,
-    "tipos": [
-      "GHOST",
-      "GRASS"
-    ],
-    "stats_base": {
-      "hp": 49,
-      "atq": 66,
-      "def": 70,
-      "spa": 44,
-      "spd": 55,
-      "vel": 51
-    },
-    "física": {
-      "altura": 0.4,
-      "peso": 5.0
-    },
-    "habilidades": [
-      "PICKUP",
-      "FRISK"
-    ],
-    "habilidad_oculta": [
-      "INSOMNIA"
-    ],
-    "descripcion": "Las almas errantes de este mundo se introducen en su cuerpo e inician así su viaje al más allá."
-  },
-  {
-    "numero": 714,
-    "id": "PUMPKABOO_2",
-    "nombre": "Pumpkaboo",
-    "form_name": "Tamaño Grande",
-    "es_forma": true,
-    "generacion": 6,
-    "tipos": [
-      "GHOST",
-      "GRASS"
-    ],
-    "stats_base": {
-      "hp": 54,
-      "atq": 66,
-      "def": 70,
-      "spa": 44,
-      "spd": 55,
-      "vel": 46
-    },
-    "física": {
-      "altura": 0.5,
-      "peso": 7.5
-    },
-    "habilidades": [
-      "PICKUP",
-      "FRISK"
-    ],
-    "habilidad_oculta": [
-
-    ],
-    "descripcion": "Se atribuye su gran tamaño al hecho de haber vivido en un lugar donde no escaseaban las almas errantes."
-  },
-  {
-    "numero": 714,
-    "id": "PUMPKABOO_3",
-    "nombre": "Pumpkaboo",
-    "form_name": "Tamaño Extragrande",
-    "es_forma": true,
-    "generacion": 6,
-    "tipos": [
-      "GHOST",
-      "GRASS"
-    ],
-    "stats_base": {
-      "hp": 59,
-      "atq": 66,
-      "def": 70,
-      "spa": 44,
-      "spd": 55,
-      "vel": 41
-    },
-    "física": {
-      "altura": 0.8,
-      "peso": 15.0
-    },
-    "habilidades": [
-      "PICKUP",
-      "FRISK"
-    ],
-    "habilidad_oculta": [
-      "INSOMNIA"
-    ],
-    "descripcion": "Se atribuye su enorme tamaño al hecho de haber vivido en un lugar donde abundaban las almas errantes."
-  },
-  {
     "numero": 715,
     "id": "GOURGEIST",
     "nombre": "Gourgeist",
@@ -30400,102 +30304,6 @@
 
     ],
     "descripcion": "En las noches de luna nueva deambula por las calles de las ciudades y emite espeluznantes alaridos que maldicen a quienes los oyen."
-  },
-  {
-    "numero": 715,
-    "id": "GOURGEIST_1",
-    "nombre": "Gourgeist",
-    "form_name": "Tamaño Normal",
-    "es_forma": true,
-    "generacion": 6,
-    "tipos": [
-      "GHOST",
-      "GRASS"
-    ],
-    "stats_base": {
-      "hp": 65,
-      "atq": 90,
-      "def": 122,
-      "spa": 58,
-      "spd": 75,
-      "vel": 84
-    },
-    "física": {
-      "altura": 0.9,
-      "peso": 12.5
-    },
-    "habilidades": [
-      "PICKUP",
-      "FRISK"
-    ],
-    "habilidad_oculta": [
-      "INSOMNIA"
-    ],
-    "descripcion": "Se dice que los espeluznantes alaridos que emite bien entrada la noche son los lamentos de almas en pena desde el más allá."
-  },
-  {
-    "numero": 715,
-    "id": "GOURGEIST_2",
-    "nombre": "Gourgeist",
-    "form_name": "Tamaño Grande",
-    "es_forma": true,
-    "generacion": 6,
-    "tipos": [
-      "GHOST",
-      "GRASS"
-    ],
-    "stats_base": {
-      "hp": 75,
-      "atq": 95,
-      "def": 122,
-      "spa": 58,
-      "spd": 75,
-      "vel": 69
-    },
-    "física": {
-      "altura": 1.1,
-      "peso": 14.0
-    },
-    "habilidades": [
-      "PICKUP",
-      "FRISK"
-    ],
-    "habilidad_oculta": [
-
-    ],
-    "descripcion": "Los Gourgeist Tamaño Grande se hacen pasar por adultos para tomar a los niños de la mano y llevárselos al otro mundo."
-  },
-  {
-    "numero": 715,
-    "id": "GOURGEIST_3",
-    "nombre": "Gourgeist",
-    "form_name": "Tamaño Extragrande",
-    "es_forma": true,
-    "generacion": 6,
-    "tipos": [
-      "GHOST",
-      "GRASS"
-    ],
-    "stats_base": {
-      "hp": 85,
-      "atq": 100,
-      "def": 122,
-      "spa": 58,
-      "spd": 75,
-      "vel": 54
-    },
-    "física": {
-      "altura": 1.7,
-      "peso": 39.0
-    },
-    "habilidades": [
-      "PICKUP",
-      "FRISK"
-    ],
-    "habilidad_oculta": [
-      "INSOMNIA"
-    ],
-    "descripcion": "Los Gourgeist tamaño Extragrande se llevan a cualquiera al otro mundo, pues nadie puede resistir su fuerza."
   },
   {
     "numero": 716,
