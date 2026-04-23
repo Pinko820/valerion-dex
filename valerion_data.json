@@ -412,10 +412,10 @@
     ],
     "stats_base": {
       "hp": 95,
-      "atq": 85,
-      "def": 105,
+      "atq": 80,
+      "def": 100,
       "spa": 85,
-      "spd": 110,
+      "spd": 105,
       "vel": 70
     },
     "física": {
@@ -473,12 +473,12 @@
       "STEEL"
     ],
     "stats_base": {
-      "hp": 79,
-      "atq": 103,
+      "hp": 95,
+      "atq": 80,
       "def": 120,
-      "spa": 135,
-      "spd": 115,
-      "vel": 78
+      "spa": 140,
+      "spd": 120,
+      "vel": 80
     },
     "física": {
       "altura": 1.6,
@@ -816,7 +816,7 @@
       "def": 75,
       "spa": 85,
       "spd": 75,
-      "vel": 101
+      "vel": 102
     },
     "física": {
       "altura": 1.5,
@@ -1216,11 +1216,11 @@
     ],
     "stats_base": {
       "hp": 35,
-      "atq": 55,
-      "def": 40,
-      "spa": 50,
+      "atq": 100,
+      "def": 50,
+      "spa": 100,
       "spd": 50,
-      "vel": 90
+      "vel": 100
     },
     "física": {
       "altura": 0.4,
