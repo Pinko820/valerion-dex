@@ -279,7 +279,7 @@ export const ABILITY_MAP = {
     "POWEROFALCHEMY": "Reacción Química",
     "DESOLATELAND": "Tierra del Ocaso",
     "PRIMORDIALSEA": "Mar del Arbor",
-    "NECROFORCE": "Fuerza Cerebral",
+    "NEUROFORCE": "Fuerza Cerebral",
     "DAUNTLESSSHIELD": "Coraza Indómita",
     "INTREPIDSWORD": "Espada Indómita",
     "LIQUIDOOZE": "Lodo Líquido",
@@ -290,7 +290,7 @@ export const ABILITY_MAP = {
     "VITALSPIRIT": "Espíritu Vital",
     "SWARM": "Enjambre",
     "WHITESMOKE": "Humo Blanco",
-    "GORILATACTICS": "Monotema",
+    "GORILLATACTICS": "Monotema",
     "WANDERINGSPIRIT": "Alma Errante",
     "EMERGENCYEXIT": "Salida de Emergencia",
     "SOULHEART": "Coranima",
@@ -304,5 +304,11 @@ export const ABILITY_MAP = {
     "UNSEENFIST": "Puño Invisible",
     "MINDSEYE"  : "Ojo Mental",
     "PROTEAN": "Mutatipo",
-    "PURIFYINGSALT": "Sal Purificadora"
+    "PURIFYINGSALT": "Sal Purificadora",
+    "BALLFETCH": "Recoge Bolas",
+    "BATTLEBOND": "Fuerte Afecto",
+    "BEADSOFRUIN":"Abalorio Debacle",
+    "VESSELOFRUIN":"Caldero Debacle",
+    "SWORDOFRUIN":"Espada Debacle",
+    "TABLETOFRUIN":"Tablilla Debacle"
 };
