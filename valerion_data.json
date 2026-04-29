@@ -40944,69 +40944,7 @@
     "descripcion": "Es un Pokémon de gran astucia. Atrae a sus presas fingiendo estar débil para otorgarle a su compañero la oportunidad de atacar."
   },
   {
-    "numero": 983,
-    "id": "TATSUGIRI_1",
-    "nombre": "Tatsugiri",
-    "form_name": "Forma Lánguida",
-    "es_forma": true,
-    "generacion": 9,
-    "tipos": [
-      "DRAGON",
-      "WATER"
-    ],
-    "stats_base": {
-      "hp": 68,
-      "atq": 50,
-      "def": 60,
-      "spa": 120,
-      "spd": 95,
-      "vel": 82
-    },
-    "física": {
-      "altura": 0.3,
-      "peso": 8.0
-    },
-    "habilidades": [
-      "COMMANDER"
-    ],
-    "habilidad_oculta": [
-      "STORMDRAIN"
-    ],
-    "descripcion": "Al parecer, tanto los motivos como el color de su cuerpo cambian para adaptarse a los gustos de la presa a la que quiere atraer."
-  },
-  {
-    "numero": 983,
-    "id": "TATSUGIRI_2",
-    "nombre": "Tatsugiri",
-    "form_name": "Forma Recta",
-    "es_forma": true,
-    "generacion": 9,
-    "tipos": [
-      "DRAGON",
-      "WATER"
-    ],
-    "stats_base": {
-      "hp": 68,
-      "atq": 50,
-      "def": 60,
-      "spa": 120,
-      "spd": 95,
-      "vel": 82
-    },
-    "física": {
-      "altura": 0.3,
-      "peso": 8.0
-    },
-    "habilidades": [
-      "COMMANDER"
-    ],
-    "habilidad_oculta": [
-      "STORMDRAIN"
-    ],
-    "descripcion": "Se alimenta principalmente de Pokémon pájaro. Es consciente de que es débil, por lo que caza junto a un compañero."
-  },
-  {
-    "numero": 983,
+    "numero": 982,
     "id": "TATSUGIRI_3",
     "nombre": "Tatsugiri",
     "form_name": "Mega Tatsugiri Forma Curvada",
@@ -41038,68 +40976,6 @@
   },
   {
     "numero": 983,
-    "id": "TATSUGIRI_4",
-    "nombre": "Tatsugiri",
-    "form_name": "Mega Tatsugiri Forma Lánguida",
-    "es_forma": true,
-    "generacion": 9,
-    "tipos": [
-      "DRAGON",
-      "WATER"
-    ],
-    "stats_base": {
-      "hp": 68,
-      "atq": 65,
-      "def": 90,
-      "spa": 135,
-      "spd": 125,
-      "vel": 92
-    },
-    "física": {
-      "altura": 0.6,
-      "peso": 24.0
-    },
-    "habilidades": [
-      "COMMANDER"
-    ],
-    "habilidad_oculta": [
-      "COMMANDER"
-    ],
-    "descripcion": "La megaevolución le permite solidificar la energía de la transformación, liberando esferas que explotan al mínimo contacto."
-  },
-  {
-    "numero": 983,
-    "id": "TATSUGIRI_5",
-    "nombre": "Tatsugiri",
-    "form_name": "Mega Tatsugiri Forma Recta",
-    "es_forma": true,
-    "generacion": 9,
-    "tipos": [
-      "DRAGON",
-      "WATER"
-    ],
-    "stats_base": {
-      "hp": 68,
-      "atq": 65,
-      "def": 90,
-      "spa": 135,
-      "spd": 125,
-      "vel": 92
-    },
-    "física": {
-      "altura": 0.6,
-      "peso": 24.0
-    },
-    "habilidades": [
-      "COMMANDER"
-    ],
-    "habilidad_oculta": [
-      "COMMANDER"
-    ],
-    "descripcion": "La megaevolución le proporciona el uso libre de la energía de la transformación para crear un medio de transporte, con el cual puede desplazarse por el aire libremente."
-  },
-  {
-    "numero": 984,
     "id": "ANNIHILAPE",
     "nombre": "Annihilape",
     "form_name": "",
