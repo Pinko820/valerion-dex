@@ -314,5 +314,17 @@ export const ABILITY_MAP = {
     "COMMANDER":"Comandar",
     "DRAGONSMAW":"Mandíbula Dragón",
     "TRANSISTOR": "Transistor",
-    "ELECTROMORPHOSIS":"Dinamo"
+    "ELECTROMORPHOSIS":"Dinamo",
+    "EMBODYASPECT": "Evoca Recuerdos Turquesa",
+    "EMBODYASPECT_1": "Evoca Recuerdos Fuente",
+    "EMBODYASPECT_2": "Evoca Recuerdos Horno",
+    "EMBODYASPECT_3": "Evoca Recuerdos Cimiento",
+    "GOODASGOLD": "Cuerpo de Oro",
+    "HOSPITALITY": "Hospitalidad",
+    "ICEFACE":"Cara de Hielo",
+    "ICESCALES":"Escamas de Hielo",
+    "LINGERINGAROMA": "Aroma Incesante",
+    "MARVELSCALE":"Escama Especial",
+    "MIMICRY":"Mimetismo",
+    "MOODY":"Veleta"
 };
