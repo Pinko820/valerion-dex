@@ -1189,9 +1189,9 @@
       "hp": 82,
       "atq": 105,
       "def": 89,
-      "spa": 99,
-      "spd": 80,
-      "vel": 55
+      "spa": 55,
+      "spd": 99,
+      "vel": 80
     },
     "física": {
       "altura": 5.2,
@@ -1338,12 +1338,12 @@
       "PSYCHIC"
     ],
     "stats_base": {
-      "hp": 60,
-      "atq": 85,
-      "def": 50,
-      "spa": 95,
+      "hp": 70,
+      "atq": 60,
+      "def": 55,
+      "spa": 115,
       "spd": 85,
-      "vel": 110
+      "vel": 115
     },
     "física": {
       "altura": 0.7,
@@ -1492,8 +1492,8 @@
       "hp": 75,
       "atq": 100,
       "def": 110,
-      "spa": 45,
-      "spd": 55,
+      "spa": 35,
+      "spd": 65,
       "vel": 65
     },
     "física": {
@@ -20463,12 +20463,12 @@
       "NORMAL"
     ],
     "stats_base": {
-      "hp": 120,
-      "atq": 120,
-      "def": 120,
-      "spa": 120,
-      "spd": 120,
-      "vel": 120
+      "hp": 150,
+      "atq": 150,
+      "def": 150,
+      "spa": 150,
+      "spd": 150,
+      "vel": 150
     },
     "física": {
       "altura": 3.2,
@@ -20493,12 +20493,12 @@
       "FIGHTING"
     ],
     "stats_base": {
-      "hp": 120,
-      "atq": 120,
-      "def": 120,
-      "spa": 120,
-      "spd": 120,
-      "vel": 120
+      "hp": 150,
+      "atq": 150,
+      "def": 150,
+      "spa": 150,
+      "spd": 150,
+      "vel": 150
     },
     "física": {
       "altura": 3.2,
@@ -20523,12 +20523,12 @@
       "FLYING"
     ],
     "stats_base": {
-      "hp": 120,
-      "atq": 120,
-      "def": 120,
-      "spa": 120,
-      "spd": 120,
-      "vel": 120
+      "hp": 150,
+      "atq": 150,
+      "def": 150,
+      "spa": 150,
+      "spd": 150,
+      "vel": 150
     },
     "física": {
       "altura": 3.2,
@@ -20553,12 +20553,12 @@
       "POISON"
     ],
     "stats_base": {
-      "hp": 120,
-      "atq": 120,
-      "def": 120,
-      "spa": 120,
-      "spd": 120,
-      "vel": 120
+      "hp": 150,
+      "atq": 150,
+      "def": 150,
+      "spa": 150,
+      "spd": 150,
+      "vel": 150
     },
     "física": {
       "altura": 3.2,
@@ -20583,12 +20583,12 @@
       "GROUND"
     ],
     "stats_base": {
-      "hp": 120,
-      "atq": 120,
-      "def": 120,
-      "spa": 120,
-      "spd": 120,
-      "vel": 120
+      "hp": 150,
+      "atq": 150,
+      "def": 150,
+      "spa": 150,
+      "spd": 150,
+      "vel": 150
     },
     "física": {
       "altura": 3.2,
@@ -20613,12 +20613,12 @@
       "ROCK"
     ],
     "stats_base": {
-      "hp": 120,
-      "atq": 120,
-      "def": 120,
-      "spa": 120,
-      "spd": 120,
-      "vel": 120
+      "hp": 150,
+      "atq": 150,
+      "def": 150,
+      "spa": 150,
+      "spd": 150,
+      "vel": 150
     },
     "física": {
       "altura": 3.2,
@@ -20643,12 +20643,12 @@
       "BUG"
     ],
     "stats_base": {
-      "hp": 120,
-      "atq": 120,
-      "def": 120,
-      "spa": 120,
-      "spd": 120,
-      "vel": 120
+      "hp": 150,
+      "atq": 150,
+      "def": 150,
+      "spa": 150,
+      "spd": 150,
+      "vel": 150
     },
     "física": {
       "altura": 3.2,
@@ -20673,12 +20673,12 @@
       "GHOST"
     ],
     "stats_base": {
-      "hp": 120,
-      "atq": 120,
-      "def": 120,
-      "spa": 120,
-      "spd": 120,
-      "vel": 120
+      "hp": 150,
+      "atq": 150,
+      "def": 150,
+      "spa": 150,
+      "spd": 150,
+      "vel": 150
     },
     "física": {
       "altura": 3.2,
@@ -20703,12 +20703,12 @@
       "STEEL"
     ],
     "stats_base": {
-      "hp": 120,
-      "atq": 120,
-      "def": 120,
-      "spa": 120,
-      "spd": 120,
-      "vel": 120
+      "hp": 150,
+      "atq": 150,
+      "def": 150,
+      "spa": 150,
+      "spd": 150,
+      "vel": 150
     },
     "física": {
       "altura": 3.2,
@@ -20733,12 +20733,12 @@
       "QMARKS"
     ],
     "stats_base": {
-      "hp": 120,
-      "atq": 120,
-      "def": 120,
-      "spa": 120,
-      "spd": 120,
-      "vel": 120
+      "hp": 150,
+      "atq": 150,
+      "def": 150,
+      "spa": 150,
+      "spd": 150,
+      "vel": 150
     },
     "física": {
       "altura": 3.2,
@@ -20763,12 +20763,12 @@
       "FIRE"
     ],
     "stats_base": {
-      "hp": 120,
-      "atq": 120,
-      "def": 120,
-      "spa": 120,
-      "spd": 120,
-      "vel": 120
+      "hp": 150,
+      "atq": 150,
+      "def": 150,
+      "spa": 150,
+      "spd": 150,
+      "vel": 150
     },
     "física": {
       "altura": 3.2,
@@ -20793,12 +20793,12 @@
       "WATER"
     ],
     "stats_base": {
-      "hp": 120,
-      "atq": 120,
-      "def": 120,
-      "spa": 120,
-      "spd": 120,
-      "vel": 120
+      "hp": 150,
+      "atq": 150,
+      "def": 150,
+      "spa": 150,
+      "spd": 150,
+      "vel": 150
     },
     "física": {
       "altura": 3.2,
@@ -20823,12 +20823,12 @@
       "GRASS"
     ],
     "stats_base": {
-      "hp": 120,
-      "atq": 120,
-      "def": 120,
-      "spa": 120,
-      "spd": 120,
-      "vel": 120
+      "hp": 150,
+      "atq": 150,
+      "def": 150,
+      "spa": 150,
+      "spd": 150,
+      "vel": 150
     },
     "física": {
       "altura": 3.2,
@@ -20853,12 +20853,12 @@
       "ELECTRIC"
     ],
     "stats_base": {
-      "hp": 120,
-      "atq": 120,
-      "def": 120,
-      "spa": 120,
-      "spd": 120,
-      "vel": 120
+      "hp": 150,
+      "atq": 150,
+      "def": 150,
+      "spa": 150,
+      "spd": 150,
+      "vel": 150
     },
     "física": {
       "altura": 3.2,
@@ -20883,12 +20883,12 @@
       "PSYCHIC"
     ],
     "stats_base": {
-      "hp": 120,
-      "atq": 120,
-      "def": 120,
-      "spa": 120,
-      "spd": 120,
-      "vel": 120
+      "hp": 150,
+      "atq": 150,
+      "def": 150,
+      "spa": 150,
+      "spd": 150,
+      "vel": 150
     },
     "física": {
       "altura": 3.2,
@@ -20913,12 +20913,12 @@
       "ICE"
     ],
     "stats_base": {
-      "hp": 120,
-      "atq": 120,
-      "def": 120,
-      "spa": 120,
-      "spd": 120,
-      "vel": 120
+      "hp": 150,
+      "atq": 150,
+      "def": 150,
+      "spa": 150,
+      "spd": 150,
+      "vel": 150
     },
     "física": {
       "altura": 3.2,
@@ -20943,12 +20943,12 @@
       "DRAGON"
     ],
     "stats_base": {
-      "hp": 120,
-      "atq": 120,
-      "def": 120,
-      "spa": 120,
-      "spd": 120,
-      "vel": 120
+      "hp": 150,
+      "atq": 150,
+      "def": 150,
+      "spa": 150,
+      "spd": 150,
+      "vel": 150
     },
     "física": {
       "altura": 3.2,
@@ -20973,12 +20973,12 @@
       "DARK"
     ],
     "stats_base": {
-      "hp": 120,
-      "atq": 120,
-      "def": 120,
-      "spa": 120,
-      "spd": 120,
-      "vel": 120
+      "hp": 150,
+      "atq": 150,
+      "def": 150,
+      "spa": 150,
+      "spd": 150,
+      "vel": 150
     },
     "física": {
       "altura": 3.2,
@@ -21003,12 +21003,12 @@
       "FAIRY"
     ],
     "stats_base": {
-      "hp": 120,
-      "atq": 120,
-      "def": 120,
-      "spa": 120,
-      "spd": 120,
-      "vel": 120
+      "hp": 150,
+      "atq": 150,
+      "def": 150,
+      "spa": 150,
+      "spd": 150,
+      "vel": 150
     },
     "física": {
       "altura": 3.2,
@@ -40944,7 +40944,7 @@
     "descripcion": "Es un Pokémon de gran astucia. Atrae a sus presas fingiendo estar débil para otorgarle a su compañero la oportunidad de atacar."
   },
   {
-    "numero": 982,
+    "numero": 983,
     "id": "TATSUGIRI_3",
     "nombre": "Tatsugiri",
     "form_name": "Mega Tatsugiri Forma Curvada",
@@ -40975,7 +40975,7 @@
     "descripcion": "La megaevolución ha estimulado su cerebro y lo ha vuelto aún más astuto. En combate, crea y controla réplicas de sí mismo."
   },
   {
-    "numero": 983,
+    "numero": 984,
     "id": "ANNIHILAPE",
     "nombre": "Annihilape",
     "form_name": "",
