@@ -310,5 +310,9 @@ export const ABILITY_MAP = {
     "BEADSOFRUIN":"Abalorio Debacle",
     "VESSELOFRUIN":"Caldero Debacle",
     "SWORDOFRUIN":"Espada Debacle",
-    "TABLETOFRUIN":"Tablilla Debacle"
+    "TABLETOFRUIN":"Tablilla Debacle",
+    "COMMANDER":"Comandar",
+    "DRAGONSMAW":"Mandíbula Dragón",
+    "TRANSISTOR": "Transistor",
+    "ELECTROMORPHOSIS":"Dinamo"
 };
