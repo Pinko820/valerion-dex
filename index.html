@@ -18,11 +18,11 @@
             </header>
 
             <div class="max-w-6xl mx-auto bg-gray-800 p-6 rounded-2xl shadow-2xl border border-gray-700 mb-10">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-                    <input type="text" id="search" placeholder="Nombre del Pokémon..." 
-                        class="w-full p-3 rounded-xl bg-gray-900 border-none focus:ring-2 focus:ring-yellow-500 text-white placeholder-gray-500">
+                <!-- Contenedor de Filtros en una sola fila larga -->
+                <div class="filter-row mb-4">
+                    <input type="text" id="search" placeholder="Nombre del Pokémon..." class="filter-field">
             
-                    <select id="gen-filter" class="w-full p-3 rounded-xl bg-gray-900 border-none focus:ring-2 focus:ring-yellow-500 text-gray-300">
+                    <select id="gen-filter" class="filter-field">
                         <option value="all">Todas las Regiones</option>
                         <option value="Valerion">Región Valerion (Fakemon)</option>
                         <option value="Gen 1">Kanto (Gen 1)</option>
@@ -37,15 +37,15 @@
                         <option value="Otras">Otras Generaciones</option>
                     </select>
 
-                    <select id="type-1" class="w-full p-3 rounded-xl bg-gray-900 border-none focus:ring-2 focus:ring-blue-500 text-gray-300">
+                    <select id="type-1" class="filter-field focus:ring-blue-500">
                         <option value="all">Tipo 1: Todos</option>
                     </select>
 
-                    <select id="type-2" class="w-full p-3 rounded-xl bg-gray-900 border-none focus:ring-2 focus:ring-red-500 text-gray-300">
+                    <select id="type-2" class="filter-field focus:ring-red-500">
                         <option value="all">Tipo 2: Todos / Único</option>
                     </select>
 
-                    <select id="ability-filter" class="w-full p-3 rounded-xl bg-gray-900 border-none focus:ring-2 focus:ring-yellow-500 text-gray-300">
+                    <select id="ability-filter" class="filter-field">
                         <option value="all">Todas las Habilidades</option>
                     </select>
                 </div>
@@ -86,7 +86,8 @@
                 </div>
             </div>
 
-            <div id="pokedex" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
+            <!-- Grid configurada para 5 columnas en XL (PC) -->
+            <div id="pokedex" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"></div>
         </div>
     </div>
 
