@@ -46,7 +46,6 @@
 /* --- Ajustes de Grid --- */
 #pokedex {
     display: grid;
-    /* Por defecto usa auto-fill, pero en PC (XL) forzamos 5 columnas */
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1.5rem;
 }
@@ -63,12 +62,11 @@
     flex-direction: row;
     flex-wrap: nowrap;
     overflow-x: auto;
-    gap: 1rem;
+    gap: 0.75rem; /* Margen entre campos reducido un poco */
     padding-bottom: 0.5rem;
     width: 100%;
 }
 
-/* Ocultar barra de scroll pero permitir funcionalidad */
 .filter-row::-webkit-scrollbar {
     height: 4px;
 }
@@ -79,22 +77,22 @@
 
 .filter-field {
     flex: 1;
-    min-width: 220px; /* Hace los campos más largos */
-    padding: 0.75rem;
+    min-width: 200px; /* Ajustado para que quepan mejor en el contenedor más ancho */
+    padding: 0.6rem; /* Padding reducido para que sea más compacto */
     border-radius: 0.75rem;
-    background-color: #111827; /* bg-gray-900 */
+    background-color: #111827;
     border: none;
-    color: #d1d5db; /* text-gray-300 */
+    color: #d1d5db;
     transition: all 0.2s ease;
     outline: none;
+    font-size: 0.9rem;
 }
 
 .filter-field:focus {
-    box-shadow: 0 0 0 2px #eab308; /* focus:ring-yellow-500 */
+    box-shadow: 0 0 0 2px #eab308;
 }
 
 /* --- Texto de Habilidades --- */
-/* Target general para el texto de habilidades dentro de las cards */
 .ability-text, 
 #pokedex .text-sm, 
 .pokemon-card .ability {
@@ -103,7 +101,7 @@
     color: #e5e7eb;
 }
 
-/* --- Otros Estilos Existentes --- */
+/* --- Otros Estilos --- */
 .sprite-window img.loading {
     opacity: 0;
 }
