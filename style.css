@@ -43,18 +43,67 @@
     max-width: none !important;
 }
 
-#main-layout { transition: margin-right 0.3s ease-out; }
-#pokedex { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
-
-.sprite-window img.loading {
-    opacity: 0;
+/* --- Ajustes de Grid --- */
+#pokedex {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
 }
 
-/* Forzar que el grid se reajuste al nuevo ancho del 60% restante */
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
     #pokedex {
-        grid-template-columns: repeat(5, minmax(0, 1fr));
+        grid-template-columns: repeat(5, 1fr) !important;
     }
+}
+
+/* --- Caja de Filtros Dinámica --- */
+.filter-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0.75rem; /* Margen entre campos reducido un poco */
+    padding-bottom: 0.5rem;
+    width: 100%;
+}
+
+.filter-row::-webkit-scrollbar {
+    height: 4px;
+}
+.filter-row::-webkit-scrollbar-thumb {
+    background: #374151;
+    border-radius: 10px;
+}
+
+.filter-field {
+    flex: 1;
+    min-width: 200px; /* Ajustado para que quepan mejor en el contenedor más ancho */
+    padding: 0.6rem; /* Padding reducido para que sea más compacto */
+    border-radius: 0.75rem;
+    background-color: #111827;
+    border: none;
+    color: #d1d5db;
+    transition: all 0.2s ease;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.filter-field:focus {
+    box-shadow: 0 0 0 2px #eab308;
+}
+
+/* --- Texto de Habilidades --- */
+.ability-text, 
+#pokedex .text-sm, 
+.pokemon-card .ability {
+    font-size: 1.05rem !important;
+    font-weight: 500;
+    color: #e5e7eb;
+}
+
+/* --- Otros Estilos --- */
+.sprite-window img.loading {
+    opacity: 0;
 }
 
 @media (max-width: 640px) {
@@ -66,15 +115,8 @@
     }
 }
 
-/* Ajuste del layout principal al abrir el panel */
 #main-layout {
     transition: margin-right 0.3s ease-out;
-}
-
-/* Asegurar que las tarjetas se adapten al espacio disponible */
-#pokedex {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
 }
 
 .placeholder-silhouette {
@@ -94,7 +136,6 @@
     display: none !important;
 }
 
-/* Clase para abrir el panel */
 #details-panel.open {
     transform: translateX(0);
 }
@@ -104,15 +145,12 @@
     opacity: 1;
 }
 
-/* Lógica específica para móviles */
 @media (max-width: 768px) {
     #details-panel {
         top: auto;
         bottom: 0;
         height: 90vh;
         width: 100% !important;
-        /*border-l-0;
-        border-t: 1px solid #374151;*/
         border-radius: 2rem 2rem 0 0;
     }
     
@@ -125,7 +163,6 @@
     }
 }
 
-/* Scrollbar personalizada */
 .custom-scrollbar::-webkit-scrollbar {
     width: 6px;
 }
@@ -138,10 +175,9 @@
 }
 
 .card-pokemon h2 {
-    font-size: 1.5rem; /* Ajusta según prefieras */
+    font-size: 1.5rem;
 }
 
-/* Estilos para la tabla de calculadora en el panel de detalles */
 .stats-calc-table th {
     font-size: 0.65rem;
     color: #9ca3af;
