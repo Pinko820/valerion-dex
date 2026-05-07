@@ -15,73 +15,78 @@ export function handleMissingImage(imgElement) {
 }
 
 export function createCard(p) {
-    let fontSizeClass = p.nombreFinal.length > 18 ? "text-base" : 
-                        p.nombreFinal.length > 14 ? "text-lg" : 
-                        p.nombreFinal.length > 10 ? "text-xl" : "text-2xl";
+    let fontSizeClass = p.nombreFinal.length > 18 ? "text-[10px]" :
+                        p.nombreFinal.length > 13 ? "text-xs" :
+                        p.nombreFinal.length > 9  ? "text-sm" : "text-base";
 
     const typesHTML = p.tipos.map(t => {
         const info = TYPE_MAP[t.toUpperCase()] || { esp: t, color: '#555' };
-        return `<span class="text-[10px] px-2 py-0.5 rounded font-bold text-white uppercase" style="background-color: ${info.color}">${info.esp}</span>`;
+        return `<span class="text-[9px] px-1.5 py-0.5 rounded font-bold text-white uppercase" style="background-color: ${info.color}">${info.esp}</span>`;
     }).join('');
 
     const habilidadesUnicas = new Set([...p.habilidades, ...p.habilidad_oculta]);
     let abilitiesHTML = "";
 
     if (habilidadesUnicas.size === 1) {
-        // Traducimos el primer (y único) elemento
         const habilidad = translateAbility(Array.from(habilidadesUnicas)[0]);
-        abilitiesHTML = `<div class="text-[10px] text-gray-400 italic">Habilidad Innata: <span class="text-white font-bold">${habilidad}</span></div>`;
+        abilitiesHTML = `<span class="text-white font-semibold">${habilidad}</span>`;
     } else {
-        // Mapeamos las normales a sus traducciones
         const normales = p.habilidades.map(translateAbility).join(' / ');
-        
-        // Filtramos y traducimos la oculta
         const ocultaFiltrada = p.habilidad_oculta.filter(h => !p.habilidades.includes(h));
-        const ocultaHTML = ocultaFiltrada.length > 0 ? 
-            `<div class="text-yellow-500/80 italic mt-0.5">Oculta: ${ocultaFiltrada.map(translateAbility).join(', ')}</div>` : "";
-        
-        abilitiesHTML = `
-            <div class="text-[10px] text-gray-400">
-                <div class="text-white font-medium">${normales}</div>
-                ${ocultaHTML}
-            </div>
-        `;
+        const ocultaHTML = ocultaFiltrada.length > 0
+            ? `<div class="text-yellow-500/70 italic leading-tight">↳ ${ocultaFiltrada.map(translateAbility).join(', ')}</div>`
+            : "";
+        abilitiesHTML = `<span class="text-white font-semibold">${normales}</span>${ocultaHTML}`;
     }
 
     const numeroFormateado = String(p.numero).padStart(3, '0');
+    const spritePath = `${CONFIG.SPRITE_PATH}${p.id}.png`;
 
     return `
-        <div class="card-pokemon bg-gray-800 px-3 py-6 rounded-3xl hover:bg-gray-750 transition-all border-b-8 border-yellow-600 group shadow-lg flex flex-col relative cursor-pointer" 
+        <div class="card-pokemon bg-gray-800 rounded-2xl hover:bg-gray-750 transition-all border-l-4 border-yellow-600 group shadow-md flex flex-row cursor-pointer overflow-hidden"
              data-id="${p.id}">
-            <span class="absolute top-4 right-6 font-mono text-xl font-black text-white/10 group-hover:text-yellow-500/20 transition-colors">
-                #${numeroFormateado}
-            </span>
-            <div class="sprite-window mb-4 group-hover:scale-110 transition-transform relative flex-shrink-0">
-                <img src="${CONFIG.SPRITE_PATH}${p.id}.png" class="pixelated" alt="${p.nombre}" loading="lazy">
-            </div>
-            <div class="flex-grow flex flex-col justify-between text-center px-1">
-                <div class="mb-4">
-                    <h2 class="font-black ${fontSizeClass} uppercase tracking-tighter text-white leading-tight break-words">${p.nombreFinal}</h2>
-                    <p class="text-yellow-500 text-[10px] font-bold mt-1 mb-2">${p.genLabel}</p>
-                    <div class="flex justify-center gap-1 mb-3 flex-wrap">${typesHTML}</div>
-                    
-                    <div class="bg-black/20 py-2 px-1 rounded-lg border border-white/5 mb-2">
-                        ${abilitiesHTML}
-                    </div>
+
+            <!-- IZQUIERDA: sprite (primer frame) -->
+            <div class="flex-shrink-0 w-[84px] flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors relative p-1">
+                <span class="absolute top-1 left-1 font-mono text-[9px] font-black text-yellow-500/50 leading-none">#${numeroFormateado}</span>
+                <div class="sprite-frame-box"
+                     data-sprite="${spritePath}"
+                     style="
+                        width: 72px;
+                        height: 72px;
+                        image-rendering: pixelated;
+                        background-image: url('${spritePath}');
+                        background-repeat: no-repeat;
+                        background-position: 0 0;
+                        background-size: auto 72px;
+                     ">
                 </div>
-                
-                <div class="bg-gray-900 p-3 rounded-xl mt-auto shadow-inner">
-                    <div class="flex justify-between items-center mb-2 px-1 border-b border-gray-700 pb-1">
-                        <span class="text-[9px] font-bold text-yellow-500 uppercase tracking-widest">Total Stats</span>
-                        <span class="text-sm font-black text-white">${p.bst}</span>
+            </div>
+
+            <!-- DERECHA: info -->
+            <div class="flex-1 flex flex-col justify-between p-2 min-w-0">
+                <div>
+                    <h2 class="font-black ${fontSizeClass} uppercase tracking-tight text-white leading-tight" style="word-break: break-word; hyphens: auto;">${p.nombreFinal}</h2>
+                    <p class="text-yellow-500/70 text-[9px] font-bold mb-1">${p.genLabel}</p>
+                    <div class="flex gap-0.5 flex-wrap mb-1.5">${typesHTML}</div>
+                </div>
+
+                <div class="text-[10px] text-gray-300 leading-tight mb-1.5">
+                    ${abilitiesHTML}
+                </div>
+
+                <div class="bg-gray-900/80 rounded-lg px-1.5 py-1">
+                    <div class="flex justify-between items-center mb-0.5">
+                        <span class="text-[7px] font-bold text-yellow-500 uppercase tracking-widest">BST</span>
+                        <span class="text-xs font-black text-white">${p.bst}</span>
                     </div>
-                    <div class="grid grid-cols-2 gap-x-3 gap-y-1 text-sm font-mono opacity-90 text-gray-400">
-                        <div class="flex justify-between border-b border-gray-800"><span>HP</span><span class="text-white">${p.stats_base.hp}</span></div>
-                        <div class="flex justify-between border-b border-gray-800"><span>ATK</span><span class="text-white">${p.stats_base.atq}</span></div>
-                        <div class="flex justify-between border-b border-gray-800"><span>DEF</span><span class="text-white">${p.stats_base.def}</span></div>
-                        <div class="flex justify-between border-b border-gray-800"><span>SPA</span><span class="text-white">${p.stats_base.spa}</span></div>
-                        <div class="flex justify-between border-b border-gray-800"><span>SPD</span><span class="text-white">${p.stats_base.spd}</span></div>
-                        <div class="flex justify-between border-b border-gray-800"><span>VEL</span><span class="text-white">${p.stats_base.vel}</span></div>
+                    <div class="grid grid-cols-3 gap-x-1.5 text-[9px] font-mono text-gray-400">
+                        <div class="flex justify-between"><span>HP</span><span class="text-white">${p.stats_base.hp}</span></div>
+                        <div class="flex justify-between"><span>ATK</span><span class="text-white">${p.stats_base.atq}</span></div>
+                        <div class="flex justify-between"><span>DEF</span><span class="text-white">${p.stats_base.def}</span></div>
+                        <div class="flex justify-between"><span>SPA</span><span class="text-white">${p.stats_base.spa}</span></div>
+                        <div class="flex justify-between"><span>SPD</span><span class="text-white">${p.stats_base.spd}</span></div>
+                        <div class="flex justify-between"><span>VEL</span><span class="text-white">${p.stats_base.vel}</span></div>
                     </div>
                 </div>
             </div>
