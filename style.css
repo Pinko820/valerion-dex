@@ -235,3 +235,13 @@
 .card-pokemon:hover .sprite-frame-box {
     transform: scale(1.1);
 }
+
+/* Tabs de movimientos */
+#moves-tabs button {
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+#moves-tabs button.active-tab {
+    color: #eab308;
+    border-bottom-color: #eab308;
+}

@@ -1,6 +1,5 @@
 #===============================================================================
-# * Valerion Dex Exporter + Moves Integrator
-# Genera moves_data.json cruzando pokemon.txt y moves.txt
+# * Valerion Dex Exporter + Moves Category Integrator
 #===============================================================================
 require 'json'
 
@@ -10,11 +9,11 @@ def pbExportMovesData
   output_file = "moves_data.json"
 
   unless File.exist?(path_moves) && File.exist?(path_pokemon)
-    pbMessage("Faltan archivos en la carpeta PBS (moves.txt o pokemon.txt)")
+    pbMessage("Faltan archivos en la carpeta PBS")
     return
   end
 
-  # 1. PASADA A: Crear diccionario de movimientos
+  # 1. PASADA A: Diccionario de movimientos con Categoría
   moves_db = {}
   current_move_id = nil
 
@@ -22,7 +21,14 @@ def pbExportMovesData
     line = line.strip
     if line =~ /^\[(.+)\]$/
       current_move_id = $1
-      moves_db[current_move_id] = { "tipo" => "NORMAL", "pot" => 0, "pre" => 0 }
+      moves_db[current_move_id] = { 
+        "nombre_es" => current_move_id,
+        "tipo" => "NORMAL", 
+        "pot" => 0, 
+        "pre" => 0, 
+        "cat" => "Status",
+        "desc" => ""
+      }
       next
     end
     next if current_move_id.nil? || line.empty? || line.start_with?('#')
@@ -30,14 +36,18 @@ def pbExportMovesData
     if line.include?('=')
       key, value = line.split('=', 2).map(&:strip)
       case key
-      when "Type"     then moves_db[current_move_id]["tipo"] = value
-      when "Power"    then moves_db[current_move_id]["pot"] = value.to_i
-      when "Accuracy" then moves_db[current_move_id]["pre"] = value.to_i
+      when "Name"        then moves_db[current_move_id]["nombre_es"] = value
+      when "Type"        then moves_db[current_move_id]["tipo"]      = value
+      when "Power"       then moves_db[current_move_id]["pot"]       = value.to_i
+      when "Accuracy"    then moves_db[current_move_id]["pre"]       = value.to_i
+      when "TotalPP"     then moves_db[current_move_id]["pp"]        = value.to_i
+      when "Category"    then moves_db[current_move_id]["cat"]       = value
+      when "Description" then moves_db[current_move_id]["desc"]      = value
       end
     end
   end
 
-  # 2. PASADA B: Procesar Pokemon y cruzar datos
+  # 2. PASADA B: Cruzar con Pokemon (igual que antes pero añadiendo 'cat')
   pokemon_moves_db = {}
   current_pkm_id = nil
 
@@ -48,54 +58,46 @@ def pbExportMovesData
       pokemon_moves_db[current_pkm_id] = { "nivel" => [], "mt" => [], "huevo" => [], "tutor" => [] }
       next
     end
-    next if current_pkm_id.nil? || line.empty? || line.start_with?('#')
-
+    next if current_pkm_id.nil? || line.empty?
+    
     if line.include?('=')
       key, value = line.split('=', 2).map(&:strip)
-      
       case key
       when "Moves"
-        raw = value.split(',')
-        raw.each_slice(2) do |lvl, m_id|
+        value.split(',').each_slice(2) do |lvl, m_id|
           m_info = moves_db[m_id] || {}
           pokemon_moves_db[current_pkm_id]["nivel"] << {
-            "nombre" => m_id,
-            "nivel"  => lvl.to_i,
-            "tipo"   => m_info["tipo"] || "???",
-            "pot"    => m_info["pot"],
-            "pre"    => m_info["pre"]
+            "nombre"     => m_id,
+            "nombre_es"  => m_info["nombre_es"] || m_id,
+            "nivel"      => lvl.to_i,
+            "tipo"       => m_info["tipo"],
+            "pot"        => m_info["pot"],
+            "pre"        => m_info["pre"],
+            "pp"         => m_info["pp"],
+            "cat"        => m_info["cat"],
+            "desc"       => m_info["desc"]
           }
         end
-
-      when "TutorMoves"
+      when "TutorMoves", "EggMoves"
+        tipo_json = (key == "TutorMoves" ? "mt" : "huevo")
         value.split(',').each do |m_id|
           m_id.strip!
           m_info = moves_db[m_id] || {}
-          pokemon_moves_db[current_pkm_id]["mt"] << {
-            "nombre" => m_id,
-            "tipo"   => m_info["tipo"] || "???",
-            "pot"    => m_info["pot"],
-            "pre"    => m_info["pre"]
-          }
-        end
-
-      when "EggMoves"
-        value.split(',').each do |m_id|
-          m_id.strip!
-          m_info = moves_db[m_id] || {}
-          pokemon_moves_db[current_pkm_id]["huevo"] << {
-            "nombre" => m_id,
-            "tipo"   => m_info["tipo"] || "???",
-            "pot"    => m_info["pot"],
-            "pre"    => m_info["pre"]
+          pokemon_moves_db[current_pkm_id][tipo_json] << {
+            "nombre"     => m_id,
+            "nombre_es"  => m_info["nombre_es"] || m_id,
+            "tipo"       => m_info["tipo"],
+            "pot"        => m_info["pot"],
+            "pre"        => m_info["pre"],
+            "pp"         => m_info["pp"],
+            "cat"        => m_info["cat"],
+            "desc"       => m_info["desc"]
           }
         end
       end
     end
   end
 
-  # 3. Guardar JSON
   File.open(output_file, "w") { |f| f.write(JSON.pretty_generate(pokemon_moves_db)) }
-
-  pbMessage(_INTL("¡Datos de Valerion exportados con éxito!"))
+  pbMessage(_INTL("¡moves_data.json generado con categorías!"))
 end
