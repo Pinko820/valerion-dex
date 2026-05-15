@@ -1,9 +1,13 @@
 import { getGenLabel } from './ui-utils.js';
 import { TYPE_MAP } from './config.js';
+import { selectedMoves, matchesMoveFilter } from './move-filter.js';
 
 export let pokemonData = [];
-// OPTIMIZACIÓN: índice para lookup O(1) por id en vez de .find() O(n)
 export let pokemonIndex = {};
+
+// Referencia al cache de movimientos (se asigna desde main.js tras la precarga)
+export let movesCache = null;
+export function setMovesCache(cache) { movesCache = cache; }
 
 export async function cargarBaseDeDatos() {
     // OPTIMIZACIÓN: sin ?v=Date.now() → el navegador puede cachear el JSON
@@ -45,6 +49,9 @@ export function getFilteredData() {
         if (gen !== 'all' && p.genLabel !== gen)          return false;
         if (!showForms && p.es_forma)                     return false;
         if (ability !== 'all' && !p.habilidades.includes(ability) && !p.habilidad_oculta.includes(ability)) return false;
+
+        // Filtro de movimientos (chips)
+        if (!matchesMoveFilter(p.id, movesCache))          return false;
 
         // Tipos
         if (type1 !== 'all' && type2 !== 'all') {

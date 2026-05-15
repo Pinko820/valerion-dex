@@ -8,8 +8,8 @@ export function preloadMoves() {
     if (movesPromise) return movesPromise;
     movesPromise = fetch('moves_data.json')
         .then(r => r.json())
-        .then(data => { movesCache = data; })
-        .catch(() => { movesCache = {}; });
+        .then(data => { movesCache = data; return data; })
+        .catch(() => { movesCache = {}; return {}; });
     return movesPromise;
 }
 
@@ -29,15 +29,6 @@ const calcStat = (base, statName, level, iv, ev, nature) => {
         return Math.floor(((2 * base + iv + Math.floor(ev / 4)) * level) / 100) + level + 10;
     }
     return Math.floor((Math.floor(((2 * base + iv + Math.floor(ev / 4)) * level) / 100) + 5) * nature);
-};
-
-const statBarColor = (val) => {
-    if (val <= 30)  return '#ef4444'; // rojo
-    if (val <= 69)  return '#f97316'; // naranja
-    if (val <= 99) return '#eab308'; // amarillo
-    if (val <= 139) return '#84cc16'; // verde lima
-    if (val <= 179) return '#38bdf8'; // celeste
-    return '#f1f5f9';                 // blanco
 };
 
 function getCategoryIcon(cat) {
@@ -96,73 +87,73 @@ export async function openDetails(p) {
             const max    = calcStat(base, key, level, 31, 252, 1);
             const mPlus  = calcStat(base, key, level, 31, 252, key === 'hp' ? 1 : 1.1);
             return `
-                <tr class="border-b border-white/5 text-xs font-mono">
-                    <td class="text-left py-1 text-gray-400 font-black uppercase">${labels[key]}</td>
-                    <td class="text-blue-400 text-center py-1">${mMinus}</td>
-                    <td class="text-gray-400 text-center py-1">${min}</td>
-                    <td class="text-gray-400 text-center py-1">${max}</td>
-                    <td class="text-red-400 font-bold text-center py-1">${mPlus}</td>
+                <tr class="border-b border-white/5 text-[10px] font-mono">
+                    <td class="text-left py-0.5 text-gray-500 font-bold uppercase">${labels[key]}</td>
+                    <td class="text-blue-400 text-center py-0.5">${mMinus}</td>
+                    <td class="text-gray-400 text-center py-0.5">${min}</td>
+                    <td class="text-gray-400 text-center py-0.5">${max}</td>
+                    <td class="text-red-400 font-bold text-center py-0.5">${mPlus}</td>
                 </tr>`;
         }).join('');
     };
 
     content.innerHTML = `
-        <div class="p-5">
-            <div class="flex flex-row gap-4 mb-5 bg-gray-800/40 p-4 rounded-2xl border border-white/5">
-                <div class="flex flex-col items-center gap-3 flex-shrink-0">
+        <div class="p-4">
+            <div class="flex flex-row gap-3 mb-4 bg-gray-800/40 p-3 rounded-2xl border border-white/5">
+                <div class="flex flex-col items-center gap-2 flex-shrink-0">
                     <div class="sprite-detail-frame"
                          data-sprite="${spritePath}"
-                         style="width:144px;height:144px;image-rendering:pixelated;background-image:url('${spritePath}');background-repeat:no-repeat;background-position:0 0;background-size:auto 144px;flex-shrink:0;border-radius:0.75rem;">
+                         style="width:128px;height:128px;image-rendering:pixelated;background-image:url('${spritePath}');background-repeat:no-repeat;background-position:0 0;background-size:auto 128px;flex-shrink:0;border-radius:0.75rem;">
                     </div>
-                    <div class="space-y-1 bg-black/20 p-2.5 rounded-xl w-full">
+                    <div class="space-y-0.5 bg-black/20 p-2 rounded-xl w-full">
                         ${Object.entries(p.stats_base).map(([s, val]) => `
-                            <div class="flex items-center gap-2">
-                                <span class="w-8 text-[10px] font-black uppercase text-gray-400">${s}</span>
-                                <div class="flex-1 bg-gray-900 h-2 rounded-full overflow-hidden">
-                                    <div class="h-full rounded-full" style="width:${Math.min(val / 2.0, 100)}%;background:${statBarColor(val)}"></div>
+                            <div class="flex items-center gap-1.5">
+                                <span class="w-6 text-[7px] font-black uppercase text-gray-500">${s}</span>
+                                <div class="flex-1 bg-gray-900 h-1 rounded-full overflow-hidden">
+                                    <div class="h-full bg-yellow-500/80" style="width:${Math.min(val / 1.8, 100)}%"></div>
                                 </div>
-                                <span class="w-7 text-right font-mono text-xs font-bold" style="color:${statBarColor(val)}">${val}</span>
+                                <span class="w-5 text-right font-mono text-[8px] text-gray-400">${val}</span>
                             </div>`).join('')}
                     </div>
                 </div>
-                <div class="flex-1 flex flex-col justify-between min-w-0 gap-2.5">
+                <div class="flex-1 flex flex-col justify-between min-w-0 gap-2">
                     <div>
                         <h2 class="text-2xl font-black uppercase text-white leading-tight break-words">${p.nombreFinal}</h2>
-                        <p class="text-yellow-500 font-bold text-xs mt-0.5 uppercase tracking-widest">#${String(p.numero).padStart(3,'0')} · ${p.genLabel}</p>
+                        <p class="text-yellow-500 font-bold text-[9px] mt-0.5 uppercase tracking-widest">#${String(p.numero).padStart(3,'0')} · ${p.genLabel}</p>
                     </div>
-                    <div class="flex gap-1.5 flex-wrap">
-                        ${p.tipos.map(t => `<span class="px-2.5 py-0.5 rounded-full text-xs font-black uppercase text-white" style="background-color:${TYPE_MAP[t.toUpperCase()]?.color}">${TYPE_MAP[t.toUpperCase()]?.esp}</span>`).join('')}
+                    <div class="flex gap-1 flex-wrap">
+                        ${p.tipos.map(t => `<span class="px-2 py-0.5 rounded-full text-[9px] font-black uppercase text-white" style="background-color:${TYPE_MAP[t.toUpperCase()]?.color}">${TYPE_MAP[t.toUpperCase()]?.esp}</span>`).join('')}
                     </div>
-                    <div class="flex gap-1.5 text-xs font-bold uppercase">
-                        <div class="flex-1 bg-black/30 px-2 py-1.5 rounded-lg"><span class="text-gray-500 block text-[9px]">Altura</span>${p.física?.altura} m</div>
-                        <div class="flex-1 bg-black/30 px-2 py-1.5 rounded-lg"><span class="text-gray-500 block text-[9px]">Peso</span>${p.física?.peso} kg</div>
-                        <div class="flex-1 bg-black/30 px-2 py-1.5 rounded-lg border border-green-500/20 text-green-400"><span class="text-gray-500 block text-[9px]">H. Lazo</span>${gkPower} pw</div>
+                    <div class="flex gap-1 text-[9px] font-bold uppercase">
+                        <div class="flex-1 bg-black/30 px-2 py-1 rounded-lg"><span class="text-gray-500 block text-[7px]">Altura</span>${p.física?.altura} m</div>
+                        <div class="flex-1 bg-black/30 px-2 py-1 rounded-lg"><span class="text-gray-500 block text-[7px]">Peso</span>${p.física?.peso} kg</div>
+                        <div class="flex-1 bg-black/30 px-2 py-1 rounded-lg border border-green-500/20 text-green-400"><span class="text-gray-500 block text-[7px]">H. Lazo</span>${gkPower} pw</div>
                     </div>
-                    <div class="bg-black/20 px-3 py-2 rounded-lg">
-                        <span class="text-[9px] font-black text-gray-500 uppercase tracking-widest block mb-1">Habilidades</span>
-                        <div class="text-xs text-gray-200 font-bold leading-snug">${p.habilidades.map(h => ABILITY_MAP[h] || h).join(' / ')}</div>
-                        ${p.habilidad_oculta.length ? `<div class="text-xs text-yellow-500/80 italic mt-0.5">↳ HA: ${p.habilidad_oculta.map(h => ABILITY_MAP[h] || h).join(', ')}</div>` : ''}
+                    <div class="bg-black/20 px-2 py-1.5 rounded-lg">
+                        <span class="text-[7px] font-black text-gray-500 uppercase tracking-widest block mb-0.5">Habilidades</span>
+                        <div class="text-[10px] text-gray-200 font-bold">${p.habilidades.map(h => ABILITY_MAP[h] || h).join(' / ')}</div>
+                        ${p.habilidad_oculta.length ? `<div class="text-[9px] text-yellow-600 italic">↳ ${p.habilidad_oculta.map(h => ABILITY_MAP[h] || h).join(', ')}</div>` : ''}
                     </div>
                 </div>
             </div>
 
-            <div class="bg-gray-800/30 px-4 py-3 rounded-2xl border border-white/5 mb-3">
-                <div class="flex justify-between items-center mb-2">
-                    <h3 class="font-black uppercase text-gray-400 text-xs tracking-widest">Calculadora de Stats</h3>
-                    <div class="flex items-center gap-2 bg-black/40 px-3 py-1 rounded-full border border-white/10">
-                        <span class="text-[10px] font-black text-gray-500 uppercase">Nivel</span>
+            <div class="bg-gray-800/30 px-3 py-2 rounded-2xl border border-white/5 mb-3">
+                <div class="flex justify-between items-center mb-1">
+                    <h3 class="font-black uppercase text-gray-500 text-[8px] tracking-widest">Calculadora</h3>
+                    <div class="flex items-center gap-1.5 bg-black/40 px-2 py-0.5 rounded-full border border-white/10">
+                        <span class="text-[7px] font-black text-gray-500 uppercase">Nv</span>
                         <input type="number" id="calc-level" value="100" min="1" max="100"
-                               class="w-10 bg-transparent border-none text-white font-mono text-xs p-0 text-center outline-none">
+                               class="w-8 bg-transparent border-none text-white font-mono text-[10px] p-0 text-center outline-none">
                     </div>
                 </div>
                 <table class="w-full">
                     <thead>
-                        <tr class="text-[10px] text-gray-600 uppercase font-black">
-                            <th class="text-left pb-1">Stat</th>
-                            <th class="pb-1 text-blue-400 text-center">Min −</th>
-                            <th class="pb-1 text-center">Mín</th>
-                            <th class="pb-1 text-center">Máx</th>
-                            <th class="pb-1 text-red-400 text-center">Max +</th>
+                        <tr class="text-[7px] text-gray-600 uppercase font-black">
+                            <th class="text-left pb-0.5">Stat</th>
+                            <th class="pb-0.5 text-blue-400">Min−</th>
+                            <th class="pb-0.5">Min</th>
+                            <th class="pb-0.5">Max</th>
+                            <th class="pb-0.5 text-red-400">Max+</th>
                         </tr>
                     </thead>
                     <tbody id="calc-body">${getTableHTML(100)}</tbody>
@@ -171,11 +162,11 @@ export async function openDetails(p) {
 
             <div class="bg-gray-800/30 rounded-3xl border border-white/5 overflow-hidden">
                 <div class="flex border-b border-white/5 bg-black/20" id="moves-tabs">
-                    <button class="flex-1 py-3 text-xs font-black uppercase text-yellow-500 border-b-2 border-yellow-500 active-tab" data-tab="nivel">Nivel</button>
-                    <button class="flex-1 py-3 text-xs font-black uppercase text-gray-500" data-tab="mt">MT / Tutor</button>
-                    <button class="flex-1 py-3 text-xs font-black uppercase text-gray-500" data-tab="huevo">Huevo</button>
+                    <button class="flex-1 py-3 text-[9px] font-black uppercase text-yellow-500 border-b-2 border-yellow-500 active-tab" data-tab="nivel">Nivel</button>
+                    <button class="flex-1 py-3 text-[9px] font-black uppercase text-gray-500" data-tab="mt">MT/Tutor</button>
+                    <button class="flex-1 py-3 text-[9px] font-black uppercase text-gray-500" data-tab="huevo">Huevo</button>
                 </div>
-                <div id="moves-container" class="p-2 max-h-[380px] overflow-y-auto custom-scrollbar">
+                <div id="moves-container" class="p-2 max-h-[300px] overflow-y-auto custom-scrollbar">
                     ${renderMovesList(p, 'nivel')}
                 </div>
             </div>
@@ -219,7 +210,6 @@ export async function openDetails(p) {
     });
 
     panel.classList.add('open');
-    document.getElementById('panel-overlay').classList.add('show');
     if (window.innerWidth >= 1024) {
         mainLayout.style.marginRight = "40%";
         document.getElementById('pokedex').style.gridTemplateColumns = 'repeat(4, 1fr)';
@@ -228,9 +218,7 @@ export async function openDetails(p) {
 
 export function closeDetails() {
     document.getElementById('details-panel').classList.remove('open');
-    document.getElementById('panel-overlay').classList.remove('show');
     document.getElementById('main-layout').style.marginRight = "0";
-    // Forzar 5 columnas explícitamente (sobreescribe el !important del CSS)
-    document.getElementById('pokedex').style.gridTemplateColumns = 'repeat(5, 1fr)';
+    document.getElementById('pokedex').style.gridTemplateColumns = '';
     document.body.style.overflow = 'auto';
 }

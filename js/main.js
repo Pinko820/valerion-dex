@@ -1,7 +1,8 @@
-import { cargarBaseDeDatos, getFilteredData, pokemonIndex } from './pokedex.js';
+import { cargarBaseDeDatos, getFilteredData, pokemonIndex, setMovesCache } from './pokedex.js';
 import { createCard, observeNewSprites, populateTypeFilter } from './ui-utils.js';
 import { openDetails, closeDetails, preloadMoves } from './detalles.js';
 import { ABILITY_MAP } from './config.js';
+import { initMoveFilter, setMoveFilterCallback } from './move-filter.js';
 
 // OPTIMIZACIÓN: debounce para evitar re-renders en cada tecla
 function debounce(fn, delay) {
@@ -22,8 +23,13 @@ async function init() {
     renderUI();
 
     // OPTIMIZACIÓN: precargar moves_data en background para que el primer
-    // clic al panel de detalles sea instantáneo
-    preloadMoves();
+    // clic al panel de detalles sea instantáneo. Cuando termine, inicializar
+    // el filtro de movimientos con el catálogo completo.
+    preloadMoves().then(cache => {
+        setMovesCache(cache);
+        setMoveFilterCallback(renderUI);
+        initMoveFilter(cache, renderUI);
+    });
 
     // OPTIMIZACIÓN: delegación de eventos — un solo listener para todas las tarjetas
     const pokedexContainer = document.getElementById('pokedex');
@@ -48,6 +54,15 @@ async function init() {
         document.getElementById('sort-by').value       = "numero";
         document.getElementById('sort-direction').value = "asc";
         document.getElementById('show-forms').checked   = true;
+
+        // Limpiar chips de movimientos
+        import('./move-filter.js').then(({ selectedMoves: sm }) => {
+            sm.length = 0; // vaciar el array in-place
+            const box   = document.getElementById('move-filter-box');
+            const input = document.getElementById('move-search-input');
+            if (box && input) box.querySelectorAll('.move-chip').forEach(c => c.remove());
+        });
+
         renderUI();
     });
 
