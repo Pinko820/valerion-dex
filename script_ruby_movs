@@ -1,103 +1,114 @@
 #===============================================================================
-# * Valerion Dex Exporter + Moves Category Integrator
+# * Valerion Dex Exporter + Moves Category Integrator (Optimizado en 2 archivos)
 #===============================================================================
 require 'json'
 
 def pbExportMovesData
-  path_moves = "PBS/moves.txt"
-  path_pokemon = "PBS/pokemon.txt"
-  output_file = "moves_data.json"
+  # Rutas de archivos
+  path_moves       = "PBS/moves.txt"
+  path_pokemon     = "PBS/pokemon.txt"
+  path_forms       = "PBS/pokemon_forms.txt"
 
   unless File.exist?(path_moves) && File.exist?(path_pokemon)
-    pbMessage("Faltan archivos en la carpeta PBS")
+    pbMessage("Faltan archivos base en PBS")
     return
   end
 
-  # 1. PASADA A: Diccionario de movimientos con Categoría
+  # 1. Base de datos de movimientos (DICCIONARIO MAESTRO)
   moves_db = {}
   current_move_id = nil
-
   File.open(path_moves, "r:utf-8").each_line do |line|
     line = line.strip
     if line =~ /^\[(.+)\]$/
       current_move_id = $1
-      moves_db[current_move_id] = { 
-        "nombre_es" => current_move_id,
-        "tipo" => "NORMAL", 
-        "pot" => 0, 
-        "pre" => 0, 
-        "cat" => "Status",
-        "desc" => ""
-      }
+      moves_db[current_move_id] = { "nombre_es" => current_move_id, "tipo" => "NORMAL", "cat" => "Status" }
       next
     end
     next if current_move_id.nil? || line.empty? || line.start_with?('#')
-
+    
     if line.include?('=')
       key, value = line.split('=', 2).map(&:strip)
       case key
       when "Name"        then moves_db[current_move_id]["nombre_es"] = value
       when "Type"        then moves_db[current_move_id]["tipo"]      = value
+      when "Category"    then moves_db[current_move_id]["cat"]       = value
       when "Power"       then moves_db[current_move_id]["pot"]       = value.to_i
       when "Accuracy"    then moves_db[current_move_id]["pre"]       = value.to_i
       when "TotalPP"     then moves_db[current_move_id]["pp"]        = value.to_i
-      when "Category"    then moves_db[current_move_id]["cat"]       = value
       when "Description" then moves_db[current_move_id]["desc"]      = value
       end
     end
   end
 
-  # 2. PASADA B: Cruzar con Pokemon (igual que antes pero añadiendo 'cat')
+  # 2. Leer Pokémon y Formas (LEARNSETS SIMPLIFICADOS)
   pokemon_moves_db = {}
-  current_pkm_id = nil
+  base_form_map = {}
 
-  File.open(path_pokemon, "r:utf-8").each_line do |line|
-    line = line.strip
-    if line =~ /^\[(.+)\]$/
-      current_pkm_id = $1
-      pokemon_moves_db[current_pkm_id] = { "nivel" => [], "mt" => [], "huevo" => [], "tutor" => [] }
-      next
-    end
-    next if current_pkm_id.nil? || line.empty?
+  [path_pokemon, path_forms].each do |path|
+    next unless File.exist?(path)
+    current_full_id = nil
     
-    if line.include?('=')
-      key, value = line.split('=', 2).map(&:strip)
-      case key
-      when "Moves"
-        value.split(',').each_slice(2) do |lvl, m_id|
-          m_info = moves_db[m_id] || {}
-          pokemon_moves_db[current_pkm_id]["nivel"] << {
-            "nombre"     => m_id,
-            "nombre_es"  => m_info["nombre_es"] || m_id,
-            "nivel"      => lvl.to_i,
-            "tipo"       => m_info["tipo"],
-            "pot"        => m_info["pot"],
-            "pre"        => m_info["pre"],
-            "pp"         => m_info["pp"],
-            "cat"        => m_info["cat"],
-            "desc"       => m_info["desc"]
-          }
+    File.open(path, "r:utf-8").each_line do |line|
+      line = line.strip
+      
+      # Formateo del ID y mapeo de formas base
+      if line =~ /^\[(.+)\]$/
+        raw_id = $1
+        if raw_id.include?(',')
+          base_id = raw_id.split(',')[0].strip
+          current_full_id = raw_id.gsub(',', '_').gsub(' ', '')
+          base_form_map[current_full_id] = base_id
+        else
+          current_full_id = raw_id.strip
         end
-      when "TutorMoves", "EggMoves"
-        tipo_json = (key == "TutorMoves" ? "mt" : "huevo")
-        value.split(',').each do |m_id|
-          m_id.strip!
-          m_info = moves_db[m_id] || {}
-          pokemon_moves_db[current_pkm_id][tipo_json] << {
-            "nombre"     => m_id,
-            "nombre_es"  => m_info["nombre_es"] || m_id,
-            "tipo"       => m_info["tipo"],
-            "pot"        => m_info["pot"],
-            "pre"        => m_info["pre"],
-            "pp"         => m_info["pp"],
-            "cat"        => m_info["cat"],
-            "desc"       => m_info["desc"]
-          }
+        
+        pokemon_moves_db[current_full_id] ||= { "nivel" => [], "mt" => [], "huevo" => [] }
+        next
+      end
+
+      next if current_full_id.nil? || line.empty? || line.start_with?('#')
+
+      if line.include?('=')
+        key, value = line.split('=', 2).map(&:strip)
+        case key
+        when "BaseForm"
+          base_form_map[current_full_id] = value.strip
+        when "Moves"
+          value.split(',').each_slice(2) do |lvl, m_id|
+            next unless m_id
+            # OPTIMIZADO: Solo el ID y el Nivel
+            pokemon_moves_db[current_full_id]["nivel"] << { "id" => m_id.strip, "nivel" => lvl.to_i }
+          end
+        when "TutorMoves", "EggMoves"
+          tipo_json = (key == "TutorMoves" ? "mt" : "huevo")
+          value.split(',').each do |m_id|
+            # OPTIMIZADO: Solo el string del ID
+            pokemon_moves_db[current_full_id][tipo_json] << m_id.strip
+          end
         end
       end
     end
   end
 
-  File.open(output_file, "w") { |f| f.write(JSON.pretty_generate(pokemon_moves_db)) }
-  pbMessage(_INTL("¡moves_data.json generado con categorías!"))
+  # 3. Aplicar Herencia de movimientos a las formas regionales/alternas
+  base_form_map.each do |forma_id, base_id|
+    next unless pokemon_moves_db[forma_id] && pokemon_moves_db[base_id]
+    
+    ["nivel", "mt", "huevo"].each do |tipo|
+      if pokemon_moves_db[forma_id][tipo].empty? && !pokemon_moves_db[base_id][tipo].empty?
+        pokemon_moves_db[forma_id][tipo] = pokemon_moves_db[base_id][tipo].map(&:dup)
+      end
+    end
+  end
+
+  # 4. Guardar en dos archivos independientes
+  File.open("moves_dictionary.json", "w:utf-8") do |f| 
+    f.write(JSON.pretty_generate(moves_db)) 
+  end
+  
+  File.open("pokemon_learnsets.json", "w:utf-8") do |f| 
+    f.write(JSON.pretty_generate(pokemon_moves_db)) 
+  end
+
+  pbMessage("¡Éxito! moves_dictionary.json y pokemon_learnsets.json generados sin redundancia.")
 end

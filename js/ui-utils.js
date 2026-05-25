@@ -60,7 +60,7 @@ export function createCard(p) {
     }
 
     const numeroFormateado = String(p.numero).padStart(3, '0');
-    const spritePath = `${CONFIG.SPRITE_PATH}${p.id}.png`;
+    const spritePath = `${CONFIG.SPRITE_PATH}${p.id}.webp`;
 
     // OPTIMIZACIÓN: data-sprite sin backgroundImage → el observer lo inyecta solo cuando entra al viewport
     return `
