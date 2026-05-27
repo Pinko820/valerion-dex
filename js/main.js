@@ -27,6 +27,8 @@ async function init() {
     // el filtro de movimientos con el catálogo completo.
     preloadMoves().then(cache => {
         setMovesCache(cache);
+        // Añade esta línea para poder acceder desde la consola:
+        window.movesCache = cache;
         setMoveFilterCallback(renderUI);
         initMoveFilter(cache, renderUI);
     });

@@ -17,20 +17,17 @@ const CAT_LABEL = { Physical: 'Fís.', Special: 'Esp.', Status: 'Est.' };
 
 // ── Inicialización ─────────────────────────────────────────────────────────
 export function initMoveFilter(movesData, onChangeCallback) {
+    // movesData es el objeto { learnsets, dictionary } que pasamos desde main.js
+    const dictionary = movesData.dictionary;
+
     // 1. Construir catálogo global de movimientos únicos desde moves_data
     moveCatalog = {};
-    for (const pkm of Object.values(movesData)) {
-        for (const cat of ['nivel', 'mt', 'huevo']) {
-            for (const m of pkm[cat] || []) {
-                if (!moveCatalog[m.nombre]) {
-                    moveCatalog[m.nombre] = {
-                        label: m.nombre_es || m.nombre,
-                        tipo:  (m.tipo || 'NORMAL').toUpperCase(),
-                        cat:   m.cat || 'Status',
-                    };
-                }
-            }
-        }
+    for (const [id, data] of Object.entries(dictionary)) {
+        moveCatalog[id] = {
+            label: data.nombre_es || id,
+            tipo:  (data.tipo || 'NORMAL').toUpperCase(),
+            cat:   data.cat || 'Status'
+        };
     }
 
     // 2. Referencias DOM
@@ -88,16 +85,21 @@ export function initMoveFilter(movesData, onChangeCallback) {
 // los movimientos seleccionados (en cualquier categoría)
 export function matchesMoveFilter(pokemonId, movesCache) {
     if (selectedMoves.length === 0) return true;
-    const pkm = movesCache?.[pokemonId];
-    if (!pkm) return false;
+    
+    // Obtenemos los movimientos aprendidos por este Pokémon
+    const learnsetEntry = movesCache.learnsets[pokemonId.toUpperCase()];
+    if (!learnsetEntry) return false;
 
-    const allMoveIds = new Set([
-        ...(pkm.nivel  || []).map(m => m.nombre),
-        ...(pkm.mt     || []).map(m => m.nombre),
-        ...(pkm.huevo  || []).map(m => m.nombre),
-    ]);
+    // Combinamos todos los movimientos posibles (nivel, mt, huevo) en una sola lista
+    const allKnownMoves = [
+        ...(learnsetEntry.nivel || []),
+        ...(learnsetEntry.mt || []),
+        ...(learnsetEntry.huevo || [])
+    ].map(m => m.id);
 
-    return selectedMoves.every(sel => allMoveIds.has(sel.id));
+    // Verificamos si el Pokémon aprende todos los movimientos seleccionados
+    // (O según la lógica de tu filtro: ¿al menos uno o todos?)
+    return selectedMoves.every(sel => allKnownMoves.includes(sel.id));
 }
 
 // ── Helpers internos ───────────────────────────────────────────────────────

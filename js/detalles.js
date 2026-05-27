@@ -1,15 +1,25 @@
 import { CONFIG, TYPE_MAP, ABILITY_MAP } from './config.js';
 
 // OPTIMIZACIÓN: moves_data se precarga en background al inicio
-let movesCache = null;
+export let movesCache = null;
 let movesPromise = null;
 
-export function preloadMoves() {
+export async function preloadMoves() {
     if (movesPromise) return movesPromise;
-    movesPromise = fetch('moves_data.json')
-        .then(r => r.json())
-        .then(data => { movesCache = data; return data; })
-        .catch(() => { movesCache = {}; return {}; });
+    
+    movesPromise = Promise.all([
+        fetch('pokemon_learnsets.json').then(r => r.json()),
+        fetch('moves_dictionary.json').then(r => r.json())
+    ]).then(([learnsets, dictionary]) => {
+        // Guardamos ambos en una estructura unificada
+        movesCache = { learnsets, dictionary };
+        return movesCache;
+    }).catch(err => {
+        console.error("Error cargando archivos:", err);
+        movesCache = { learnsets: {}, dictionary: {} };
+        return movesCache;
+    });
+    
     return movesPromise;
 }
 
@@ -43,27 +53,43 @@ function getCategoryIcon(cat) {
 
 function renderMovesList(p, categoria) {
     const moves = p.movimientos?.[categoria] || [];
-    if (!moves.length) return `<div class="p-8 text-center text-[10px] text-gray-600 uppercase italic">Sin datos</div>`;
+    
+    if (!moves.length) return `<div class="p-8 text-center text-sm text-gray-500 italic">No hay movimientos en esta categoría.</div>`;
 
     return `
-        <table class="w-full text-left border-separate border-spacing-y-1">
-            <tbody class="text-[10px] font-mono">
-                ${moves.map(m => `
-                    <tr class="bg-white/5 hover:bg-white/10">
-                        <td class="py-2 px-2 text-yellow-500/70 font-bold">${m.nivel || '—'}</td>
-                        <td class="py-2 px-1">
-                            <div class="flex flex-col">
-                                <span class="text-gray-200 font-bold uppercase leading-none">${m.nombre.replace(/_/g, ' ')}</span>
-                                <div class="flex items-center gap-1 mt-1">
-                                    <div class="w-1.5 h-1.5 rounded-full" style="background-color:${TYPE_MAP[m.tipo?.toUpperCase()]?.color || '#555'}"></div>
-                                    ${getCategoryIcon(m.cat)}
-                                </div>
-                            </div>
-                        </td>
-                        <td class="py-2 px-2 text-right text-gray-400">P: ${m.pot || '—'} A: ${m.pre || '—'}</td>
-                    </tr>`).join('')}
-            </tbody>
-        </table>`;
+        <div class="flex flex-col gap-1">
+            ${moves.map(m => {
+                const moveId = (typeof m === 'string') ? m : m.id;
+                const moveInfo = movesCache.dictionary[moveId] || { 
+                    nombre_es: moveId, tipo: 'NORMAL', cat: 'Status', pot: '-', pre: '-' 
+                };
+
+                return `
+                <div class="flex items-center gap-3 p-2 bg-gray-800/20 hover:bg-white/5 rounded-xl border border-white/5 transition-all group">
+                    <div class="w-10 text-center font-mono font-bold text-yellow-500/80 text-xs">
+                        ${m.nivel || '—'}
+                    </div>
+
+                    <div class="flex-1 flex flex-col justify-center min-w-0">
+                        <span class="text-gray-100 font-bold uppercase text-xs truncate leading-tight group-hover:text-white">
+                            ${moveInfo.nombre_es.replace(/_/g, ' ')}
+                        </span>
+                        <div class="flex items-center gap-2 mt-0.5">
+                            <span class="text-[9px] px-1.5 py-0.5 rounded-full text-white font-bold" 
+                                  style="background-color:${TYPE_MAP[moveInfo.tipo?.toUpperCase()]?.color || '#555'}">
+                                ${TYPE_MAP[moveInfo.tipo?.toUpperCase()]?.esp || moveInfo.tipo}
+                            </span>
+                            ${getCategoryIcon(moveInfo.cat)}
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col items-end gap-0.5 text-[10px] font-mono text-gray-400">
+                        <span class="leading-none"><span class="text-gray-600">P:</span> ${moveInfo.pot || '—'}</span>
+                        <span class="leading-none"><span class="text-gray-600">A:</span> ${moveInfo.pre || '—'}</span>
+                    </div>
+                </div>`;
+            }).join('')}
+        </div>`;
 }
 
 export async function openDetails(p) {
@@ -73,11 +99,13 @@ export async function openDetails(p) {
 
     // OPTIMIZACIÓN: si el preload no ha terminado aún, esperamos (casi siempre ya está listo)
     if (!movesCache) await preloadMoves();
-    p.movimientos = movesCache[p.id] || { nivel: [], mt: [], huevo: [] };
+    // Accedemos a .learnsets y convertimos el ID a mayúsculas
+    p.movimientos = movesCache.learnsets[p.id.toUpperCase()] || { nivel: [], mt: [], huevo: [] };
+    //p.movimientos = movesCache[p.id] || { nivel: [], mt: [], huevo: [] };
 
     const weight  = p.física?.peso || 0;
     const gkPower = getGrassKnotPower(weight);
-    const spritePath = `${CONFIG.SPRITE_PATH}${p.id}.png`;
+    const spritePath = `${CONFIG.SPRITE_PATH}${p.id}.webp`;
 
     const getTableHTML = (level) => {
         const labels = { hp: 'PS', atq: 'Atk', def: 'Def', spa: 'SpA', spd: 'SpD', vel: 'Vel' };

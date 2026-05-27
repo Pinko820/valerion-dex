@@ -1,0 +1,7239 @@
+{
+  "MEGAHORN": {
+    "nombre_es": "Megacuerno",
+    "tipo": "BUG",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 85,
+    "pp": 10,
+    "desc": "Violenta embestida con cuernos imponentes."
+  },
+  "ATTACKORDER": {
+    "nombre_es": "Al Ataque",
+    "tipo": "BUG",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 100,
+    "pp": 15,
+    "desc": "El usuario llama a sus amigos para que ataquen al rival. Suele ser crítico."
+  },
+  "BUGBUZZ": {
+    "nombre_es": "Zumbido",
+    "tipo": "BUG",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 10,
+    "desc": "El movimiento de las alas crea una onda sónica dañina. Puede disminuir la Defensa Especial del objetivo."
+  },
+  "FIRSTIMPRESSION": {
+    "nombre_es": "Escaramuza",
+    "tipo": "BUG",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Movimiento de gran potencia y prioridad que solo puede usarse en el primer turno del usuario."
+  },
+  "POLLENPUFF": {
+    "nombre_es": "Bola de Polen",
+    "tipo": "BUG",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Ataca al oponente con una bola explosiva. Si esta alcanza a un aliado, le hará recuperar PS."
+  },
+  "LEECHLIFE": {
+    "nombre_es": "Chupavidas",
+    "tipo": "BUG",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Restaura al usuario la mitad del daño causado al objetivo."
+  },
+  "LUNGE": {
+    "nombre_es": "Plancha",
+    "tipo": "BUG",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Ataca al oponente abalanzándose sobre él con todas sus fuerzas y reduce su Ataque."
+  },
+  "XSCISSOR": {
+    "nombre_es": "Tijera X",
+    "tipo": "BUG",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Cruza las guadañas o las garras para atacar al rival como si fueran unas tijeras."
+  },
+  "SIGNALBEAM": {
+    "nombre_es": "Rayo Señal",
+    "tipo": "BUG",
+    "cat": "Special",
+    "pot": 75,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Ataca con un rayo de luz siniestro. Puede confundir al objetivo."
+  },
+  "SKITTERSMACK": {
+    "nombre_es": "Golpe Rastrero",
+    "tipo": "BUG",
+    "cat": "Physical",
+    "pot": 70,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Ataca al objetivo por la espalda de forma subrepticia y además reduce su Ataque Especial."
+  },
+  "UTURN": {
+    "nombre_es": "Ida y Vuelta",
+    "tipo": "BUG",
+    "cat": "Physical",
+    "pot": 70,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Tras atacar, vuelve a toda prisa para dar paso a otro Pokémon del equipo."
+  },
+  "STEAMROLLER": {
+    "nombre_es": "Rodillo de Púas",
+    "tipo": "BUG",
+    "cat": "Physical",
+    "pot": 65,
+    "pre": 100,
+    "pp": 20,
+    "desc": "El usuario se hace una bola y arrolla al objetivo con su cuerpo. Puede amedrentar."
+  },
+  "BUGBITE": {
+    "nombre_es": "Picadura",
+    "tipo": "BUG",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Pica al rival. Si el adversario lleva una Baya, el agresor se la come y se beneficia de su efecto."
+  },
+  "SILVERWIND": {
+    "nombre_es": "Viento Plata",
+    "tipo": "BUG",
+    "cat": "Special",
+    "pot": 60,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Fuerte viento con polvo de escamas. Puede subir todas las características de quien lo usa."
+  },
+  "FELLSTINGER": {
+    "nombre_es": "Aguijón Letal",
+    "tipo": "BUG",
+    "cat": "Physical",
+    "pot": 50,
+    "pre": 100,
+    "pp": 25,
+    "desc": "Al derrotar al objetivo utilizando este movimiento, aumenta muchísimo el Ataque del usuario."
+  },
+  "STRUGGLEBUG": {
+    "nombre_es": "Estoicismo",
+    "tipo": "BUG",
+    "cat": "Special",
+    "pot": 50,
+    "pre": 100,
+    "pp": 20,
+    "desc": "El usuario contraataca. Además baja el Ataque Especial de los oponentes."
+  },
+  "FURYCUTTER": {
+    "nombre_es": "Corte Furia",
+    "tipo": "BUG",
+    "cat": "Physical",
+    "pot": 40,
+    "pre": 95,
+    "pp": 20,
+    "desc": "Ataque con garras o guadañas que crece en intensidad si se usa repetidas veces."
+  },
+  "PINMISSILE": {
+    "nombre_es": "Pin Misil",
+    "tipo": "BUG",
+    "cat": "Physical",
+    "pot": 25,
+    "pre": 95,
+    "pp": 20,
+    "desc": "Lanza finas púas que hieren de dos a cinco veces."
+  },
+  "TWINEEDLE": {
+    "nombre_es": "Doble Ataque",
+    "tipo": "BUG",
+    "cat": "Physical",
+    "pot": 25,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Clava aguijones al rival dos veces. Puede envenenar."
+  },
+  "INFESTATION": {
+    "nombre_es": "Acoso",
+    "tipo": "BUG",
+    "cat": "Special",
+    "pot": 20,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Oprime al enemigo de cuatro a cinco turnos, durante los cuales no podrá huir."
+  },
+  "DEFENDORDER": {
+    "nombre_es": "A Defender",
+    "tipo": "BUG",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "El usuario llama a sus amigos para que formen un escudo viviente. Sube la Defensa y la Def. Esp."
+  },
+  "HEALORDER": {
+    "nombre_es": "Auxilio",
+    "tipo": "BUG",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "El usuario llama a sus amigos para que lo curen. Recupera hasta la mitad de los PS máximos."
+  },
+  "POWDER": {
+    "nombre_es": "Polvo Explosivo",
+    "tipo": "BUG",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 20,
+    "desc": "Si el objetivo usa un movimiento de tipo Fuego en ese turno, el polvo explota y le inflige daño."
+  },
+  "QUIVERDANCE": {
+    "nombre_es": "Danza Aleteo",
+    "tipo": "BUG",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Danza mística que sube el Ataque Especial, la Defensa Especial y la Velocidad."
+  },
+  "RAGEPOWDER": {
+    "nombre_es": "Polvo Ira",
+    "tipo": "BUG",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Usa un polvo que irrita y centra en el usuario la atención y los ataques de los rivales."
+  },
+  "SPIDERWEB": {
+    "nombre_es": "Telaraña",
+    "tipo": "BUG",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Enreda al objetivo para evitar que abandone la batalla."
+  },
+  "STICKYWEB": {
+    "nombre_es": "Red Viscosa",
+    "tipo": "BUG",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Coloca una red pegajosa en el bando rival que baja la Velocidad de cualquier Pokémon que entre."
+  },
+  "STRINGSHOT": {
+    "nombre_es": "Disparo Demora",
+    "tipo": "BUG",
+    "cat": "Status",
+    "pre": 95,
+    "pp": 40,
+    "desc": "Lanza seda al objetivo y reduce su Velocidad."
+  },
+  "TAILGLOW": {
+    "nombre_es": "Luminicola",
+    "tipo": "BUG",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Se concentra en una ráfaga de luz que sube muchísimo el Ataque Especial."
+  },
+  "HYPERSPACEFURY": {
+    "nombre_es": "Cerco Dimensión",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 0,
+    "pp": 5,
+    "desc": "Ataca ignorando efectos de movimientos como Protección. Baja la Defensa del usuario."
+  },
+  "FOULPLAY": {
+    "nombre_es": "Juego Sucio",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 95,
+    "pre": 100,
+    "pp": 15,
+    "desc": "El usuario emplea el Ataque del objetivo para golpear."
+  },
+  "FIERYWRATH": {
+    "nombre_es": "Furia Candente",
+    "tipo": "DARK",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 10,
+    "desc": "El usuario transforma su ira en un aura de fuego para atacar. Puede amedrentar al objetivo."
+  },
+  "DARKESTLARIAT": {
+    "nombre_es": "Lariat Oscuro",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 85,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Gira y golpea al oponente, ignorando los cambios en las características del objetivo."
+  },
+  "NIGHTDAZE": {
+    "nombre_es": "Pulso Noche",
+    "tipo": "DARK",
+    "cat": "Special",
+    "pot": 85,
+    "pre": 95,
+    "pp": 10,
+    "desc": "Ataca al objetivo con una onda siniestra. Puede bajar su Precisión."
+  },
+  "CRUNCH": {
+    "nombre_es": "Triturar",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Tritura con afilados colmillos y puede bajar la Defensa del objetivo."
+  },
+  "DARKPULSE": {
+    "nombre_es": "Pulso Umbrío",
+    "tipo": "DARK",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Libera una horrible aura llena de malos pensamientos y puede amedrentar al objetivo."
+  },
+  "FALSESURRENDER": {
+    "nombre_es": "Irreverencia",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 0,
+    "pp": 10,
+    "desc": "El usuario finge hacer una reverencia y ensarta al objetivo con su cabello alborotado. No falla."
+  },
+  "JAWLOCK": {
+    "nombre_es": "Presa Maxilar",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Prohibe al objetivo y al usuario abandonar el combate hasta que uno de los dos se debilite."
+  },
+  "THROATCHOP": {
+    "nombre_es": "Golpe Mordaza",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Inflige al rival un dolor tan abrumador que le impide utilizar durante dos turnos ataques sonoros."
+  },
+  "WICKEDBLOW": {
+    "nombre_es": "Golpe Oscuro",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 75,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Golpe devastador que requiere un absoluto dominio de las artes siniestras. Siempre es crítico."
+  },
+  "LASHOUT": {
+    "nombre_es": "Desahogo",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 75,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Si el usuario ha sufrido una reducción de características en ese turno duplica la potencia."
+  },
+  "NIGHTSLASH": {
+    "nombre_es": "Tajo Umbrío",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 70,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Ataca al objetivo a la primera oportunidad. Suele ser crítico."
+  },
+  "SUCKERPUNCH": {
+    "nombre_es": "Golpe Bajo",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 70,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Permite atacar primero. Falla si el objetivo no está preparando ningún ataque."
+  },
+  "KNOCKOFF": {
+    "nombre_es": "Desarme",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 65,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Impide al objetivo usar el objeto que lleva durante el combate."
+  },
+  "ASSURANCE": {
+    "nombre_es": "Buena Baza",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Si el objetivo ya ha sufrido daño en ese turno, la fuerza del ataque se duplica."
+  },
+  "BITE": {
+    "nombre_es": "Mordisco",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 100,
+    "pp": 25,
+    "desc": "Un voraz bocado que puede amedrentar al objetivo."
+  },
+  "BRUTALSWING": {
+    "nombre_es": "Giro Vil",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Hace pivotar su cuerpo para infligir daño a todos sus rivales."
+  },
+  "FEINTATTACK": {
+    "nombre_es": "Finta",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 0,
+    "pp": 20,
+    "desc": "Engaña al objetivo para acercarse y dar un puñetazo que no falla."
+  },
+  "THIEF": {
+    "nombre_es": "Ladrón",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 100,
+    "pp": 25,
+    "desc": "Ataca y le quita al objetivo su objeto. Si el agresor lleva un objeto, no robará el del objetivo."
+  },
+  "SNARL": {
+    "nombre_es": "Alarido",
+    "tipo": "DARK",
+    "cat": "Special",
+    "pot": 55,
+    "pre": 95,
+    "pp": 15,
+    "desc": "Ataca lanzando un chillido insoportable que baja el Ataque Especial de los objetivos."
+  },
+  "PAYBACK": {
+    "nombre_es": "Vendetta",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 50,
+    "pre": 100,
+    "pp": 10,
+    "desc": "El usuario contraataca con el doble de fuerza si el objetivo usa un movimiento antes."
+  },
+  "PURSUIT": {
+    "nombre_es": "Persecución",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 40,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Hace el doble de daño al objetivo que pide el relevo."
+  },
+  "BEATUP": {
+    "nombre_es": "Paliza",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataque de todo el equipo Pokémon. Cuantos más haya, más veces ataca."
+  },
+  "FLING": {
+    "nombre_es": "Lanzamiento",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Lanza contra el objetivo su objeto. La fuerza del ataque y su efecto varían según el objeto."
+  },
+  "POWERTRIP": {
+    "nombre_es": "Chulería",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Cuanto más hayan subido las características del usuario, mayor será el daño."
+  },
+  "PUNISHMENT": {
+    "nombre_es": "Castigo",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 100,
+    "pp": 5,
+    "desc": "La fuerza del ataque aumenta cuanto más se ha fortalecido el rival con cambios de características."
+  },
+  "DARKVOID": {
+    "nombre_es": "Brecha Negra",
+    "tipo": "DARK",
+    "cat": "Status",
+    "pre": 50,
+    "pp": 10,
+    "desc": "El objetivo es enviado a un mundo de tinieblas que lo hace dormir."
+  },
+  "EMBARGO": {
+    "nombre_es": "Embargo",
+    "tipo": "DARK",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 15,
+    "desc": "Impide al objetivo usar el objeto que lleva. Su Entrenador tampoco puede usar objetos sobre él."
+  },
+  "FAKETEARS": {
+    "nombre_es": "Llanto Falso",
+    "tipo": "DARK",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 20,
+    "desc": "Lágrimas de cocodrilo que bajan mucho la Defensa Especial del objetivo."
+  },
+  "FLATTER": {
+    "nombre_es": "Camelo",
+    "tipo": "DARK",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 15,
+    "desc": "Halaga al objetivo y lo confunde, pero también sube su Ataque Especial."
+  },
+  "HONECLAWS": {
+    "nombre_es": "Afilagarras",
+    "tipo": "DARK",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 15,
+    "desc": "El usuario se afila las garras para aumentar su Ataque y Precisión."
+  },
+  "MEMENTO": {
+    "nombre_es": "Legado",
+    "tipo": "DARK",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 10,
+    "desc": "El usuario se debilita, pero baja mucho tanto el Ataque como el Ataque Especial del objetivo."
+  },
+  "NASTYPLOT": {
+    "nombre_es": "Maquinación",
+    "tipo": "DARK",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Estimula su cerebro pensando en cosas malas. Aumenta considerablemente el Ataque Especial."
+  },
+  "OBSTRUCT": {
+    "nombre_es": "Obstrucción",
+    "tipo": "DARK",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Frena cualquier ataque y baja mucho la defensa si recibe un golpe de contacto. Si se usa mucho falla."
+  },
+  "PARTINGSHOT": {
+    "nombre_es": "Última Palabra",
+    "tipo": "DARK",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 20,
+    "desc": "Baja el Ataque y el Ataque Especial del rival y se cambia por otro Pokémon de su equipo."
+  },
+  "QUASH": {
+    "nombre_es": "Último Lugar",
+    "tipo": "DARK",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 15,
+    "desc": "El usuario intimida a su objetivo logrando que su movimiento sea el último del turno."
+  },
+  "SNATCH": {
+    "nombre_es": "Robo",
+    "tipo": "DARK",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Roba el efecto de movimientos de curación o de cambio de características de un combatiente."
+  },
+  "SWITCHEROO": {
+    "nombre_es": "Trapicheo",
+    "tipo": "DARK",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 10,
+    "desc": "Intercambia con el objetivo los objetos que llevan tan rápido que es imposible verlo a simple vista."
+  },
+  "TAUNT": {
+    "nombre_es": "Mofa",
+    "tipo": "DARK",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 20,
+    "desc": "Enfurece al objetivo para que solo use movimientos de ataque durante tres turnos."
+  },
+  "TOPSYTURVY": {
+    "nombre_es": "Reversión",
+    "tipo": "DARK",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Invierte por completo los cambios en las características del Pokémon objetivo."
+  },
+  "TORMENT": {
+    "nombre_es": "Tormento",
+    "tipo": "DARK",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 15,
+    "desc": "Atormenta y enfurece al objetivo, que no puede usar dos veces seguidas el mismo movimiento."
+  },
+  "ETERNABEAM": {
+    "nombre_es": "Rayo Infinito",
+    "tipo": "DRAGON",
+    "cat": "Special",
+    "pot": 160,
+    "pre": 90,
+    "pp": 5,
+    "desc": "Ataque más poderoso de Eternatus en su forma original. No se podrá mover en el siguiente turno."
+  },
+  "DRAGONENERGY": {
+    "nombre_es": "Dracoenergía",
+    "tipo": "DRAGON",
+    "cat": "Special",
+    "pot": 150,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Ataca con su fuerza vital. Cuanto menos vida tenga el usuario, menos daño hará."
+  },
+  "ROAROFTIME": {
+    "nombre_es": "Distorsión",
+    "tipo": "DRAGON",
+    "cat": "Special",
+    "pot": 150,
+    "pre": 90,
+    "pp": 5,
+    "desc": "Ataca usando tal energía que el tiempo se distorsiona. El usuario descansa el siguiente turno."
+  },
+  "DRACOMETEOR": {
+    "nombre_es": "Cometa Draco",
+    "tipo": "DRAGON",
+    "cat": "Special",
+    "pot": 130,
+    "pre": 90,
+    "pp": 5,
+    "desc": "Hace que grandes cometas caigan del cielo. Baja mucho el Ataque Especial de quien lo usa."
+  },
+  "OUTRAGE": {
+    "nombre_es": "Enfado",
+    "tipo": "DRAGON",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca de dos a tres turnos y acaba confundiendo al agresor."
+  },
+  "CLANGINGSCALES": {
+    "nombre_es": "Fragor Escamas",
+    "tipo": "DRAGON",
+    "cat": "Special",
+    "pot": 110,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Frota las escamas de su cuerpo para crear un fuerte sonido, a costa de reducir su Defensa."
+  },
+  "COREENFORCER": {
+    "nombre_es": "Núcleo Castigo",
+    "tipo": "DRAGON",
+    "cat": "Special",
+    "pot": 100,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Inflige daño al rival, y si este ya ha hecho uso de algún movimiento, pierde su habilidad."
+  },
+  "DRAGONRUSH": {
+    "nombre_es": "Carga Dragón",
+    "tipo": "DRAGON",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 75,
+    "pp": 10,
+    "desc": "Ataca de forma brutal mientras intimida al objetivo. También puede amedrentarlo."
+  },
+  "DYNAMAXCANNON": {
+    "nombre_es": "Cañón Dinamax",
+    "tipo": "DRAGON",
+    "cat": "Special",
+    "pot": 100,
+    "pre": 100,
+    "pp": 5,
+    "desc": "El usuario lanza un poderoso rayo de energía de su núcleo."
+  },
+  "SPACIALREND": {
+    "nombre_es": "Corte Vacío",
+    "tipo": "DRAGON",
+    "cat": "Special",
+    "pot": 100,
+    "pre": 95,
+    "pp": 5,
+    "desc": "Desgarra al objetivo y el espacio a su alrededor. Suele ser crítico."
+  },
+  "DRAGONHAMMER": {
+    "nombre_es": "Martillo Dragón",
+    "tipo": "DRAGON",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Usa el cuerpo como un martillo para abalanzarse sobre su rival y causarle daño."
+  },
+  "DRAGONPULSE": {
+    "nombre_es": "Pulso Dragón",
+    "tipo": "DRAGON",
+    "cat": "Special",
+    "pot": 85,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Abre mucho la boca y libera una onda de choque que ataca al objetivo."
+  },
+  "DRAGONCLAW": {
+    "nombre_es": "Garra Dragón",
+    "tipo": "DRAGON",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Araña al objetivo con garras afiladas."
+  },
+  "BREAKINGSWIPE": {
+    "nombre_es": "Vasto Impacto",
+    "tipo": "DRAGON",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Azota con ímpetu con su cola al Pokémon enemigo. Esto hace que baje el Ataque del objetivo."
+  },
+  "DRAGONBREATH": {
+    "nombre_es": "Dragoaliento",
+    "tipo": "DRAGON",
+    "cat": "Special",
+    "pot": 60,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Poderosa ráfaga de aliento que golpea al objetivo y puede paralizarlo."
+  },
+  "DRAGONTAIL": {
+    "nombre_es": "Cola Dragón",
+    "tipo": "DRAGON",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Ataca al objetivo y lo obliga a cambiarse por otro Pokémon. Si es uno salvaje, acaba el combate."
+  },
+  "DRAGONDARTS": {
+    "nombre_es": "Dracoflechas",
+    "tipo": "DRAGON",
+    "cat": "Physical",
+    "pot": 50,
+    "pre": 100,
+    "pp": 10,
+    "desc": "El usuario ataca dos veces usando Dreepy. Si hay dos enemigos, golpea una vez a cada uno."
+  },
+  "DUALCHOP": {
+    "nombre_es": "Golpe Bis",
+    "tipo": "DRAGON",
+    "cat": "Physical",
+    "pot": 40,
+    "pre": 90,
+    "pp": 15,
+    "desc": "Golpea dos veces seguidas con la cola u otras partes de su cuerpo."
+  },
+  "TWISTER": {
+    "nombre_es": "Ciclón",
+    "tipo": "DRAGON",
+    "cat": "Special",
+    "pot": 40,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Crea un violento tornado para hacer trizas al rival. Puede amedrentarlo."
+  },
+  "SCALESHOT": {
+    "nombre_es": "Ráfaga Escamas",
+    "tipo": "DRAGON",
+    "cat": "Physical",
+    "pot": 25,
+    "pre": 90,
+    "pp": 20,
+    "desc": "Lanza escamas de dos a cinco veces. Sube la Velocidad del usuario pero reduce su Defensa."
+  },
+  "DRAGONRAGE": {
+    "nombre_es": "Furia Dragón",
+    "tipo": "DRAGON",
+    "cat": "Special",
+    "pot": 1,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ráfaga de furiosas ondas de choque que quitan 40 PS."
+  },
+  "CLANGOROUSSOUL": {
+    "nombre_es": "Estruendo Escama",
+    "tipo": "DRAGON",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "El usuario aumenta todas sus características a cambio de sus PS."
+  },
+  "DRAGONDANCE": {
+    "nombre_es": "Danza Dragón",
+    "tipo": "DRAGON",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Danza mística que sube el Ataque y la Velocidad."
+  },
+  "BOLTSTRIKE": {
+    "nombre_es": "Ataque Fulgor",
+    "tipo": "ELECTRIC",
+    "cat": "Physical",
+    "pot": 130,
+    "pre": 85,
+    "pp": 5,
+    "desc": "Ataca envolviéndose de una gran carga eléctrica y embistiendo al objetivo con ella. Puede paralizar."
+  },
+  "VOLTTACKLE": {
+    "nombre_es": "Placaje Eléctrico",
+    "tipo": "ELECTRIC",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Placaje de alto riesgo que hiere también al atacante."
+  },
+  "ZAPCANNON": {
+    "nombre_es": "Electrocañón",
+    "tipo": "ELECTRIC",
+    "cat": "Special",
+    "pot": 120,
+    "pre": 50,
+    "pp": 5,
+    "desc": "Dispara una descarga eléctrica que causa daño y parálisis."
+  },
+  "AURAWHEEL": {
+    "nombre_es": "Rueda Aural",
+    "tipo": "ELECTRIC",
+    "cat": "Physical",
+    "pot": 110,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca y sube la Velocidad del usuario. Cambia de tipo dependiendo de la forma del usuario."
+  },
+  "THUNDER": {
+    "nombre_es": "Trueno",
+    "tipo": "ELECTRIC",
+    "cat": "Special",
+    "pot": 110,
+    "pre": 70,
+    "pp": 10,
+    "desc": "Un poderoso rayo que daña al objetivo y puede paralizarlo."
+  },
+  "FUSIONBOLT": {
+    "nombre_es": "Rayo Fusión",
+    "tipo": "ELECTRIC",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Enorme descarga eléctrica. Aumenta su potencia si es influenciada por una gigantesca llamarada."
+  },
+  "PLASMAFISTS": {
+    "nombre_es": "Puños Plasma",
+    "tipo": "ELECTRIC",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Ataca con los puños. Convierte los movimientos de tipo Normal en tipo Eléctrico."
+  },
+  "THUNDERBOLT": {
+    "nombre_es": "Rayo",
+    "tipo": "ELECTRIC",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Potente ataque eléctrico que puede paralizar al objetivo."
+  },
+  "WILDCHARGE": {
+    "nombre_es": "Voltio Cruel",
+    "tipo": "ELECTRIC",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Carga eléctrica muy potente que también hiere ligeramente a quien la usa."
+  },
+  "BOLTBEAK": {
+    "nombre_es": "Electropico",
+    "tipo": "ELECTRIC",
+    "cat": "Physical",
+    "pot": 85,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca con su pico electrificado. Si el usuario ataca antes que el objetivo, duplica la potencia."
+  },
+  "DISCHARGE": {
+    "nombre_es": "Chispazo",
+    "tipo": "ELECTRIC",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Una deslumbradora onda eléctrica afecta a los demás Pokémon del combate. Puede paralizar."
+  },
+  "OVERDRIVE": {
+    "nombre_es": "Amplificador",
+    "tipo": "ELECTRIC",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "El usuario rasguea su cuerpo para generar enormes vibraciones con las que ataca al objetivo."
+  },
+  "THUNDERCAGE": {
+    "nombre_es": "Electrojaula",
+    "tipo": "ELECTRIC",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 90,
+    "pp": 15,
+    "desc": "El usuario atrapa al rival en una caja eléctrica que dura entre cuatro y cinco turnos."
+  },
+  "ZINGZAP": {
+    "nombre_es": "Electropunzada",
+    "tipo": "ELECTRIC",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "El usuario se lanza contra el objetivo y le suelta una potente descarga que puede amedrentarlo."
+  },
+  "THUNDERPUNCH": {
+    "nombre_es": "Puño Trueno",
+    "tipo": "ELECTRIC",
+    "cat": "Physical",
+    "pot": 75,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Puñetazo eléctrico. Puede paralizar."
+  },
+  "RISINGVOLTAGE": {
+    "nombre_es": "Alto Voltaje",
+    "tipo": "ELECTRIC",
+    "cat": "Special",
+    "pot": 70,
+    "pre": 100,
+    "pp": 20,
+    "desc": "La potencia del movimiento se duplica si el rival se ve afectado por un campo eléctrico."
+  },
+  "VOLTSWITCH": {
+    "nombre_es": "Voltiocambio",
+    "tipo": "ELECTRIC",
+    "cat": "Special",
+    "pot": 70,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Tras atacar, vuelve a toda prisa para dar paso a otro Pokémon del equipo."
+  },
+  "PARABOLICCHARGE": {
+    "nombre_es": "Carga Parábola",
+    "tipo": "ELECTRIC",
+    "cat": "Special",
+    "pot": 65,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Inflige daño a los Pokémon a su alrededor, absorbiendo la mitad del daño producido."
+  },
+  "SPARK": {
+    "nombre_es": "Chispa",
+    "tipo": "ELECTRIC",
+    "cat": "Physical",
+    "pot": 65,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Ataque eléctrico que puede llegar a paralizar."
+  },
+  "THUNDERFANG": {
+    "nombre_es": "Colmillo Rayo",
+    "tipo": "ELECTRIC",
+    "cat": "Physical",
+    "pot": 65,
+    "pre": 95,
+    "pp": 15,
+    "desc": "Muerde con colmillos electrificados. Puede hacer que el rival se amedrente o paralice."
+  },
+  "SHOCKWAVE": {
+    "nombre_es": "Onda Voltio",
+    "tipo": "ELECTRIC",
+    "cat": "Special",
+    "pot": 60,
+    "pre": 0,
+    "pp": 20,
+    "desc": "Ataque eléctrico muy rápido e ineludible."
+  },
+  "ELECTROWEB": {
+    "nombre_es": "Electrotela",
+    "tipo": "ELECTRIC",
+    "cat": "Special",
+    "pot": 55,
+    "pre": 95,
+    "pp": 15,
+    "desc": "Atrapa y ataca a los objetivos con una telaraña eléctrica. También reduce su Velocidad."
+  },
+  "CHARGEBEAM": {
+    "nombre_es": "Rayo Carga",
+    "tipo": "ELECTRIC",
+    "cat": "Special",
+    "pot": 50,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Lanza un rayo eléctrico contra el rival. Puede subir el Ataque Especial de quien lo usa."
+  },
+  "THUNDERSHOCK": {
+    "nombre_es": "Impactrueno",
+    "tipo": "ELECTRIC",
+    "cat": "Special",
+    "pot": 40,
+    "pre": 100,
+    "pp": 30,
+    "desc": "Ataque eléctrico que puede paralizar al objetivo."
+  },
+  "NUZZLE": {
+    "nombre_es": "Moflete Estático",
+    "tipo": "ELECTRIC",
+    "cat": "Physical",
+    "pot": 20,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Frota sus mofletes cargados de electricidad contra el Pokémon objetivo y consigue paralizarlo."
+  },
+  "ELECTROBALL": {
+    "nombre_es": "Bola Voltio",
+    "tipo": "ELECTRIC",
+    "cat": "Special",
+    "pot": 1,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Lanza una bola eléctrica. Cuanto mayor es la Velocidad del usuario, mayor será el daño causado."
+  },
+  "CHARGE": {
+    "nombre_es": "Carga",
+    "tipo": "ELECTRIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Recarga energía para potenciar el siguiente movimiento Eléctrico. Sube la Defensa Especial."
+  },
+  "EERIEIMPULSE": {
+    "nombre_es": "Onda Anómala",
+    "tipo": "ELECTRIC",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 15,
+    "desc": "Irradia unas raras ondas que disminuyen mucho el Ataque Especial del objetivo."
+  },
+  "ELECTRICTERRAIN": {
+    "nombre_es": "Campo Eléctrico",
+    "tipo": "ELECTRIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Durante cinco turnos crea un campo eléctrico que impide dormirse a los Pokémon en el suelo."
+  },
+  "ELECTRIFY": {
+    "nombre_es": "Electrificación",
+    "tipo": "ELECTRIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Si el Pokémon objetivo queda electrificado antes de usar un movimiento, este será de tipo Eléctrico."
+  },
+  "IONDELUGE": {
+    "nombre_es": "Cortina Plasma",
+    "tipo": "ELECTRIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 25,
+    "desc": "Disemina partículas con carga que convierten los movimientos de tipo Normal en tipo Eléctrico."
+  },
+  "MAGNETRISE": {
+    "nombre_es": "Levitón",
+    "tipo": "ELECTRIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Levita gracias a un campo magnético generado por electricidad durante cinco turnos."
+  },
+  "MAGNETICFLUX": {
+    "nombre_es": "Aura Magnética",
+    "tipo": "ELECTRIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Aumentar la Defensa y la Defensa Especial de los aliados con las habilidades Más y Menos."
+  },
+  "THUNDERWAVE": {
+    "nombre_es": "Onda Trueno",
+    "tipo": "ELECTRIC",
+    "cat": "Status",
+    "pre": 90,
+    "pp": 20,
+    "desc": "Una ligera descarga que paraliza al objetivo si lo alcanza."
+  },
+  "LIGHTOFRUIN": {
+    "nombre_es": "Luz Aniquiladora",
+    "tipo": "FAIRY",
+    "cat": "Special",
+    "pot": 140,
+    "pre": 90,
+    "pp": 5,
+    "desc": "Emplea el poder de la Flor Eterna para lanzar un potente rayo de luz, pero sufre bastante daño."
+  },
+  "FLEURCANNON": {
+    "nombre_es": "Cañón Floral",
+    "tipo": "FAIRY",
+    "cat": "Special",
+    "pot": 130,
+    "pre": 90,
+    "pp": 5,
+    "desc": "El usuario emite un potente rayo, pero su Ataque Especial se reduce mucho."
+  },
+  "MISTYEXPLOSION": {
+    "nombre_es": "Bruma Explosiva",
+    "tipo": "FAIRY",
+    "cat": "Special",
+    "pot": 100,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Ataca a todos a su alrededor, pero se debilita. Aumenta su potencia en un 50% si hay un campo niebla."
+  },
+  "MOONBLAST": {
+    "nombre_es": "Fuerza Lunar",
+    "tipo": "FAIRY",
+    "cat": "Special",
+    "pot": 95,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Invoca el poder de la luna para atacar. Puede disminuir el Ataque Especial del objetivo."
+  },
+  "PLAYROUGH": {
+    "nombre_es": "Carantoña",
+    "tipo": "FAIRY",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Hace cucamonas al objetivo y lo ataca. Puede disminuir el Ataque del objetivo."
+  },
+  "STRANGESTEAM": {
+    "nombre_es": "Cautivapor",
+    "tipo": "FAIRY",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 95,
+    "pp": 10,
+    "desc": "El usuario ataca al enemigo emitiendo vapor. Puede dejar confuso al objetivo."
+  },
+  "DAZZLINGGLEAM": {
+    "nombre_es": "Brillo Mágico",
+    "tipo": "FAIRY",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Inflige daño a los oponentes con una potente luz."
+  },
+  "SPIRITBREAK": {
+    "nombre_es": "Choque Anímico",
+    "tipo": "FAIRY",
+    "cat": "Physical",
+    "pot": 75,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Ataca al objetivo con tal ímpetu que acaba minando su moral y reduce su Ataque Especial."
+  },
+  "DRAININGKISS": {
+    "nombre_es": "Beso Drenaje",
+    "tipo": "FAIRY",
+    "cat": "Special",
+    "pot": 50,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Absorbe PS del objetivo con un beso y restaura sus PS."
+  },
+  "DISARMINGVOICE": {
+    "nombre_es": "Voz Cautivadora",
+    "tipo": "FAIRY",
+    "cat": "Special",
+    "pot": 40,
+    "pre": 0,
+    "pp": 15,
+    "desc": "Obnubila a los oponentes con su voz y les provoca daños emocionales. Siempre acierta."
+  },
+  "FAIRYWIND": {
+    "nombre_es": "Viento Feérico",
+    "tipo": "FAIRY",
+    "cat": "Special",
+    "pot": 40,
+    "pre": 100,
+    "pp": 30,
+    "desc": "El Pokémon que lo usa desata un vendaval feérico que arremete contra el objetivo."
+  },
+  "NATURESMADNESS": {
+    "nombre_es": "Furia Natural",
+    "tipo": "FAIRY",
+    "cat": "Special",
+    "pot": 1,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Golpea al objetivo con la furia de la naturaleza y reduce sus PS a la mitad."
+  },
+  "AROMATICMIST": {
+    "nombre_es": "Niebla Aromática",
+    "tipo": "FAIRY",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Consigue aumentar la Defensa Especial de un Pokémon de su equipo con una fragancia misteriosa."
+  },
+  "BABYDOLLEYES": {
+    "nombre_es": "Ojitos Tiernos",
+    "tipo": "FAIRY",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 30,
+    "desc": "Lanza una mirada al Pokémon objetivo, reduciendo su Ataque. Siempre va primero."
+  },
+  "CHARM": {
+    "nombre_es": "Encanto",
+    "tipo": "FAIRY",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 20,
+    "desc": "Engatusa al objetivo y reduce bastante su Ataque."
+  },
+  "CRAFTYSHIELD": {
+    "nombre_es": "Truco Defensa",
+    "tipo": "FAIRY",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Se protege a sí mismo y a sus aliados de ataques de estado, pero no de otro tipo de ataques."
+  },
+  "DECORATE": {
+    "nombre_es": "Decoración",
+    "tipo": "FAIRY",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 15,
+    "desc": "El usuario aumenta el Ataque y el Ataque Especial del objetivo decorándolo."
+  },
+  "FAIRYLOCK": {
+    "nombre_es": "Cerrojo Feérico",
+    "tipo": "FAIRY",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Consigue que ningún Pokémon pueda huir en el siguiente turno echando un cerrojo."
+  },
+  "FLORALHEALING": {
+    "nombre_es": "Cura Floral",
+    "tipo": "FAIRY",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Restaura la mitad de los PS máximos del objetivo. Cura más con campo de hierba."
+  },
+  "FLOWERSHIELD": {
+    "nombre_es": "Defensa Floral",
+    "tipo": "FAIRY",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Aumenta la Defensa de los Pokémon de tipo Planta en combate usando unos misteriosos poderes."
+  },
+  "GEOMANCY": {
+    "nombre_es": "Geocontrol",
+    "tipo": "FAIRY",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Concentra energía un turno, y en el segundo aumenta mucho su At. Esp., Def. Esp. y Velocidad."
+  },
+  "MISTYTERRAIN": {
+    "nombre_es": "Campo de Niebla",
+    "tipo": "FAIRY",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Cubre de niebla el terreno cinco turnos. Los Pokémon en el suelo no reciben cambios de estado."
+  },
+  "MOONLIGHT": {
+    "nombre_es": "Luz Lunar",
+    "tipo": "FAIRY",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "Restaura PS del usuario. La cantidad varía según el tiempo que haga."
+  },
+  "SWEETKISS": {
+    "nombre_es": "Beso Dulce",
+    "tipo": "FAIRY",
+    "cat": "Status",
+    "pre": 75,
+    "pp": 10,
+    "desc": "Da un beso con tal dulzura que causa confusión."
+  },
+  "FOCUSPUNCH": {
+    "nombre_es": "Puño Certero",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 150,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Se concentra para dar un puñetazo. Falla si se sufre un golpe antes de su uso."
+  },
+  "METEORASSAULT": {
+    "nombre_es": "Asalto Estelar",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 150,
+    "pre": 100,
+    "pp": 5,
+    "desc": "El usuario arremete con su puerro. El usuario no se podrá mover en el siguiente turno."
+  },
+  "HIGHJUMPKICK": {
+    "nombre_es": "Patada Salto Alta",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 130,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Salta muy alto y lanza una patada. Si falla, dañará al usuario."
+  },
+  "CLOSECOMBAT": {
+    "nombre_es": "A Bocajarro",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Lucha abiertamente contra el rival. Reduce la Defensa y la Defensa Especial del usuario."
+  },
+  "FOCUSBLAST": {
+    "nombre_es": "Onda Certera",
+    "tipo": "FIGHTING",
+    "cat": "Special",
+    "pot": 120,
+    "pre": 70,
+    "pp": 5,
+    "desc": "Agudiza la concentración mental y libera su poder. Puede disminuir la Def. Esp. del rival."
+  },
+  "SUPERPOWER": {
+    "nombre_es": "Fuerza Bruta",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Ataque de gran potencia, pero que reduce el Ataque y la Defensa del agresor."
+  },
+  "CROSSCHOP": {
+    "nombre_es": "Tajo Cruzado",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 80,
+    "pp": 5,
+    "desc": "Corte doble que suele propinar un golpe crítico."
+  },
+  "DYNAMICPUNCH": {
+    "nombre_es": "Puño Dinámico",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 50,
+    "pp": 5,
+    "desc": "Puñetazo con toda la fuerza concentrada. Causa confusión si atina."
+  },
+  "FLYINGPRESS": {
+    "nombre_es": "Plancha Voladora",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 95,
+    "pp": 10,
+    "desc": "Se lanza sobre su oponente. Este movimiento es de tipo Lucha y tipo Volador al mismo tiempo."
+  },
+  "HAMMERARM": {
+    "nombre_es": "Machada",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Gira con fuerza el puño y da un gran golpe. No obstante, baja la Velocidad del usuario."
+  },
+  "JUMPKICK": {
+    "nombre_es": "Patada Salto",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 95,
+    "pp": 10,
+    "desc": "Da un salto y pega una patada. Si falla, dañará al usuario."
+  },
+  "SACREDSWORD": {
+    "nombre_es": "Espada Santa",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 100,
+    "pp": 15,
+    "desc": "El usuario ataca con una espada, ignorando cualquier cambio en las características del objetivo."
+  },
+  "THUNDEROUSKICK": {
+    "nombre_es": "Patada Relámpago",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 100,
+    "pp": 10,
+    "desc": "El usuario arremete contra el rival con una poderosa patada que siempre baja la Defensa."
+  },
+  "SECRETSWORD": {
+    "nombre_es": "Sable Místico",
+    "tipo": "FIGHTING",
+    "cat": "Special",
+    "pot": 85,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ensarta al objetivo con un sable, hiriéndolo con su místico poder."
+  },
+  "SKYUPPERCUT": {
+    "nombre_es": "Gancho Alto",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 85,
+    "pre": 90,
+    "pp": 15,
+    "desc": "Gancho ascendente de gran ímpetu."
+  },
+  "AURASPHERE": {
+    "nombre_es": "Esfera Aural",
+    "tipo": "FIGHTING",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 0,
+    "pp": 20,
+    "desc": "Libera una descarga de la fuerza del aura desde su interior. Es infalible."
+  },
+  "BODYPRESS": {
+    "nombre_es": "Plancha Corporal",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "El usuario embiste al objetivo. Cuanto más alta sea la Defensa del usuario, más daño inflingirá."
+  },
+  "SUBMISSION": {
+    "nombre_es": "Sumisión",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 80,
+    "pp": 20,
+    "desc": "Tira al objetivo al suelo. También hiere al agresor."
+  },
+  "BRICKBREAK": {
+    "nombre_es": "Demolición",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 75,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Potente ataque que también es capaz de destruir barreras como pantalla de luz y reflejo."
+  },
+  "DRAINPUNCH": {
+    "nombre_es": "Puño Drenaje",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 75,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Un golpe que drena energía. El Pokémon recupera la mitad de los PS arrebatados al objetivo."
+  },
+  "VITALTHROW": {
+    "nombre_es": "Llave Vital",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 70,
+    "pre": 0,
+    "pp": 10,
+    "desc": "El usuario ataca el último, pero no falla."
+  },
+  "WAKEUPSLAP": {
+    "nombre_es": "Espabila",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 70,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Inflige gran daño a objetivos dormidos. Sin embargo, los bofetones también los despiertan."
+  },
+  "LOWSWEEP": {
+    "nombre_es": "Puntapié",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 65,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Un veloz ataque a los pies que reduce la Velocidad del objetivo."
+  },
+  "CIRCLETHROW": {
+    "nombre_es": "Llave Giro",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Lanza por los aires al objetivo y hace que salga otro Pokémon. Si es uno salvaje, acaba el combate."
+  },
+  "FORCEPALM": {
+    "nombre_es": "Palmeo",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca al objetivo con una onda de choque y puede llegar a paralizarlo."
+  },
+  "REVENGE": {
+    "nombre_es": "Desquite",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataque que produce el doble de daño si el usuario es herido en el mismo turno."
+  },
+  "ROLLINGKICK": {
+    "nombre_es": "Patada Giro",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 85,
+    "pp": 15,
+    "desc": "Una patada rápida y circular. También puede amedrentar al objetivo."
+  },
+  "STORMTHROW": {
+    "nombre_es": "Llave Corsé",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Lanza un golpe fulminante. Siempre resulta en un golpe crítico."
+  },
+  "KARATECHOP": {
+    "nombre_es": "Golpe Kárate",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 50,
+    "pre": 100,
+    "pp": 25,
+    "desc": "Da un golpe cortante. Suele ser crítico."
+  },
+  "MACHPUNCH": {
+    "nombre_es": "Ultrapuño",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 40,
+    "pre": 100,
+    "pp": 30,
+    "desc": "Puñetazo que se da rápido para golpear primero."
+  },
+  "POWERUPPUNCH": {
+    "nombre_es": "Puño Incremento",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 40,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Cada vez que golpea se endurecen sus puños. Si acierta, el Ataque del usuario aumenta."
+  },
+  "ROCKSMASH": {
+    "nombre_es": "Golpe Roca",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 40,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Ataca con puñetazos que pueden romper rocas. Puede bajar la Defensa del objetivo."
+  },
+  "VACUUMWAVE": {
+    "nombre_es": "Onda Vacío",
+    "tipo": "FIGHTING",
+    "cat": "Special",
+    "pot": 40,
+    "pre": 100,
+    "pp": 30,
+    "desc": "Gira los puños y libera una onda de vacío contra el objetivo. Este movimiento siempre va primero."
+  },
+  "DOUBLEKICK": {
+    "nombre_es": "Doble Patada",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 30,
+    "pre": 100,
+    "pp": 30,
+    "desc": "Una patada doble. Golpea dos veces."
+  },
+  "ARMTHRUST": {
+    "nombre_es": "Empujón",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 15,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Empujones directos que golpean de dos a cinco veces seguidas."
+  },
+  "TRIPLEKICK": {
+    "nombre_es": "Triple Patada",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 10,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Patea hasta tres veces seguidas y cada vez más fuerte."
+  },
+  "COUNTER": {
+    "nombre_es": "Contraataque",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Devuelve un golpe físico por duplicado."
+  },
+  "FINALGAMBIT": {
+    "nombre_es": "Sacrificio",
+    "tipo": "FIGHTING",
+    "cat": "Special",
+    "pot": 1,
+    "pre": 100,
+    "pp": 5,
+    "desc": "El usuario se sacrifica causándole un daño al objetivo equivalente a sus propios PS perdidos."
+  },
+  "LOWKICK": {
+    "nombre_es": "Patada Baja",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Patada baja. Cuanto más pesa el objetivo, más daño causa."
+  },
+  "REVERSAL": {
+    "nombre_es": "Inversión",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Ataque desesperado que causa más daño cuantos menos PS tenga el usuario."
+  },
+  "SEISMICTOSS": {
+    "nombre_es": "Sísmico",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 100,
+    "pp": 20,
+    "desc": "La gravedad derriba al objetivo. Se restarán tantos PS como nivel tenga el agresor."
+  },
+  "BULKUP": {
+    "nombre_es": "Corpulencia",
+    "tipo": "FIGHTING",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Robustece el cuerpo para subir el Ataque y la Defensa."
+  },
+  "COACHING": {
+    "nombre_es": "Motivación",
+    "tipo": "FIGHTING",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "El usuario imparte indicaciones precisas a sus aliados, que ven aumentados su Ataque y su Defensa."
+  },
+  "DETECT": {
+    "nombre_es": "Detección",
+    "tipo": "FIGHTING",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "Frena los ataques, pero puede fallar si se usa repetidamente."
+  },
+  "MATBLOCK": {
+    "nombre_es": "Escudo Tatami",
+    "tipo": "FIGHTING",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "El usuario usa un tatami para escudarse de los movimientos enemigos. Protege también a los aliados. No funciona contra ataques de estado."
+  },
+  "NORETREAT": {
+    "nombre_es": "Bastión Final",
+    "tipo": "FIGHTING",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "El usuario aumenta todas sus características, pero no puede huir ni ser cambiado por otro."
+  },
+  "OCTOLOCK": {
+    "nombre_es": "Octopresa",
+    "tipo": "FIGHTING",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 15,
+    "desc": "Retiene al objetivo para impedir su huida, a la vez que reduce su Defensa y Defensa Especial cada turno."
+  },
+  "QUICKGUARD": {
+    "nombre_es": "Anticipo",
+    "tipo": "FIGHTING",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 15,
+    "desc": "Protege al equipo de ataques con prioridad. Puede fallar si se utiliza repetidamente."
+  },
+  "VCREATE": {
+    "nombre_es": "V de Fuego",
+    "tipo": "FIRE",
+    "cat": "Physical",
+    "pot": 180,
+    "pre": 95,
+    "pp": 5,
+    "desc": "Golpea con una V de llamas. Baja la Defensa, la Def. Esp. y la Velocidad del usuario."
+  },
+  "BLASTBURN": {
+    "nombre_es": "Anillo Ígneo",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 150,
+    "pre": 90,
+    "pp": 5,
+    "desc": "Explosión de fuego. El atacante debe descansar el siguiente turno."
+  },
+  "ERUPTION": {
+    "nombre_es": "Estallido",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 150,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Furia explosiva. Cuanto menor sea el número de PS del usuario, menos daño hará el ataque."
+  },
+  "MINDBLOWN": {
+    "nombre_es": "Cabeza Sorpresa",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 150,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Hace explotar su cabeza para atacar a todos a su alrededor, aunque también se hiere a sí mismo."
+  },
+  "SHELLTRAP": {
+    "nombre_es": "Coraza Trampa",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 150,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Si le alcanza un ataque físico, la trampa del caparazón estalla y el atacante sufre daño."
+  },
+  "BLUEFLARE": {
+    "nombre_es": "Llama Azul",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 130,
+    "pre": 85,
+    "pp": 5,
+    "desc": "Ataca con una bella pero potente llama azul que rodea al objetivo. Puede quemarlo."
+  },
+  "BURNUP": {
+    "nombre_es": "Llama Final",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 130,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Usa hasta el último resquicio de llamas de su cuerpo para atacar, pero pierde el tipo Fuego."
+  },
+  "OVERHEAT": {
+    "nombre_es": "Sofoco",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 130,
+    "pre": 90,
+    "pp": 5,
+    "desc": "Ataque en toda regla que baja mucho el Ataque Especial de quien lo usa."
+  },
+  "FLAREBLITZ": {
+    "nombre_es": "Envite Ígneo",
+    "tipo": "FIRE",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 100,
+    "pp": 15,
+    "desc": "El Pokémon se cubre de llamas y carga contra el objetivo, aunque él también recibe daños."
+  },
+  "PYROBALL": {
+    "nombre_es": "Balón Ígneo",
+    "tipo": "FIRE",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 90,
+    "pp": 5,
+    "desc": "Prende una pequeña piedra para crear una bola de fuego con la que ataca. Puede causar quemaduras."
+  },
+  "FIREBLAST": {
+    "nombre_es": "Llamarada",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 110,
+    "pre": 85,
+    "pp": 5,
+    "desc": "Llama intensa que lo chamusca y puede causar quemaduras."
+  },
+  "FUSIONFLARE": {
+    "nombre_es": "Llama Fusión",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 100,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Llamarada gigantesca. Aumenta su potencia si es influenciada por una gran energía eléctrica."
+  },
+  "INFERNO": {
+    "nombre_es": "Infierno",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 100,
+    "pre": 50,
+    "pp": 5,
+    "desc": "Ataca con una gran ráfaga de fuego que causa quemaduras."
+  },
+  "MAGMASTORM": {
+    "nombre_es": "Lluvia Ígnea",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 100,
+    "pre": 75,
+    "pp": 5,
+    "desc": "El rival queda atrapado en una tormenta de fuego que dura de dos a cinco turnos."
+  },
+  "SACREDFIRE": {
+    "nombre_es": "Fuego Sagrado",
+    "tipo": "FIRE",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 95,
+    "pp": 5,
+    "desc": "Fuego místico de gran intensidad que puede causar quemaduras."
+  },
+  "SEARINGSHOT": {
+    "nombre_es": "Bomba Ígnea",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 100,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Un infierno de llamas daña a los Pokémon de alrededor en combate. Puede quemar."
+  },
+  "HEATWAVE": {
+    "nombre_es": "Onda Ígnea",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 95,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Provoca un viento abrasador que puede quemar al objetivo."
+  },
+  "FLAMETHROWER": {
+    "nombre_es": "Lanzallamas",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Ataca con una gran ráfaga de fuego que puede causar quemaduras."
+  },
+  "BLAZEKICK": {
+    "nombre_es": "Patada Ígnea",
+    "tipo": "FIRE",
+    "cat": "Physical",
+    "pot": 85,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Patada que suele ser un golpe crítico y puede causar quemaduras."
+  },
+  "FIERYDANCE": {
+    "nombre_es": "Danza Llama",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "El Pokémon golpea envuelto en llamas. Puede aumentar el Ataque Especial de quien lo usa."
+  },
+  "FIRELASH": {
+    "nombre_es": "Látigo Ígneo",
+    "tipo": "FIRE",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Golpea al oponente con un látigo incandescente y reduce su Defensa."
+  },
+  "FIREPLEDGE": {
+    "nombre_es": "Voto Fuego",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca con columnas de fuego. Combinado con un Voto Planta crea un mar de llamas y aumenta su potencia."
+  },
+  "LAVAPLUME": {
+    "nombre_es": "Humareda",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Un infierno de llamas daña a los Pokémon adyacentes en combate. Puede quemar."
+  },
+  "FIREPUNCH": {
+    "nombre_es": "Puño Fuego",
+    "tipo": "FIRE",
+    "cat": "Physical",
+    "pot": 75,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Puñetazo ardiente. Puede quemar."
+  },
+  "MYSTICALFIRE": {
+    "nombre_es": "Llama Embrujada",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 75,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Lanza una llama a gran temperatura a su rival, la cual le baja el Ataque Especial."
+  },
+  "BURNINGJEALOUSY": {
+    "nombre_es": "Envidia ardiente",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 70,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Causa quemaduras a los Pokémon cuyas características hayan aumentado en ese turno."
+  },
+  "FLAMEBURST": {
+    "nombre_es": "Pirotecnia",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 70,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Golpea al objetivo con una llamarada que afecta a sus Pokémon adyacentes."
+  },
+  "FIREFANG": {
+    "nombre_es": "Colmillo Ígneo",
+    "tipo": "FIRE",
+    "cat": "Physical",
+    "pot": 65,
+    "pre": 95,
+    "pp": 15,
+    "desc": "Usa colmillos en llamas para morder. Puede hacer que el objetivo se amedrente o se queme."
+  },
+  "FLAMEWHEEL": {
+    "nombre_es": "Rueda Fuego",
+    "tipo": "FIRE",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 100,
+    "pp": 25,
+    "desc": "Ataca envuelto en fuego. Puede causar quemaduras."
+  },
+  "INCINERATE": {
+    "nombre_es": "Calcinación",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 60,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Llamas que golpean a los objetivos adyacentes. Si llevan Bayas, se quemarán y desaparecerán."
+  },
+  "FLAMECHARGE": {
+    "nombre_es": "Nitrocarga",
+    "tipo": "FIRE",
+    "cat": "Physical",
+    "pot": 50,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Llamas que golpean al objetivo y aumentan la Velocidad del atacante."
+  },
+  "EMBER": {
+    "nombre_es": "Ascuas",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 40,
+    "pre": 100,
+    "pp": 25,
+    "desc": "Ataca con llamas pequeñas que pueden causar quemaduras."
+  },
+  "FIRESPIN": {
+    "nombre_es": "Giro Fuego",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 35,
+    "pre": 85,
+    "pp": 15,
+    "desc": "Un aro de fuego que atrapa al objetivo de cuatro a cinco turnos."
+  },
+  "HEATCRASH": {
+    "nombre_es": "Golpe Calor",
+    "tipo": "FIRE",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Cuanto mayor sea su peso comparado con el del objetivo, más daño causará."
+  },
+  "SUNNYDAY": {
+    "nombre_es": "Día Soleado",
+    "tipo": "FIRE",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "Intensifica el sol durante cinco turnos, lo que potencia los movimientos de tipo Fuego."
+  },
+  "WILLOWISP": {
+    "nombre_es": "Fuego Fatuo",
+    "tipo": "FIRE",
+    "cat": "Status",
+    "pre": 85,
+    "pp": 15,
+    "desc": "Siniestra llama morada que produce quemaduras."
+  },
+  "SKYATTACK": {
+    "nombre_es": "Ataque Aéreo",
+    "tipo": "FLYING",
+    "cat": "Physical",
+    "pot": 140,
+    "pre": 90,
+    "pp": 5,
+    "desc": "Ataque en dos turnos que suele ser crítico. Puede amedrentar al objetivo."
+  },
+  "BRAVEBIRD": {
+    "nombre_es": "Pájaro Osado",
+    "tipo": "FLYING",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Pliega sus alas y ataca con un vuelo rasante. El Pokémon que lo usa también resulta dañado."
+  },
+  "DRAGONASCENT": {
+    "nombre_es": "Ascenso Draco",
+    "tipo": "FLYING",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Se precipita desde el cielo a mucha velocidad, pero hace que bajen la Def. y Def. Esp."
+  },
+  "HURRICANE": {
+    "nombre_es": "Vendaval",
+    "tipo": "FLYING",
+    "cat": "Special",
+    "pot": 110,
+    "pre": 70,
+    "pp": 10,
+    "desc": "Golpea al objetivo con un fuerte torbellino que envuelve al rival y puede confundirlo."
+  },
+  "AEROBLAST": {
+    "nombre_es": "Aerochorro",
+    "tipo": "FLYING",
+    "cat": "Special",
+    "pot": 100,
+    "pre": 95,
+    "pp": 5,
+    "desc": "Lanza un chorro de aire que suele dar un golpe crítico."
+  },
+  "BEAKBLAST": {
+    "nombre_es": "Pico Cañón",
+    "tipo": "FLYING",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Carga el pico antes de atacar. Quema al rival si recibe un ataque físico durante la carga."
+  },
+  "FLY": {
+    "nombre_es": "Vuelo",
+    "tipo": "FLYING",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 95,
+    "pp": 15,
+    "desc": "Primer turno: vuela. Segundo turno: ataca. Fuera de combate, permite ir a sitios ya conocidos."
+  },
+  "BOUNCE": {
+    "nombre_es": "Bote",
+    "tipo": "FLYING",
+    "cat": "Physical",
+    "pot": 85,
+    "pre": 85,
+    "pp": 5,
+    "desc": "Primer turno: bota. Segundo turno: golpea. Puede paralizar."
+  },
+  "DRILLPECK": {
+    "nombre_es": "Pico Taladro",
+    "tipo": "FLYING",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Picotazo giratorio y perforador muy potente."
+  },
+  "OBLIVIONWING": {
+    "nombre_es": "Ala Mortífera",
+    "tipo": "FLYING",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Absorbe energía del Pokémon objetivo y recupera más de la mitad del daño infligido."
+  },
+  "AIRSLASH": {
+    "nombre_es": "Tajo Aéreo",
+    "tipo": "FLYING",
+    "cat": "Special",
+    "pot": 75,
+    "pre": 95,
+    "pp": 15,
+    "desc": "Ataca con una hoja de aire que incluso corta el cielo. También puede amedrentar al objetivo."
+  },
+  "CHATTER": {
+    "nombre_es": "Cháchara",
+    "tipo": "FLYING",
+    "cat": "Special",
+    "pot": 65,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Ataca con una onda sónica compuesta por palabras que ha aprendido. Puede confundir al objetivo."
+  },
+  "AERIALACE": {
+    "nombre_es": "Golpe Aéreo",
+    "tipo": "FLYING",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 0,
+    "pp": 20,
+    "desc": "El usuario lanza un ataque muy rápido e ineludible."
+  },
+  "AIRCUTTER": {
+    "nombre_es": "Aire Afilado",
+    "tipo": "FLYING",
+    "cat": "Special",
+    "pot": 60,
+    "pre": 95,
+    "pp": 25,
+    "desc": "Viento cortante que azota. Suele ser un golpe crítico."
+  },
+  "PLUCK": {
+    "nombre_es": "Picoteo",
+    "tipo": "FLYING",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Picotea al objetivo. Si este sostiene una Baya, la picotea también y obtiene sus efectos."
+  },
+  "SKYDROP": {
+    "nombre_es": "Caída Libre",
+    "tipo": "FLYING",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 100,
+    "pp": 10,
+    "desc": "1º turno: lanza al objetivo al aire. 2º: lo hace caer. En el aire no lo deja moverse."
+  },
+  "WINGATTACK": {
+    "nombre_es": "Ataque Ala",
+    "tipo": "FLYING",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 100,
+    "pp": 35,
+    "desc": "Golpea al objetivo con unas grandes alas."
+  },
+  "ACROBATICS": {
+    "nombre_es": "Acróbata",
+    "tipo": "FLYING",
+    "cat": "Physical",
+    "pot": 55,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Golpea ágilmente. Si el usuario no porta ningún objeto, el objetivo resulta seriamente dañado."
+  },
+  "DUALWINGBEAT": {
+    "nombre_es": "Ala Bis",
+    "tipo": "FLYING",
+    "cat": "Physical",
+    "pot": 40,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Ataca al adversario golpeándolo dos veces con las alas."
+  },
+  "GUST": {
+    "nombre_es": "Tornado",
+    "tipo": "FLYING",
+    "cat": "Special",
+    "pot": 40,
+    "pre": 100,
+    "pp": 35,
+    "desc": "Crea un tornado con las alas y lo lanza contra el objetivo."
+  },
+  "PECK": {
+    "nombre_es": "Picotazo",
+    "tipo": "FLYING",
+    "cat": "Physical",
+    "pot": 35,
+    "pre": 100,
+    "pp": 35,
+    "desc": "Ensarta al objetivo con un cuerno o pico punzante."
+  },
+  "DEFOG": {
+    "nombre_es": "Despejar",
+    "tipo": "FLYING",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 15,
+    "desc": "Potente viento que barre el reflejo o pantalla de luz del objetivo y puede reducir su Evasión."
+  },
+  "FEATHERDANCE": {
+    "nombre_es": "Danza Pluma",
+    "tipo": "FLYING",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 15,
+    "desc": "Envuelve al objetivo con un manto de plumas para reducir mucho su Ataque."
+  },
+  "MIRRORMOVE": {
+    "nombre_es": "Espejo",
+    "tipo": "FLYING",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Contraataca con el mismo movimiento empleado por el objetivo."
+  },
+  "ROOST": {
+    "nombre_es": "Respiro",
+    "tipo": "FLYING",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "Aterriza sobre la superficie para descansar. Recupera hasta la mitad del total de sus PS."
+  },
+  "TAILWIND": {
+    "nombre_es": "Viento Afín",
+    "tipo": "FLYING",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 15,
+    "desc": "Fuerte remolino que duplica la Velocidad de los Pokémon de tu equipo durante cuatro turnos."
+  },
+  "ASTRALBARRAGE": {
+    "nombre_es": "Orbes Espectro",
+    "tipo": "GHOST",
+    "cat": "Special",
+    "pot": 120,
+    "pre": 100,
+    "pp": 5,
+    "desc": "El usuario ataca lanzando una ráfaga de fantasmas que daña a ambos rivales."
+  },
+  "SHADOWFORCE": {
+    "nombre_es": "Golpe Umbrío",
+    "tipo": "GHOST",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 100,
+    "pp": 5,
+    "desc": "En el primer turno, desaparece. En el segundo, golpea al objetivo aunque se esté protegiendo."
+  },
+  "POLTERGEIST": {
+    "nombre_es": "Poltergeist",
+    "tipo": "GHOST",
+    "cat": "Physical",
+    "pot": 110,
+    "pre": 90,
+    "pp": 5,
+    "desc": "El usuario ataca utilizando el objeto que lleva el rival. Si no tiene, falla."
+  },
+  "MOONGEISTBEAM": {
+    "nombre_es": "Rayo Umbrío",
+    "tipo": "GHOST",
+    "cat": "Special",
+    "pot": 100,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Ataca al objetivo con un rayo misterioso de energía lunar. Este movimiento ignora la habilidad del objetivo."
+  },
+  "PHANTOMFORCE": {
+    "nombre_es": "Golpe Fantasma",
+    "tipo": "GHOST",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Desaparece en el primer turno y ataca en el segundo. Acierta aunque el objetivo se proteja."
+  },
+  "SPECTRALTHIEF": {
+    "nombre_es": "Robasombra",
+    "tipo": "GHOST",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Se esconde en la sombra del objetivo y lo ataca tras robarle las mejoras en sus características."
+  },
+  "SHADOWBONE": {
+    "nombre_es": "Hueso Sombrío",
+    "tipo": "GHOST",
+    "cat": "Physical",
+    "pot": 85,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Golpea al oponente con un hueso poseído por un espíritu. Puede reducir su Defensa."
+  },
+  "SHADOWBALL": {
+    "nombre_es": "Bola Sombra",
+    "tipo": "GHOST",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Lanza una bola oscura que puede bajar la Defensa Especial del objetivo."
+  },
+  "SPIRITSHACKLE": {
+    "nombre_es": "Puntada Sombría",
+    "tipo": "GHOST",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca al oponente y, al mismo tiempo, fija su sombra al terreno, impidiendo su huida."
+  },
+  "SHADOWCLAW": {
+    "nombre_es": "Garra Umbría",
+    "tipo": "GHOST",
+    "cat": "Physical",
+    "pot": 70,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Ataca con una garra afilada hecha de sombras. Suele ser crítico."
+  },
+  "HEX": {
+    "nombre_es": "Infortunio",
+    "tipo": "GHOST",
+    "cat": "Special",
+    "pot": 65,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataque que causa un gran daño a los objetivos que sufren problemas de estado."
+  },
+  "OMINOUSWIND": {
+    "nombre_es": "Viento Aciago",
+    "tipo": "GHOST",
+    "cat": "Special",
+    "pot": 60,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Produce un viento horripilante. Puede subir de golpe todas las características del usuario."
+  },
+  "SHADOWPUNCH": {
+    "nombre_es": "Puño Sombra",
+    "tipo": "GHOST",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 0,
+    "pp": 20,
+    "desc": "Puñetazo ineludible procedente de las sombras."
+  },
+  "SHADOWSNEAK": {
+    "nombre_es": "Sombra Vil",
+    "tipo": "GHOST",
+    "cat": "Physical",
+    "pot": 40,
+    "pre": 100,
+    "pp": 30,
+    "desc": "Extiende su sombra y ataca al objetivo por la espalda. Este movimiento siempre va primero."
+  },
+  "ASTONISH": {
+    "nombre_es": "Impresionar",
+    "tipo": "GHOST",
+    "cat": "Physical",
+    "pot": 30,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Impresiona tanto que puede amedrentar al objetivo."
+  },
+  "LICK": {
+    "nombre_es": "Lengüetazo",
+    "tipo": "GHOST",
+    "cat": "Physical",
+    "pot": 30,
+    "pre": 100,
+    "pp": 30,
+    "desc": "Una lengua ataca al objetivo. Puede causar parálisis."
+  },
+  "NIGHTSHADE": {
+    "nombre_es": "Tinieblas",
+    "tipo": "GHOST",
+    "cat": "Special",
+    "pot": 1,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Produce un espejismo ante el objetivo, que pierde tantos PS como nivel tenga el agresor."
+  },
+  "CONFUSERAY": {
+    "nombre_es": "Rayo Confuso",
+    "tipo": "GHOST",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 10,
+    "desc": "Rayo siniestro que confunde al objetivo."
+  },
+  "CURSE": {
+    "nombre_es": "Maldición",
+    "tipo": "GHOST",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Un movimiento que tiene efectos distintos si el usuario es de tipo Fantasma o no."
+  },
+  "DESTINYBOND": {
+    "nombre_es": "Mismo Destino",
+    "tipo": "GHOST",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "Si el usuario se debilita, el enemigo se debilita también."
+  },
+  "GRUDGE": {
+    "nombre_es": "Rabia",
+    "tipo": "GHOST",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "Si el usuario se debilita al recibir un ataque, s los PP de este último ataque serán eliminados."
+  },
+  "NIGHTMARE": {
+    "nombre_es": "Pesadilla",
+    "tipo": "GHOST",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 15,
+    "desc": "El objetivo dormido sufre una pesadilla que le hace perder PS en cada turno."
+  },
+  "SPITE": {
+    "nombre_es": "Rencor",
+    "tipo": "GHOST",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 10,
+    "desc": "Da rienda suelta a su rencor para reducir cuatro PP del último movimiento usado por el rival."
+  },
+  "TRICKORTREAT": {
+    "nombre_es": "Halloween",
+    "tipo": "GHOST",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 20,
+    "desc": "Invita al objetivo a celebrar Halloween, volviéndolo de tipo Fantasma además de los suyos."
+  },
+  "FRENZYPLANT": {
+    "nombre_es": "Planta Feroz",
+    "tipo": "GRASS",
+    "cat": "Special",
+    "pot": 150,
+    "pre": 90,
+    "pp": 5,
+    "desc": "Golpea con una enorme planta. El atacante no puede moverse en el siguiente turno."
+  },
+  "LEAFSTORM": {
+    "nombre_es": "Lluevehojas",
+    "tipo": "GRASS",
+    "cat": "Special",
+    "pot": 130,
+    "pre": 90,
+    "pp": 5,
+    "desc": "Cae una lluvia de hojas afiladas. Baja mucho el Ataque Especial de quien lo usa."
+  },
+  "SOLARBLADE": {
+    "nombre_es": "Cuchilla Solar",
+    "tipo": "GRASS",
+    "cat": "Physical",
+    "pot": 125,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Dedica un turno a concentrar energía en forma de cuchilla con la que ataca en el segundo turno."
+  },
+  "PETALDANCE": {
+    "nombre_es": "Danza Pétalo",
+    "tipo": "GRASS",
+    "cat": "Special",
+    "pot": 120,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Lanza pétalos de dos a tres turnos y acaba confundiendo al atacante."
+  },
+  "POWERWHIP": {
+    "nombre_es": "Latigazo",
+    "tipo": "GRASS",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 85,
+    "pp": 10,
+    "desc": "El usuario agita violentamente sus lianas o tentáculos para golpear al objetivo."
+  },
+  "SEEDFLARE": {
+    "nombre_es": "Fulgor Semilla",
+    "tipo": "GRASS",
+    "cat": "Special",
+    "pot": 120,
+    "pre": 85,
+    "pp": 5,
+    "desc": "Una onda de choque se libera del cuerpo. Puede bajar la Defensa Especial del objetivo."
+  },
+  "SOLARBEAM": {
+    "nombre_es": "Rayo Solar",
+    "tipo": "GRASS",
+    "cat": "Special",
+    "pot": 120,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Primer turno: absorbe luz. Segundo turno: ataca."
+  },
+  "WOODHAMMER": {
+    "nombre_es": "Mazazo",
+    "tipo": "GRASS",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Arremete contra el rival con su robusto cuerpo. El agresor también sufre bastante daño."
+  },
+  "ENERGYBALL": {
+    "nombre_es": "Energibola",
+    "tipo": "GRASS",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Aúna fuerzas de la naturaleza y libera su ataque. Puede disminuir la Defensa Especial del objetivo."
+  },
+  "LEAFBLADE": {
+    "nombre_es": "Hoja Aguda",
+    "tipo": "GRASS",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Acuchilla con una hoja fina. Suele dar un golpe crítico."
+  },
+  "PETALBLIZZARD": {
+    "nombre_es": "Tormenta Floral",
+    "tipo": "GRASS",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 100,
+    "pp": 15,
+    "desc": "El usuario desata un intenso vendaval de pétalos que daña a los Pokémon a su alrededor."
+  },
+  "APPLEACID": {
+    "nombre_es": "Ácido Málico",
+    "tipo": "GRASS",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca con el fluido corrosivo de una manzana ácida, y reduce la Defensa Especial."
+  },
+  "DRUMBEATING": {
+    "nombre_es": "Batería Asalto",
+    "tipo": "GRASS",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "El usuario controla un tocón mediante la percusión y al atacar reduce la Velocidad del objetivo."
+  },
+  "GRASSPLEDGE": {
+    "nombre_es": "Voto Planta",
+    "tipo": "GRASS",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca con columnas de hojas. Combinado con Voto Agua crea un pantano y aumenta su potencia."
+  },
+  "GRAVAPPLE": {
+    "nombre_es": "Fuerza G",
+    "tipo": "GRASS",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Causa daño dejando caer una manzana desde una gran altura. Baja la Defensa del objetivo."
+  },
+  "SEEDBOMB": {
+    "nombre_es": "Bomba Germen",
+    "tipo": "GRASS",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Lanza al objetivo una descarga de semillas explosivas desde arriba."
+  },
+  "GIGADRAIN": {
+    "nombre_es": "Gigadrenado",
+    "tipo": "GRASS",
+    "cat": "Special",
+    "pot": 75,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Absorbe la mitad del daño producido."
+  },
+  "HORNLEECH": {
+    "nombre_es": "Asta Drenaje",
+    "tipo": "GRASS",
+    "cat": "Physical",
+    "pot": 75,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Un golpe que drena energía. El Pokémon recupera la mitad de los PS arrebatados al objetivo."
+  },
+  "GRASSYGLIDE": {
+    "nombre_es": "Fitoimpulso",
+    "tipo": "GRASS",
+    "cat": "Physical",
+    "pot": 55,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Ataca deslizándose sobre el terreno. Cuando hay campo de hierba tiene prioridad."
+  },
+  "TROPKICK": {
+    "nombre_es": "Patada Tropical",
+    "tipo": "GRASS",
+    "cat": "Physical",
+    "pot": 70,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Lanza una patada con la fuerza del trópico que golpea al rival y reduce su Ataque."
+  },
+  "LEAFTORNADO": {
+    "nombre_es": "Ciclón de Hojas",
+    "tipo": "GRASS",
+    "cat": "Special",
+    "pot": 65,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Tritura con afiladas hojas y puede bajar la Precisión del objetivo."
+  },
+  "MAGICALLEAF": {
+    "nombre_es": "Hoja Mágica",
+    "tipo": "GRASS",
+    "cat": "Special",
+    "pot": 60,
+    "pre": 0,
+    "pp": 20,
+    "desc": "Esparce extrañas hojas que persiguen al objetivo. No se puede esquivar."
+  },
+  "NEEDLEARM": {
+    "nombre_es": "Brazo Pincho",
+    "tipo": "GRASS",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Pega con brazos de pinchos y puede amedrentar al objetivo."
+  },
+  "RAZORLEAF": {
+    "nombre_es": "Hoja Afilada",
+    "tipo": "GRASS",
+    "cat": "Physical",
+    "pot": 55,
+    "pre": 95,
+    "pp": 25,
+    "desc": "Corta con hojas afiladas. Suele ser crítico."
+  },
+  "VINEWHIP": {
+    "nombre_es": "Látigo Cepa",
+    "tipo": "GRASS",
+    "cat": "Physical",
+    "pot": 45,
+    "pre": 100,
+    "pp": 25,
+    "desc": "Azota al objetivo con ramas finas."
+  },
+  "BRANCHPOKE": {
+    "nombre_es": "Punzada Rama",
+    "tipo": "GRASS",
+    "cat": "Physical",
+    "pot": 40,
+    "pre": 100,
+    "pp": 40,
+    "desc": "Ataca pinchando al objetivo con una rama afilada."
+  },
+  "LEAFAGE": {
+    "nombre_es": "Follaje",
+    "tipo": "GRASS",
+    "cat": "Physical",
+    "pot": 40,
+    "pre": 100,
+    "pp": 40,
+    "desc": "Ataca al oponente lanzando hojas."
+  },
+  "MEGADRAIN": {
+    "nombre_es": "Megaagotar",
+    "tipo": "GRASS",
+    "cat": "Special",
+    "pot": 40,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Absorbe la mitad del daño producido."
+  },
+  "SNAPTRAP": {
+    "nombre_es": "Cepo",
+    "tipo": "GRASS",
+    "cat": "Physical",
+    "pot": 35,
+    "pre": 100,
+    "pp": 15,
+    "desc": "El usuario ensarta al objetivo en un cepo de cuatro a cinco turnos."
+  },
+  "BULLETSEED": {
+    "nombre_es": "Semilladora",
+    "tipo": "GRASS",
+    "cat": "Physical",
+    "pot": 25,
+    "pre": 100,
+    "pp": 30,
+    "desc": "Dispara rápido de dos a cinco ráfagas de semillas de manera consecutiva."
+  },
+  "ABSORB": {
+    "nombre_es": "Absorber",
+    "tipo": "GRASS",
+    "cat": "Special",
+    "pot": 20,
+    "pre": 100,
+    "pp": 25,
+    "desc": "Absorbe la mitad del daño producido."
+  },
+  "GRASSKNOT": {
+    "nombre_es": "Hierba Lazo",
+    "tipo": "GRASS",
+    "cat": "Special",
+    "pot": 1,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Enreda al objetivo con hierba y lo derriba. Cuanto más pesado es el objetivo, más daño inflige."
+  },
+  "AROMATHERAPY": {
+    "nombre_es": "Aromaterapia",
+    "tipo": "GRASS",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "Cura los problemas de estado del equipo con un suave aroma."
+  },
+  "COTTONGUARD": {
+    "nombre_es": "Rizo Algodón",
+    "tipo": "GRASS",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Cubre al Pokémon con una madeja protectora. Aumenta muchísimo la Defensa."
+  },
+  "COTTONSPORE": {
+    "nombre_es": "Esporagodón",
+    "tipo": "GRASS",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 40,
+    "desc": "Adhiere esporas al objetivo para reducir mucho su Velocidad."
+  },
+  "FORESTSCURSE": {
+    "nombre_es": "Condena Silvana",
+    "tipo": "GRASS",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 20,
+    "desc": "Presa de la maldición del bosque, el rival pasa a ser de tipo Planta, además de los suyos."
+  },
+  "GRASSWHISTLE": {
+    "nombre_es": "Silbato",
+    "tipo": "GRASS",
+    "cat": "Status",
+    "pre": 55,
+    "pp": 15,
+    "desc": "Agradable melodía que adormece al objetivo."
+  },
+  "GRASSYTERRAIN": {
+    "nombre_es": "Campo de Hierba",
+    "tipo": "GRASS",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Invoca un campo de hierba 5 turnos. Al final del turno los Pokémon en el suelo recuperan PS."
+  },
+  "INGRAIN": {
+    "nombre_es": "Arraigo",
+    "tipo": "GRASS",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Echa raíces para recuperar PS en cada turno, pero impide el relevo."
+  },
+  "JUNGLEHEALING": {
+    "nombre_es": "Cura Selvática",
+    "tipo": "GRASS",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Restaura los PS y cura los problemas de estado del usuario y sus aliados."
+  },
+  "LEECHSEED": {
+    "nombre_es": "Drenadoras",
+    "tipo": "GRASS",
+    "cat": "Status",
+    "pre": 90,
+    "pp": 10,
+    "desc": "Planta semillas que absorben PS para recuperar la salud del usuario en cada turno."
+  },
+  "SLEEPPOWDER": {
+    "nombre_es": "Somnífero",
+    "tipo": "GRASS",
+    "cat": "Status",
+    "pre": 75,
+    "pp": 15,
+    "desc": "Esparce polvo que duerme al objetivo."
+  },
+  "SPIKYSHIELD": {
+    "nombre_es": "Barrera Espinosa",
+    "tipo": "GRASS",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Evita el ataque de su oponente y le inflige daño si ha entrado en contacto con él."
+  },
+  "SPORE": {
+    "nombre_es": "Espora",
+    "tipo": "GRASS",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 15,
+    "desc": "Esparce esporas que inducen al sueño."
+  },
+  "STRENGTHSAP": {
+    "nombre_es": "Absorbefuerza",
+    "tipo": "GRASS",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 10,
+    "desc": "Baja el Ataque del rival y restaura una cantidad de PS equivalente al valor de Ataque del rival."
+  },
+  "STUNSPORE": {
+    "nombre_es": "Paralizador",
+    "tipo": "GRASS",
+    "cat": "Status",
+    "pre": 75,
+    "pp": 30,
+    "desc": "Esparce polvo que paraliza al objetivo."
+  },
+  "SYNTHESIS": {
+    "nombre_es": "Síntesis",
+    "tipo": "GRASS",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "Restaura PS del usuario. La cantidad varía según el clima."
+  },
+  "WORRYSEED": {
+    "nombre_es": "Abatidoras",
+    "tipo": "GRASS",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 10,
+    "desc": "Se planta una semilla en el objetivo que le causa pesar y le induce Insomnio."
+  },
+  "PRECIPICEBLADES": {
+    "nombre_es": "Filo del Abismo",
+    "tipo": "GROUND",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 85,
+    "pp": 10,
+    "desc": "Manifiesta el poder latente de la tierra en forma de hojas afiladas y ataca al objetivo."
+  },
+  "EARTHQUAKE": {
+    "nombre_es": "Terremoto",
+    "tipo": "GROUND",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Un terremoto que afecta a los Pokémon de alrededor en combate."
+  },
+  "HIGHHORSEPOWER": {
+    "nombre_es": "Fuerza Equina",
+    "tipo": "GROUND",
+    "cat": "Physical",
+    "pot": 95,
+    "pre": 95,
+    "pp": 10,
+    "desc": "Asesta un golpe devastador usando su cuerpo."
+  },
+  "EARTHPOWER": {
+    "nombre_es": "Tierra Viva",
+    "tipo": "GROUND",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Erupciona la tierra a los pies del rival. Puede disminuir la Defensa Especial."
+  },
+  "LANDSWRATH": {
+    "nombre_es": "Fuerza Telúrica",
+    "tipo": "GROUND",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Acumula energía de la corteza terrestre y la concentra contra los oponentes, dañándolos."
+  },
+  "THOUSANDARROWS": {
+    "nombre_es": "Mil Flechas",
+    "tipo": "GROUND",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Acierta incluso a Pokémon que estén en el aire y los hace caer al suelo."
+  },
+  "THOUSANDWAVES": {
+    "nombre_es": "Mil Temblores",
+    "tipo": "GROUND",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ondas sísmicas que se propagan por el suelo a todos los rivales. Los alcanzados no podrán huir."
+  },
+  "DIG": {
+    "nombre_es": "Excavar",
+    "tipo": "GROUND",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Primer turno: cava. Segundo turno: ataca. También sirve para salir de ciertas zonas."
+  },
+  "DRILLRUN": {
+    "nombre_es": "Taladradora",
+    "tipo": "GROUND",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 95,
+    "pp": 10,
+    "desc": "El usuario golpea usando su cuerpo como un taladro. Suele ser crítico."
+  },
+  "STOMPINGTANTRUM": {
+    "nombre_es": "Pataleta",
+    "tipo": "GROUND",
+    "cat": "Physical",
+    "pot": 75,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Usa la frustración para atacar, duplicando la potencia si ha fallado su último movimiento."
+  },
+  "SCORCHINGSANDS": {
+    "nombre_es": "Arenas Ardientes",
+    "tipo": "GROUND",
+    "cat": "Special",
+    "pot": 70,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca al objetivo arrojándole arena a temperaturas muy elevadas. Puede causar quemaduras."
+  },
+  "BONECLUB": {
+    "nombre_es": "Hueso Palo",
+    "tipo": "GROUND",
+    "cat": "Physical",
+    "pot": 65,
+    "pre": 85,
+    "pp": 20,
+    "desc": "Aporrea con un hueso. Puede amedrentar al objetivo."
+  },
+  "MUDBOMB": {
+    "nombre_es": "Bomba Fango",
+    "tipo": "GROUND",
+    "cat": "Special",
+    "pot": 65,
+    "pre": 85,
+    "pp": 10,
+    "desc": "Ataca lanzando una compacta bola de fango. Puede bajar la Precisión del objetivo."
+  },
+  "BULLDOZE": {
+    "nombre_es": "Terratemblor",
+    "tipo": "GROUND",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Ataca con una sacudida sísmica que afecta a los Pokémon adyacentes y baja su Velocidad."
+  },
+  "MUDSHOT": {
+    "nombre_es": "Disparo Lodo",
+    "tipo": "GROUND",
+    "cat": "Special",
+    "pot": 55,
+    "pre": 95,
+    "pp": 15,
+    "desc": "El usuario lanza lodo al objetivo y reduce su Velocidad."
+  },
+  "BONEMERANG": {
+    "nombre_es": "Huesomerang",
+    "tipo": "GROUND",
+    "cat": "Physical",
+    "pot": 50,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Lanza un hueso a modo de bumerán que golpea dos veces."
+  },
+  "SANDTOMB": {
+    "nombre_es": "Bucle Arena",
+    "tipo": "GROUND",
+    "cat": "Physical",
+    "pot": 35,
+    "pre": 85,
+    "pp": 15,
+    "desc": "Enreda al objetivo en un remolino de arena de cuatro a cinco turnos."
+  },
+  "BONERUSH": {
+    "nombre_es": "Ataque Óseo",
+    "tipo": "GROUND",
+    "cat": "Physical",
+    "pot": 25,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Hueso en ristre, aporrea al objetivo de dos a cinco veces."
+  },
+  "MUDSLAP": {
+    "nombre_es": "Bofetón Lodo",
+    "tipo": "GROUND",
+    "cat": "Special",
+    "pot": 20,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Echa lodo en la cara para bajar la Precisión."
+  },
+  "FISSURE": {
+    "nombre_es": "Fisura",
+    "tipo": "GROUND",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 30,
+    "pp": 5,
+    "desc": "Abre una grieta en el suelo y mete al objetivo en ella. Fulmina en un golpe."
+  },
+  "MAGNITUDE": {
+    "nombre_es": "Magnitud",
+    "tipo": "GROUND",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 100,
+    "pp": 30,
+    "desc": "Sacudida sísmica de intensidad variable que afecta a los Pokémon adyacentes en combate."
+  },
+  "MUDSPORT": {
+    "nombre_es": "Chapoteo Lodo",
+    "tipo": "GROUND",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 15,
+    "desc": "Se cubre de lodo y debilita los movimientos de tipo Eléctrico mientras está en combate."
+  },
+  "ROTOTILLER": {
+    "nombre_es": "Fertilizante",
+    "tipo": "GROUND",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Labra la tierra y consigue que aumente el Ataque y el Ataque Especial de los Pokémon Planta."
+  },
+  "SANDATTACK": {
+    "nombre_es": "Ataque Arena",
+    "tipo": "GROUND",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 15,
+    "desc": "Arroja arena a la cara y baja la Precisión."
+  },
+  "SHOREUP": {
+    "nombre_es": "Recogearena",
+    "tipo": "GROUND",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Restaura la mitad de los PS máximos del usuario. Si hay tormentas de arena restaura más PS."
+  },
+  "SPIKES": {
+    "nombre_es": "Púas",
+    "tipo": "GROUND",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Esparce púas en el terreno rival. Las púas hieren a los Pokémon rivales que entran en combate."
+  },
+  "FREEZESHOCK": {
+    "nombre_es": "Rayo Gélido",
+    "tipo": "ICE",
+    "cat": "Physical",
+    "pot": 140,
+    "pre": 90,
+    "pp": 5,
+    "desc": "Carga un bloque de hielo con electricidad en el 1º turno y ataca con él en el 2º. Puede paralizar."
+  },
+  "ICEBURN": {
+    "nombre_es": "Llama Gélida",
+    "tipo": "ICE",
+    "cat": "Special",
+    "pot": 140,
+    "pre": 90,
+    "pp": 5,
+    "desc": "Ataca al objetivo en el segundo turno rodeándolo de un aire gélido. Puede causar quemaduras."
+  },
+  "GLACIALLANCE": {
+    "nombre_es": "Lanza Glacial",
+    "tipo": "ICE",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 100,
+    "pp": 5,
+    "desc": "El usuario ataca lanzando una poderosa lanza de hielo que daña a ambos rivales."
+  },
+  "BLIZZARD": {
+    "nombre_es": "Ventisca",
+    "tipo": "ICE",
+    "cat": "Special",
+    "pot": 110,
+    "pre": 70,
+    "pp": 5,
+    "desc": "Tormenta de hielo que puede llegar a congelar."
+  },
+  "ICEHAMMER": {
+    "nombre_es": "Martillo Hielo",
+    "tipo": "ICE",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Un terrible puño golpea al contrincante, pero la Velocidad del usuario se ve reducida."
+  },
+  "ICEBEAM": {
+    "nombre_es": "Rayo Hielo",
+    "tipo": "ICE",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Rayo de hielo que puede llegar a congelar."
+  },
+  "ICICLECRASH": {
+    "nombre_es": "Chuzos",
+    "tipo": "ICE",
+    "cat": "Physical",
+    "pot": 85,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Lanza grandes carámbanos. Puede amedrentar al objetivo."
+  },
+  "ICEPUNCH": {
+    "nombre_es": "Puño Hielo",
+    "tipo": "ICE",
+    "cat": "Physical",
+    "pot": 75,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Puñetazo helado. Puede congelar."
+  },
+  "FREEZEDRY": {
+    "nombre_es": "Liofilización",
+    "tipo": "ICE",
+    "cat": "Special",
+    "pot": 70,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Enfría súbitamente al objetivo e incluso puede congelarlo. Es supereficaz contra Pokémon de tipo Agua."
+  },
+  "AURORABEAM": {
+    "nombre_es": "Rayo Aurora",
+    "tipo": "ICE",
+    "cat": "Special",
+    "pot": 65,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Rayo multicolor que puede reducir el Ataque."
+  },
+  "GLACIATE": {
+    "nombre_es": "Mundo Gélido",
+    "tipo": "ICE",
+    "cat": "Special",
+    "pot": 65,
+    "pre": 95,
+    "pp": 10,
+    "desc": "Ataque con aire helado que puede bajar la Velocidad del objetivo."
+  },
+  "ICEFANG": {
+    "nombre_es": "Colmillo Hielo",
+    "tipo": "ICE",
+    "cat": "Physical",
+    "pot": 65,
+    "pre": 95,
+    "pp": 15,
+    "desc": "Usa colmillos helados para morder. Puede hacer que el objetivo se amedrente o congelarlo."
+  },
+  "AVALANCHE": {
+    "nombre_es": "Alud",
+    "tipo": "ICE",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Este ataque inflige el doble de daño a un objetivo que haya golpeado al usuario en ese mismo turno."
+  },
+  "FROSTBREATH": {
+    "nombre_es": "Vaho Gélido",
+    "tipo": "ICE",
+    "cat": "Special",
+    "pot": 60,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Ataque con aire helado. Siempre resulta en un golpe crítico."
+  },
+  "ICYWIND": {
+    "nombre_es": "Viento Hielo",
+    "tipo": "ICE",
+    "cat": "Special",
+    "pot": 55,
+    "pre": 95,
+    "pp": 15,
+    "desc": "Ataque con aire helado que baja la Velocidad del objetivo."
+  },
+  "ICESHARD": {
+    "nombre_es": "Esquirla Helada",
+    "tipo": "ICE",
+    "cat": "Physical",
+    "pot": 40,
+    "pre": 100,
+    "pp": 30,
+    "desc": "Crea bolas de hielo y las lanza a gran velocidad. Este movimiento siempre va primero."
+  },
+  "POWDERSNOW": {
+    "nombre_es": "Nieve Polvo",
+    "tipo": "ICE",
+    "cat": "Special",
+    "pot": 40,
+    "pre": 100,
+    "pp": 25,
+    "desc": "Lanza nieve que puede llegar a congelar."
+  },
+  "ICEBALL": {
+    "nombre_es": "Bola Hielo",
+    "tipo": "ICE",
+    "cat": "Physical",
+    "pot": 30,
+    "pre": 90,
+    "pp": 20,
+    "desc": "El atacante rueda contra el objetivo durante cinco turnos, cada vez con mayor fuerza."
+  },
+  "ICICLESPEAR": {
+    "nombre_es": "Carámbano",
+    "tipo": "ICE",
+    "cat": "Physical",
+    "pot": 25,
+    "pre": 100,
+    "pp": 30,
+    "desc": "Ataca lanzando de dos a cinco ráfagas consecutivas de carámbanos."
+  },
+  "TRIPLEAXEL": {
+    "nombre_es": "Triple Axel",
+    "tipo": "ICE",
+    "cat": "Physical",
+    "pot": 20,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Patea hasta tres veces seguidas y cada vez más fuerte."
+  },
+  "SHEERCOLD": {
+    "nombre_es": "Frío Polar",
+    "tipo": "ICE",
+    "cat": "Special",
+    "pot": 1,
+    "pre": 30,
+    "pp": 5,
+    "desc": "Ataque de frío polar que debilita al objetivo si le alcanza."
+  },
+  "AURORAVEIL": {
+    "nombre_es": "Velo Aurora",
+    "tipo": "ICE",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Reduce el daño de los ataques físicos y especiales que ejecuta el rival durante cinco turnos. Solo puede usarse cuando está nevando."
+  },
+  "HAIL": {
+    "nombre_es": "Granizo",
+    "tipo": "ICE",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Tormenta de granizo que dura cinco turnos. Hiere a s, excepto a los de tipo Hielo."
+  },
+  "HAZE": {
+    "nombre_es": "Niebla",
+    "tipo": "ICE",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 30,
+    "desc": "Neblina que elimina los cambios de características de todos los Pokémon en combate."
+  },
+  "MIST": {
+    "nombre_es": "Neblina",
+    "tipo": "ICE",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 30,
+    "desc": "Rodea de fina niebla al usuario y protege las características de su equipo durante cinco turnos."
+  },
+  "EXPLOSION": {
+    "nombre_es": "Explosion",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 250,
+    "pre": 100,
+    "pp": 5,
+    "desc": "El atacante explota y hiere a todos a su alrededor. El usuario se debilita de inmediato."
+  },
+  "SELFDESTRUCT": {
+    "nombre_es": "Autodestrucción",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 200,
+    "pre": 100,
+    "pp": 5,
+    "desc": "El atacante explota y hiere a todos a su alrededor. El usuario se debilita de inmediato."
+  },
+  "GIGAIMPACT": {
+    "nombre_es": "Gigaimpacto",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 150,
+    "pre": 90,
+    "pp": 5,
+    "desc": "Carga contra el rival usando toda la fuerza que tiene. El Pokémon descansa el turno siguiente."
+  },
+  "HYPERBEAM": {
+    "nombre_es": "Hiperrayo",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 150,
+    "pre": 90,
+    "pp": 5,
+    "desc": "Un rayo fulminante, pero el atacante deberá descansar en el siguiente turno."
+  },
+  "BOOMBURST": {
+    "nombre_es": "Estruendo",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 140,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca a todos los Pokémon a su alrededor con una potentísima onda sonora."
+  },
+  "LASTRESORT": {
+    "nombre_es": "Última Baza",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 140,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Este movimiento solo puede usarse tras haber usado los demás conocidos por el Pokémon."
+  },
+  "SKULLBASH": {
+    "nombre_es": "Cabezazo",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 130,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Primer turno: se prepara y sube la Defensa. Segundo turno: da el cabezazo."
+  },
+  "DOUBLEEDGE": {
+    "nombre_es": "Doble Filo",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Ataque arriesgado que también hiere al agresor."
+  },
+  "HEADCHARGE": {
+    "nombre_es": "Ariete",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Propina un tremendo cabezazo. También daña al usuario un poco."
+  },
+  "MEGAKICK": {
+    "nombre_es": "Megapatada",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 75,
+    "pp": 5,
+    "desc": "Patada de extrema fuerza."
+  },
+  "MULTIATTACK": {
+    "nombre_es": "Multiataque",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Se rodea de una potente energía con la que golpea al rival. El tipo depende del disco que lleva."
+  },
+  "TECHNOBLAST": {
+    "nombre_es": "Tecno Shock",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 120,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Ataca al objetivo con un gran láser. El tipo del ataque lo determina el cartucho que porta el usuario."
+  },
+  "THRASH": {
+    "nombre_es": "Saña",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca de dos a tres turnos y acaba confundiendo al agresor."
+  },
+  "EGGBOMB": {
+    "nombre_es": "Bomba Huevo",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 75,
+    "pp": 10,
+    "desc": "Arroja un huevo al objetivo con gran fuerza."
+  },
+  "JUDGMENT": {
+    "nombre_es": "Sentencia",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 100,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Emite incontables haces de luz. Varía según el tipo de tabla que lleve el usuario."
+  },
+  "HYPERVOICE": {
+    "nombre_es": "Vozarrón",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Grito desgarrador que inflige daño al objetivo."
+  },
+  "REVELATIONDANCE": {
+    "nombre_es": "Danza Despertar",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Baile enérgico cuyo tipo será el primero del Pokémon que lo ejecuta. Si lo pierde, usará el segundo."
+  },
+  "ROCKCLIMB": {
+    "nombre_es": "Treparrocas",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 85,
+    "pp": 20,
+    "desc": "Ataca con una gran embestida. Puede confundir al objetivo."
+  },
+  "TAKEDOWN": {
+    "nombre_es": "Derribo",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 85,
+    "pp": 20,
+    "desc": "Carga desmedida que también hiere al agresor."
+  },
+  "UPROAR": {
+    "nombre_es": "Alboroto",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca de forma alborotada durante tres turnos. Mantiene despiertos a todos."
+  },
+  "BODYSLAM": {
+    "nombre_es": "Golpe Cuerpo",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 85,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Salta sobre el objetivo con su peso. Puede paralizar."
+  },
+  "EXTREMESPEED": {
+    "nombre_es": "Velocidad Extrema",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Ataque muy rápido que siempre va en primer lugar."
+  },
+  "HYPERFANG": {
+    "nombre_es": "Hipercolmillo",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 90,
+    "pp": 15,
+    "desc": "Ataque con finos colmillos. Puede amedrentar."
+  },
+  "MEGAPUNCH": {
+    "nombre_es": "Megapuño",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 85,
+    "pp": 20,
+    "desc": "Un puñetazo de gran potencia."
+  },
+  "RAZORWIND": {
+    "nombre_es": "Viento Cortante",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Primer turno: prepara. Segundo turno: ataca. Suele ser crítico."
+  },
+  "SLAM": {
+    "nombre_es": "Atizar",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 75,
+    "pp": 20,
+    "desc": "Golpea con las extremidades."
+  },
+  "STRENGTH": {
+    "nombre_es": "Fuerza",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Potente puñetazo. Fuera de combate sirve para mover piedras."
+  },
+  "TRIATTACK": {
+    "nombre_es": "Triataque",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataque triple que puede paralizar, quemar o congelar al objetivo."
+  },
+  "CRUSHCLAW": {
+    "nombre_es": "Garra Brutal",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 75,
+    "pre": 95,
+    "pp": 10,
+    "desc": "Hace trizas al objetivo con garras afiladas y puede bajar su Defensa."
+  },
+  "RELICSONG": {
+    "nombre_es": "Canto Arcaico",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 75,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca conmoviendo a los rivales de alrededor con un antiguo canto. Puede dormirlos."
+  },
+  "CHIPAWAY": {
+    "nombre_es": "Guardia Baja",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 70,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Busca los puntos débiles del objetivo y causa daño aunque cambien sus características."
+  },
+  "DIZZYPUNCH": {
+    "nombre_es": "Puño Mareo",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 70,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Rítmicos puñetazos que pueden causar confusión."
+  },
+  "FACADE": {
+    "nombre_es": "Fachada",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 70,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Ataca con el doble de potencia si el usuario está quemado, paralizado o envenenado."
+  },
+  "HEADBUTT": {
+    "nombre_es": "Golpe Cabeza",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 70,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Lanza un potente cabezazo que puede amedrentar al objetivo."
+  },
+  "RETALIATE": {
+    "nombre_es": "Represalia",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 70,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Si en el turno anterior han derrotado a un compañero, la potencia del ataque aumentará."
+  },
+  "SECRETPOWER": {
+    "nombre_es": "Daño Secreto",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 70,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Ataque con poder secreto cuyos efectos secundarios varían según el entorno de combate."
+  },
+  "SLASH": {
+    "nombre_es": "Cuchillada",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 70,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Ataca con cuchillas o con pinzas. Suele ser un golpe crítico."
+  },
+  "SMELLINGSALTS": {
+    "nombre_es": "Estímulo",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 70,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Hace el doble de daño a objetivos paralizados, pero también cura la parálisis."
+  },
+  "HORNATTACK": {
+    "nombre_es": "Cornada",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 65,
+    "pre": 100,
+    "pp": 25,
+    "desc": "Ataca al objetivo con una cornada."
+  },
+  "STOMP": {
+    "nombre_es": "Pisotón",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 65,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Tremendo pisotón que puede amedrentar al objetivo."
+  },
+  "COVET": {
+    "nombre_es": "Antojo",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 100,
+    "pp": 25,
+    "desc": "Se acerca con ternura al objetivo, pero le ataca pudiendo robar el objeto que lleve."
+  },
+  "HIDDENPOWER": {
+    "nombre_es": "Poder Oculto",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 60,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Ataque único cuyo tipo y potencia varían según el agresor."
+  },
+  "ROUND": {
+    "nombre_es": "Canon",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 60,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Un canto que ataca al objetivo. Cuantos más Pokémon lo usan, más aumenta de potencia."
+  },
+  "SWIFT": {
+    "nombre_es": "Meteoros",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 60,
+    "pre": 0,
+    "pp": 20,
+    "desc": "Lanza rayos en forma de estrella que no fallan nunca."
+  },
+  "VISEGRIP": {
+    "nombre_es": "Agarre",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 55,
+    "pre": 100,
+    "pp": 30,
+    "desc": "Atrapa con potentes pinzas."
+  },
+  "CUT": {
+    "nombre_es": "Corte",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 50,
+    "pre": 95,
+    "pp": 30,
+    "desc": "Corta con garras, guadañas, etc. También sirve para cortar árboles finos."
+  },
+  "RAPIDSPIN": {
+    "nombre_es": "Giro Rápido",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 50,
+    "pre": 100,
+    "pp": 40,
+    "desc": "Ataque giratorio que sube la Velocidad y elimina movimientos como atadura, drenadoras o púas."
+  },
+  "SNORE": {
+    "nombre_es": "Ronquido",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 50,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Fuerte ronquido que debe usarse dormido. Puede amedrentar al objetivo."
+  },
+  "TERRAINPULSE": {
+    "nombre_es": "Pulso de Campo",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 50,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca aprovechando la energía del campo activo, que determina el tipo y la potencia del movimiento."
+  },
+  "WEATHERBALL": {
+    "nombre_es": "Meteorobola",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 50,
+    "pre": 100,
+    "pp": 10,
+    "desc": "El tipo y fuerza del ataque varían según el clima."
+  },
+  "ECHOEDVOICE": {
+    "nombre_es": "Eco Voz",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 40,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Un susurro que aumenta de potencia conforme el usuario y otros Pokémon lo van utilizando."
+  },
+  "FAKEOUT": {
+    "nombre_es": "Sorpresa",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 40,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca primero y, además, amedrenta al rival. Solo sirve en el primer turno."
+  },
+  "FALSESWIPE": {
+    "nombre_es": "Falso Tortazo",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 40,
+    "pre": 100,
+    "pp": 40,
+    "desc": "Ataque moderado que no debilita al objetivo y le deja al menos un PS."
+  },
+  "HOLDBACK": {
+    "nombre_es": "Clemencia",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 40,
+    "pre": 100,
+    "pp": 40,
+    "desc": "El usuario se contiene a la hora de atacar y deja al Pokémon objetivo con al menos 1 PS."
+  },
+  "PAYDAY": {
+    "nombre_es": "Día de Pago",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 40,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Arroja monedas al objetivo. Las recupera al final del combate."
+  },
+  "POUND": {
+    "nombre_es": "Destructor",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 40,
+    "pre": 100,
+    "pp": 35,
+    "desc": "Golpea con las patas o la cola."
+  },
+  "QUICKATTACK": {
+    "nombre_es": "Ataque Rápido",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 40,
+    "pre": 100,
+    "pp": 30,
+    "desc": "Ataque rápido que permite golpear en primer lugar."
+  },
+  "SCRATCH": {
+    "nombre_es": "Arañazo",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 40,
+    "pre": 100,
+    "pp": 35,
+    "desc": "Araña con afiladas garras."
+  },
+  "TACKLE": {
+    "nombre_es": "Placaje",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 40,
+    "pre": 100,
+    "pp": 35,
+    "desc": "Embiste con el cuerpo."
+  },
+  "DOUBLEHIT": {
+    "nombre_es": "Doble Golpe",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 35,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Golpea al objetivo dos veces seguidas con la cola u otras partes de su cuerpo."
+  },
+  "FEINT": {
+    "nombre_es": "Amago",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 30,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Permite golpear a objetivos que usan Protección o Detección y anula dichos movimientos."
+  },
+  "TAILSLAP": {
+    "nombre_es": "Plumerazo",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 25,
+    "pre": 85,
+    "pp": 10,
+    "desc": "Golpea con la cola u otras partes de su cuerpo de dos a cinco veces seguidas."
+  },
+  "RAGE": {
+    "nombre_es": "Furia",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 20,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Al usarse, aumenta el Ataque del usuario cada vez que es golpeado."
+  },
+  "SPIKECANNON": {
+    "nombre_es": "Clavo Cañón",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 20,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Lanza finas púas que hieren de dos a cinco veces."
+  },
+  "COMETPUNCH": {
+    "nombre_es": "Puño Cometa",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 18,
+    "pre": 85,
+    "pp": 15,
+    "desc": "Pega de dos a cinco veces seguidas."
+  },
+  "FURYSWIPES": {
+    "nombre_es": "Golpes Furia",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 18,
+    "pre": 80,
+    "pp": 15,
+    "desc": "Araña rápidamente de dos a cinco veces."
+  },
+  "BARRAGE": {
+    "nombre_es": "Bombardeo",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 15,
+    "pre": 85,
+    "pp": 20,
+    "desc": "Arroja esferas al objetivo entre dos y cinco veces seguidas."
+  },
+  "BIND": {
+    "nombre_es": "Atadura",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 15,
+    "pre": 85,
+    "pp": 20,
+    "desc": "Ata y oprime de cuatro a cinco turnos."
+  },
+  "DOUBLESLAP": {
+    "nombre_es": "Doble Bofetón",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 15,
+    "pre": 85,
+    "pp": 10,
+    "desc": "Abofetea de dos a cinco veces seguidas."
+  },
+  "FURYATTACK": {
+    "nombre_es": "Ataque Furia",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 15,
+    "pre": 85,
+    "pp": 20,
+    "desc": "Cornea al objetivo de dos a cinco veces."
+  },
+  "WRAP": {
+    "nombre_es": "Constricción",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 15,
+    "pre": 90,
+    "pp": 20,
+    "desc": "Oprime al objetivo de cuatro a cinco turnos con ramas o con su cuerpo."
+  },
+  "CONSTRICT": {
+    "nombre_es": "Restricción",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 10,
+    "pre": 100,
+    "pp": 35,
+    "desc": "Constriñe para herir y puede bajar la Velocidad."
+  },
+  "BIDE": {
+    "nombre_es": "Venganza",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 0,
+    "pp": 10,
+    "desc": "Resiste dos golpes para liberar la energía acumulada."
+  },
+  "CRUSHGRIP": {
+    "nombre_es": "Agarrón",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Cuantos más PS le queden al objetivo, más fuerte será el ataque."
+  },
+  "ENDEAVOR": {
+    "nombre_es": "Esfuerzo",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Reduce los PS del objetivo para que igualen a los del atacante."
+  },
+  "FLAIL": {
+    "nombre_es": "Azote",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Ataque frenético. Cuantos menos PS tenga el usuario, más daño produce."
+  },
+  "FRUSTRATION": {
+    "nombre_es": "Frustración",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Cuanto menor sea la amistad con el Entrenador, más poderoso será este ataque."
+  },
+  "GUILLOTINE": {
+    "nombre_es": "Guillotina",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 30,
+    "pp": 5,
+    "desc": "Ataque con pinzas que debilita al oponente de un golpe si acierta."
+  },
+  "HORNDRILL": {
+    "nombre_es": "Perforador",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 30,
+    "pp": 5,
+    "desc": "Ataque con taladro que fulmina en un golpe al objetivo si le toca."
+  },
+  "NATURALGIFT": {
+    "nombre_es": "Don Natural",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 100,
+    "pp": 15,
+    "desc": "La baya que lleva presta su fuerza para atacar. El tipo de ataque y su fuerza dependen de la baya."
+  },
+  "PRESENT": {
+    "nombre_es": "Presente",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 90,
+    "pp": 15,
+    "desc": "Regalo con bomba trampa. A veces restaura los PS."
+  },
+  "RETURN": {
+    "nombre_es": "Retribución",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Cuanto mayor sea la amistad con el Entrenador, más poderoso será este ataque."
+  },
+  "SONICBOOM": {
+    "nombre_es": "Bomba Sónica",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 1,
+    "pre": 90,
+    "pp": 20,
+    "desc": "Lanza ondas de choque que restan 20 PS al objetivo."
+  },
+  "SPITUP": {
+    "nombre_es": "Escupir",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 1,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Libera de una vez la energía acumulada con reserva."
+  },
+  "SUPERFANG": {
+    "nombre_es": "Superdiente",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Finos colmillos que reducen a la mitad los PS del objetivo."
+  },
+  "TRUMPCARD": {
+    "nombre_es": "As Oculto",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 1,
+    "pre": 0,
+    "pp": 5,
+    "desc": "Cuantos menos PP tenga el movimiento, mayor será la fuerza para atacar."
+  },
+  "WRINGOUT": {
+    "nombre_es": "Estrujón",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 1,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Estruja con fuerza al objetivo. Cuantos más PS tenga el objetivo, más fuerza tendrá el ataque."
+  },
+  "ACUPRESSURE": {
+    "nombre_es": "Acupresión",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 30,
+    "desc": "La presión en puntos clave del cuerpo potencia una de sus características al azar."
+  },
+  "AFTERYOU": {
+    "nombre_es": "Cede Paso",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 15,
+    "desc": "Si el usuario es el más rápido, permite al objetivo usar un movimiento justo tras él."
+  },
+  "ASSIST": {
+    "nombre_es": "Ayuda",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Usa un movimiento de un miembro del equipo elegido al azar."
+  },
+  "ATTRACT": {
+    "nombre_es": "Atracción",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 15,
+    "desc": "Si el objetivo es del sexo opuesto, se enamorará y bajará la posibilidad de que ataque."
+  },
+  "BATONPASS": {
+    "nombre_es": "Relevo",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 40,
+    "desc": "Cambia el puesto con un compañero y le pasa los cambios de características."
+  },
+  "BELLYDRUM": {
+    "nombre_es": "Tambor",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Reduce la mitad de los PS máximos para mejorar al máximo el Ataque."
+  },
+  "BESTOW": {
+    "nombre_es": "Ofrenda",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 15,
+    "desc": "Entrega el objeto que lleva al objetivo en caso de que este no tenga ninguno."
+  },
+  "BLOCK": {
+    "nombre_es": "Bloqueo",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "Le corta el paso al objetivo para que no pueda escapar."
+  },
+  "CAMOUFLAGE": {
+    "nombre_es": "Camuflaje",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Modifica el tipo del Pokémon según el terreno de combate donde esté."
+  },
+  "CAPTIVATE": {
+    "nombre_es": "Seducción",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 20,
+    "desc": "Si el objetivo es del sexo opuesto, queda embelesado y baja mucho su Ataque Especial."
+  },
+  "CELEBRATE": {
+    "nombre_es": "Celebración",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 40,
+    "desc": "El Pokémon te felicita en un día muy especial para ti."
+  },
+  "CONFIDE": {
+    "nombre_es": "Confidencia",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Desconcentra al oponente contándole un secreto, disminuyendo así su Ataque Especial."
+  },
+  "CONVERSION": {
+    "nombre_es": "Conversión",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 30,
+    "desc": "Cambia el tipo del usuario por el de uno de sus movimientos."
+  },
+  "CONVERSION2": {
+    "nombre_es": "Conversión2",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 30,
+    "desc": "El usuario cambia de tipo para hacerse resistente al último tipo de movimiento usado por el objetivo."
+  },
+  "COPYCAT": {
+    "nombre_es": "Copión",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Imita el movimiento usado justo antes. El movimiento falla si no se ha usado aún ninguno."
+  },
+  "COURTCHANGE": {
+    "nombre_es": "Cambio de Cancha",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Gracias a un poder misterioso, el usuario intercambia los efectos en los extremos del campo."
+  },
+  "DEFENSECURL": {
+    "nombre_es": "Rizo Defensa",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 40,
+    "desc": "Se enrosca para ocultar su punto débil. Sube la Defensa."
+  },
+  "DISABLE": {
+    "nombre_es": "Anulación",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 20,
+    "desc": "Desactiva el último movimiento del objetivo durante cuatro turnos."
+  },
+  "DOUBLETEAM": {
+    "nombre_es": "Doble Equipo",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 15,
+    "desc": "Crea copias de sí mismo para mejorar la Evasión."
+  },
+  "ENCORE": {
+    "nombre_es": "Otra Vez",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 5,
+    "desc": "El objetivo repite su último movimiento durante tres turnos."
+  },
+  "ENDURE": {
+    "nombre_es": "Aguante",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Resiste cualquier ataque y deja al menos un PS. Puede fallar si se usa repetidamente."
+  },
+  "ENTRAINMENT": {
+    "nombre_es": "Danza Amiga",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 15,
+    "desc": "Una extraña danza que hace que el usuario y el objetivo tengan la misma habilidad."
+  },
+  "FLASH": {
+    "nombre_es": "Destello",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 20,
+    "desc": "Luz cegadora que baja la Precisión del objetivo. Fuera de combate sirve para iluminar."
+  },
+  "FOCUSENERGY": {
+    "nombre_es": "Foco Energía",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 30,
+    "desc": "Concentra energía para aumentar las posibilidades de un golpe crítico."
+  },
+  "FOLLOWME": {
+    "nombre_es": "Señuelo",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Llama la atención para concentrar los ataques de todos los del equipo rival hacia sí mismo."
+  },
+  "FORESIGHT": {
+    "nombre_es": "Profecía",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 40,
+    "desc": "Permite atacar con cualquier movimiento a objetivos de tipo Fantasma y golpear a Pokémon evasivos."
+  },
+  "GLARE": {
+    "nombre_es": "Deslumbrar",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 30,
+    "desc": "Intimida y asusta al objetivo con la mirada para dejarlo paralizado."
+  },
+  "GROWL": {
+    "nombre_es": "Gruñido",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 40,
+    "desc": "Dulce gruñido que reduce el Ataque del contrincante."
+  },
+  "GROWTH": {
+    "nombre_es": "Desarrollo",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "El cuerpo del usuario crece a marchas forzadas y aumenta el Ataque y el Ataque Especial."
+  },
+  "HAPPYHOUR": {
+    "nombre_es": "Paga Extra",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 30,
+    "desc": "Al usar este movimiento se consigue duplicar la recompensa recibida tras el combate."
+  },
+  "HARDEN": {
+    "nombre_es": "Fortaleza",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 30,
+    "desc": "Tensa la musculatura del usuario para aumentar la Defensa."
+  },
+  "HEALBELL": {
+    "nombre_es": "Cascabel Cura",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "Tañido que cura los problemas de estado de todos los Pokémon del equipo."
+  },
+  "HELPINGHAND": {
+    "nombre_es": "Refuerzo",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "El usuario ayuda a un aliado reforzando la potencia de su ataque."
+  },
+  "HOLDHANDS": {
+    "nombre_es": "Manos Juntas",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 40,
+    "desc": "El Pokémon le da la mano a un aliado y ambos se sienten muy felices."
+  },
+  "HOWL": {
+    "nombre_es": "Aullido",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 40,
+    "desc": "Aullido que sube el ánimo y aumenta el Ataque."
+  },
+  "LASERFOCUS": {
+    "nombre_es": "Aguzar",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 30,
+    "desc": "El usuario se concentra para que el siguiente ataque propine un golpe crítico."
+  },
+  "LEER": {
+    "nombre_es": "Malicioso",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 30,
+    "desc": "Intimida al objetivo para bajar su Defensa."
+  },
+  "LOCKON": {
+    "nombre_es": "Fijar Blanco",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "Fija el blanco para que el siguiente ataque no falle."
+  },
+  "LOVELYKISS": {
+    "nombre_es": "Beso Amoroso",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 75,
+    "pp": 10,
+    "desc": "Con una cara que asusta, da un beso al objetivo y lo adormece."
+  },
+  "LUCKYCHANT": {
+    "nombre_es": "Conjuro",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 30,
+    "desc": "Lanza al cielo un conjuro que impide al objetivo asestar golpes críticos."
+  },
+  "MEFIRST": {
+    "nombre_es": "Yo Primero",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Se adelanta al movimiento que pretende usar el objetivo y lo lanza antes con más fuerza. Si el usuario es más lento, falla."
+  },
+  "MEANLOOK": {
+    "nombre_es": "Mal de Ojo",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "Impide al objetivo huir de la batalla."
+  },
+  "METRONOME": {
+    "nombre_es": "Metrónomo",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "El usuario mueve un dedo y estimula su cerebro para usar al azar casi cualquier movimiento."
+  },
+  "MILKDRINK": {
+    "nombre_es": "Batido",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "Restaura la mitad de sus PS máximos. Fuera de combate puede transferir sus PS a un aliado."
+  },
+  "MIMIC": {
+    "nombre_es": "Mimético",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Copia el último movimiento usado por el objetivo. Solo lo podrá usar si no es cambiado."
+  },
+  "MINDREADER": {
+    "nombre_es": "Telépata",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "El usuario adivina los movimientos del objetivo para hacer que su siguiente ataque no falle."
+  },
+  "MINIMIZE": {
+    "nombre_es": "Reducción",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "El usuario mengua para aumentar mucho la Evasión."
+  },
+  "MORNINGSUN": {
+    "nombre_es": "Sol Matinal",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "Restaura PS del usuario. La cantidad varía según el tiempo que haga."
+  },
+  "NATUREPOWER": {
+    "nombre_es": "Adaptación",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Usa el poder de la naturaleza. Su efecto varía según el entorno de combate."
+  },
+  "NOBLEROAR": {
+    "nombre_es": "Rugido de Guerra",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 30,
+    "desc": "Intimida a su oponente con un rugido de guerra, bajando su Ataque y su Ataque Especial."
+  },
+  "ODORSLEUTH": {
+    "nombre_es": "Rastreo",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 40,
+    "desc": "Permite atacar con cualquier movimiento a objetivos de tipo Fantasma y golpear a Pokémon evasivos."
+  },
+  "PAINSPLIT": {
+    "nombre_es": "Divide Dolor",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Suma los PS del usuario a los del objetivo y los reparte a partes iguales."
+  },
+  "PERISHSONG": {
+    "nombre_es": "Canto Mortal",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "Si un Pokémon escucha este canto y no es cambiado por otro en tres turnos, acaba debilitándose."
+  },
+  "PLAYNICE": {
+    "nombre_es": "Camaradería",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Se hace amigo de su oponente y consigue que no quiera combatir. Además, reduce su Ataque."
+  },
+  "PROTECT": {
+    "nombre_es": "Protección",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Frena los ataques, pero puede fallar si se usa repetidamente."
+  },
+  "PSYCHUP": {
+    "nombre_es": "Autosugestión",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Se hipnotiza y copia cualquier cambio que haya en las características de su objetivo."
+  },
+  "RECOVER": {
+    "nombre_es": "Recuperación",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "Restaura hasta la mitad de los PS máximos."
+  },
+  "RECYCLE": {
+    "nombre_es": "Reciclaje",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Recicla y así recupera el objeto equipado de un solo uso que ya ha sido empleado en el combate."
+  },
+  "REFLECTTYPE": {
+    "nombre_es": "Clonatipo",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 15,
+    "desc": "Cambia el tipo del Pokémon al mismo tipo que el del objetivo."
+  },
+  "REFRESH": {
+    "nombre_es": "Alivio",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Descansa para curar parálisis, envenenamiento o quemaduras."
+  },
+  "ROAR": {
+    "nombre_es": "Rugido",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Se lleva al objetivo, que es cambiado por otro Pokémon. Si es un Pokémon salvaje, acaba el combate."
+  },
+  "SAFEGUARD": {
+    "nombre_es": "Velo Sagrado",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 25,
+    "desc": "Crea un campo protector que evita problemas de estado durante cinco turnos."
+  },
+  "SCARYFACE": {
+    "nombre_es": "Cara Susto",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 10,
+    "desc": "Asusta al objetivo para reducir mucho su Velocidad."
+  },
+  "SCREECH": {
+    "nombre_es": "Chirrido",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 85,
+    "pp": 40,
+    "desc": "Alarido agudo que reduce mucho la Defensa del objetivo."
+  },
+  "SHARPEN": {
+    "nombre_es": "Afilar",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 30,
+    "desc": "El perfil del usuario se hace más afilado y su Ataque mejora."
+  },
+  "SHELLSMASH": {
+    "nombre_es": "Rompecoraza",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 15,
+    "desc": "Rompe su coraza y baja su Defensa y Def. Esp., pero aumenta mucho su Ataque, At. Esp. y Velocidad."
+  },
+  "SIMPLEBEAM": {
+    "nombre_es": "Onda Simple",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 15,
+    "desc": "Envía una imagen desconcertante al oponente. Cambia la habilidad del oponente a Simple."
+  },
+  "SING": {
+    "nombre_es": "Canto",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 55,
+    "pp": 15,
+    "desc": "Cancioncilla que hace dormir profundamente al objetivo."
+  },
+  "SKETCH": {
+    "nombre_es": "Esquema",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 1,
+    "desc": "Aprende de forma permanente el último movimiento del objetivo. Es de un solo uso."
+  },
+  "SLACKOFF": {
+    "nombre_es": "Relajo",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "El usuario se relaja y restaura la mitad de sus PS máximos."
+  },
+  "SLEEPTALK": {
+    "nombre_es": "Sonámbulo",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Mientras duerme, usa uno de sus movimientos elegido al azar."
+  },
+  "SMOKESCREEN": {
+    "nombre_es": "Pantalla de Humo",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 20,
+    "desc": "Baja la Precisión del objetivo con una nube de humo o tinta."
+  },
+  "SOFTBOILED": {
+    "nombre_es": "Ovocuración",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "Restaura la mitad de los PS máximos del usuario. Fuera de combate transfiere PS a un aliado."
+  },
+  "SPLASH": {
+    "nombre_es": "Salpicadura",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 40,
+    "desc": "No tiene ningún efecto. Solo salpica."
+  },
+  "SPOTLIGHT": {
+    "nombre_es": "Foco",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 15,
+    "desc": "Convierte a un Pokémon en el foco de atención, haciendo que los ataques se dirijan hacia él."
+  },
+  "STOCKPILE": {
+    "nombre_es": "Reserva",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Acumula energía y sube la Defensa y la Defensa Especial. Puede utilizarse hasta tres veces."
+  },
+  "STUFFCHEEKS": {
+    "nombre_es": "Atiborramiento",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "El usuario se come la baya que lleve equipada y sube drásticamente su Defensa."
+  },
+  "SUBSTITUTE": {
+    "nombre_es": "Sustituto",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Utiliza parte de los PS propios para crear un sustituto que actúa como señuelo."
+  },
+  "SUPERSONIC": {
+    "nombre_es": "Supersónico",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 55,
+    "pp": 20,
+    "desc": "Raras ondas sónicas que pueden confundir al objetivo."
+  },
+  "SWAGGER": {
+    "nombre_es": "Fanfarronear",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 85,
+    "pp": 15,
+    "desc": "Provoca confusión en el objetivo, pero también sube mucho su Ataque."
+  },
+  "SWALLOW": {
+    "nombre_es": "Tragar",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Absorbe la energía acumulada con reserva y restaura PS."
+  },
+  "SWEETSCENT": {
+    "nombre_es": "Dulce Aroma",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 20,
+    "desc": "Engatusa al rival para reducir su evasión. También atrae Pokémon salvajes."
+  },
+  "SWORDSDANCE": {
+    "nombre_es": "Danza Espada",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Baile frenético que aumenta mucho el Ataque."
+  },
+  "TAILWHIP": {
+    "nombre_es": "Látigo",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 30,
+    "desc": "Agita la cola para bajar la Defensa del contrincante."
+  },
+  "TEARFULLOOK": {
+    "nombre_es": "Ojos Llorosos",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Mira al objetivo para hacerle perder su espíritu combativo y reduce su Ataque y Ataque Especial."
+  },
+  "TEATIME": {
+    "nombre_es": "Hora del Té",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Invita a tomar el té a todos los presentes en el combate, haciendo que ingieran sus bayas equipadas."
+  },
+  "TEETERDANCE": {
+    "nombre_es": "Danza Caos",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 20,
+    "desc": "Danza histérica que confunde a los Pokémon que están alrededor del usuario."
+  },
+  "TICKLE": {
+    "nombre_es": "Cosquillas",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 20,
+    "desc": "Hace reír al objetivo para bajar el Ataque y la Defensa."
+  },
+  "TRANSFORM": {
+    "nombre_es": "Transformación",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "El usuario se transforma en una copia del objetivo, con los mismos movimientos."
+  },
+  "WHIRLWIND": {
+    "nombre_es": "Remolino",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Se lleva al rival, que es cambiado por otro Pokémon. Si es un Pokémon salvaje, acaba el combate."
+  },
+  "WISH": {
+    "nombre_es": "Deseo",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Cumple el deseo de restaurar la mitad de los PS máximos en el siguiente turno."
+  },
+  "WORKUP": {
+    "nombre_es": "Avivar",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 30,
+    "desc": "Movimiento que aumenta el Ataque y el Ataque Especial de quien lo usa."
+  },
+  "YAWN": {
+    "nombre_es": "Bostezo",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Gran bostezo que induce al sueño al objetivo en el siguiente turno."
+  },
+  "BELCH": {
+    "nombre_es": "Eructo",
+    "tipo": "POISON",
+    "cat": "Special",
+    "pot": 120,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Causa daño a su oponente lanzándole un eructo. Para usarlo tiene que llevar una Baya y comérsela."
+  },
+  "GUNKSHOT": {
+    "nombre_es": "Lanzamugre",
+    "tipo": "POISON",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 80,
+    "pp": 5,
+    "desc": "Lanza contra el objetivo asquerosa basura. Puede envenenar al objetivo."
+  },
+  "SLUDGEWAVE": {
+    "nombre_es": "Onda Tóxica",
+    "tipo": "POISON",
+    "cat": "Special",
+    "pot": 95,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Una onda tóxica que daña a los Pokémon de alrededor. Puede envenenar."
+  },
+  "SHELLSIDEARM": {
+    "nombre_es": "Moluscañón",
+    "tipo": "POISON",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Lanza un ataque físico o especial en función de cuál inflija más daño. Puede envenenar."
+  },
+  "SLUDGEBOMB": {
+    "nombre_es": "Bomba Lodo",
+    "tipo": "POISON",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Arroja residuos al objetivo. Puede llegar a envenenar."
+  },
+  "POISONJAB": {
+    "nombre_es": "Puya Nociva",
+    "tipo": "POISON",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Pincha al rival con un tentáculo o brazo envenenado. Puede llegar a envenenar al rival."
+  },
+  "CROSSPOISON": {
+    "nombre_es": "Veneno X",
+    "tipo": "POISON",
+    "cat": "Physical",
+    "pot": 70,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Tajo que puede envenenar al objetivo. Suele ser crítico."
+  },
+  "SLUDGE": {
+    "nombre_es": "Residuos",
+    "tipo": "POISON",
+    "cat": "Special",
+    "pot": 65,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Arroja residuos al objetivo. Puede llegar a envenenar."
+  },
+  "VENOSHOCK": {
+    "nombre_es": "Carga Tóxica",
+    "tipo": "POISON",
+    "cat": "Special",
+    "pot": 65,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca cubriendo al objetivo con un líquido venenoso. El daño será doble si este ya está envenenado."
+  },
+  "CLEARSMOG": {
+    "nombre_es": "Niebla Clara",
+    "tipo": "POISON",
+    "cat": "Special",
+    "pot": 50,
+    "pre": 0,
+    "pp": 15,
+    "desc": "Ataca al objetivo con una extraña niebla que elimina sus cambios de características."
+  },
+  "POISONFANG": {
+    "nombre_es": "Colmillo Veneno",
+    "tipo": "POISON",
+    "cat": "Physical",
+    "pot": 50,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Colmillos tóxicos que pueden envenenar gravemente al objetivo."
+  },
+  "POISONTAIL": {
+    "nombre_es": "Cola Veneno",
+    "tipo": "POISON",
+    "cat": "Physical",
+    "pot": 50,
+    "pre": 100,
+    "pp": 25,
+    "desc": "Ataque con la cola que puede envenenar y dar un golpe crítico."
+  },
+  "ACID": {
+    "nombre_es": "Ácido",
+    "tipo": "POISON",
+    "cat": "Special",
+    "pot": 40,
+    "pre": 100,
+    "pp": 30,
+    "desc": "Rocía con un ácido corrosivo. Puede bajar la Defensa Especial."
+  },
+  "ACIDSPRAY": {
+    "nombre_es": "Bomba Ácida",
+    "tipo": "POISON",
+    "cat": "Special",
+    "pot": 40,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Ataca con un líquido corrosivo, reduciendo mucho la Defensa Especial del objetivo."
+  },
+  "SMOG": {
+    "nombre_es": "Polución",
+    "tipo": "POISON",
+    "cat": "Special",
+    "pot": 30,
+    "pre": 70,
+    "pp": 20,
+    "desc": "El objetivo es atacado con gases tóxicos que pueden llegar a envenenar."
+  },
+  "POISONSTING": {
+    "nombre_es": "Picotazo Veneno",
+    "tipo": "POISON",
+    "cat": "Physical",
+    "pot": 15,
+    "pre": 100,
+    "pp": 35,
+    "desc": "Lanza un aguijón tóxico que puede envenenar al objetivo."
+  },
+  "ACIDARMOR": {
+    "nombre_es": "Armadura Ácida",
+    "tipo": "POISON",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Transforma la estructura celular para hacerse líquido y aumenta mucho la Defensa."
+  },
+  "BANEFULBUNKER": {
+    "nombre_es": "Búnker",
+    "tipo": "POISON",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Protege de ataques y, al mismo tiempo, envenena al que use un movimiento de contacto contra él."
+  },
+  "COIL": {
+    "nombre_es": "Enrosque",
+    "tipo": "POISON",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "El usuario se concentra, lo que le permite aumentar su Ataque, Defensa y Precisión."
+  },
+  "CORROSIVEGAS": {
+    "nombre_es": "Gas Corrosivo",
+    "tipo": "POISON",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 40,
+    "desc": "Libera un gas cáustico que envuelve a todos alrededor y derrite los objetos que lleven equipados."
+  },
+  "GASTROACID": {
+    "nombre_es": "Bilis",
+    "tipo": "POISON",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 10,
+    "desc": "El usuario arroja sus jugos biliares al objetivo, lo que anula el efecto de la habilidad en uso."
+  },
+  "POISONGAS": {
+    "nombre_es": "Gas Venenoso",
+    "tipo": "POISON",
+    "cat": "Status",
+    "pre": 90,
+    "pp": 40,
+    "desc": "Lanza una nube de gas tóxico al objetivo. Produce envenenamiento."
+  },
+  "POISONPOWDER": {
+    "nombre_es": "Polvo Veneno",
+    "tipo": "POISON",
+    "cat": "Status",
+    "pre": 75,
+    "pp": 35,
+    "desc": "Polvo tóxico que envenena al objetivo."
+  },
+  "PURIFY": {
+    "nombre_es": "Purificación",
+    "tipo": "POISON",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Cura los problemas de estado del Pokémon rival y a cambio recupera PS propios."
+  },
+  "TOXIC": {
+    "nombre_es": "Tóxico",
+    "tipo": "POISON",
+    "cat": "Status",
+    "pre": 90,
+    "pp": 10,
+    "desc": "Envenena gravemente al objetivo y causa un daño mayor en cada turno."
+  },
+  "TOXICSPIKES": {
+    "nombre_es": "Púas Tóxicas",
+    "tipo": "POISON",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Lanza una trampa de púas tóxicas a los pies del objetivo. El veneno afecta a los Pokémon que entran."
+  },
+  "TOXICTHREAD": {
+    "nombre_es": "Hilo Venenoso",
+    "tipo": "POISON",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 20,
+    "desc": "Ataca al oponente con hilillos venenosos que reducen su Velocidad y lo envenenan."
+  },
+  "VENOMDRENCH": {
+    "nombre_es": "Trampa Venenosa",
+    "tipo": "POISON",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 20,
+    "desc": "Disminuye el Ataque, el Ataque Especial y la Velocidad, pero solo a Pokémon ya envenenados."
+  },
+  "PRISMATICLASER": {
+    "nombre_es": "Láser Prisma",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 160,
+    "pre": 100,
+    "pp": 10,
+    "desc": "El usuario utiliza un prisma para emitir un rayo de gran potencia, pero no puede moverse en el turno siguiente."
+  },
+  "PSYCHOBOOST": {
+    "nombre_es": "Psicoataque",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 140,
+    "pre": 90,
+    "pp": 5,
+    "desc": "Ataque en toda regla que baja mucho el Ataque Especial de quien lo usa."
+  },
+  "FUTURESIGHT": {
+    "nombre_es": "Premonición",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 120,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Concentra energía psíquica para golpear al objetivo dos turnos después."
+  },
+  "SYNCHRONOISE": {
+    "nombre_es": "Sincrorruido",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 120,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Una extraña onda que daña a todos los Pokémon adyacentes del mismo tipo que el que la ejecuta."
+  },
+  "DREAMEATER": {
+    "nombre_es": "Comesueños",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 100,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Restaura al usuario la mitad del daño causado a un objetivo dormido."
+  },
+  "PHOTONGEYSER": {
+    "nombre_es": "Géiser Fotónico",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 100,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Compara sus valores de Ataque y Ataque Especial para infligir daño con el más alto de los dos."
+  },
+  "PSYSTRIKE": {
+    "nombre_es": "Onda Mental",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 100,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Crea una onda psíquica que golpea al objetivo provocándole un daño físico."
+  },
+  "FREEZINGGLARE": {
+    "nombre_es": "Mirada Heladora",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 10,
+    "desc": "El usuario ataca disparando poderes psíquicos por los ojos. Puede congelar."
+  },
+  "PSYCHIC": {
+    "nombre_es": "Psíquico",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Fuerte ataque telequinético que puede bajar la Defensa Especial del objetivo."
+  },
+  "PSYCHICFANGS": {
+    "nombre_es": "Psicocolmillo",
+    "tipo": "PSYCHIC",
+    "cat": "Physical",
+    "pot": 85,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca con poderes psíquicos que además destruyen barreras como pantalla de luz y reflejo."
+  },
+  "EERIESPELL": {
+    "nombre_es": "Conjuro Funesto",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 5,
+    "desc": "El usuario ataca con su poder psíquico y reduce tres PP del último movimiento usado por el objetivo."
+  },
+  "EXPANDINGFORCE": {
+    "nombre_es": "Vasta Fuerza",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca al objetivo con sus poderes psíquicos. En campo psíquico aumenta su potencia e inflige daño a todos los rivales."
+  },
+  "EXTRASENSORY": {
+    "nombre_es": "Paranormal",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Energía muy extraña que puede amedrentar al objetivo."
+  },
+  "HYPERSPACEHOLE": {
+    "nombre_es": "Paso Dimensional",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 0,
+    "pp": 5,
+    "desc": "Golpea aunque el rival use Protección, Detección, Vastaguardia o Anticipo ese turno."
+  },
+  "PSYSHOCK": {
+    "nombre_es": "Psicocarga",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Crea una onda psíquica que golpea al objetivo y provoca un gran daño físico."
+  },
+  "ZENHEADBUTT": {
+    "nombre_es": "Cabezazo Zen",
+    "tipo": "PSYCHIC",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 90,
+    "pp": 15,
+    "desc": "Concentra su energía psíquica en la cabeza para golpear. Puede hacer que el objetivo se amedrente."
+  },
+  "LUSTERPURGE": {
+    "nombre_es": "Resplandor",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 95,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Fogonazo de luz que puede bajar la Defensa Especial del objetivo."
+  },
+  "MISTBALL": {
+    "nombre_es": "Bola Neblina",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 95,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Banco de niebla que puede bajar el Ataque Especial del objetivo."
+  },
+  "PSYCHOCUT": {
+    "nombre_es": "Psicocorte",
+    "tipo": "PSYCHIC",
+    "cat": "Physical",
+    "pot": 70,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Ataca al objetivo con cuchillas formadas por energía psíquica. Suele ser crítico."
+  },
+  "PSYBEAM": {
+    "nombre_es": "Psicorrayo",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 65,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Extraño rayo que puede causar confusión."
+  },
+  "HEARTSTAMP": {
+    "nombre_es": "Arrumaco",
+    "tipo": "PSYCHIC",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 100,
+    "pp": 25,
+    "desc": "Grácil gesto que asesta un golpe tremendo al objetivo y puede amedrentarlo."
+  },
+  "CONFUSION": {
+    "nombre_es": "Confusión",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 50,
+    "pre": 100,
+    "pp": 25,
+    "desc": "Débil ataque telequinético que puede causar confusión."
+  },
+  "STOREDPOWER": {
+    "nombre_es": "Poder Reserva",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 20,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Cuanto más suban las características del usuario, mayor será el daño."
+  },
+  "MIRRORCOAT": {
+    "nombre_es": "Manto Espejo",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 1,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Responde a un ataque especial ocasionando el doble del daño recibido."
+  },
+  "PSYWAVE": {
+    "nombre_es": "Psicoonda",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 1,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Ataque con una onda de energía de intensidad variable."
+  },
+  "AGILITY": {
+    "nombre_es": "Agilidad",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 30,
+    "desc": "Relaja el cuerpo para ganar mucha Velocidad."
+  },
+  "ALLYSWITCH": {
+    "nombre_es": "Cambio de Banda",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 15,
+    "desc": "Un extraño poder que intercambia las posiciones del usuario y un aliado sobre el terreno de combate."
+  },
+  "AMNESIA": {
+    "nombre_es": "Amnesia",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "El usuario olvida sus preocupaciones y aumenta mucho la Defensa Especial."
+  },
+  "BARRIER": {
+    "nombre_es": "Barrera",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Crea una barrera para aumentar mucho la Defensa."
+  },
+  "CALMMIND": {
+    "nombre_es": "Paz Mental",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Aumenta la concentración y calma el espíritu para subir el Ataque Especial y la Defensa Especial."
+  },
+  "COSMICPOWER": {
+    "nombre_es": "Masa Cósmica",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Sube la Defensa y la Defensa Especial propias con energía mística."
+  },
+  "GRAVITY": {
+    "nombre_es": "Gravedad",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "La gravedad aumenta durante cinco turnos, lo que impide acciones que impliquen volar o levitar."
+  },
+  "GUARDSPLIT": {
+    "nombre_es": "Isoguardia",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Hace la media de su Defensa y Def. Esp. con las de su objetivo y las comparte."
+  },
+  "GUARDSWAP": {
+    "nombre_es": "Cambiadefensa",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Con su poder mental intercambia los cambios en Defensa y Def. Especial con el objetivo."
+  },
+  "HEALBLOCK": {
+    "nombre_es": "Anticura",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 15,
+    "desc": "Impide al objetivo usar movimientos, habilidades y objetos que recuperan PS durante cinco turnos."
+  },
+  "HEALPULSE": {
+    "nombre_es": "Pulso Cura",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Una onda curativa restaura los PS del objetivo a la mitad de su máximo."
+  },
+  "HEALINGWISH": {
+    "nombre_es": "Deseo Cura",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "El Pokémon cae debilitado, pero su sustituto recupera su estado y los PS."
+  },
+  "HEARTSWAP": {
+    "nombre_es": "Cambiaalmas",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Usa la fuerza mental para intercambiar con el objetivo los cambios en las características."
+  },
+  "HYPNOSIS": {
+    "nombre_es": "Hipnosis",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 60,
+    "pp": 20,
+    "desc": "Ataque hipnótico que hace dormir profundamente al objetivo."
+  },
+  "IMPRISON": {
+    "nombre_es": "Sellar",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Impide a los contrincantes usar ataques conocidos por el usuario durante el combate."
+  },
+  "INSTRUCT": {
+    "nombre_es": "Mandato",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 15,
+    "desc": "Fuerza al objetivo a repetir inmediatamente su último movimiento."
+  },
+  "KINESIS": {
+    "nombre_es": "Kinético",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 80,
+    "pp": 15,
+    "desc": "Dobla una cuchara para distraer al objetivo y bajar su nivel de Precisión."
+  },
+  "LIGHTSCREEN": {
+    "nombre_es": "Pantalla de Luz",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 30,
+    "desc": "Pared de luz que reduce durante cinco turnos el daño producido por los ataques especiales."
+  },
+  "LUNARDANCE": {
+    "nombre_es": "Danza Lunar",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "El usuario se debilita, pero el Pokémon que lo sustituye recupera su estado, los PS y los PP."
+  },
+  "MAGICCOAT": {
+    "nombre_es": "Capa Mágica",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 15,
+    "desc": "Barrera capaz de devolver al agresor movimientos como drenadoras y que alteran el estado."
+  },
+  "MAGICPOWDER": {
+    "nombre_es": "Polvo Mágico",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 20,
+    "desc": "El usuario lanza una nube de polvo mágico que convierte al objetivo en tipo Psíquico."
+  },
+  "MAGICROOM": {
+    "nombre_es": "Zona Mágica",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Crea un espacio misterioso que inutiliza los objetos de los Pokémon durante cinco turnos."
+  },
+  "MEDITATE": {
+    "nombre_es": "Meditación",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 40,
+    "desc": "El usuario reposa y medita para potenciar el Ataque."
+  },
+  "MIRACLEEYE": {
+    "nombre_es": "Gran Ojo",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 40,
+    "desc": "Permite atacar con cualquier movimiento a objetivos de tipo Siniestro y golpear a Pokémon evasivos."
+  },
+  "POWERSPLIT": {
+    "nombre_es": "Isofuerza",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Hace la media de su Ataque y Ataque Especial con los de su objetivo y los comparte."
+  },
+  "POWERSWAP": {
+    "nombre_es": "Cambiafuerza",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Intercambia los cambios en Ataque y At. Especial con el objetivo."
+  },
+  "POWERTRICK": {
+    "nombre_es": "Truco Fuerza",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Usa sus poderes mentales para intercambiar su característica de Ataque por Defensa."
+  },
+  "PSYCHICTERRAIN": {
+    "nombre_es": "Campo Psíquico",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Durante cinco turnos se potencian los movimientos Psíquico y los de prioridad fallan."
+  },
+  "PSYCHOSHIFT": {
+    "nombre_es": "Psicocambio",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 10,
+    "desc": "Usa su poder mental para transferir al objetivo sus problemas de estado."
+  },
+  "REFLECT": {
+    "nombre_es": "Reflejo",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Pared de luz que reduce durante cinco turnos el daño producido por los ataques físicos."
+  },
+  "REST": {
+    "nombre_es": "Descanso",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Restaura los PS y cura los problemas de estado del usuario. Duerme los dos próximos turnos."
+  },
+  "ROLEPLAY": {
+    "nombre_es": "Imitación",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Imita al objetivo por completo y copia su habilidad."
+  },
+  "SKILLSWAP": {
+    "nombre_es": "Intercambio",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Usa el poder psíquico para intercambiar habilidades con el objetivo."
+  },
+  "SPEEDSWAP": {
+    "nombre_es": "Cambiavelocidad",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Intercambia su Velocidad por la del oponente."
+  },
+  "TELEKINESIS": {
+    "nombre_es": "Telequinesis",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 15,
+    "desc": "Hace flotar al objetivo, haciéndolo blanco fácil de sus ataques durante tres turnos."
+  },
+  "TELEPORT": {
+    "nombre_es": "Teletransporte",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Permite al usuario cambiarse por otro Pokémon del equipo, si es posible."
+  },
+  "TRICK": {
+    "nombre_es": "Truco",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 10,
+    "desc": "Engaña al objetivo desprevenido e intercambia objetos."
+  },
+  "TRICKROOM": {
+    "nombre_es": "Espacio Raro",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "Se crea un espacio extraño en el que los Pokémon lentos se mueven primero durante cinco turnos."
+  },
+  "WONDERROOM": {
+    "nombre_es": "Zona Extraña",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Crea una zona que intercambia la Defensa y Def. Esp. de todos por 5 turnos."
+  },
+  "HEADSMASH": {
+    "nombre_es": "Testarazo",
+    "tipo": "ROCK",
+    "cat": "Physical",
+    "pot": 150,
+    "pre": 80,
+    "pp": 5,
+    "desc": "Arriesga su vida y lanza un cabezazo con toda su fuerza. El agresor resulta seriamente dañado."
+  },
+  "ROCKWRECKER": {
+    "nombre_es": "Romperrocas",
+    "tipo": "ROCK",
+    "cat": "Physical",
+    "pot": 150,
+    "pre": 90,
+    "pp": 5,
+    "desc": "Lanza una piedra enorme contra el objetivo, pero tiene que descansar el siguiente turno."
+  },
+  "METEORBEAM": {
+    "nombre_es": "Rayo Meteórico",
+    "tipo": "ROCK",
+    "cat": "Special",
+    "pot": 120,
+    "pre": 90,
+    "pp": 10,
+    "desc": "1º turno: aumenta su At. Especial. 2º turno: lanza su ofensiva contra el objetivo."
+  },
+  "DIAMONDSTORM": {
+    "nombre_es": "Torm. de Diamantes",
+    "tipo": "ROCK",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 95,
+    "pp": 5,
+    "desc": "Devastador vendaval de diamantes. Puede aumentar la Defensa del usuario."
+  },
+  "STONEEDGE": {
+    "nombre_es": "Roca Afilada",
+    "tipo": "ROCK",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 80,
+    "pp": 5,
+    "desc": "Clava piedras muy afiladas al objetivo. Suele ser crítico."
+  },
+  "POWERGEM": {
+    "nombre_es": "Joya de Luz",
+    "tipo": "ROCK",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Ataca con un rayo de luz que centellea como si lo formaran miles de joyas."
+  },
+  "ROCKSLIDE": {
+    "nombre_es": "Avalancha",
+    "tipo": "ROCK",
+    "cat": "Physical",
+    "pot": 75,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Lanza grandes pedruscos. Puede amedrentar al objetivo."
+  },
+  "ANCIENTPOWER": {
+    "nombre_es": "Poder Pasado",
+    "tipo": "ROCK",
+    "cat": "Special",
+    "pot": 60,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Ataque prehistórico que puede subir todas las características."
+  },
+  "ROCKTOMB": {
+    "nombre_es": "Tumba Rocas",
+    "tipo": "ROCK",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 95,
+    "pp": 15,
+    "desc": "Tira rocas que detienen al objetivo y bajan su Velocidad."
+  },
+  "ROCKTHROW": {
+    "nombre_es": "Lanzarrocas",
+    "tipo": "ROCK",
+    "cat": "Physical",
+    "pot": 50,
+    "pre": 90,
+    "pp": 15,
+    "desc": "Tira una pequeña roca al objetivo."
+  },
+  "SMACKDOWN": {
+    "nombre_es": "Antiaéreo",
+    "tipo": "ROCK",
+    "cat": "Physical",
+    "pot": 50,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Ataca lanzando una piedra o un proyectil. Estrella contra el suelo al objetivo si vuela."
+  },
+  "ACCELEROCK": {
+    "nombre_es": "Roca Veloz",
+    "tipo": "ROCK",
+    "cat": "Physical",
+    "pot": 40,
+    "pre": 100,
+    "pp": 20,
+    "desc": "El usuario se lanza contra el objetivo a gran velocidad. Siempre ataca primero."
+  },
+  "ROLLOUT": {
+    "nombre_es": "Rodar",
+    "tipo": "ROCK",
+    "cat": "Physical",
+    "pot": 30,
+    "pre": 90,
+    "pp": 20,
+    "desc": "Consiste en enrollarse y girar como una rueda por el campo de batalla."
+  },
+  "ROCKBLAST": {
+    "nombre_es": "Pedrada",
+    "tipo": "ROCK",
+    "cat": "Physical",
+    "pot": 25,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Lanza pedruscos al objetivo de dos a cinco veces consecutivas."
+  },
+  "ROCKPOLISH": {
+    "nombre_es": "Pulimento",
+    "tipo": "ROCK",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Reduce la resistencia puliendo su cuerpo. Aumenta la Velocidad considerablemente."
+  },
+  "SANDSTORM": {
+    "nombre_es": "Tormenta Arena",
+    "tipo": "ROCK",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Tormenta de arena que dura cinco turnos y hiere a s, excepto a los de tipo Roca, Tierra y Acero."
+  },
+  "STEALTHROCK": {
+    "nombre_es": "Trampa Rocas",
+    "tipo": "ROCK",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Una trampa de rocas que flota en el aire y daña a los objetivos que entran en combate."
+  },
+  "TARSHOT": {
+    "nombre_es": "Alquitranazo",
+    "tipo": "ROCK",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 15,
+    "desc": "Lanza alquitran sobre el objetivo, bajando su Velocidad y volviéndolo débil ante los movs. Fuego."
+  },
+  "WIDEGUARD": {
+    "nombre_es": "Vasta Guardia",
+    "tipo": "ROCK",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Protege a todo tu bando de golpes que dan a múltiples objetivos. Falla si se usa repetidamente."
+  },
+  "DOOMDESIRE": {
+    "nombre_es": "Deseo Oculto",
+    "tipo": "STEEL",
+    "cat": "Special",
+    "pot": 140,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Concentra un haz de luz y ataca dos turnos después."
+  },
+  "STEELBEAM": {
+    "nombre_es": "Metaláser",
+    "tipo": "STEEL",
+    "cat": "Special",
+    "pot": 140,
+    "pre": 95,
+    "pp": 5,
+    "desc": "El usuario lanza un rayo de metal que recolecta de su cuerpo. Esto daña al usuario."
+  },
+  "STEELROLLER": {
+    "nombre_es": "Allanador Férreo",
+    "tipo": "STEEL",
+    "cat": "Physical",
+    "pot": 130,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Lanza su ataque y destruye el campo activo. Falla si no hay ninguno en ese momento."
+  },
+  "BEHEMOTHBASH": {
+    "nombre_es": "Embate Supremo",
+    "tipo": "STEEL",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 100,
+    "pp": 5,
+    "desc": "El usuario se convierte en un escudo gigante y arremete contra el objetivo."
+  },
+  "BEHEMOTHBLADE": {
+    "nombre_es": "Tajo Supremo",
+    "tipo": "STEEL",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 100,
+    "pp": 5,
+    "desc": "El usuario se convierte en una espada gigante para rebanar al objetivo."
+  },
+  "IRONTAIL": {
+    "nombre_es": "Cola Férrea",
+    "tipo": "STEEL",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 75,
+    "pp": 15,
+    "desc": "Ataca con una cola férrea y puede bajar la Defensa del objetivo."
+  },
+  "SUNSTEELSTRIKE": {
+    "nombre_es": "Meteoimpacto",
+    "tipo": "STEEL",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Ataca al objetivo con la potencia de un meteoro."
+  },
+  "METEORMASH": {
+    "nombre_es": "Puño Meteoro",
+    "tipo": "STEEL",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Puñetazo que impacta como un meteorito y puede subir el Ataque del agresor."
+  },
+  "ANCHORSHOT": {
+    "nombre_es": "Anclaje",
+    "tipo": "STEEL",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Ataca lanzando un ancla al oponente, que queda atrapado y no puede huir."
+  },
+  "FLASHCANNON": {
+    "nombre_es": "Foco Resplandor",
+    "tipo": "STEEL",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "El usuario concentra toda la luz del cuerpo y la libera. Puede bajar la Defensa Especial del objetivo."
+  },
+  "IRONHEAD": {
+    "nombre_es": "Cabeza de Hierro",
+    "tipo": "STEEL",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Ataca con su dura cabeza de hierro. Puede hacer que el objetivo se amedrente."
+  },
+  "SMARTSTRIKE": {
+    "nombre_es": "Cuerno Certero",
+    "tipo": "STEEL",
+    "cat": "Physical",
+    "pot": 70,
+    "pre": 0,
+    "pp": 10,
+    "desc": "Ensarta al adversario con su afilada cornamenta. Este movimiento acierta siempre."
+  },
+  "STEELWING": {
+    "nombre_es": "Ala de Acero",
+    "tipo": "STEEL",
+    "cat": "Physical",
+    "pot": 70,
+    "pre": 90,
+    "pp": 25,
+    "desc": "Alas macizas que golpean al objetivo y pueden subir la Defensa del usuario."
+  },
+  "DOUBLEIRONBASH": {
+    "nombre_es": "Ferropuño Doble",
+    "tipo": "STEEL",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Golpea dos veces seguidas con los puños pudiendo amedrentar al rival."
+  },
+  "MIRRORSHOT": {
+    "nombre_es": "Disparo Espejo",
+    "tipo": "STEEL",
+    "cat": "Special",
+    "pot": 65,
+    "pre": 85,
+    "pp": 10,
+    "desc": "El usuario libera un haz de energía desde su pulido cuerpo. Puede bajar la Precisión."
+  },
+  "MAGNETBOMB": {
+    "nombre_es": "Bomba Imán",
+    "tipo": "STEEL",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 0,
+    "pp": 20,
+    "desc": "Lanza unas bombas de hierro que se pegan al adversario. Este movimiento acierta siempre."
+  },
+  "GEARGRIND": {
+    "nombre_es": "Rueda Doble",
+    "tipo": "STEEL",
+    "cat": "Physical",
+    "pot": 50,
+    "pre": 85,
+    "pp": 15,
+    "desc": "Rota dos engranajes de hierro sobre el objetivo. Golpea dos veces."
+  },
+  "METALCLAW": {
+    "nombre_es": "Garra Metal",
+    "tipo": "STEEL",
+    "cat": "Physical",
+    "pot": 50,
+    "pre": 95,
+    "pp": 35,
+    "desc": "Ataque con garras de acero que puede aumentar el Ataque del usuario."
+  },
+  "BULLETPUNCH": {
+    "nombre_es": "Puño Bala",
+    "tipo": "STEEL",
+    "cat": "Physical",
+    "pot": 40,
+    "pre": 100,
+    "pp": 30,
+    "desc": "Fuerte puñetazo tan rápido como un proyectil. Este movimiento siempre va primero."
+  },
+  "GYROBALL": {
+    "nombre_es": "Giro Bola",
+    "tipo": "STEEL",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Embiste con un potente ataque giratorio. Cuanto más lento es el usuario, más daño causa."
+  },
+  "HEAVYSLAM": {
+    "nombre_es": "Cuerpo Pesado",
+    "tipo": "STEEL",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Cuanto mayor sea su peso comparado con el del objetivo, más daño causará."
+  },
+  "METALBURST": {
+    "nombre_es": "Represión Metal",
+    "tipo": "STEEL",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Devuelve al objetivo el último ataque recibido, pero con mucha más fuerza."
+  },
+  "AUTOTOMIZE": {
+    "nombre_es": "Aligerar",
+    "tipo": "STEEL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 15,
+    "desc": "El usuario se sacude para hacerse más ligero y aumentar mucho su Velocidad."
+  },
+  "GEARUP": {
+    "nombre_es": "Piñón Auxiliar",
+    "tipo": "STEEL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Cambia de marcha y logra aumentar el Ataque y el Ataque Especial de los Pokémon aliados."
+  },
+  "IRONDEFENSE": {
+    "nombre_es": "Defensa Férrea",
+    "tipo": "STEEL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 15,
+    "desc": "Fortalece el cuerpo como si fuera hierro y sube mucho la Defensa."
+  },
+  "KINGSSHIELD": {
+    "nombre_es": "Escudo Real",
+    "tipo": "STEEL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Protege al usuario de cualquier daño y baja el Ataque del rival si lo toca."
+  },
+  "METALSOUND": {
+    "nombre_es": "Eco Metálico",
+    "tipo": "STEEL",
+    "cat": "Status",
+    "pre": 85,
+    "pp": 40,
+    "desc": "Horrible chirrido metálico que baja mucho la Defensa Especial del objetivo."
+  },
+  "SHIFTGEAR": {
+    "nombre_es": "Cambio de Marcha",
+    "tipo": "STEEL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Al hacer girar los engranajes, el usuario mejora su Ataque y aumenta su Velocidad espectacularmente."
+  },
+  "HYDROCANNON": {
+    "nombre_es": "Hidrocañón",
+    "tipo": "WATER",
+    "cat": "Special",
+    "pot": 150,
+    "pre": 90,
+    "pp": 5,
+    "desc": "Disparo potente de agua. El atacante debe descansar el siguiente turno."
+  },
+  "WATERSPOUT": {
+    "nombre_es": "Salpicar",
+    "tipo": "WATER",
+    "cat": "Special",
+    "pot": 150,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Chorro de agua. Cuantos menos PS tenga el usuario, menos dañino será."
+  },
+  "HYDROPUMP": {
+    "nombre_es": "Hidrobomba",
+    "tipo": "WATER",
+    "cat": "Special",
+    "pot": 110,
+    "pre": 80,
+    "pp": 5,
+    "desc": "Lanza una gran masa de agua a presión para atacar."
+  },
+  "ORIGINPULSE": {
+    "nombre_es": "Pulso Primigenio",
+    "tipo": "WATER",
+    "cat": "Special",
+    "pot": 110,
+    "pre": 85,
+    "pp": 10,
+    "desc": "Ataca al objetivo con una infinidad de rayos de luz azulada."
+  },
+  "STEAMERUPTION": {
+    "nombre_es": "Chorro de Vapor",
+    "tipo": "WATER",
+    "cat": "Special",
+    "pot": 110,
+    "pre": 95,
+    "pp": 5,
+    "desc": "Envuelve al Pokémon oponente con vapor extremadamente caliente que puede llegar a quemarlo."
+  },
+  "CRABHAMMER": {
+    "nombre_es": "Martillazo",
+    "tipo": "WATER",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Golpea con fuerza con unas pinzas. Suele ser crítico."
+  },
+  "AQUATAIL": {
+    "nombre_es": "Acua Cola",
+    "tipo": "WATER",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Ataca agitando la cola como si fuera una ola rabiosa en una tormenta devastadora."
+  },
+  "MUDDYWATER": {
+    "nombre_es": "Agua Lodosa",
+    "tipo": "WATER",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 85,
+    "pp": 10,
+    "desc": "Ataque con agua lodosa que puede bajar la Precisión."
+  },
+  "SPARKLINGARIA": {
+    "nombre_es": "Aria Burbuja",
+    "tipo": "WATER",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Libera burbujas al cantar. Cura las quemaduras de los Pokémon que reciban daño."
+  },
+  "SURF": {
+    "nombre_es": "Surf",
+    "tipo": "WATER",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Inunda el campo de batalla con una ola gigante. Fuera de batalla sirve para moverse sobre el agua."
+  },
+  "FISHIOUSREND": {
+    "nombre_es": "Branquibocado",
+    "tipo": "WATER",
+    "cat": "Physical",
+    "pot": 85,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca al objetivo con sus branquias. Si ataca antes que el objetivo, duplica la potencia."
+  },
+  "LIQUIDATION": {
+    "nombre_es": "Hidroariete",
+    "tipo": "WATER",
+    "cat": "Physical",
+    "pot": 85,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca golpeando gracias a la fuerza del agua. También puede reducir la Defensa del objetivo."
+  },
+  "DIVE": {
+    "nombre_es": "Buceo",
+    "tipo": "WATER",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Primer turno: se sumerge en el mar. Segundo turno: emerge y ataca."
+  },
+  "SCALD": {
+    "nombre_es": "Escaldar",
+    "tipo": "WATER",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Ataca arrojando agua hirviendo al objetivo. Puede causar quemaduras."
+  },
+  "SNIPESHOT": {
+    "nombre_es": "Disparo Certero",
+    "tipo": "WATER",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Atacar al objetivo ignorando habilidades o movimientos que redirigen ataques."
+  },
+  "WATERPLEDGE": {
+    "nombre_es": "Voto Agua",
+    "tipo": "WATER",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca con columnas de agua. Combinado con un Voto Fuego crea un arcoíris."
+  },
+  "WATERFALL": {
+    "nombre_es": "Cascada",
+    "tipo": "WATER",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Embiste con un gran impulso que puede amedrentar. También sirve para remontar cascadas."
+  },
+  "RAZORSHELL": {
+    "nombre_es": "Concha Filo",
+    "tipo": "WATER",
+    "cat": "Physical",
+    "pot": 75,
+    "pre": 95,
+    "pp": 10,
+    "desc": "Una afilada vieira ataca al objetivo. También puede hacer disminuir su Defensa."
+  },
+  "BRINE": {
+    "nombre_es": "Salmuera",
+    "tipo": "WATER",
+    "cat": "Special",
+    "pot": 65,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Si al objetivo le queda la mitad o menos de sus PS, el ataque será el doble de fuerte."
+  },
+  "BUBBLEBEAM": {
+    "nombre_es": "Rayo Burbuja",
+    "tipo": "WATER",
+    "cat": "Special",
+    "pot": 65,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Diluvio de burbujas que puede bajar la Velocidad."
+  },
+  "OCTAZOOKA": {
+    "nombre_es": "Pulpocañón",
+    "tipo": "WATER",
+    "cat": "Special",
+    "pot": 65,
+    "pre": 85,
+    "pp": 10,
+    "desc": "Dispara tinta a la cara. Puede bajar la Precisión."
+  },
+  "FLIPTURN": {
+    "nombre_es": "Viraje",
+    "tipo": "WATER",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Tras atacar, el usuario da paso a toda prisa a otro Pokémon del equipo."
+  },
+  "WATERPULSE": {
+    "nombre_es": "Hidropulso",
+    "tipo": "WATER",
+    "cat": "Special",
+    "pot": 60,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Ataca con un potente chorro de agua. Puede confundir al objetivo."
+  },
+  "AQUAJET": {
+    "nombre_es": "Acua Jet",
+    "tipo": "WATER",
+    "cat": "Physical",
+    "pot": 40,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Ataque rápido que permite golpear en primer lugar."
+  },
+  "BUBBLE": {
+    "nombre_es": "Burbuja",
+    "tipo": "WATER",
+    "cat": "Special",
+    "pot": 40,
+    "pre": 100,
+    "pp": 30,
+    "desc": "Lanza burbujas al contrincante y puede reducir su Velocidad."
+  },
+  "WATERGUN": {
+    "nombre_es": "Pistola Agua",
+    "tipo": "WATER",
+    "cat": "Special",
+    "pot": 40,
+    "pre": 100,
+    "pp": 25,
+    "desc": "Ataca disparando agua con gran potencia."
+  },
+  "CLAMP": {
+    "nombre_es": "Tenaza",
+    "tipo": "WATER",
+    "cat": "Physical",
+    "pot": 35,
+    "pre": 85,
+    "pp": 15,
+    "desc": "Atrapa y atenaza con fuerza durante cuatro o cinco turnos."
+  },
+  "WHIRLPOOL": {
+    "nombre_es": "Torbellino",
+    "tipo": "WATER",
+    "cat": "Special",
+    "pot": 35,
+    "pre": 85,
+    "pp": 15,
+    "desc": "Una tromba de agua atrapa al objetivo durante cuatro o cinco turnos."
+  },
+  "SURGINGSTRIKES": {
+    "nombre_es": "Azote Torrencial",
+    "tipo": "WATER",
+    "cat": "Physical",
+    "pot": 25,
+    "pre": 100,
+    "pp": 5,
+    "desc": "El usuario, dominador absoluto del líquido elemento, golpea hasta tres veces con movimientos fluidos. Siempre asesta un golpe crítico."
+  },
+  "WATERSHURIKEN": {
+    "nombre_es": "Shuriken de Agua",
+    "tipo": "WATER",
+    "cat": "Special",
+    "pot": 15,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Golpea de dos a cinco veces con estrellas arrojadizas. El que lo usa siempre ataca primero."
+  },
+  "AQUARING": {
+    "nombre_es": "Acua Aro",
+    "tipo": "WATER",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 20,
+    "desc": "Un manto de agua cubre al Pokémon que lo usa. Recupera algunos PS en cada turno."
+  },
+  "LIFEDEW": {
+    "nombre_es": "Gota Vital",
+    "tipo": "WATER",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "El usuario rocia un agua misteriosa que recupera PS para él y sus aliados en combate."
+  },
+  "RAINDANCE": {
+    "nombre_es": "Danza Lluvia",
+    "tipo": "WATER",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "Genera una fuerte lluvia que refuerza los movimientos de tipo Agua durante cinco turnos."
+  },
+  "SOAK": {
+    "nombre_es": "Empapar",
+    "tipo": "WATER",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 20,
+    "desc": "Potente lluvia que transforma al objetivo en un Pokémon de tipo Agua."
+  },
+  "WATERSPORT": {
+    "nombre_es": "Hidrochorro",
+    "tipo": "WATER",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 15,
+    "desc": "El usuario se moja y, mientras esté en combate, los movimientos de tipo Fuego se debilitan."
+  },
+  "WITHDRAW": {
+    "nombre_es": "Refugio",
+    "tipo": "WATER",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 40,
+    "desc": "El usuario se protege en su coraza y sube la Defensa."
+  },
+  "DIRECLAW": {
+    "nombre_es": "Garra Nociva",
+    "tipo": "POISON",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Ataca al punto débil del objetivo con unas garras letales que pueden envenenarlo, paralizarlo o dormirlo."
+  },
+  "SPRINGTIDESTORM": {
+    "nombre_es": "Ciclón Primavera",
+    "tipo": "FAIRY",
+    "cat": "Special",
+    "pot": 100,
+    "pre": 80,
+    "pp": 5,
+    "desc": "Desata una tormenta de amor y odio con la que envuelve al objetivo. Puede reducir su Ataque."
+  },
+  "RAGINGFURY": {
+    "nombre_es": "Erupción de Ira",
+    "tipo": "FIRE",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca con unas violentas llamas de dos a tres turnos seguidos y después se queda confuso."
+  },
+  "WAVECRASH": {
+    "nombre_es": "Envite Acuático",
+    "tipo": "WATER",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 100,
+    "pp": 10,
+    "desc": "El usuario se envuelve en agua y embiste contra el objetivo, pero también se hiere seriamente a sí mismo."
+  },
+  "CHLOROBLAST": {
+    "nombre_es": "Clorofiláser",
+    "tipo": "GRASS",
+    "cat": "Special",
+    "pot": 150,
+    "pre": 95,
+    "pp": 5,
+    "desc": "El usuario concentra clorofila y la dispara en forma de rayo, pero también se hiere a sí mismo."
+  },
+  "MOUNTAINGALE": {
+    "nombre_es": "Viento Carámbano",
+    "tipo": "ICE",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 85,
+    "pp": 10,
+    "desc": "Ataca con unos carámbanos grandes como icebergs que pueden amedrentar al objetivo."
+  },
+  "HEADLONGRUSH": {
+    "nombre_es": "Arremetida",
+    "tipo": "GROUND",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 100,
+    "pp": 5,
+    "desc": "El usuario arremete con todas sus fuerzas, pero se reducen su Defensa y su Defensa Especial."
+  },
+  "BARBBARRAGE": {
+    "nombre_es": "Mil Púas Tóxicas",
+    "tipo": "POISON",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Dispara púas tóxicas que pueden envenenar al objetivo. Duplica la potencia si está envenenado."
+  },
+  "ESPERWING": {
+    "nombre_es": "Ala Aural",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Corta con unas alas imbuidas de aura. Suele asestar un golpe crítico y aumenta la Velocidad."
+  },
+  "BITTERMALICE": {
+    "nombre_es": "Rencor Reprimido",
+    "tipo": "GHOST",
+    "cat": "Special",
+    "pot": 75,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca al objetivo sometiéndolo a su frío rencor y reduce su Ataque."
+  },
+  "TRIPLEARROWS": {
+    "nombre_es": "Triple Flecha",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Asesta un talonazo y lanza tres flechas. Puede amedrentar o bajar la Defensa del objetivo. Alto índice de crítico."
+  },
+  "BLEAKWINDSTORM": {
+    "nombre_es": "Vendaval Gélido",
+    "tipo": "FLYING",
+    "cat": "Special",
+    "pot": 100,
+    "pre": 80,
+    "pp": 10,
+    "desc": "Viento muy frío que estremece el cuerpo y puede reducir la Velocidad del objetivo."
+  },
+  "WILDBOLTSTORM": {
+    "nombre_es": "Electormenta",
+    "tipo": "ELECTRIC",
+    "cat": "Special",
+    "pot": 100,
+    "pre": 80,
+    "pp": 10,
+    "desc": "Invoca una tormenta eléctrica que ataca al objetivo con fuertes vientos y relámpagos y puede paralizarlo."
+  },
+  "SANDSEARSTORM": {
+    "nombre_es": "Simún de Arena",
+    "tipo": "GROUND",
+    "cat": "Special",
+    "pot": 100,
+    "pre": 80,
+    "pp": 10,
+    "desc": "Ataca envolviéndo al objetivo en unas arenas tórridas que pueden causar quemaduras."
+  },
+  "LUNARBLESSING": {
+    "nombre_es": "Plegaria Lunar",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 5,
+    "desc": "Dedica una oración a la luna que restaura PS y los problemas de estado del bando del usuario."
+  },
+  "PSYSHIELDBASH": {
+    "nombre_es": "Asalto Barrera",
+    "tipo": "PSYCHIC",
+    "cat": "Physical",
+    "pot": 70,
+    "pre": 90,
+    "pp": 10,
+    "desc": "El usuario ataca envuelto en una energía psíquica que además aumenta su Defensa."
+  },
+  "POWERSHIFT": {
+    "nombre_es": "Cambiapoder",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Intercambia su Ataque por su Defensa."
+  },
+  "STONEAXE": {
+    "nombre_es": "Hachazo Pétreo",
+    "tipo": "ROCK",
+    "cat": "Physical",
+    "pot": 65,
+    "pre": 90,
+    "pp": 15,
+    "desc": "Ataca con un hacha de piedra y, al hacerlo, se deprenden fragmentos que rodean al objetivo."
+  },
+  "MYSTICALPOWER": {
+    "nombre_es": "Poder Místico",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 70,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Ataca desatando un misterioso poder, que también aumenta su Ataque Especial."
+  },
+  "VICTORYDANCE": {
+    "nombre_es": "Danza Triunfal",
+    "tipo": "FIGHTING",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Ejecuta una danza frenética que invoca la victoria y aumenta el Ataque, la Defensa y la Velocidad."
+  },
+  "SHELTER": {
+    "nombre_es": "Retracción",
+    "tipo": "STEEL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "La piel del usuario se vuelve dura como un escudo de acero, lo que aumenta mucho su Defensa."
+  },
+  "INFERNALPARADE": {
+    "nombre_es": "Marcha Espectral",
+    "tipo": "GHOST",
+    "cat": "Special",
+    "pot": 60,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Bolas de fuego que pueden causar quemaduras. Duplica la potencia si ya tiene un cambio de estado."
+  },
+  "CEASELESSEDGE": {
+    "nombre_es": "Tajo Metralla",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 65,
+    "pre": 90,
+    "pp": 15,
+    "desc": "Ataca con una espada de forma brusca y, al hacerlo, se desprenden púas que rodean al bando enemigo."
+  },
+  "TAKEHEART": {
+    "nombre_es": "Bálsamo Osado",
+    "tipo": "PSYCHIC",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "El usuario se cura de problemas de estado. Aumenta su Ataque Especial y su Defensa Especial."
+  },
+  "AQUACUTTER": {
+    "nombre_es": "Tajo Acuático",
+    "tipo": "WATER",
+    "cat": "Physical",
+    "pot": 70,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Corta al objetivo con agua a presión como si de una hoja se tratara. Suele ser crítico."
+  },
+  "AQUASTEP": {
+    "nombre_es": "Danza Acuática",
+    "tipo": "WATER",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ejecuta una elegante y fluida danza y le inflige daño. Aumenta la Velocidad del usuario."
+  },
+  "ARMORCANNON": {
+    "nombre_es": "Cañón Armadura",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 120,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Arroja partes de su armadura como proyectiles ardientes. Reduce la Def. y la Def. Esp. del usuario."
+  },
+  "AXEKICK": {
+    "nombre_es": "Patada Hacha",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Lanza una patada al aire y golpea con el talón. Si falla, se hiere a sí mismo. Puede confundir."
+  },
+  "BITTERBLADE": {
+    "nombre_es": "Espada Lamento",
+    "tipo": "FIRE",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Asesta una estocada llena de rencor. Recupera la mitad de los PS del daño que produce."
+  },
+  "BLAZINGTORQUE": {
+    "nombre_es": "Pirochoque",
+    "tipo": "FIRE",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Puede causar quemaduras."
+  },
+  "CHILLINGWATER": {
+    "nombre_es": "Agua Fría",
+    "tipo": "WATER",
+    "cat": "Special",
+    "pot": 50,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Ataca al objetivo rociándolo con un agua gélida y desalentadora que reduce su Ataque."
+  },
+  "CHILLYRECEPTION": {
+    "nombre_es": "Fría Acogida",
+    "tipo": "ICE",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Cuenta un chiste con una acogida tan fría que hace que nieve, y se cambia por un Pokémon del equipo."
+  },
+  "COLLISIONCOURSE": {
+    "nombre_es": "Nitrochoque",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Choca contra el suelo mientras se transforma. La potencia aumenta si es supereficaz."
+  },
+  "COMBATTORQUE": {
+    "nombre_es": "Pugnachoque",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Puede paralizar al objetivo."
+  },
+  "COMEUPPANCE": {
+    "nombre_es": "Resarcimiento",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Devuelve al rival el último ataque recibido, pero con mucha más fuerza."
+  },
+  "DOODLE": {
+    "nombre_es": "Decalcomanía",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 100,
+    "pp": 10,
+    "desc": "Calca la esencia misma del objetivo para atribuir su habilidad a sí mismo y a sus aliados."
+  },
+  "DOUBLESHOCK": {
+    "nombre_es": "Electropalmas",
+    "tipo": "ELECTRIC",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Libera toda la electricidad de su cuerpo para atacar. Pierde el tipo Eléctrico."
+  },
+  "ELECTRODRIFT": {
+    "nombre_es": "Electroderrape",
+    "tipo": "ELECTRIC",
+    "cat": "Special",
+    "pot": 100,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Se abalanza mientras se transforma y atraviesa al rival. La potencia aumenta si es supereficaz."
+  },
+  "FILLETAWAY": {
+    "nombre_es": "Deslome",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Aumenta mucho el Ataque, el Ataque Especial y la Velocidad del usuario a costa de parte de sus PS."
+  },
+  "FLOWERTRICK": {
+    "nombre_es": "Truco Floral",
+    "tipo": "GRASS",
+    "cat": "Physical",
+    "pot": 70,
+    "pre": 0,
+    "pp": 10,
+    "desc": "Lanza un ramo de flores trucado. No falla nunca y siempre asesta un golpe crítico."
+  },
+  "GIGATONHAMMER": {
+    "nombre_es": "Martillo Colosal",
+    "tipo": "STEEL",
+    "cat": "Physical",
+    "pot": 160,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Golpea con un enorme martillo. No se puede usar dos veces seguidas."
+  },
+  "GLAIVERUSH": {
+    "nombre_es": "Asalto Espadón",
+    "tipo": "DRAGON",
+    "cat": "Physical",
+    "pot": 120,
+    "pre": 100,
+    "pp": 5,
+    "desc": "En el turno siguiente los ataques del rival no fallarán y causarán el doble de daño."
+  },
+  "HYPERDRILL": {
+    "nombre_es": "Hipertaladro",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Ataca rotando la parte puntiaguda de su cuerpo. Ignora movimientos como Protección."
+  },
+  "ICESPINNER": {
+    "nombre_es": "Pirueta Helada",
+    "tipo": "ICE",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Recubre las extremidades con una capa de hielo y golpea al rival. Si hay un campo lo rompe."
+  },
+  "JETPUNCH": {
+    "nombre_es": "Puño Jet",
+    "tipo": "WATER",
+    "cat": "Physical",
+    "pot": 60,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Envuelve el puño con un torrente y propina un golpe de alta prioridad."
+  },
+  "KOWTOWCLEAVE": {
+    "nombre_es": "Genufendiente",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 85,
+    "pre": 0,
+    "pp": 10,
+    "desc": "Se postra en ademán de reverencia para que el objetivo baje la guardia y aprovecha para atacar. No falla."
+  },
+  "LASTRESPECTS": {
+    "nombre_es": "Homenaje Póstumo",
+    "tipo": "GHOST",
+    "cat": "Physical",
+    "pot": 50,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Venga a sus compañeros caídos. Cuantos más se hayan debilitado, mayor será la potencia."
+  },
+  "LUMINACRASH": {
+    "nombre_es": "Fotocolisión",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Ataca proyectando una extraña luz que afecta a la mente y reduce mucho la Def Especial."
+  },
+  "MAGICALTORQUE": {
+    "nombre_es": "Feerichoque",
+    "tipo": "FAIRY",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Puede confundir al objetivo."
+  },
+  "MAKEITRAIN": {
+    "nombre_es": "Fiebre Dorada",
+    "tipo": "STEEL",
+    "cat": "Special",
+    "pot": 120,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Ataca arrojando muchas monedas, pero reduce su At. Especial. Aumenta la recompensa."
+  },
+  "MORTALSPIN": {
+    "nombre_es": "Giro Mortífero",
+    "tipo": "POISON",
+    "cat": "Physical",
+    "pot": 30,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Ataque giratorio que envenena al objetivo y anula efectos como atadura, constricción y drenadoras."
+  },
+  "NOXIOUSTORQUE": {
+    "nombre_es": "Ponzochoque",
+    "tipo": "POISON",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Puede envenenar al objetivo."
+  },
+  "ORDERUP": {
+    "nombre_es": "Oído Cocina",
+    "tipo": "DRAGON",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Si lleva un Tatsugiri en la boca, aumenta una de sus características en función de su forma."
+  },
+  "POPULATIONBOMB": {
+    "nombre_es": "Proliferación",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 20,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Ejecuta un ataque conjunto que golpea al objetivo de una a diez veces seguidas."
+  },
+  "POUNCE": {
+    "nombre_es": "Brinco",
+    "tipo": "BUG",
+    "cat": "Physical",
+    "pot": 50,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Ataca abalanzándose sobre el objetivo y le reduce la Velocidad."
+  },
+  "RAGEFIST": {
+    "nombre_es": "Puño Furia",
+    "tipo": "GHOST",
+    "cat": "Physical",
+    "pot": 50,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Convierte su rabia en energía. Cuantos más golpes haya recibido mayor será la potencia."
+  },
+  "RAGINGBULL": {
+    "nombre_es": "Furia Taurina",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Este movimiento cambia de tipo en función de la forma del usuario. Destruye barreras."
+  },
+  "REVIVALBLESSING": {
+    "nombre_es": "Plegaria Vital",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 1,
+    "desc": "Oración que revive a un Pokémon del equipo que se haya debilitado y restaura la mitad de sus PS."
+  },
+  "RUINATION": {
+    "nombre_es": "Calamidad",
+    "tipo": "DARK",
+    "cat": "Special",
+    "pot": 1,
+    "pre": 90,
+    "pp": 10,
+    "desc": "Provoca una catástrofe devastadora que reduce a la mitad los PS del objetivo."
+  },
+  "SALTCURE": {
+    "nombre_es": "Salazón",
+    "tipo": "ROCK",
+    "cat": "Physical",
+    "pot": 40,
+    "pre": 100,
+    "pp": 15,
+    "desc": "El objetivo pierde PS cada turno. Afecta especialmente a Pokémon de tipo Acero y tipo Agua."
+  },
+  "SHEDTAIL": {
+    "nombre_es": "Autotomía",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "El usuario se cambia por otro Pokémon del equipo dejando un sustituto a cambio de sus PS."
+  },
+  "SILKTRAP": {
+    "nombre_es": "Telatrampa",
+    "tipo": "BUG",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Trampa sedosa que protege al usuario. Baja la Velocidad de quien lo toca."
+  },
+  "SNOWSCAPE": {
+    "nombre_es": "Paisaje Nevado",
+    "tipo": "ICE",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Invoca una nevada durante 5 turnos que aumenta la Defensa de los Pokémon de tipo Hielo."
+  },
+  "SPICYEXTRACT": {
+    "nombre_es": "Extracto Picante",
+    "tipo": "GRASS",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 15,
+    "desc": "Libera un extracto picante que aumenta mucho su Ataque, pero también reduce mucho su Defensa."
+  },
+  "SPINOUT": {
+    "nombre_es": "Quemarrueda",
+    "tipo": "STEEL",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Gira violentamente sobre sí. Reduce mucho la Velocidad del usuario."
+  },
+  "TIDYUP": {
+    "nombre_es": "Limpieza General",
+    "tipo": "NORMAL",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Aumenta el Ataque y la Velocidad. Limpia efectos de efectos como Púas, Trampa Rocas o Sustituto."
+  },
+  "TORCHSONG": {
+    "nombre_es": "Canto Ardiente",
+    "tipo": "FIRE",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Expele tórridas llamaradas como si entonara una canción. Aumenta el Ataque Especial."
+  },
+  "TRAILBLAZE": {
+    "nombre_es": "Abrecaminos",
+    "tipo": "GRASS",
+    "cat": "Physical",
+    "pot": 50,
+    "pre": 100,
+    "pp": 20,
+    "desc": "Ataca como si saltara desde la hierba alta. Aumenta su Velocidad."
+  },
+  "TRIPLEDIVE": {
+    "nombre_es": "Triple Inmersión",
+    "tipo": "WATER",
+    "cat": "Physical",
+    "pot": 30,
+    "pre": 95,
+    "pp": 10,
+    "desc": "Ejecuta una inmersión triple en perfecta sincronía que golpea al objetivo tres veces seguidas."
+  },
+  "TWINBEAM": {
+    "nombre_es": "Láser Doble",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 40,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Emite dos misteriosos haces lumínicos por los ojos que infligen daño dos veces seguidas."
+  },
+  "WICKEDTORQUE": {
+    "nombre_es": "Ominochoque",
+    "tipo": "DARK",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Puede dormir al objetivo."
+  },
+  "HYDROSTEAM": {
+    "nombre_es": "Hidrovapor",
+    "tipo": "WATER",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Lanza un potente chorro de agua hirviendo al rival que aumenta su poder si hace sol."
+  },
+  "PSYBLADE": {
+    "nombre_es": "Psicohojas",
+    "tipo": "PSYCHIC",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 100,
+    "pp": 15,
+    "desc": "El usuario desgarra al objetivo con una espada etérea cuyo poder aumenta en el terreno eléctrico."
+  },
+  "BLOODMOON": {
+    "nombre_es": "Luna Roja",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 140,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Ataca con toda su fuerza a través de una luna roja. No puede usarse dos veces seguidas."
+  },
+  "MATCHAGOTCHA": {
+    "nombre_es": "Cañón Batidor",
+    "tipo": "GRASS",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 90,
+    "pp": 15,
+    "desc": "Rocía al objetivo con té y recupera la mitad de los PS del daño que produce. Puede quemar."
+  },
+  "SYRUPBOMB": {
+    "nombre_es": "Bomba Caramelo",
+    "tipo": "GRASS",
+    "cat": "Special",
+    "pot": 60,
+    "pre": 85,
+    "pp": 10,
+    "desc": "Impregna al objetivo con su viscoso néctar, reduciendo su Velocidad durante tres turnos."
+  },
+  "IVYCUDGEL": {
+    "nombre_es": "Garrote Liana",
+    "tipo": "GRASS",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Golpea con un garrote. El tipo varía según la máscara que lleve. Suele ser crítico."
+  },
+  "ELECTROSHOT": {
+    "nombre_es": "Electrorrayo",
+    "tipo": "ELECTRIC",
+    "cat": "Special",
+    "pot": 130,
+    "pre": 100,
+    "pp": 10,
+    "desc": "1º turno: acumula electricidad y aumenta At. Esp. 2º turno: ataca. Si llueve ataca el 1º turno."
+  },
+  "TERASTARSTORM": {
+    "nombre_es": "Teraclúster",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 120,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Si Terapagos lo usa en su Forma Astral, inflige daño a todos los rivales."
+  },
+  "FICKLEBEAM": {
+    "nombre_es": "Láser Veleidoso",
+    "tipo": "DRAGON",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 5,
+    "desc": "En ocasiones el resto de sus cabezas se unen al ataque haciendo el doble de daño."
+  },
+  "BURNINGBULWARK": {
+    "nombre_es": "Llama Protectora",
+    "tipo": "FIRE",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Emplea pelaje para protegerse de ataques y causar quemaduras si le tocan."
+  },
+  "THUNDERCLAP": {
+    "nombre_es": "Relámpago Súbito",
+    "tipo": "ELECTRIC",
+    "cat": "Special",
+    "pot": 70,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Rayo que cae sobre el objetivo con prioridad. Falla si el objetivo no ataca."
+  },
+  "MIGHTYCLEAVE": {
+    "nombre_es": "Filo Potente",
+    "tipo": "ROCK",
+    "cat": "Physical",
+    "pot": 95,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Rebana al objetivo con la luz que ha acumulado en la testa. Golpea aunque el rival se proteja."
+  },
+  "TACHYONCUTTER": {
+    "nombre_es": "Tajo Taquión",
+    "tipo": "STEEL",
+    "cat": "Special",
+    "pot": 50,
+    "pre": 0,
+    "pp": 10,
+    "desc": "Ráfaga de cuchillas formadas por partículas que inflige daño dos veces seguidas. No falla."
+  },
+  "HARDPRESS": {
+    "nombre_es": "Prensa Metalica",
+    "tipo": "STEEL",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Oprime con los brazos o las pinzas. Cuantos más PS le queden al objetivo, más daño hace."
+  },
+  "DRAGONCHEER": {
+    "nombre_es": "Bramido Dragón",
+    "tipo": "DRAGON",
+    "cat": "Status",
+    "pre": 0,
+    "pp": 10,
+    "desc": "Bramido que aumenta la probabilidad de golpe crítico de aliados, y en dos niveles si es Dragón."
+  },
+  "ALLURINGVOICE": {
+    "nombre_es": "Canto Encantador",
+    "tipo": "FAIRY",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Canto angelical que confunde al objetivo si sus características han aumentado en ese turno."
+  },
+  "TEMPERFLARE": {
+    "nombre_es": "Cólera Ardiente",
+    "tipo": "FIRE",
+    "cat": "Physical",
+    "pot": 75,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Su potencia se duplica si el movimiento del usuario falló en el turno anterior."
+  },
+  "SUPERCELLSLAM": {
+    "nombre_es": "Plancha Voltaica",
+    "tipo": "ELECTRIC",
+    "cat": "Physical",
+    "pot": 100,
+    "pre": 95,
+    "pp": 15,
+    "desc": "Electrifica su cuerpo y salta en plancha sobre el objetivo. Si falla, se hiere a sí mismo."
+  },
+  "PSYCHICNOISE": {
+    "nombre_es": "Psicorruido",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 75,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Onda que impide al objetivo recuperar PS durante 2 turnos con movimientos, habilidades y objetos."
+  },
+  "UPPERHAND": {
+    "nombre_es": "Palma Rauda",
+    "tipo": "FIGHTING",
+    "cat": "Physical",
+    "pot": 65,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Si el objetivo usa movimientos de prioridad se anticipa golpeándolo antes y lo amedrenta."
+  },
+  "MALIGNANTCHAIN": {
+    "nombre_es": "Cadena Virulenta",
+    "tipo": "POISON",
+    "cat": "Special",
+    "pot": 100,
+    "pre": 100,
+    "pp": 5,
+    "desc": "Apresa al objetivo con una cadena para minarle las fuerzas. Puede envenenar gravemente."
+  },
+  "TERABLAST": {
+    "nombre_es": "Teraexplosión",
+    "tipo": "NORMAL",
+    "cat": "Special",
+    "pot": 80,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Movimiento cuyo tipo varía al del usuario en caso de que éste haya teracristalizado."
+  },
+  "NIHILLIGHT": {
+    "nombre_es": "Luz Devastadora",
+    "tipo": "DRAGON",
+    "cat": "Special",
+    "pot": 200,
+    "pre": 100,
+    "pp": 10,
+    "desc": "Luz devastadora que pega de forma neutra a los Pokémon de tipo hada. Ignora cambios de Def. Esp. y Evasión."
+  }
+}
