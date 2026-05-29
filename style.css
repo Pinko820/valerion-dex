@@ -6,8 +6,8 @@
 
 /* 1. EL CONTENEDOR (La ventana centradora) */
 .sprite-window {
-    width: 130px;
-    height: 130px;
+    width: 90px;
+    height: 90px;
     aspect-ratio: 1 / 1; 
     margin: 0 auto;
     overflow: hidden; 
@@ -190,4 +190,58 @@
     font-family: monospace;
     padding: 0.25rem;
     text-align: center;
+}
+
+/* Sprite en layout horizontal */
+.sprite-window-h {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.sprite-window-h img {
+    height: 72px;
+    width: auto;
+    max-width: none !important;
+    image-rendering: pixelated;
+    transition: transform 0.2s ease;
+}
+
+.card-pokemon:hover .sprite-window-h img {
+    transform: scale(1.12);
+}
+
+@media (min-width: 1280px) {
+    #pokedex {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+}
+@media (min-width: 1536px) {
+    #pokedex {
+        grid-template-columns: repeat(5, 1fr) !important;
+    }
+}
+
+.sprite-frame-box {
+    flex-shrink: 0;
+    border-radius: 0.5rem;
+    transition: transform 0.2s ease;
+    mix-blend-mode: screen;
+}
+
+.card-pokemon:hover .sprite-frame-box {
+    transform: scale(1.1);
+}
+
+/* Tabs de movimientos */
+#moves-tabs button {
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+#moves-tabs button.active-tab {
+    color: #eab308;
+    border-bottom-color: #eab308;
 }

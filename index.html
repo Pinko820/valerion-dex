@@ -4,9 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokédex Valerion</title>
-    
+
+    <!-- OPTIMIZACIÓN: preconnect al CDN de Tailwind -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+
+    <!-- OPTIMIZACIÓN: preload del JSON principal para que empiece a descargarse
+         mientras el parser aún procesa el HTML -->
+    <link rel="preload" href="valerion_data.json" as="fetch" crossorigin="anonymous">
+
+    <!-- Tailwind (CDN, igual que antes) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <style>
+    /* ── Filtro de movimientos ── */
+    .move-filter-wrapper {
+        position: relative;
+        width: 100%;
+    }
+    .move-filter-box {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.375rem;
+        min-height: 2.6rem;
+        padding: 0.375rem 0.6rem;
+        background: #111827;
+        border-radius: 0.75rem;
+        cursor: text;
+        transition: box-shadow .2s;
+    }
+    .move-filter-box:focus-within {
+        box-shadow: 0 0 0 2px #eab308;
+    }
+    .move-filter-input {
+        flex: 1;
+        min-width: 160px;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #d1d5db;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    .move-filter-input::placeholder { color: #6b7280; }
+
+    /* chip */
+    .move-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        padding: 0.15rem 0.55rem;
+        background: #1d4ed8;
+        color: #fff;
+        font-size: 0.75rem;
+        font-weight: 700;
+        border-radius: 9999px;
+        white-space: nowrap;
+        user-select: none;
+    }
+    .move-chip button {
+        display: flex;
+        align-items: center;
+        background: transparent;
+        border: none;
+        color: #93c5fd;
+        cursor: pointer;
+        padding: 0;
+        font-size: 1rem;
+        line-height: 1;
+    }
+    .move-chip button:hover { color: #fff; }
+
+    /* dropdown */
+    .move-autocomplete {
+        position: absolute;
+        top: calc(100% + 4px);
+        left: 0; right: 0;
+        background: #1f2937;
+        border: 1px solid #374151;
+        border-radius: 0.75rem;
+        max-height: 220px;
+        overflow-y: auto;
+        z-index: 200;
+        padding: 0.25rem 0;
+        box-shadow: 0 8px 24px rgba(0,0,0,.5);
+    }
+    .move-autocomplete.hidden { display: none; }
+    .move-autocomplete li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.45rem 0.75rem;
+        cursor: pointer;
+        font-size: 0.82rem;
+        color: #d1d5db;
+        transition: background .12s;
+    }
+    .move-autocomplete li:hover,
+    .move-autocomplete li.active {
+        background: #374151;
+        color: #fff;
+    }
+    .move-autocomplete li .mv-type {
+        font-size: 0.65rem;
+        font-weight: 800;
+        padding: 0.1rem 0.4rem;
+        border-radius: 4px;
+        text-transform: uppercase;
+        color: #fff;
+        flex-shrink: 0;
+    }
+    .move-autocomplete li .mv-cat {
+        font-size: 0.65rem;
+        color: #9ca3af;
+        flex-shrink: 0;
+    }
+    .move-autocomplete li .mv-name { flex: 1; font-weight: 600; }
+    .move-autocomplete li .mv-nomatch { color: #6b7280; font-style: italic; }
+    </style>
 </head>
 <body class="bg-gray-900 text-white min-h-screen font-sans flex overflow-x-hidden">
 
@@ -17,12 +132,10 @@
                 <p class="text-gray-400 mt-1 text-sm">Ingeniería de Software | Base de Datos Digital</p>
             </header>
 
-            <!-- Contenedor ajustado: más ancho (7xl), menos padding (p-4) y menos margen inferior (mb-6) -->
             <div class="max-w-7xl mx-auto bg-gray-800 p-4 rounded-2xl shadow-2xl border border-gray-700 mb-6">
-                <!-- Contenedor de Filtros en una sola fila larga -->
                 <div class="filter-row mb-4">
                     <input type="text" id="search" placeholder="Nombre del Pokémon..." class="filter-field">
-            
+
                     <select id="gen-filter" class="filter-field">
                         <option value="all">Todas las Regiones</option>
                         <option value="Valerion">Región Valerion (Fakemon)</option>
@@ -51,6 +164,21 @@
                     </select>
                 </div>
 
+                <!-- ── FILTRO DE MOVIMIENTOS ── -->
+                <div class="move-filter-wrapper mt-3 mb-1">
+                    <div class="move-filter-box" id="move-filter-box">
+                        <!-- chips insertados aquí por JS -->
+                        <input
+                            type="text"
+                            id="move-search-input"
+                            class="move-filter-input"
+                            placeholder="Filtrar por movimiento..."
+                            autocomplete="off"
+                        >
+                    </div>
+                    <ul id="move-autocomplete" class="move-autocomplete hidden"></ul>
+                </div>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 border-t border-gray-700 pt-4 mb-4">
                     <div class="flex items-center gap-2">
                         <label class="text-xs font-bold text-gray-500 uppercase">Ordenar:</label>
@@ -66,7 +194,6 @@
                             <option value="vel">Velocidad</option>
                         </select>
                     </div>
-
                     <div class="flex items-center gap-2">
                         <label class="text-xs font-bold text-gray-500 uppercase">Dir:</label>
                         <select id="sort-direction" class="flex-1 p-2 rounded-xl bg-gray-900 border-none focus:ring-2 focus:ring-yellow-500 text-gray-300 text-sm">
@@ -87,8 +214,7 @@
                 </div>
             </div>
 
-            <!-- Grid configurada para 5 columnas en XL (PC) -->
-            <div id="pokedex" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"></div>
+            <div id="pokedex" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-3"></div>
         </div>
     </div>
 
@@ -103,6 +229,7 @@
         <div id="panel-content" class="h-full overflow-y-auto custom-scrollbar"></div>
     </aside>
 
+    <!-- OPTIMIZACIÓN: type="module" ya es diferido por defecto, no necesita defer -->
     <script type="module" src="js/main.js"></script>
 </body>
 </html>

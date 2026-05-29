@@ -198,7 +198,7 @@ export const ABILITY_MAP = {
     "FLOWERVEIL": "Velo Flor",
     "FURCOAT": "Pelaje Recio",
     "GALEWINGS": "Alas Vendaval",
-    "GOOEY": "Viscosidad",
+    "GOOEY": "Baba",
     "GRASSPELT": "Manto Frondoso",
     "MAGICIAN": "Prestidigitador",
     "MEGALAUNCHER": "Megadisparador",
