@@ -13,7 +13,7 @@ let moveCatalog = {};
 
 // ── Categoría → color texto ────────────────────────────────────────────────
 const CAT_COLOR = { Physical: '#f97316', Special: '#60a5fa', Status: '#9ca3af' };
-const CAT_LABEL = { Physical: 'Fís.', Special: 'Esp.', Status: 'Est.' };
+const CAT_LABEL = { Physical: 'Físico.', Special: 'Especial.', Status: 'Estado.' };
 
 // ── Inicialización ─────────────────────────────────────────────────────────
 export function initMoveFilter(movesData, onChangeCallback) {
@@ -90,15 +90,19 @@ export function matchesMoveFilter(pokemonId, movesCache) {
     const learnsetEntry = movesCache.learnsets[pokemonId.toUpperCase()];
     if (!learnsetEntry) return false;
 
-    // Combinamos todos los movimientos posibles (nivel, mt, huevo) en una sola lista
+    // Combinamos todas las categorías posibles asegurando compatibilidad con Tutores también
     const allKnownMoves = [
         ...(learnsetEntry.nivel || []),
         ...(learnsetEntry.mt || []),
-        ...(learnsetEntry.huevo || [])
-    ].map(m => m.id);
+        ...(learnsetEntry.huevo || []),
+        ...(learnsetEntry.tutor || [])
+    ].map(m => {
+        // CORRECCIÓN: Si 'm' es un objeto (tiene propiedad .id), usamos m.id.
+        // Si 'm' ya es un texto (como en huevo/mt), lo usamos directamente.
+        return (typeof m === 'object' && m !== null) ? m.id : m;
+    });
 
     // Verificamos si el Pokémon aprende todos los movimientos seleccionados
-    // (O según la lógica de tu filtro: ¿al menos uno o todos?)
     return selectedMoves.every(sel => allKnownMoves.includes(sel.id));
 }
 
