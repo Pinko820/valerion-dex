@@ -46,14 +46,18 @@
 /* --- Ajustes de Grid --- */
 #pokedex {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
 }
 
-@media (min-width: 1280px) {
-    #pokedex {
-        grid-template-columns: repeat(5, 1fr) !important;
-    }
+@media (min-width: 640px)  { #pokedex { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { #pokedex { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1280px) { #pokedex { grid-template-columns: repeat(5, 1fr); } }
+@media (min-width: 1536px) { #pokedex { grid-template-columns: repeat(5, 1fr); } }
+
+/* Panel abierto: JS añade data-panel-open y aplica 4 columnas */
+#pokedex[data-panel-open] {
+    grid-template-columns: repeat(4, 1fr) !important;
 }
 
 /* --- Caja de Filtros Dinámica --- */
@@ -214,16 +218,7 @@
     transform: scale(1.12);
 }
 
-@media (min-width: 1280px) {
-    #pokedex {
-        grid-template-columns: repeat(4, 1fr) !important;
-    }
-}
-@media (min-width: 1536px) {
-    #pokedex {
-        grid-template-columns: repeat(5, 1fr) !important;
-    }
-}
+/* (reglas de columnas del grid unificadas arriba) */
 
 .sprite-frame-box {
     flex-shrink: 0;
@@ -244,4 +239,78 @@
 #moves-tabs button.active-tab {
     color: #eab308;
     border-bottom-color: #eab308;
+}
+/* ══════════════════════════════════════════════════════
+   PokéAPI diff styles — Valerion vs. Canónico
+   ══════════════════════════════════════════════════════ */
+
+/* Barras de stats */
+.stat-bar { transition: width 0.4s ease; }
+.stat-bar.stat-buffed  { background: linear-gradient(90deg, #22c55e, #4ade80) !important; }
+.stat-bar.stat-nerfed  { background: linear-gradient(90deg, #ef4444, #f87171) !important; }
+.stat-bar.stat-same    { background: rgba(234,179,8,0.8); }
+
+/* Número de stat */
+.stat-buffed { color: #4ade80 !important; font-weight: 900; }
+.stat-nerfed { color: #f87171 !important; font-weight: 900; }
+
+/* Valor canónico (entre paréntesis) */
+.canon-val {
+    font-size: 7px;
+    color: #6b7280;
+    font-style: italic;
+    margin-left: 1px;
+}
+
+/* Flecha de diff */
+.diff-arrow {
+    font-size: 7px;
+    font-weight: 900;
+    line-height: 1;
+}
+.diff-arrow.up   { color: #4ade80; }
+.diff-arrow.down { color: #f87171; }
+
+/* Tipos cambiados */
+.type-badge { transition: box-shadow 0.2s; }
+.type-changed {
+    box-shadow: 0 0 0 2px #f59e0b, 0 0 8px 1px rgba(245,158,11,0.4);
+    outline: 2px solid rgba(245,158,11,0.6);
+}
+
+/* Habilidades cambiadas */
+.ability-badge        { display: inline; }
+.ability-badge-hidden { display: inline; }
+.ability-changed {
+    color: #f59e0b !important;
+    text-decoration: underline dotted;
+    text-decoration-color: #f59e0b;
+}
+
+/* Badge de leyenda */
+.legend-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+    padding: 4px 8px;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 8px;
+    font-size: 7px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.legend-item { padding: 1px 5px; border-radius: 4px; }
+.legend-item.buffed  { color: #4ade80; background: rgba(74,222,128,0.12); }
+.legend-item.nerfed  { color: #f87171; background: rgba(248,113,113,0.12); }
+.legend-item.changed { color: #f59e0b; background: rgba(245,158,11,0.12); }
+.legend-sep {
+    color: #4b5563;
+    margin-left: auto;
+    font-style: italic;
+    text-transform: none;
+    font-weight: 400;
 }

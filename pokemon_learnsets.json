@@ -1549,148 +1549,6 @@
 
     ]
   },
-  "BUTTERFREEVALE": {
-    "nivel": [
-      {
-        "id": "GUST",
-        "nivel": 1
-      },
-      {
-        "id": "HARDEN",
-        "nivel": 1
-      },
-      {
-        "id": "TACKLE",
-        "nivel": 1
-      },
-      {
-        "id": "STRINGSHOT",
-        "nivel": 1
-      },
-      {
-        "id": "BUGBITE",
-        "nivel": 1
-      },
-      {
-        "id": "SUPERSONIC",
-        "nivel": 4
-      },
-      {
-        "id": "CONFUSION",
-        "nivel": 8
-      },
-      {
-        "id": "POISONPOWDER",
-        "nivel": 12
-      },
-      {
-        "id": "STUNSPORE",
-        "nivel": 12
-      },
-      {
-        "id": "SLEEPPOWDER",
-        "nivel": 12
-      },
-      {
-        "id": "PSYBEAM",
-        "nivel": 16
-      },
-      {
-        "id": "WHIRLWIND",
-        "nivel": 20
-      },
-      {
-        "id": "AIRSLASH",
-        "nivel": 24
-      },
-      {
-        "id": "SAFEGUARD",
-        "nivel": 28
-      },
-      {
-        "id": "BUGBUZZ",
-        "nivel": 32
-      },
-      {
-        "id": "TAILWIND",
-        "nivel": 36
-      },
-      {
-        "id": "RAGEPOWDER",
-        "nivel": 40
-      },
-      {
-        "id": "QUIVERDANCE",
-        "nivel": 44
-      }
-    ],
-    "mt": [
-      "ACROBATICS",
-      "AERIALACE",
-      "AIRCUTTER",
-      "AIRSLASH",
-      "ATTRACT",
-      "BATONPASS",
-      "BUGBITE",
-      "BUGBUZZ",
-      "CAPTIVATE",
-      "CONFIDE",
-      "DEFOG",
-      "DOUBLEEDGE",
-      "DOUBLETEAM",
-      "DRAININGKISS",
-      "DREAMEATER",
-      "DUALWINGBEAT",
-      "ELECTROWEB",
-      "ENDURE",
-      "ENERGYBALL",
-      "FACADE",
-      "FLASH",
-      "FRUSTRATION",
-      "GIGADRAIN",
-      "GIGAIMPACT",
-      "HIDDENPOWER",
-      "HURRICANE",
-      "HYPERBEAM",
-      "INFESTATION",
-      "IRONDEFENSE",
-      "MIMIC",
-      "NATURALGIFT",
-      "OMINOUSWIND",
-      "POLLENPUFF",
-      "PROTECT",
-      "PSYCHIC",
-      "PSYCHUP",
-      "RAINDANCE",
-      "REST",
-      "RETURN",
-      "ROOST",
-      "ROUND",
-      "SAFEGUARD",
-      "SECRETPOWER",
-      "SHADOWBALL",
-      "SIGNALBEAM",
-      "SILVERWIND",
-      "SKILLSWAP",
-      "SLEEPTALK",
-      "SNORE",
-      "SOLARBEAM",
-      "STRINGSHOT",
-      "STRUGGLEBUG",
-      "SUBSTITUTE",
-      "SUNNYDAY",
-      "SWAGGER",
-      "SWIFT",
-      "TAILWIND",
-      "THIEF",
-      "TWISTER",
-      "UTURN",
-      "VENOSHOCK"
-    ],
-    "huevo": [
-
-    ]
-  },
   "WEEDLE": {
     "nivel": [
       {
@@ -1801,154 +1659,6 @@
       {
         "id": "FELLSTINGER",
         "nivel": 44
-      }
-    ],
-    "mt": [
-      "ACROBATICS",
-      "AERIALACE",
-      "AIRCUTTER",
-      "ATTRACT",
-      "BRICKBREAK",
-      "BRUTALSWING",
-      "BUGBITE",
-      "CAPTIVATE",
-      "CONFIDE",
-      "CUT",
-      "DEFOG",
-      "DOUBLEEDGE",
-      "DOUBLETEAM",
-      "DRILLRUN",
-      "ELECTROWEB",
-      "ENDEAVOR",
-      "ENDURE",
-      "FACADE",
-      "FALSESWIPE",
-      "FLASH",
-      "FRUSTRATION",
-      "FURYCUTTER",
-      "GIGADRAIN",
-      "GIGAIMPACT",
-      "HIDDENPOWER",
-      "HYPERBEAM",
-      "INFESTATION",
-      "KNOCKOFF",
-      "LASERFOCUS",
-      "MIMIC",
-      "NATURALGIFT",
-      "OMINOUSWIND",
-      "PAYBACK",
-      "POISONJAB",
-      "PROTECT",
-      "REST",
-      "RETURN",
-      "ROCKSMASH",
-      "ROOST",
-      "ROUND",
-      "SECRETPOWER",
-      "SILVERWIND",
-      "SLEEPTALK",
-      "SLUDGEBOMB",
-      "SNORE",
-      "SOLARBEAM",
-      "STRINGSHOT",
-      "STRUGGLEBUG",
-      "SUBSTITUTE",
-      "SUNNYDAY",
-      "SWAGGER",
-      "SWIFT",
-      "SWORDSDANCE",
-      "TAILWIND",
-      "THIEF",
-      "THROATCHOP",
-      "UTURN",
-      "VENOSHOCK",
-      "XSCISSOR"
-    ],
-    "huevo": [
-
-    ]
-  },
-  "BEEDRILLOTE": {
-    "nivel": [
-      {
-        "id": "FURYATTACK",
-        "nivel": 0
-      },
-      {
-        "id": "HARDEN",
-        "nivel": 1
-      },
-      {
-        "id": "POISONSTING",
-        "nivel": 1
-      },
-      {
-        "id": "STRINGSHOT",
-        "nivel": 1
-      },
-      {
-        "id": "BUGBITE",
-        "nivel": 1
-      },
-      {
-        "id": "FURYCUTTER",
-        "nivel": 11
-      },
-      {
-        "id": "LASERFOCUS",
-        "nivel": 14
-      },
-      {
-        "id": "POISONSTING",
-        "nivel": 17
-      },
-      {
-        "id": "FOCUSENERGY",
-        "nivel": 20
-      },
-      {
-        "id": "VENOSHOCK",
-        "nivel": 23
-      },
-      {
-        "id": "ASSURANCE",
-        "nivel": 26
-      },
-      {
-        "id": "TOXICSPIKES",
-        "nivel": 29
-      },
-      {
-        "id": "PINMISSILE",
-        "nivel": 32
-      },
-      {
-        "id": "POISONJAB",
-        "nivel": 35
-      },
-      {
-        "id": "AGILITY",
-        "nivel": 38
-      },
-      {
-        "id": "ENDEAVOR",
-        "nivel": 41
-      },
-      {
-        "id": "FELLSTINGER",
-        "nivel": 44
-      },
-      {
-        "id": "DRILLPECK",
-        "nivel": 49
-      },
-      {
-        "id": "HORNDRILL",
-        "nivel": 54
-      },
-      {
-        "id": "MEGAHORN",
-        "nivel": 60
       }
     ],
     "mt": [
@@ -3973,6 +3683,176 @@
     ]
   },
   "SANDSLASH": {
+    "nivel": [
+      {
+        "id": "CRUSHCLAW",
+        "nivel": 1
+      },
+      {
+        "id": "AGILITY",
+        "nivel": 1
+      },
+      {
+        "id": "SCRATCH",
+        "nivel": 1
+      },
+      {
+        "id": "DEFENSECURL",
+        "nivel": 1
+      },
+      {
+        "id": "POISONSTING",
+        "nivel": 1
+      },
+      {
+        "id": "SANDATTACK",
+        "nivel": 1
+      },
+      {
+        "id": "ROLLOUT",
+        "nivel": 9
+      },
+      {
+        "id": "FURYCUTTER",
+        "nivel": 12
+      },
+      {
+        "id": "RAPIDSPIN",
+        "nivel": 15
+      },
+      {
+        "id": "BULLDOZE",
+        "nivel": 18
+      },
+      {
+        "id": "SWIFT",
+        "nivel": 21
+      },
+      {
+        "id": "FURYSWIPES",
+        "nivel": 26
+      },
+      {
+        "id": "SANDTOMB",
+        "nivel": 31
+      },
+      {
+        "id": "SLASH",
+        "nivel": 36
+      },
+      {
+        "id": "DIG",
+        "nivel": 41
+      },
+      {
+        "id": "GYROBALL",
+        "nivel": 46
+      },
+      {
+        "id": "SWORDSDANCE",
+        "nivel": 51
+      },
+      {
+        "id": "SANDSTORM",
+        "nivel": 56
+      },
+      {
+        "id": "EARTHQUAKE",
+        "nivel": 61
+      }
+    ],
+    "mt": [
+      "AERIALACE",
+      "AGILITY",
+      "AMNESIA",
+      "ATTRACT",
+      "BODYSLAM",
+      "BRICKBREAK",
+      "BULLDOZE",
+      "CAPTIVATE",
+      "CONFIDE",
+      "COUNTER",
+      "COVET",
+      "CUT",
+      "DEFENSECURL",
+      "DIG",
+      "DOUBLEEDGE",
+      "DOUBLETEAM",
+      "DRILLRUN",
+      "DYNAMICPUNCH",
+      "EARTHPOWER",
+      "EARTHQUAKE",
+      "ENDURE",
+      "FACADE",
+      "FLING",
+      "FOCUSBLAST",
+      "FOCUSPUNCH",
+      "FRUSTRATION",
+      "FURYCUTTER",
+      "GIGAIMPACT",
+      "GYROBALL",
+      "HEADBUTT",
+      "HIDDENPOWER",
+      "HONECLAWS",
+      "HYPERBEAM",
+      "IRONTAIL",
+      "KNOCKOFF",
+      "LEECHLIFE",
+      "MIMIC",
+      "MUDSHOT",
+      "MUDSLAP",
+      "NATURALGIFT",
+      "PINMISSILE",
+      "POISONJAB",
+      "PROTECT",
+      "REST",
+      "RETURN",
+      "ROCKCLIMB",
+      "ROCKSLIDE",
+      "ROCKSMASH",
+      "ROCKTOMB",
+      "ROLLOUT",
+      "ROUND",
+      "SAFEGUARD",
+      "SANDSTORM",
+      "SANDTOMB",
+      "SCORCHINGSANDS",
+      "SECRETPOWER",
+      "SEISMICTOSS",
+      "SHADOWCLAW",
+      "SLEEPTALK",
+      "SNORE",
+      "SPIKES",
+      "STEALTHROCK",
+      "STEELROLLER",
+      "STOMPINGTANTRUM",
+      "STONEEDGE",
+      "STRENGTH",
+      "SUBSTITUTE",
+      "SUNNYDAY",
+      "SUPERFANG",
+      "SWAGGER",
+      "SWIFT",
+      "SWORDSDANCE",
+      "THIEF",
+      "THROATCHOP",
+      "WORKUP",
+      "XSCISSOR",
+      "TAKEDOWN",
+      "LOWKICK",
+      "METALCLAW",
+      "FALSESWIPE",
+      "GUNKSHOT",
+      "SMACKDOWN",
+      "HIGHHORSEPOWER",
+      "ENDEAVOR",
+      "CURSE"
+    ],
+    "huevo": [
+
+    ]
+  },
+  "SANDBLADE": {
     "nivel": [
       {
         "id": "CRUSHCLAW",
@@ -141492,6 +141372,109 @@
 
     ]
   },
+  "VEEMON": {
+    "nivel": [
+      {
+        "id": "TACKLE",
+        "nivel": 1
+      },
+      {
+        "id": "LEER",
+        "nivel": 1
+      },
+      {
+        "id": "HEADBUTT",
+        "nivel": 5
+      },
+      {
+        "id": "BITE",
+        "nivel": 10
+      },
+      {
+        "id": "DRAGONBREATH",
+        "nivel": 15
+      },
+      {
+        "id": "MACHPUNCH",
+        "nivel": 20
+      },
+      {
+        "id": "SCARYFACE",
+        "nivel": 25
+      },
+      {
+        "id": "DRAGONCLAW",
+        "nivel": 30
+      },
+      {
+        "id": "ZENHEADBUTT",
+        "nivel": 35
+      },
+      {
+        "id": "FOCUSENERGY",
+        "nivel": 40
+      },
+      {
+        "id": "DRAGONDANCE",
+        "nivel": 45
+      },
+      {
+        "id": "OUTRAGE",
+        "nivel": 50
+      },
+      {
+        "id": "CLOSECOMBAT",
+        "nivel": 55
+      }
+    ],
+    "mt": [
+      "AERIALACE",
+      "ATTRACT",
+      "BODYSLAM",
+      "BRICKBREAK",
+      "BULLDOZE",
+      "CRUNCH",
+      "DIG",
+      "DOUBLETEAM",
+      "DRACOMETEOR",
+      "DRAGONCLAW",
+      "DRAGONDANCE",
+      "DRAGONPULSE",
+      "DRAGONTAIL",
+      "ENDURE",
+      "FACADE",
+      "FIREPUNCH",
+      "FLAMETHROWER",
+      "FOCUSBLAST",
+      "FOCUSENERGY",
+      "HEADBUTT",
+      "ICEPUNCH",
+      "IRONHEAD",
+      "MIMIC",
+      "OUTRAGE",
+      "PROTECT",
+      "REST",
+      "RETURN",
+      "ROAR",
+      "ROCKSMASH",
+      "ROUND",
+      "SCARYFACE",
+      "SUBSTITUTE",
+      "SWAGGER",
+      "SWORDSDANCE",
+      "THUNDERPUNCH",
+      "WORKUP",
+      "ZENHEADBUTT"
+    ],
+    "huevo": [
+      "COUNTER",
+      "DRAGONRUSH",
+      "ENDEAVOR",
+      "FOCUSPUNCH",
+      "THRASH",
+      "TWISTER"
+    ]
+  },
   "VENUSAUR_1": {
     "nivel": [
       {
@@ -142771,6 +142754,284 @@
 
     ]
   },
+  "BUTTERFREE_1": {
+    "nivel": [
+      {
+        "id": "GUST",
+        "nivel": 1
+      },
+      {
+        "id": "HARDEN",
+        "nivel": 1
+      },
+      {
+        "id": "TACKLE",
+        "nivel": 1
+      },
+      {
+        "id": "STRINGSHOT",
+        "nivel": 1
+      },
+      {
+        "id": "BUGBITE",
+        "nivel": 1
+      },
+      {
+        "id": "SUPERSONIC",
+        "nivel": 4
+      },
+      {
+        "id": "CONFUSION",
+        "nivel": 8
+      },
+      {
+        "id": "POISONPOWDER",
+        "nivel": 12
+      },
+      {
+        "id": "STUNSPORE",
+        "nivel": 12
+      },
+      {
+        "id": "SLEEPPOWDER",
+        "nivel": 12
+      },
+      {
+        "id": "PSYBEAM",
+        "nivel": 16
+      },
+      {
+        "id": "WHIRLWIND",
+        "nivel": 20
+      },
+      {
+        "id": "AIRSLASH",
+        "nivel": 24
+      },
+      {
+        "id": "SAFEGUARD",
+        "nivel": 28
+      },
+      {
+        "id": "BUGBUZZ",
+        "nivel": 32
+      },
+      {
+        "id": "TAILWIND",
+        "nivel": 36
+      },
+      {
+        "id": "RAGEPOWDER",
+        "nivel": 40
+      },
+      {
+        "id": "QUIVERDANCE",
+        "nivel": 44
+      }
+    ],
+    "mt": [
+      "ACROBATICS",
+      "AERIALACE",
+      "AIRCUTTER",
+      "AIRSLASH",
+      "ATTRACT",
+      "BATONPASS",
+      "BUGBITE",
+      "BUGBUZZ",
+      "CAPTIVATE",
+      "CONFIDE",
+      "DEFOG",
+      "DOUBLEEDGE",
+      "DOUBLETEAM",
+      "DRAININGKISS",
+      "DREAMEATER",
+      "DUALWINGBEAT",
+      "ELECTROWEB",
+      "ENDURE",
+      "ENERGYBALL",
+      "FACADE",
+      "FLASH",
+      "FRUSTRATION",
+      "GIGADRAIN",
+      "GIGAIMPACT",
+      "HIDDENPOWER",
+      "HURRICANE",
+      "HYPERBEAM",
+      "INFESTATION",
+      "IRONDEFENSE",
+      "MIMIC",
+      "NATURALGIFT",
+      "OMINOUSWIND",
+      "POLLENPUFF",
+      "PROTECT",
+      "PSYCHIC",
+      "PSYCHUP",
+      "RAINDANCE",
+      "REST",
+      "RETURN",
+      "ROOST",
+      "ROUND",
+      "SAFEGUARD",
+      "SECRETPOWER",
+      "SHADOWBALL",
+      "SIGNALBEAM",
+      "SILVERWIND",
+      "SKILLSWAP",
+      "SLEEPTALK",
+      "SNORE",
+      "SOLARBEAM",
+      "STRINGSHOT",
+      "STRUGGLEBUG",
+      "SUBSTITUTE",
+      "SUNNYDAY",
+      "SWAGGER",
+      "SWIFT",
+      "TAILWIND",
+      "THIEF",
+      "TWISTER",
+      "UTURN",
+      "VENOSHOCK"
+    ],
+    "huevo": [
+
+    ]
+  },
+  "BEEDRILL_1": {
+    "nivel": [
+      {
+        "id": "FURYATTACK",
+        "nivel": 0
+      },
+      {
+        "id": "HARDEN",
+        "nivel": 1
+      },
+      {
+        "id": "POISONSTING",
+        "nivel": 1
+      },
+      {
+        "id": "STRINGSHOT",
+        "nivel": 1
+      },
+      {
+        "id": "BUGBITE",
+        "nivel": 1
+      },
+      {
+        "id": "FURYCUTTER",
+        "nivel": 11
+      },
+      {
+        "id": "LASERFOCUS",
+        "nivel": 14
+      },
+      {
+        "id": "POISONSTING",
+        "nivel": 17
+      },
+      {
+        "id": "FOCUSENERGY",
+        "nivel": 20
+      },
+      {
+        "id": "VENOSHOCK",
+        "nivel": 23
+      },
+      {
+        "id": "ASSURANCE",
+        "nivel": 26
+      },
+      {
+        "id": "TOXICSPIKES",
+        "nivel": 29
+      },
+      {
+        "id": "PINMISSILE",
+        "nivel": 32
+      },
+      {
+        "id": "POISONJAB",
+        "nivel": 35
+      },
+      {
+        "id": "AGILITY",
+        "nivel": 38
+      },
+      {
+        "id": "ENDEAVOR",
+        "nivel": 41
+      },
+      {
+        "id": "FELLSTINGER",
+        "nivel": 44
+      }
+    ],
+    "mt": [
+      "ACROBATICS",
+      "AERIALACE",
+      "AIRCUTTER",
+      "ATTRACT",
+      "BRICKBREAK",
+      "BRUTALSWING",
+      "BUGBITE",
+      "CAPTIVATE",
+      "CONFIDE",
+      "CUT",
+      "DEFOG",
+      "DOUBLEEDGE",
+      "DOUBLETEAM",
+      "DRILLRUN",
+      "ELECTROWEB",
+      "ENDEAVOR",
+      "ENDURE",
+      "FACADE",
+      "FALSESWIPE",
+      "FLASH",
+      "FRUSTRATION",
+      "FURYCUTTER",
+      "GIGADRAIN",
+      "GIGAIMPACT",
+      "HIDDENPOWER",
+      "HYPERBEAM",
+      "INFESTATION",
+      "KNOCKOFF",
+      "LASERFOCUS",
+      "MIMIC",
+      "NATURALGIFT",
+      "OMINOUSWIND",
+      "PAYBACK",
+      "POISONJAB",
+      "PROTECT",
+      "REST",
+      "RETURN",
+      "ROCKSMASH",
+      "ROOST",
+      "ROUND",
+      "SECRETPOWER",
+      "SILVERWIND",
+      "SLEEPTALK",
+      "SLUDGEBOMB",
+      "SNORE",
+      "SOLARBEAM",
+      "STRINGSHOT",
+      "STRUGGLEBUG",
+      "SUBSTITUTE",
+      "SUNNYDAY",
+      "SWAGGER",
+      "SWIFT",
+      "SWORDSDANCE",
+      "TAILWIND",
+      "THIEF",
+      "THROATCHOP",
+      "UTURN",
+      "VENOSHOCK",
+      "XSCISSOR"
+    ],
+    "huevo": [
+
+    ]
+  },
   "RATTATA_1": {
     "nivel": [
       {
@@ -143038,7 +143299,7 @@
 
     ]
   },
-  "PIKACHU_8": {
+  "PIKACHU_2": {
     "nivel": [
       {
         "id": "PLAYNICE",
@@ -143214,7 +143475,7 @@
 
     ]
   },
-  "PIKACHU_20": {
+  "PIKACHU_3": {
     "nivel": [
       {
         "id": "PLAYNICE",
