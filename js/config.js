@@ -108,7 +108,7 @@ export const ABILITY_MAP = {
     "ANGERPOINT": "Irascible",
     "UNBURDEN": "Liviano",
     "HEATPROOF": "Ignífugo",
-    "SIMPLE": "Ignorante",
+    "SIMPLE": "Simple",
     "DRYSKIN": "Piel Seca",
     "DOWNLOAD": "Descarga",
     "IRONFIST": "Puño Férreo",
@@ -340,5 +340,6 @@ export const ABILITY_MAP = {
     "TERAFORMZERO":"Teraformación Cero",
     "TERASHELL":"Tera Caparazón",
     "TERASHIFT":"Tera Cambio",
-    "TOXICCHAIN":"Cadena Tóxica"
+    "TOXICCHAIN":"Cadena Tóxica",
+    "PUNKROCK":"Punk Rock"
 };

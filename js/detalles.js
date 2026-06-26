@@ -37,6 +37,26 @@ export async function preloadMoves() {
  */
 function idToPokeApiSlug(id, formName) {
     const base = id.split('_')[0].toLowerCase();
+
+    // Si no hay forma, puede que sea un fakemon o un Pokémon exclusivo del fangame
+
+    // CASO ESPECIAL PARA Raticlaw (Convergente de Raticate): PokéAPI no tiene "raticlaw", entonces llamo a raticate normal para que al menos tenga datos para comparar"
+    if (base === 'raticlaw') {
+        return 'raticate';
+    }
+    // CASO ESPECIAL PARA Noctarow (Evolucion de Fearow): PokéAPI no tiene "noctarow", entonces llamo a fearow normal para que al menos tenga datos para comparar"
+    if (base === 'noctarow') {
+        return 'fearow';
+    }
+    // CASO ESPECIAL PARA Adnocana (Evolucion de Arbok) : PokéAPI no tiene "adnocana", entonces llamo a arbok normal para que al menos tenga datos para comparar"
+    if (base === 'adnocana') {
+        return 'arbok';
+    }
+    // CASO ESPECIAL PARA Sandblade (Evolucion de Sandslash) : PokéAPI no tiene "sandblade", entonces llamo a sandslash normal para que al menos tenga datos para comparar"
+    if (base === 'sandblade') {
+        return 'sandslash';
+    }
+
     if (!formName) return base;
 
     const fn = formName.toLowerCase();
@@ -58,7 +78,11 @@ function idToPokeApiSlug(id, formName) {
     if (base === 'blastoise' && fn.includes('mega')) {
         if (fn.includes('x')) return 'blastoise';
     }
-
+    // CASO ESPECIAL PARA Mega Butterfree: PokéAPI no tiene "butterfree-mega", entonces llamo a butterfree normal para que al menos tenga datos para comparar"
+    if (base === 'butterfree' && fn.includes('mega')) {
+        return 'butterfree';
+    }
+    
 
     // Formas conocidas
     if (fn.includes('mega x'))  return `${base}-mega-x`;
