@@ -11,9 +11,17 @@ export let selectedMoves = [];
 // Se construye al llamar initMoveFilter(movesData)
 let moveCatalog = {};
 
-// ── Categoría → color texto ────────────────────────────────────────────────
-const CAT_COLOR = { Physical: '#f97316', Special: '#60a5fa', Status: '#9ca3af' };
-const CAT_LABEL = { Physical: 'Físico.', Special: 'Especial.', Status: 'Estado.' };
+// ── Categoría → etiqueta y color de texto ─────────────────────────────────
+const CAT_META = {
+    Physical: { color: '#f97316', label: 'Físico.'   },
+    Special:  { color: '#60a5fa', label: 'Especial.' },
+    Status:   { color: '#9ca3af', label: 'Estado.'   },
+};
+
+// ── Guardado del callback para los mousedown del dropdown ─────────────────
+export function setMoveFilterCallback(fn) {
+    window.__moveFilterCallback = fn;
+}
 
 // ── Inicialización ─────────────────────────────────────────────────────────
 export function initMoveFilter(movesData, onChangeCallback) {
@@ -26,14 +34,14 @@ export function initMoveFilter(movesData, onChangeCallback) {
         moveCatalog[id] = {
             label: data.nombre_es || id,
             tipo:  (data.tipo || 'NORMAL').toUpperCase(),
-            cat:   data.cat || 'Status'
+            cat:   data.cat || 'Status',
         };
     }
 
     // 2. Referencias DOM
-    const box       = document.getElementById('move-filter-box');
-    const input     = document.getElementById('move-search-input');
-    const dropdown  = document.getElementById('move-autocomplete');
+    const box      = document.getElementById('move-filter-box');
+    const input    = document.getElementById('move-search-input');
+    const dropdown = document.getElementById('move-autocomplete');
     if (!box || !input || !dropdown) return;
 
     // 3. Clic en el box → enfocar input
@@ -54,19 +62,23 @@ export function initMoveFilter(movesData, onChangeCallback) {
             e.preventDefault();
             activeIdx = Math.min(activeIdx + 1, items.length - 1);
             items.forEach((li, i) => li.classList.toggle('active', i === activeIdx));
+
         } else if (e.key === 'ArrowUp') {
             e.preventDefault();
             activeIdx = Math.max(activeIdx - 1, 0);
             items.forEach((li, i) => li.classList.toggle('active', i === activeIdx));
+
         } else if (e.key === 'Enter') {
             e.preventDefault();
             const active = dropdown.querySelector('li.active[data-id]');
             if (active) addMove(active.dataset.id, active.dataset.label, box, input, dropdown, onChangeCallback);
+
         } else if (e.key === 'Backspace' && input.value === '' && selectedMoves.length > 0) {
-            // Borrar último chip
+            // Borrar último chip con Backspace cuando el campo está vacío
             const last = selectedMoves[selectedMoves.length - 1];
             removeMove(last.id, box, input, onChangeCallback);
             hideDropdown(dropdown);
+
         } else if (e.key === 'Escape') {
             hideDropdown(dropdown);
         }
@@ -82,38 +94,36 @@ export function initMoveFilter(movesData, onChangeCallback) {
 
 // ── Filtrado de Pokémon ────────────────────────────────────────────────────
 // Dado un pokémon y movesCache (moves_data), devuelve true si tiene TODOS
-// los movimientos seleccionados (en cualquier categoría)
+// los movimientos seleccionados (en cualquier categoría de aprendizaje)
 export function matchesMoveFilter(pokemonId, movesCache) {
     if (selectedMoves.length === 0) return true;
-    
-    // Obtenemos los movimientos aprendidos por este Pokémon
-    const learnsetEntry = movesCache.learnsets[pokemonId.toUpperCase()];
+
+    const learnsetEntry = movesCache?.learnsets[pokemonId.toUpperCase()];
     if (!learnsetEntry) return false;
 
-    // Combinamos todas las categorías posibles asegurando compatibilidad con Tutores también
+    // Combinar todas las categorías de aprendizaje (nivel, MT, huevo, tutor)
     const allKnownMoves = [
-        ...(learnsetEntry.nivel || []),
-        ...(learnsetEntry.mt || []),
-        ...(learnsetEntry.huevo || []),
-        ...(learnsetEntry.tutor || [])
-    ].map(m => {
-        // CORRECCIÓN: Si 'm' es un objeto (tiene propiedad .id), usamos m.id.
-        // Si 'm' ya es un texto (como en huevo/mt), lo usamos directamente.
-        return (typeof m === 'object' && m !== null) ? m.id : m;
-    });
+        ...(learnsetEntry.nivel  || []),
+        ...(learnsetEntry.mt     || []),
+        ...(learnsetEntry.huevo  || []),
+        ...(learnsetEntry.tutor  || []),
+    ].map(m =>
+        // CORRECCIÓN: nivel devuelve objetos con .id; huevo/mt devuelven strings
+        (typeof m === 'object' && m !== null) ? m.id : m
+    );
 
-    // Verificamos si el Pokémon aprende todos los movimientos seleccionados
     return selectedMoves.every(sel => allKnownMoves.includes(sel.id));
 }
 
 // ── Helpers internos ───────────────────────────────────────────────────────
+
 function renderDropdown(query, dropdown) {
     if (!query) { hideDropdown(dropdown); return; }
 
-    const q = query.toLowerCase();
+    const q       = query.toLowerCase();
     const results = Object.entries(moveCatalog)
         .filter(([id, info]) =>
-            !selectedMoves.some(s => s.id === id) &&           // no repetir
+            !selectedMoves.some(s => s.id === id) &&       // no repetir seleccionados
             (info.label.toLowerCase().includes(q) || id.toLowerCase().includes(q))
         )
         .slice(0, 12); // máximo 12 sugerencias
@@ -130,15 +140,15 @@ function renderDropdown(query, dropdown) {
         <li data-id="${id}" data-label="${escHtml(info.label)}">
             <span class="mv-type" style="background:${typeColor(info.tipo)}">${TYPE_MAP[info.tipo]?.esp || info.tipo}</span>
             <span class="mv-name">${escHtml(info.label)}</span>
-            <span class="mv-cat" style="color:${CAT_COLOR[info.cat]}">${CAT_LABEL[info.cat] || ''}</span>
+            <span class="mv-cat" style="color:${CAT_META[info.cat]?.color}">${CAT_META[info.cat]?.label || ''}</span>
         </li>
     `).join('');
 
     dropdown.querySelectorAll('li[data-id]').forEach(li => {
         li.addEventListener('mousedown', (e) => {
             e.preventDefault(); // evitar que el input pierda foco antes del click
-            const box    = document.getElementById('move-filter-box');
-            const input  = document.getElementById('move-search-input');
+            const box   = document.getElementById('move-filter-box');
+            const input = document.getElementById('move-search-input');
             addMove(li.dataset.id, li.dataset.label, box, input, dropdown,
                     window.__moveFilterCallback);
         });
@@ -185,10 +195,6 @@ function hideDropdown(dropdown) {
 
 function escHtml(str) {
     return str.replace(/[&<>"']/g, c =>
-        ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
-}
-
-// Guardar callback globalmente para el mousedown del dropdown
-export function setMoveFilterCallback(fn) {
-    window.__moveFilterCallback = fn;
+        ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])
+    );
 }
