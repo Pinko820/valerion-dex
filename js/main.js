@@ -13,6 +13,42 @@ function debounce(fn, delay) {
     };
 }
 
+// ── IDs de los filtros y su tipo de evento ────────────────────────────────
+const FILTER_CONFIGS = [
+    { id: 'search',         eventType: 'input',  debounced: true  },
+    { id: 'gen-filter',     eventType: 'change', debounced: false },
+    { id: 'ability-filter', eventType: 'change', debounced: false },
+    { id: 'type-1',         eventType: 'change', debounced: false },
+    { id: 'type-2',         eventType: 'change', debounced: false },
+    { id: 'sort-by',        eventType: 'change', debounced: false },
+    { id: 'sort-direction', eventType: 'change', debounced: false },
+    { id: 'show-forms',     eventType: 'change', debounced: false },
+];
+
+// ── Limpia todos los controles de filtro a sus valores por defecto ────────
+function resetFilters() {
+    document.getElementById('search').value = '';
+
+    ['gen-filter', 'ability-filter', 'type-1', 'type-2'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.value = 'all';
+    });
+
+    document.getElementById('sort-by').value        = 'numero';
+    document.getElementById('sort-direction').value  = 'asc';
+    document.getElementById('show-forms').checked    = true;
+}
+
+// ── Limpia los chips de movimiento de forma asíncrona (import dinámico) ───
+async function resetMoveChips() {
+    const { selectedMoves } = await import('./move-filter.js');
+    selectedMoves.length = 0; // vaciar el array in-place
+
+    const box   = document.getElementById('move-filter-box');
+    const input = document.getElementById('move-search-input');
+    if (box && input) box.querySelectorAll('.move-chip').forEach(c => c.remove());
+}
+
 async function init() {
     await cargarBaseDeDatos();
 
@@ -46,38 +82,20 @@ async function init() {
         });
     }
 
-    // Limpiar filtros
-    document.getElementById('clear-btn')?.addEventListener('click', () => {
-        document.getElementById('search').value = "";
-        ['gen-filter', 'ability-filter', 'type-1', 'type-2'].forEach(id => {
-            const el = document.getElementById(id);
-            if (el) el.value = "all";
-        });
-        document.getElementById('sort-by').value       = "numero";
-        document.getElementById('sort-direction').value = "asc";
-        document.getElementById('show-forms').checked   = true;
-
-        // Limpiar chips de movimientos
-        import('./move-filter.js').then(({ selectedMoves: sm }) => {
-            sm.length = 0; // vaciar el array in-place
-            const box   = document.getElementById('move-filter-box');
-            const input = document.getElementById('move-search-input');
-            if (box && input) box.querySelectorAll('.move-chip').forEach(c => c.remove());
-        });
-
+    // Botón de limpiar filtros
+    document.getElementById('clear-btn')?.addEventListener('click', async () => {
+        resetFilters();
+        await resetMoveChips();
         renderUI();
     });
 
     // OPTIMIZACIÓN: debounce 200ms en el buscador de texto, inmediato en selects
     const debouncedRender = debounce(renderUI, 200);
-    const filterIds = ['search', 'gen-filter', 'ability-filter', 'type-1', 'type-2',
-                       'sort-by', 'sort-direction', 'show-forms'];
 
-    filterIds.forEach(id => {
+    FILTER_CONFIGS.forEach(({ id, eventType, debounced }) => {
         const el = document.getElementById(id);
         if (!el) return;
-        const isText = el.tagName === 'INPUT' && el.type === 'text';
-        el.addEventListener(isText ? 'input' : 'change', isText ? debouncedRender : renderUI);
+        el.addEventListener(eventType, debounced ? debouncedRender : renderUI);
     });
 
     document.getElementById('close-panel')?.addEventListener('click', closeDetails);
@@ -85,7 +103,7 @@ async function init() {
 }
 
 function renderUI() {
-    const filtered = getFilteredData();
+    const filtered  = getFilteredData();
     const container = document.getElementById('pokedex');
     if (!container) return;
 
@@ -109,6 +127,7 @@ function populateAbilityFilter() {
     if (!select) return;
 
     const allAbilities = new Set();
+
     // Import pokemonData lazily from the already-loaded module
     import('./pokedex.js').then(({ pokemonData }) => {
         pokemonData.forEach(p => {

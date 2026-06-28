@@ -2,72 +2,68 @@ import { CONFIG, TYPE_MAP, ABILITY_MAP } from './config.js';
 
 const translateAbility = (id) => ABILITY_MAP[id.toUpperCase()] || id;
 
-// OPTIMIZACIÓN: IntersectionObserver compartido para lazy-load de sprites
+// ── IntersectionObserver compartido para lazy-load de sprites ─────────────
+// OPTIMIZACIÓN: un solo observer para toda la página en lugar de uno por sprite
 let spriteObserver = null;
+
 function getSpriteObserver() {
     if (spriteObserver) return spriteObserver;
+
     spriteObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (!entry.isIntersecting) return;
-            const el = entry.target;
+            const el  = entry.target;
             const src = el.dataset.sprite;
             if (src) {
                 el.style.backgroundImage = `url('${src}')`;
-                el.removeAttribute('data-sprite'); // no volver a observar
+                el.removeAttribute('data-sprite'); // evitar doble procesado
             }
             spriteObserver.unobserve(el);
         });
     }, {
         rootMargin: '200px 0px', // precargar con 200px de anticipación
-        threshold: 0
+        threshold: 0,
     });
+
     return spriteObserver;
 }
 
+// ── Utilidades generales ──────────────────────────────────────────────────
+
 export function getGenLabel(gen) {
-    if (gen === CONFIG.VALERION_GEN) return "Valerion";
+    // Si es un array (la nueva estructura del JSON)
+    if (Array.isArray(gen)) {
+        return gen.map(g => 
+            g === CONFIG.VALERION_GEN ? 'Valerion' : (typeof g === 'number' ? `Gen ${g}` : g)
+        ).join(' / ');
+    }
+    
+    // Fallback por si llega un valor único
+    if (gen === CONFIG.VALERION_GEN) return 'Valerion';
     return typeof gen === 'number' ? `Gen ${gen}` : gen;
 }
 
-export function handleMissingImage(imgElement) {
-    imgElement.classList.add('hidden');
-    imgElement.nextElementSibling?.classList.remove('hidden');
-    imgElement.nextElementSibling?.classList.add('flex');
-}
+// ── Creación de tarjeta de Pokémon ────────────────────────────────────────
 
 export function createCard(p) {
-    const fontSizeClass = p.nombreFinal.length > 18 ? "text-[10px]" :
-                          p.nombreFinal.length > 13 ? "text-xs" :
-                          p.nombreFinal.length > 9  ? "text-sm" : "text-base";
+    const fontSizeClass = p.nombreFinal.length > 18 ? 'text-[10px]'
+                        : p.nombreFinal.length > 13 ? 'text-xs'
+                        : p.nombreFinal.length >  9 ? 'text-sm'
+                        : 'text-base';
 
-    const typesHTML = p.tipos.map(t => {
-        const info = TYPE_MAP[t.toUpperCase()] || { esp: t, color: '#555' };
-        return `<span class="text-[9px] px-1.5 py-0.5 rounded font-bold text-white uppercase" style="background-color:${info.color}">${info.esp}</span>`;
-    }).join('');
-
-    const habilidadesUnicas = new Set([...p.habilidades, ...p.habilidad_oculta]);
-    let abilitiesHTML;
-
-    if (habilidadesUnicas.size === 1) {
-        abilitiesHTML = `<span class="text-white font-semibold">${translateAbility([...habilidadesUnicas][0])}</span>`;
-    } else {
-        const normales = p.habilidades.map(translateAbility).join(' / ');
-        const ocultaFiltrada = p.habilidad_oculta.filter(h => !p.habilidades.includes(h));
-        const ocultaHTML = ocultaFiltrada.length
-            ? `<div class="text-yellow-500/70 italic leading-tight">↳ ${ocultaFiltrada.map(translateAbility).join(', ')}</div>`
-            : "";
-        abilitiesHTML = `<span class="text-white font-semibold">${normales}</span>${ocultaHTML}`;
-    }
+    const typesHTML    = buildTypesHTML(p.tipos);
+    const abilitiesHTML = buildAbilitiesHTML(p.habilidades, p.habilidad_oculta);
 
     const numeroFormateado = String(p.numero).padStart(3, '0');
-    const spritePath = `${CONFIG.SPRITE_PATH}${p.id}.webp`;
+    const spritePath       = `${CONFIG.SPRITE_PATH}${p.id}.webp`;
 
-    // OPTIMIZACIÓN: data-sprite sin backgroundImage → el observer lo inyecta solo cuando entra al viewport
+    // OPTIMIZACIÓN: data-sprite sin backgroundImage → el observer lo inyecta
+    // solo cuando el elemento entra al viewport (lazy-load)
     return `
         <div class="card-pokemon bg-gray-800 rounded-2xl hover:bg-gray-750 transition-all border-l-4 border-yellow-600 group shadow-md flex flex-row cursor-pointer overflow-hidden"
              data-id="${p.id}">
             <div class="flex-shrink-0 w-[84px] flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors relative p-1">
-                <span class="absolute top-1 left-1 font-mono text-[9px] font-black text-yellow-500/50 leading-none">#${numeroFormateado}</span>
+                <span class="absolute top-1 left-1 font-mono text-[9px] font-black text-yellow-500/50 leading-none truncate max-w-[75px]">${p.genLabel}</span>
                 <div class="sprite-frame-box lazy-sprite"
                      data-sprite="${spritePath}"
                      style="width:72px;height:72px;image-rendering:pixelated;background-repeat:no-repeat;background-position:0 0;background-size:auto 72px;">
@@ -98,11 +94,41 @@ export function createCard(p) {
         </div>`;
 }
 
-// OPTIMIZACIÓN: registra los sprites recién insertados en el observer
+// ── Helpers de construcción de HTML ──────────────────────────────────────
+
+function buildTypesHTML(tipos) {
+    return tipos.map(t => {
+        const info = TYPE_MAP[t.toUpperCase()] || { esp: t, color: '#555' };
+        return `<span class="text-[9px] px-1.5 py-0.5 rounded font-bold text-white uppercase" style="background-color:${info.color}">${info.esp}</span>`;
+    }).join('');
+}
+
+function buildAbilitiesHTML(habilidades, habilidad_oculta) {
+    const habilidadesUnicas = new Set([...habilidades, ...habilidad_oculta]);
+
+    // Caso especial: una sola habilidad en total
+    if (habilidadesUnicas.size === 1) {
+        return `<span class="text-white font-semibold">${translateAbility([...habilidadesUnicas][0])}</span>`;
+    }
+
+    const normales       = habilidades.map(translateAbility).join(' / ');
+    const ocultaFiltrada = habilidad_oculta.filter(h => !habilidades.includes(h));
+    const ocultaHTML     = ocultaFiltrada.length
+        ? `<div class="text-yellow-500/70 italic leading-tight">↳ ${ocultaFiltrada.map(translateAbility).join(', ')}</div>`
+        : '';
+
+    return `<span class="text-white font-semibold">${normales}</span>${ocultaHTML}`;
+}
+
+// ── Lazy-load de sprites ──────────────────────────────────────────────────
+
+// OPTIMIZACIÓN: registra los sprites recién insertados en el IntersectionObserver
 export function observeNewSprites(container) {
     const obs = getSpriteObserver();
     container.querySelectorAll('.lazy-sprite[data-sprite]').forEach(el => obs.observe(el));
 }
+
+// ── Poblado de selects de tipo ────────────────────────────────────────────
 
 export function populateTypeFilter(selectorId, defaultText) {
     const select = document.getElementById(selectorId);

@@ -70,7 +70,7 @@ def pbExportarPokedexJSON
       "nombre" => s.name,
       "form_name" => s.form_name || "",
       "es_forma" => s.form > 0,
-      "generacion" => s.generation || 0,
+      "generacion"      => s.generation.is_a?(Array) ? s.generation : [s.generation || 0],
       "tipos" => s.types.map { |t| t.to_s },
       "stats_base" => {
         "hp"  => s.base_stats[:HP],

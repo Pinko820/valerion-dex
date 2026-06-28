@@ -2907,7 +2907,7 @@
     "desc": "Esparce polvo que paraliza al objetivo."
   },
   "SYNTHESIS": {
-    "nombre_es": "Síntesis",
+    "nombre_es": "Fotosíntesis",
     "tipo": "GRASS",
     "cat": "Status",
     "pre": 0,
@@ -4381,7 +4381,7 @@
   },
   "GROWTH": {
     "nombre_es": "Desarrollo",
-    "tipo": "NORMAL",
+    "tipo": "GRASS",
     "cat": "Status",
     "pre": 0,
     "pp": 20,
@@ -4820,7 +4820,7 @@
     "desc": "Baile frenético que aumenta mucho el Ataque."
   },
   "TAILWHIP": {
-    "nombre_es": "Látigo",
+    "nombre_es": "Agitacola",
     "tipo": "NORMAL",
     "cat": "Status",
     "pre": 100,
@@ -5924,7 +5924,7 @@
     "desc": "Ataca lanzando un ancla al oponente, que queda atrapado y no puede huir."
   },
   "FLASHCANNON": {
-    "nombre_es": "Foco Resplandor",
+    "nombre_es": "Cañón Resplandor",
     "tipo": "STEEL",
     "cat": "Special",
     "pot": 80,
@@ -7234,6 +7234,132 @@
     "pot": 200,
     "pre": 100,
     "pp": 10,
-    "desc": "Luz devastadora que pega de forma neutra a los Pokémon de tipo hada. Ignora cambios de Def. Esp. y Evasión."
+    "desc": "Luz devastadora que pega de forma neutra a los Pokémon de tipo Hada. Ignora cambios de Def. Esp. y Evasión."
+  },
+  "EEVEEVOLLEY": {
+    "nombre_es": "Eevimpacto",
+    "tipo": "NORMAL",
+    "cat": "Physical",
+    "pot": 1,
+    "pre": 0,
+    "pp": 20,
+    "desc": "Cuanto mayor sea la amistad con el Entrenador, más poderoso será este ataque. No falla."
+  },
+  "BOUNCYBUBBLE": {
+    "nombre_es": "Vapodrenaje",
+    "tipo": "WATER",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 15,
+    "desc": "El usuario ataca disparando burbujas de agua al objetivo y absorbe la mitad del daño producido."
+  },
+  "BUZZYBUZZ": {
+    "nombre_es": "Joltioparálisis",
+    "tipo": "ELECTRIC",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 15,
+    "desc": "El usuario dispara una descarga eléctrica para atacar al objetivo, siempre paraliza."
+  },
+  "SIZZLYSLIDE": {
+    "nombre_es": "Flarembestida",
+    "tipo": "FIRE",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 100,
+    "pp": 15,
+    "desc": "El usuario se cubre de fuego y carga contra el objetivo, siempre provoca quemadura."
+  },
+  "GLITZYGLOW": {
+    "nombre_es": "Espeaura",
+    "tipo": "PSYCHIC",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 15,
+    "desc": "El usuario bombardea al objetivo con fuerza telequinética y levanta una Pantalla de Luz."
+  },
+  "BADDYBAD": {
+    "nombre_es": "Umbreozona",
+    "tipo": "DARK",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 15,
+    "desc": "El usuario actúa mal, ataca al objetivo y levanta una pantalla de Reflejo."
+  },
+  "SAPPYSEED": {
+    "nombre_es": "Leafitobombas",
+    "tipo": "GRASS",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 100,
+    "pp": 15,
+    "desc": "El usuario esparce semillas para atacar al objetivo y coloca Drenadoras."
+  },
+  "FREEZYFROST": {
+    "nombre_es": "Glaceoprisma",
+    "tipo": "ICE",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Ataca con un cristal de neblina helada. Elimina los cambios de estadísticas de todos."
+  },
+  "SPARKLYSWIRL": {
+    "nombre_es": "Sylveotornado",
+    "tipo": "FAIRY",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 15,
+    "desc": "Ataca al objetivo envolviéndolo con un torbellino. Cura todos los problemas de estado del equipo."
+  },
+  "PIKAPAPOW": {
+    "nombre_es": "Pikatormenta",
+    "tipo": "ELECTRIC",
+    "cat": "Special",
+    "pot": 1,
+    "pre": 0,
+    "pp": 20,
+    "desc": "Cuanto mayor sea la amistad con el Entrenador, más poderoso será este ataque. No falla."
+  },
+  "ZIPPYZAP": {
+    "nombre_es": "Pikaturbo",
+    "tipo": "ELECTRIC",
+    "cat": "Physical",
+    "pot": 50,
+    "pre": 100,
+    "pp": 15,
+    "desc": "El usuario ataca con ráfagas eléctricas, siempre va en primer lugar y es golpe crítico."
+  },
+  "SPLISHYSPLASH": {
+    "nombre_es": "Salpikasurf",
+    "tipo": "WATER",
+    "cat": "Special",
+    "pot": 90,
+    "pre": 100,
+    "pp": 15,
+    "desc": "El usuario carga una enorme onda eléctrica y golpea al Pokémon rival con ella. Puede paralizar."
+  },
+  "FLOATYFALL": {
+    "nombre_es": "Pikapicado",
+    "tipo": "FLYING",
+    "cat": "Physical",
+    "pot": 90,
+    "pre": 95,
+    "pp": 15,
+    "desc": "El usuario flota en el aire y luego se lanza en picado para atacar al objetivo. Puede amedrentar."
+  },
+  "FROSTBRAND": {
+    "nombre_es": "Tajo Helado",
+    "tipo": "ICE",
+    "cat": "Physical",
+    "pot": 80,
+    "pre": 0,
+    "pp": 10,
+    "desc": "El usuario vuelve gelida una parte de su cuerpo como una cuchilla."
   }
 }
