@@ -2160,7 +2160,8 @@
       1
     ],
     "tipos": [
-      "FIRE"
+      "FIRE",
+      "FAIRY"
     ],
     "stats_base": {
       "hp": 83,
@@ -13604,7 +13605,8 @@
       3
     ],
     "tipos": [
-      "ELECTRIC"
+      "ELECTRIC",
+      "FIRE"
     ],
     "stats_base": {
       "hp": 70,
@@ -13638,7 +13640,8 @@
       6
     ],
     "tipos": [
-      "ELECTRIC"
+      "ELECTRIC",
+      "FIRE"
     ],
     "stats_base": {
       "hp": 70,
@@ -13734,7 +13737,8 @@
       3
     ],
     "tipos": [
-      "BUG"
+      "BUG",
+      "ELECTRIC"
     ],
     "stats_base": {
       "hp": 65,
@@ -13767,7 +13771,8 @@
       3
     ],
     "tipos": [
-      "BUG"
+      "BUG",
+      "FAIRY"
     ],
     "stats_base": {
       "hp": 65,
@@ -14366,7 +14371,7 @@
       3
     ],
     "tipos": [
-      "GROUND",
+      "BUG",
       "DRAGON"
     ],
     "stats_base": {
@@ -17486,7 +17491,8 @@
       4
     ],
     "tipos": [
-      "ELECTRIC"
+      "ELECTRIC",
+      "DARK"
     ],
     "stats_base": {
       "hp": 80,
@@ -18011,7 +18017,8 @@
       4
     ],
     "tipos": [
-      "ELECTRIC"
+      "ELECTRIC",
+      "NORMAL"
     ],
     "stats_base": {
       "hp": 60,
@@ -19939,7 +19946,8 @@
       4
     ],
     "tipos": [
-      "ELECTRIC"
+      "ELECTRIC",
+      "FIGHTING"
     ],
     "stats_base": {
       "hp": 75,
@@ -20038,7 +20046,7 @@
     ],
     "tipos": [
       "BUG",
-      "FLYING"
+      "DRAGON"
     ],
     "stats_base": {
       "hp": 86,
@@ -22878,7 +22886,8 @@
       5
     ],
     "tipos": [
-      "ELECTRIC"
+      "ELECTRIC",
+      "GROUND"
     ],
     "stats_base": {
       "hp": 75,
@@ -37267,7 +37276,8 @@
       8
     ],
     "tipos": [
-      "ELECTRIC"
+      "ELECTRIC",
+      "FAIRY"
     ],
     "stats_base": {
       "hp": 69,
@@ -38622,7 +38632,8 @@
       8
     ],
     "tipos": [
-      "ELECTRIC"
+      "ELECTRIC",
+      "WATER"
     ],
     "stats_base": {
       "hp": 48,
@@ -43376,7 +43387,7 @@
     ],
     "tipos": [
       "BUG",
-      "FIGHTING"
+      "DRAGON"
     ],
     "stats_base": {
       "hp": 85,
