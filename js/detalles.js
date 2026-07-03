@@ -54,6 +54,7 @@ function idToPokeApiSlug(id, formName) {
     }
     // CASO ESPECIAL PARA Sandblade (Evolucion de Sandslash) : PokéAPI no tiene "sandblade", entonces llamo a sandslash normal para que al menos tenga datos para comparar"
     if (base === 'sandblade') {
+        if(formName == "Forma Alola") return 'sandslash-alola';
         return 'sandslash';
     }
 
@@ -81,6 +82,11 @@ function idToPokeApiSlug(id, formName) {
     // CASO ESPECIAL PARA Mega Butterfree: PokéAPI no tiene "butterfree-mega", entonces llamo a butterfree normal para que al menos tenga datos para comparar"
     if (base === 'butterfree' && fn.includes('mega')) {
         return 'butterfree';
+    }
+
+    //Caso especial para mega Nidoking: PokéAPI no tiene "nidoking-mega", entonces llamo a nidoking normal para que al menos tenga datos para comparar"
+    if (base === 'nidoking' && fn.includes('mega')) {
+        return 'nidoking';
     }
     
 
